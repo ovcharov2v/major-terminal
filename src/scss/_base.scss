@@ -4,34 +4,6 @@
 	box-sizing: inherit;
 }
 
-html {
-	position: relative;
-	overflow-x: hidden;
-	min-height: 100vh;
-	box-sizing: border-box;
-	font-family: $font-primary;
-	scroll-behavior: smooth;
-
-	&.has-cursor,
-	&.has-cursor * {
-		// stylelint-disable-next-line
-		cursor: none !important;
-	}
-
-	&.is-lock-scroll,
-	&.is-lock-scroll body {
-		overflow: hidden;
-	}
-}
-
-body {
-	-webkit-font-smoothing: antialiased;
-	text-decoration-skip: objects;
-	text-rendering: optimizeLegibility;
-	text-size-adjust: 100%;
-	-webkit-tap-highlight-color: transparent;
-}
-
 main {
 	flex: 1;
 }
