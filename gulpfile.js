@@ -77,34 +77,6 @@ if (argv.throwErrors) {
 	errorHandler = null;
 }
 
-function svgoConfig(minify = argv.minifySvg) {
-	return (file) => {
-		const filename = path.basename(file.relative, path.extname(file.relative));
-
-		return {
-			js2svg: {
-				pretty: !minify,
-				indent: '\t',
-			},
-			plugins: [
-				{
-					name: 'cleanupIDs',
-					params: {
-						minify: true,
-						prefix: `${filename}-`,
-					},
-				},
-				'removeTitle',
-				{
-					name: 'removeViewBox',
-					active: false,
-				},
-				'sortAttrs',
-			],
-		};
-	};
-}
-
 gulp.task('copy', () => {
 	return gulp.src([
 		'src/resources/**/*.*',
@@ -123,53 +95,6 @@ gulp.task('images', () => {
 	return gulp.src('src/images/**/*.*')
 		.pipe($.if(argv.cache, $.newer('build/images')))
 		.pipe($.if(argv.debug, $.debug()))
-		.pipe(gulp.dest('build/images'));
-});
-
-gulp.task('sprites:png', () => {
-	const spritesData = gulp.src('src/images/sprites/png/*.png')
-		.pipe($.plumber({
-			errorHandler,
-		}))
-		.pipe($.if(argv.debug, $.debug()))
-		.pipe($.spritesmith({
-			cssName: '_sprites.scss',
-			cssTemplate: 'src/scss/_sprites.hbs',
-			imgName: 'sprites.png',
-			retinaImgName: 'sprites@2x.png',
-			retinaSrcFilter: 'src/images/sprites/png/*@2x.png',
-			padding: 2,
-		}));
-
-	return $.mergeStream(
-		spritesData.img
-			.pipe($.plumber({
-				errorHandler,
-			}))
-			.pipe($.vinylBuffer())
-			.pipe($.imagemin())
-			.pipe(gulp.dest('build/images')),
-		spritesData.css
-			.pipe(gulp.dest('src/scss')),
-	);
-});
-
-gulp.task('sprites:svg', () => {
-	return gulp.src('src/images/sprites/svg/*.svg')
-		.pipe($.plumber({
-			errorHandler,
-		}))
-		.pipe($.if(argv.debug, $.debug()))
-		.pipe($.svgmin(svgoConfig()))
-		.pipe($.svgstore())
-		.pipe($.if(!argv.minifySvg, $.replace(/^\t+$/gm, '')))
-		.pipe($.if(!argv.minifySvg, $.replace(/\n{2,}/g, '\n')))
-		.pipe($.if(!argv.minifySvg, $.replace('?><!', '?>\n<!')))
-		.pipe($.if(!argv.minifySvg, $.replace('><svg', '>\n<svg')))
-		.pipe($.if(!argv.minifySvg, $.replace('><defs', '>\n\t<defs')))
-		.pipe($.if(!argv.minifySvg, $.replace('><symbol', '>\n<symbol')))
-		.pipe($.if(!argv.minifySvg, $.replace('></svg', '>\n</svg')))
-		.pipe($.rename('sprites.svg'))
 		.pipe(gulp.dest('build/images'));
 });
 
@@ -315,39 +240,6 @@ gulp.task('validate:html', () => {
 		.pipe($.w3cHtmlValidator());
 });
 
-gulp.task('optimize:images', () => {
-	return gulp.src('src/images/**/*.*')
-		.pipe($.plumber({
-			errorHandler,
-		}))
-		.pipe($.if(argv.debug, $.debug()))
-		.pipe($.imagemin([
-			$.imagemin.gifsicle({
-				interlaced: true,
-			}),
-			$.imagemin.optipng({
-				optimizationLevel: 3,
-			}),
-			$.imageminMozjpeg({
-				progressive: true,
-				quality: 80,
-			}),
-		]))
-		.pipe(gulp.dest('src/images'));
-});
-
-gulp.task('optimize:svg', () => {
-	return gulp.src('src/images/**/*.svg', {
-		base: 'src/images',
-	})
-		.pipe($.plumber({
-			errorHandler,
-		}))
-		.pipe($.if(argv.debug, $.debug()))
-		.pipe($.svgmin(svgoConfig(false)))
-		.pipe(gulp.dest('src/images'));
-});
-
 gulp.task('watch', () => {
 	gulp.watch([
 		'src/resources/**/*.*',
@@ -355,13 +247,6 @@ gulp.task('watch', () => {
 	], gulp.series('copy'));
 
 	gulp.watch('src/images/**/*.*', gulp.series('images'));
-
-	gulp.watch([
-		'src/images/sprites/png/*.png',
-		'src/scss/_sprites.hbs',
-	], gulp.series('sprites:png'));
-
-	gulp.watch('src/images/sprites/svg/*.svg', gulp.series('sprites:svg'));
 
 	gulp.watch([
 		'src/*.pug',
@@ -457,10 +342,6 @@ gulp.task('share', () => {
 	]);
 });
 
-gulp.task('robots', () => {
-	return !argv.robots ? del(['./build/robots.txt']) : Promise.resolve();
-});
-
 gulp.task('lint', gulp.series(
 	'lint:pug',
 	'lint:scss',
@@ -471,11 +352,8 @@ gulp.task('build', gulp.series(
 	'copy',
 	'pug',
 	'share',
-	'robots',
 	gulp.parallel(
 		'images',
-		'sprites:png',
-		'sprites:svg',
 		'scss',
 		'js',
 	),

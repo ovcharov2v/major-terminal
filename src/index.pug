@@ -4,17 +4,243 @@ prepend vars
 	//-
 
 append vars
-	//-
+	-
+		title = "Главная"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
 
 block content
-	//- include pug/data
+	// Section Ready
+	section.section-ready.container
+		.section-ready__title-box
+			h1.h1.text-blue.section-ready__title Готовые
+				|
+				|
+				strong.strong.text-blue-light складские решения
+			a.button.button--white.button--sm(href="#") Все индустрии
+		.section-ready__grid
+			// Card
+			a.section-ready__card.card(href="#")
+				.card__title-box
+					p.card__title Fashion
+					+svg("chevron-right")(class="card__arrow")
+				span.button.button--white.button--xs Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg1.jpg", alt)
+			// Card
+			a.section-ready__card.card(href="#")
+				.card__title-box
+					p.card__title Healthcare
+					+svg("chevron-right")(class="card__arrow")
+				span.button.button--white.button--xs Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg2.jpg", alt)
+			// Card
+			a.section-ready__card.card(href="#")
+				.card__title-box
+					p.card__title Automotive
+					+svg("chevron-right")(class="card__arrow")
+				span.button.button--white.button--xs Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg3.jpg", alt)
+			// Card
+			a.section-ready__card.card(href="#")
+				.card__title-box
+					p.card__title FMCG
+					+svg("chevron-right")(class="card__arrow")
+				span.button.button--white.button--xs Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg4.jpg", alt)
+			// Card
+			a.section-ready__card.card(href="#")
+				.card__title-box
+					p.card__title Telecom
+					+svg("chevron-right")(class="card__arrow")
+				span.button.button--white.button--xs Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg5.jpg", alt)
+			// Card
+			a.section-ready__card.card(href="#")
+				.card__title-box
+					p.card__title POSM
+					+svg("chevron-right")(class="card__arrow")
+				span.button.button--white.button--xs Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg6.jpg", alt)
 
-	//- .site
-	//- 	include pug/components/header
+	// Section Nav
+	.section-nav.container
+		ul.section-nav__list
+			li.section-nav__elem
+				a.section-nav__link(href="#")
+					img.section-nav__logo(src="images/section-nav/logo-map.png", alt)
+					span.section-nav__text-box Вход в MAP
+			li.section-nav__elem
+				a.section-nav__link(href="#")
+					| Наши вакансии
+			li.section-nav__elem.section-nav__elem--wide
+				a.section-nav__link(href="#")
+					| Вебинар о складской деятельности - 31.03
 
-	//- 	include pug/pages/home
+	// Section Services
+	section.section-services
+		.container
+			.section-services__title-box
+				h2.h2.text-blue-light.section-services__title Услуги
+					|
+					|
+					span.text-blue Ma
+						span.text-red j
+						| or Terminal
+				a.button.button--white.button--sm(href="#") Все услуги
+			.section-services__nav.nav-row
+				ul.nav-list
+					li.nav-list__elem
+						a.nav-list__link(href="#") Хранение
+					li.nav-list__elem
+						a.nav-list__link(href="#") Упаковка
+					li.nav-list__elem
+						a.nav-list__link(href="#") Копакинг
+					li.nav-list__elem
+						a.nav-list__link(href="#") Стикеровка
+					li.nav-list__elem
+						a.nav-list__link(href="#") Работа с комплектами
+			// Slider
+			.swiper.slider.section-services__slider
+				.swiper-wrapper
+					// Slide
+					.swiper-slide.slider__slide.slider__slide--wide
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/services/slide-bg1.jpg", alt)
+						p.slider__slide-text Складские терминалы Ma
+							span.text-red j
+							| or
+						p.slider__slide-title Логопарк Major
+					// Slide
+					.swiper-slide.slider__slide
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+						p.slider__slide-title М9
+					// Slide
+					.swiper-slide.slider__slide.slider__slide--bg-blue
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+						p.slider__slide-title Истра
+					// Slide
+					.swiper-slide.slider__slide.slider__slide--bg-light-blue
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+						p.slider__slide-title Истра
+					// Slide
+					.swiper-slide.slider__slide.slider__slide--bg-light-blue
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+						p.slider__slide-title Истра
+					// Slide
+					.swiper-slide.slider__slide.slider__slide--bg-light-blue
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+						p.slider__slide-title Истра
+			.slider__nav
+				button.slider__btn.slider__btn--prev(aria-label="Назад")
+					+svg("chevron-slider")(class="slider__btn-arrow")
+				.slider__pagination
+				button.slider__btn.slider__btn--next(aria-label="Вперед")
+					+svg("chevron-slider")(class="slider__btn-arrow")
 
-	//- 	include pug/components/footer
+	// Section Partner
+	section.section-partner.container
+		.section-partner__row
+			.section-partner__col.section-partner__col--content
+				h2.h2.text-blue.section-partner__title Ma
+					span.text-red j
+					| or Terminal – Ваш
+					|
+					span.text-blue-light надежный партнер
+					|
+					| в cкладском бизнесе
+				p.section-partner__text Major Terminal является частью 4PL-оператора Major Logistics, которые имеет колоссальный опыт и экспертизу в широком спектре транспортной логистики и складской обработке грузов...
+				.section-partner__button-row
+					a.button.button--outline-blue.button--md.section-partner__button(href="#") Подробнее о нас
+					a.button.button--blue.button--md.button--with-icon.section-partner__button(href="#")
+						+svg("play")(class="button__icon")
+						|Посмотреть видео
+			.section-partner__col.section-partner__col--img
+				img.section-partner__img(src="images/section-partner/img.png", alt)
 
-	//- include pug/components/analytics
-	h1 hello world
+	// Section News
+	.section-news
+		.tabs
+			.container
+				.section-news__tab-box
+					ul.tabs__nav-list
+						li.tabs__nav-elem
+							button.tabs__nav-button.tabs__nav-button--active(data-content="content1") Новости
+						li.tabs__nav-elem
+							button.tabs__nav-button(data-content="content2") Вебинары
+					a.button.button--outline-blue.button--sm(href="#") Все новости
+				.tabs__content-box
+					// Content
+					.tabs__content.tabs__content--active#content1
+						.news-row
+							// News
+							.news-row__card-box
+								a.news-card(href="#")
+									img.news-card__img(src="images/common/news1.jpg", alt)
+									.news-card__content-box
+										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+										p.news-card__title Логистика в период ограничений на 06 октября
+							// News
+							.news-row__card-box
+								a.news-card(href="#")
+									img.news-card__img(src="images/common/news2.jpg", alt)
+									.news-card__content-box
+										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+										p.news-card__title Логистика в период ограничений на 06 октября
+							// News
+							.news-row__card-box
+								a.news-card(href="#")
+									img.news-card__img(src="images/common/news3.jpg", alt)
+									.news-card__content-box
+										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+										p.news-card__title Логистика в период ограничений на 06 октября
+					// Content
+					.tabs__content#content2
+						.news-row
+							// News
+							.news-row__card-box
+								a.news-card(href="#")
+									img.news-card__img(src="images/common/news1.jpg", alt)
+									.news-card__content-box
+										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+										p.news-card__title Логистика в период ограничений на 06 октября
+							// News
+							.news-row__card-box
+								a.news-card(href="#")
+									img.news-card__img(src="images/common/news1.jpg", alt)
+									.news-card__content-box
+										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+										p.news-card__title Логистика в период ограничений на 06 октября
+							// News
+							.news-row__card-box
+								a.news-card(href="#")
+									img.news-card__img(src="images/common/news1.jpg", alt)
+									.news-card__content-box
+										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+										p.news-card__title Логистика в период ограничений на 06 октября
+	// Section Contacts
+	section.section-contacts
+		.container
+			h2.h2.text-blue.section-contacts__title Есть вопросы? Свяжитесь с нами!
+			form.section-contacts__form
+				.section-contacts__form-row
+					.section-contacts__form-col
+						input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
+						input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
+						input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
+					.section-contacts__form-col
+						textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
+				.section-contacts__form-submit-box
+					button.button.button--blue.button--lg.section-contacts__form-submit Отправить

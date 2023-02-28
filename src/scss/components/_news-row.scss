@@ -1,0 +1,10 @@
+.news-row {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__card-box {
+		width: 100%;
+		max-width: 33.3333%;
+		padding: 0 15px;
+	}
+}

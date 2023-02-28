@@ -1,0 +1,11 @@
+.section-news {
+	padding-top: 75px;
+	padding-bottom: 118px;
+
+	&__tab-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 58px;
+	}
+}

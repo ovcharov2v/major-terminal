@@ -1,0 +1,51 @@
+.dropdown {
+	&--with-flag {
+	}
+
+	&__value-box {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__value {
+		width: 100%;
+		padding-right: 15px;
+		border: none;
+		background-color: $color-transparent;
+		font-family: $font-additional;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+		pointer-events: none;
+
+		&:focus {
+			outline: none;
+		}
+
+		.dropdown--with-flag & {
+			padding-left: 34px;
+		}
+	}
+
+	&__flag {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 24px;
+		height: 24px;
+	}
+
+	&__options-list {
+		display: none;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		width: 10px;
+		height: 5px;
+	}
+}

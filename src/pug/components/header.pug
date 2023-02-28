@@ -1,1 +1,60 @@
+// Header
 header.header
+	// Top block
+	.header__row
+		.header__top-box.container
+			ul.header__logo-list
+				li.header__logo-list-elem
+					a.header__logo-list-link(href="#", target="_blank", rel="noreferrer")
+						img.header__logo-list-img(src="images/common/logo-mjr.svg", alt="Mjr")
+				li.header__logo-list-elem
+					a.header__logo-list-link(href="#", target="_blank", rel="noreferrer")
+						img.header__logo-list-img(src="images/common/logo-major.png", alt="Major")
+				li.header__logo-list-elem
+					a.header__logo-list-link(href="#", target="_blank", rel="noreferrer")
+						img.header__logo-list-img(src="images/common/logo-map.png", alt="Map")
+			p.header__text
+				a.header__phone(href="tel:84957376006") 8 (495) 737 60 06
+				|
+				| — Секретариат
+			.header__search
+				form.search-form
+					button.search-form__submit(aria-label="Искать")
+						+svg("search-loupe")(class="search-form__submit-icon")
+					input.search-form__input(placeholder="Поиск...")
+			.header__lang
+				.dropdown.dropdown--with-flag
+					.dropdown__value-box
+						+svg("flag-ru")(class="dropdown__flag")
+						input.dropdown__value(type="text", value="Русский", disabled)
+						+svg("chevron-dropdown")(class="dropdown__arrow")
+					ul.dropdown__options-list
+						li.dropdown__option.dropdown__option--selected
+							+svg("flag-ru")(class="dropdown__flag")
+							| Русский
+						li.dropdown__option
+							+svg("flag-ru")(class="dropdown__flag")
+							| English
+	// Navigation
+	.header__row
+		.header__nav-box.container
+			a.header__logo-link(href="/")
+				img.header__logo-img(src="images/common/logo-terminal.svg", alt="Major Terminal")
+			nav.header__nav
+				ul.header__nav-list
+					li.header__nav-elem
+						a.header__nav-link.header__nav-link--active(href="#") Индустрии
+					li.header__nav-elem
+						a.header__nav-link(href="#") Услуги
+					li.header__nav-elem
+						a.header__nav-link(href="#") Кейсы
+					li.header__nav-elem
+						a.header__nav-link(href="#") Наши терминалы
+					li.header__nav-elem
+						a.header__nav-link(href="#") Устойчивое развитие
+					li.header__nav-elem
+						a.header__nav-link(href="#") Пресс-релизы
+					li.header__nav-elem
+						a.header__nav-link(href="#") О нас
+					li.header__nav-elem
+						a.header__nav-link(href="#") Контакты

@@ -1,0 +1,20 @@
+.section-services {
+	padding-top: 58px;
+	padding-bottom: 40px;
+	overflow: hidden;
+
+	&__title-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__nav {
+		margin-bottom: 130px;
+	}
+}
