@@ -1,0 +1,23 @@
+.form-control {
+	border: 1px solid $color-blue;
+	padding: 19px 23px;
+	border-radius: 10px;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 700;
+	background-color: $color-white;
+	transition: background-color $transition-default;
+
+	&::placeholder {
+		color: #7A797A;
+	}
+
+	&:focus {
+		outline: none;
+		background-color: #DDE5EC;
+	}
+
+	&--textarea {
+		resize: none;
+	}
+}

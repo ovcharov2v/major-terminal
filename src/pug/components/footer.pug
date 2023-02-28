@@ -1,6 +1,78 @@
+// Footer
 footer.footer
-	.footer__copyright
-		span(data-actual-year)
-
-	.footer__developer
-		| &copy;&nbsp;Девять линий
+	.container.footer__container
+		.footer__row
+			// Nav col
+			.footer__col
+				p.footer__nav-title Индустрии
+				ul.footer__nav-list
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Fashion
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Telecom
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Helthcare
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Автомотив
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") POSM маркетинг
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") FMCG
+			// Nav col
+			.footer__col
+				p.footer__nav-title Услуги
+				ul.footer__nav-list
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Упаковка
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Фуллфилмент
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Ответственное хранение
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Таможенный склад
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Кросс-докинг
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Еще услуга
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Еще название услуги
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Еще название услуги
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Еще название услуги
+			// Nav col
+			.footer__col
+				p.footer__nav-title Major Terminal
+				ul.footer__nav-list
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") О нас
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Кейсы
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Пресс-релизы
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Наши склады
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Контакты
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Преимущества
+					li.footer__nav-elem
+						a.footer__nav-link(href="#") Карьера
+			// Contact col
+			.footer__col.footer__col--contacts
+				a.footer__logo-link(href="/")
+					img.footer__logo(src="images/common/logo.svg", alt="Major")
+				p.footer__text-secretariat
+					a.footer__link(href="tel:84957376006") 8 (495) 737 60 06
+					|
+					| — Секретариат
+				a.footer__link.footer__link--mail(href="mailto:info@mjr-terminal.ru") info@mjr-terminal.ru
+				a.footer__link.footer__link--contacts(href="/") Связаться с нами
+				p.footer__text Мы в социальных сетях
+				ul.footer__social.social
+					li.social__elem
+						a.social__link(href="", target="_blank", rel="noreferrer", aria-label="Youtube")
+							+svg("youtube-blue")(class="social__link-icon")
+					li.social__elem
+						a.social__link(href="", target="_blank", rel="noreferrer", aria-label="Telegram")
+							+svg("telegram")(class="social__link-icon")

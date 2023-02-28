@@ -1,0 +1,87 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $font-additional;
+	text-align: center;
+	white-space: nowrap;
+	border-radius: 100px;
+
+
+	&--outline-blue {
+		border: 3px solid $color-blue;
+		border-radius: 50px;
+		color: $color-blue;
+		transition: background-color $transition-default, color $transition-default;
+
+		&:hover {
+			background-color: $color-blue;
+			color: $color-white;
+		}
+	}
+
+	&--blue {
+		border: 3px solid $color-blue;
+		border-radius: 50px;
+		background-color: $color-blue;
+		color: $color-white;
+		transition: background-color $transition-default, border-color $transition-default;
+
+		&:hover {
+			background-color: darken($color-blue, 10%);
+			border-color: darken($color-blue, 10%);
+		}
+	}
+
+	&--white {
+		background-color: $color-white;
+		color: $color-blue;
+		transition: box-shadow $transition-default, color $transition-default;
+
+		&:hover {
+			color: $color-black;
+			box-shadow: 0 0 10px rgba($color-blue, .15);
+		}
+	}
+
+	&--lg {
+		padding: 29px 40px;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+
+	&--md {
+		padding: 22px 40px;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+
+		&.button--with-icon {
+			padding-top: 19px;
+			padding-bottom: 19px;
+		}
+	}
+
+	&--sm {
+		padding: 16px 33px;
+		font-family: $font-primary;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 500;
+	}
+
+	&--xs {
+		padding: 7px 14px;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 500;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+	}
+}

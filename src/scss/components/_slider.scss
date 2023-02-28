@@ -1,0 +1,134 @@
+.slider {
+	overflow: visible;
+
+	&__slide {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		width: 383px;
+		padding-bottom: 34px;
+		border-radius: 25px;
+		user-select: none;
+
+		&--wide {
+			width: 800px;
+		}
+	}
+
+	&__slide-bg-box {
+		flex-grow: 1;
+		border-radius: 25px;
+		background-color: $color-blue;
+		overflow: hidden;
+	}
+
+	&__slide-bg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__slide-title {
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		transform: translateX(50%);
+		margin: 0;
+		padding: 28px 49px;
+		border-radius: 25px;
+		background-color: $color-white;
+		font-family: $font-additional;
+		font-size: 24px;
+		line-height: 1;
+		font-weight: 500;
+
+		.slider__slide--wide & {
+			right: 70px;
+			transform: none;
+		}
+	}
+
+	&__slide-text {
+		position: absolute;
+		top: -29px;
+		left: -29px;
+		width: 100%;
+		max-width: 340px;
+		margin: 0;
+		padding: 25px 36px 38px;
+		background-color: $color-blue;
+		border-radius: 25px;
+		font-family: $font-secondary;
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: 700;
+		color: $color-white;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 7px;
+		background-color: $color-transparent;
+		border: none;
+		color: $color-blue;
+
+		&:disabled {
+			color: $color-blue-light;
+			cursor: not-allowed;
+		}
+
+		&--prev {
+			margin-right: 10px;
+		}
+
+		&--next {
+			margin-left: 10px;
+		}
+	}
+
+	&__btn-arrow {
+		width: 15px;
+		height: 24px;
+
+		.slider__btn--prev & {
+			transform: scaleX(-1);
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+	}
+
+	&__pagintaion {
+		display: flex;
+		align-items: center;
+		margin: 0 -6px;
+	}
+
+	&__bullet {
+		width: 8px;
+		height: 8px;
+		padding: 0;
+		border-radius: 50%;
+		border: none;
+		background-color: #429EDD;
+		margin: 0 6px;
+		transition: transform $transition-default, background-color $transition-default;
+
+		&--active {
+			background-color: $color-blue-medium;
+			transform: scale(2);
+		}
+
+		&:hover {
+			background-color: $color-blue-medium;
+		}
+	}
+}

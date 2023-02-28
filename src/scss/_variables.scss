@@ -1,25 +1,21 @@
-// stylelint-disable scss/dollar-variable-empty-line-before
-
-// COLORS
+// Colors
+$color-transparent: rgba(#fff, 0);
+$color-body: #F6F6F6;
 $color-black: #000;
 $color-white: #fff;
 $color-gray: #eee;
 
-// FONTS
-// stylelint-disable-next-line
-$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$color-blue: #004996;
+$color-blue-medium: #00539F;
+$color-blue-light: #2B6BCD;
 
-// EASING TRANSITIONS
-$duration-normal: 0.4s;
-$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
-$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
-$easing-out: ease-out;
-$easing-in: ease-in;
+$color-red: #E10000;
 
-// Settings
-$desktop: 1025;
-$desktop-xl: 1800;
-$laptop: 1440;
-$tablet: 768;
-$mobile: 320;
-$desktop-vh: 750;
+
+// Fonts
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Roboto Condensed', sans-serif;
+$font-additional: 'Montserrat', sans-serif;
+
+// Transitions
+$transition-default: .2s ease;

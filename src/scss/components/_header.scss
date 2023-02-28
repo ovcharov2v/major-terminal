@@ -1,0 +1,136 @@
+.header {
+	background-color: $color-white;
+
+	&__row {
+		border-bottom: 1px solid rgba(#3C3C3C26, .15);
+	}
+
+	&__top-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 60px;
+	}
+
+	&__logo-list {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		margin: 0 -7px;
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	&__logo-list-elem {
+		padding: 0 7px;
+	}
+
+	&__logo-list-link {
+		display: inline-block;
+	}
+
+	&__logo-list-img {
+		max-width: 100%;
+	}
+
+	&__text {
+		flex-grow: 1;
+		margin: 0;
+		padding-left: 157px;
+		font-family: $font-additional;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	&__phone {
+		font-weight: 700;
+		color: inherit;
+		transition: color $transition-default;
+
+		&:hover {
+			color: $color-blue;
+		}
+	}
+
+	&__search {
+		display: flex;
+		align-items: center;
+		width: 184px;
+		height: 100%;
+		padding: 5px 20px;
+		border-style: solid;
+		border-color: rgba(#3C3C3C26, .15);
+		border-width: 0 1px;
+	}
+
+	&__lang {
+		width: 138px;
+		padding-left: 24px;
+	}
+
+	&__nav-box {
+		display: flex;
+		align-items: center;
+		padding-right: 147px;
+		height: 90px;
+	}
+
+	&__logo-link {
+		display: inline-block;
+	}
+
+	&__logo-img {
+		width: 117px;
+	}
+
+	&__nav {
+		margin: 0 auto;
+	}
+
+	&__nav-list {
+		display: flex;
+		list-style-type: none;
+		padding-left: 0;
+		margin: 0;
+	}
+
+	&__nav-elem {
+	}
+
+	&__nav-link {
+		position: relative;
+		display: inline-block;
+		padding: 36px 8px;
+		font-family: $font-additional;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-blue;
+		transition: color $transition-default;
+
+		&::after {
+			position: absolute;
+			top: calc(100% - 2px);
+			left: 50%;
+			width: 19px;
+			height: 4px;
+			transform: translateX(-50%) scaleX(0);
+			border-radius: 4px;
+			background-color: $color-transparent;
+			content: "";
+			transition: background-color $transition-default, transform $transition-default;
+		}
+
+		&:hover,
+		&--active {
+			color: $color-red;
+
+			&::after {
+				background-color: $color-red;
+				transform: translateX(-50%) scaleX(1);
+			}
+		}
+	}
+}
