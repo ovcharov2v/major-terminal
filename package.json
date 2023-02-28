@@ -2,10 +2,16 @@
 	"name": "ninelines-template",
 	"version": "3.0.4",
 	"description": "Шаблон для разработки сайтов",
-	"repository": "ninelines-team/ninelines-template",
-	"author": "Ninelines Agency <info@ninelines.agency>",
+	"repository": "https://github.com/ovcharov2v/dreamheads-major",
+	"author": "",
 	"license": "ISC",
 	"private": true,
+	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
+		"start": "gulp",
+		"build": "gulp build"
+	},
 	"devDependencies": {
 		"@babel/cli": "7.14.8",
 		"@babel/core": "7.14.8",
@@ -63,14 +69,10 @@
 		"@babel/plugin-transform-runtime": "7.14.5",
 		"@babel/runtime": "7.14.8",
 		"core-js": "3.15.2",
+		"gh-pages": "5.0.0",
 		"lozad": "1.16.0",
 		"normalize.css": "8.0.1",
 		"swiper": "9.0.5"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
 	},
 	"lint-staged": {
 		"*.(js|jsx|ts|tsx)": "eslint --color --fix",
