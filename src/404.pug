@@ -1,0 +1,24 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "404"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], '404 ошибка')(class="container")
+	section.section-404.container
+		img.section-404__img(src="images/section-404/img-404.svg", alt)
+		h1.section-404__title 404
+		p.section-404__text Что-то пошло не так! Нужная страница не найдена
+			br
+			|Вы можете перейти на
+			|
+			a.section-404__link(href="/") главную страницу
+

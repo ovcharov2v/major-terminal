@@ -1,0 +1,44 @@
+.section-404 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 60px;
+	padding-bottom: 144px;
+	background-image: url("../images/section-404/bg-404.svg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+
+	&__img {
+		max-width: 100%;
+		margin-bottom: 54px;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 26px;
+		font-size: 200px;
+		line-height: 200px;
+		font-weight: 600;
+		color: $color-blue;
+	}
+
+	&__text {
+		margin: 0;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 300;
+	}
+
+	&__link {
+		font-weight: 700;
+		color: $color-blue;
+		transition: color $transition-default;
+
+		&:hover {
+			color: $color-red;
+		}
+	}
+}
