@@ -1,0 +1,46 @@
+.section-hero {
+	position: relative;
+	z-index: 0;
+	padding-bottom: 67px;
+	color: $color-white;
+
+	&::before {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, #00539F 50.02%, rgba(0, 83, 159, 0) 79.38%);
+		content: "";
+	}
+
+	&__bg {
+		position: absolute;
+		z-index: -2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__breadcrumb {
+		margin-bottom: 18px;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 34px;
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: 900;
+	}
+
+	&__text {
+		margin: 0;
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+}

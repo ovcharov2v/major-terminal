@@ -10,6 +10,10 @@
 		font-size: 12px;
 		line-height: 12px;
 		color: $color-black;
+
+		.breadcrumb--white & {
+			color: $color-white;
+		}
 	}
 
 	&__item {
@@ -19,7 +23,7 @@
 	}
 
 	&__link {
-		font-weight: 700;
+		font-weight: 500;
 		color: inherit;
 	}
 
@@ -33,5 +37,9 @@
 		height: 18px;
 		margin-left: 16px;
 		color: $color-blue;
+
+		.breadcrumb--white & {
+			color: $color-white;
+		}
 	}
 }

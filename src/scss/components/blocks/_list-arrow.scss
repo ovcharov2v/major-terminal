@@ -1,0 +1,46 @@
+.list-arrow {
+	margin: 0;
+	padding-left: 0;
+	font-size: 24px;
+	list-style-type: none;
+
+	&--red {
+		line-height: 50px;
+		font-weight: 700;
+		color: $color-blue;
+	}
+
+	&--blue {
+		font-family: $font-secondary;
+		line-height: 24px;
+	}
+
+	&__elem {
+		position: relative;
+		margin-bottom: 8px;
+		padding-left: 34px;
+
+		&::before {
+			position: absolute;
+			top: 14px;
+			left: 0;
+			width: 12px;
+			height: 20px;
+			background-repeat: no-repeat;
+			background-position: center;
+			content: "";
+		}
+
+		.list-arrow--red & {
+			&::before {
+				background-image: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 19L10 10L1 1' stroke='%23E10000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+			}
+		}
+
+		.list-arrow--blue & {
+			&::before {
+				background-image: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 19L10 10L1 1' stroke='%23004996' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+			}
+		}
+	}
+}

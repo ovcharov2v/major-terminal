@@ -12,7 +12,7 @@ append vars
 		link.icon32x32 = "favicons/favicon-32x32.png"
 
 block content
-	+breadcrumb(['Главная'], 'Индустрии')
+	+breadcrumb(['Главная'], 'Индустрии')(class="container")
 
 	// Section Industries
 	section.section-industries.container
@@ -76,6 +76,7 @@ block content
 				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-ready/bg6.jpg", alt)
+
 	// Section Invite
 	.section-invite
 		.container
