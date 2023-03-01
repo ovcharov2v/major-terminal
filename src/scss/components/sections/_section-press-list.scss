@@ -1,0 +1,66 @@
+.section-press-list {
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	&__title-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 57px;
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+	}
+
+	&__year {
+		margin-right: 16px;
+		padding: 14px 20px;
+		background-color: $color-white;
+		border-radius: 40px;
+		font-family: $font-additional;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-black;
+		text-align: center;
+		transition: background-color $transition-default, color $transition-default;
+
+		&:hover {
+			background-color: lighten($color-blue, 65%);
+		}
+
+		&--active {
+			background-color: $color-blue;
+			color: $color-white;
+		}
+	}
+
+	&__search {
+		width: 290px;
+		max-width: 100%;
+	}
+
+	&__top-row {
+		margin-bottom: 62px;
+	}
+
+	&__bottom-row {
+		margin-bottom: 84px;
+	}
+
+	&__button-row {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	&__button {
+		width: 100%;
+		max-width: 240px;
+	}
+}

@@ -6,5 +6,9 @@
 		width: 100%;
 		max-width: 33.3333%;
 		padding: 0 15px;
+
+		.news-row--two-col & {
+			max-width: 50%;
+		}
 	}
 }
