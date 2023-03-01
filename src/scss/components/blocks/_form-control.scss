@@ -8,6 +8,19 @@
 	background-color: $color-white;
 	transition: background-color $transition-default;
 
+	&--round {
+		border: none;
+		border-radius: 50px;
+		padding: 25px 32px;
+	}
+
+	&--gray {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-color: #e2e2e2;
+		border-radius: 40px;
+	}
+
 	&::placeholder {
 		color: #7A797A;
 	}
@@ -19,5 +32,9 @@
 
 	&--textarea {
 		resize: none;
+
+		&.form-control--round {
+			padding: 28px 44px;
+		}
 	}
 }

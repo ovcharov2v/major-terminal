@@ -26,7 +26,7 @@ block content
 				.card__title-box
 					p.card__title Fashion
 					+svg("chevron-right")(class="card__arrow")
-				span.button.button--white.button--xs Подробнее
+				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-ready/bg1.jpg", alt)
 			// Card
@@ -34,7 +34,7 @@ block content
 				.card__title-box
 					p.card__title Healthcare
 					+svg("chevron-right")(class="card__arrow")
-				span.button.button--white.button--xs Подробнее
+				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-ready/bg2.jpg", alt)
 			// Card
@@ -42,7 +42,7 @@ block content
 				.card__title-box
 					p.card__title Automotive
 					+svg("chevron-right")(class="card__arrow")
-				span.button.button--white.button--xs Подробнее
+				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-ready/bg3.jpg", alt)
 			// Card
@@ -50,7 +50,7 @@ block content
 				.card__title-box
 					p.card__title FMCG
 					+svg("chevron-right")(class="card__arrow")
-				span.button.button--white.button--xs Подробнее
+				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-ready/bg4.jpg", alt)
 			// Card
@@ -58,7 +58,7 @@ block content
 				.card__title-box
 					p.card__title Telecom
 					+svg("chevron-right")(class="card__arrow")
-				span.button.button--white.button--xs Подробнее
+				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-ready/bg5.jpg", alt)
 			// Card
@@ -66,7 +66,7 @@ block content
 				.card__title-box
 					p.card__title POSM
 					+svg("chevron-right")(class="card__arrow")
-				span.button.button--white.button--xs Подробнее
+				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-ready/bg6.jpg", alt)
 
@@ -191,21 +191,27 @@ block content
 									img.news-card__img(src="images/common/news1.jpg", alt)
 									.news-card__content-box
 										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-										p.news-card__title Логистика в период ограничений на 06 октября
+										p.news-card__title Логистика в период ограничений
+											br
+											| на 06 октября
 							// News
 							.news-row__card-box
 								a.news-card(href="#")
 									img.news-card__img(src="images/common/news2.jpg", alt)
 									.news-card__content-box
 										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-										p.news-card__title Логистика в период ограничений на 06 октября
+										p.news-card__title Логистика в период ограничений
+											br
+											| на 06 октября
 							// News
 							.news-row__card-box
 								a.news-card(href="#")
 									img.news-card__img(src="images/common/news3.jpg", alt)
 									.news-card__content-box
 										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-										p.news-card__title Логистика в период ограничений на 06 октября
+										p.news-card__title Логистика в период ограничений
+											br
+											| на 06 октября
 					// Content
 					.tabs__content#content2
 						.news-row
@@ -215,32 +221,32 @@ block content
 									img.news-card__img(src="images/common/news1.jpg", alt)
 									.news-card__content-box
 										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-										p.news-card__title Логистика в период ограничений на 06 октября
+										p.news-card__title Логистика в период ограничений на 06 октября
 							// News
 							.news-row__card-box
 								a.news-card(href="#")
 									img.news-card__img(src="images/common/news1.jpg", alt)
 									.news-card__content-box
 										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-										p.news-card__title Логистика в период ограничений на 06 октября
+										p.news-card__title Логистика в период ограничений на 06 октября
 							// News
 							.news-row__card-box
 								a.news-card(href="#")
 									img.news-card__img(src="images/common/news1.jpg", alt)
 									.news-card__content-box
 										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-										p.news-card__title Логистика в период ограничений на 06 октября
+										p.news-card__title Логистика в период ограничений на 06 октября
 	// Section Contacts
 	section.section-contacts
 		.container
 			h2.h2.text-blue.section-contacts__title Есть вопросы? Свяжитесь с нами!
 			form.section-contacts__form
 				.section-contacts__form-row
-					.section-contacts__form-col
+					.section-contacts__form-col.section-contacts__form-col--inputs
 						input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
 						input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
 						input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
-					.section-contacts__form-col
+					.section-contacts__form-col.section-contacts__form-col--message
 						textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
 				.section-contacts__form-submit-box
 					button.button.button--blue.button--lg.section-contacts__form-submit Отправить

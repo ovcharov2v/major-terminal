@@ -1,0 +1,93 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Пресс-релизы"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], 'Пресс-релизы')(class="container")
+	// Section News
+	section.section-press-list.container
+		.section-press-list__title-box
+			h1.h2.text-blue.section-press-list__title Пресс-релизы
+			.section-press-list__nav
+				a.section-press-list__year(href="#") 2022
+				a.section-press-list__year(href="#") 2021
+				a.section-press-list__year(href="#") 2020
+				input.form-control.form-control--gray.section-press-list__search(type="text", placeholder="Поиск по пресс-релизам...")
+		.news-row.news-row--two-col.section-press-list__top-row
+			// News
+			.news-row__card-box
+				a.news-card.news-card--big.news-card--radius-small(href="#")
+					img.news-card__img(src="images/common/news4.jpg", alt)
+					.news-card__content-box
+						time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+						p.news-card__title Логистика в период
+							br
+							| ограничений на 06 октября
+			// News
+			.news-row__card-box
+				a.news-card.news-card--big.news-card--radius-small(href="#")
+					img.news-card__img(src="images/common/news5.jpg", alt)
+					.news-card__content-box
+						time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+						p.news-card__title Логистика в период
+							br
+							| ограничений на 06 октября
+		.news-row.section-press-list__bottom-row
+			// News
+			.news-row__card-box
+				a.news-card.news-card--medium.news-card--radius-small(href="#")
+					img.news-card__img(src="images/common/news1.jpg", alt)
+					.news-card__content-box
+						time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+						p.news-card__title Логистика в период ограничений
+							br
+							| на 06 октября
+			// News
+			.news-row__card-box
+				a.news-card.news-card--medium.news-card--radius-small(href="#")
+					img.news-card__img(src="images/common/news2.jpg", alt)
+					.news-card__content-box
+						time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+						p.news-card__title Логистика в период ограничений
+							br
+							| на 06 октября
+			// News
+			.news-row__card-box
+				a.news-card.news-card--medium.news-card--radius-small(href="#")
+					img.news-card__img(src="images/common/news3.jpg", alt)
+					.news-card__content-box
+						time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+						p.news-card__title Логистика в период ограничений
+							br
+							| на 06 октября
+		.section-press-list__button-row
+			button.button.button--outline-blue.button--md.button--text-big.section-press-list__button Показать еще
+
+	// Section Invite
+	.section-invite
+		.container
+			.section-invite__row
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Вебинары
+							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Наши кейсы
+							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+

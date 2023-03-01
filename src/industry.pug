@@ -1,0 +1,225 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Индустрия"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	// Section Hero
+	section.section-hero
+		.container
+			+breadcrumb(['Главная'], 'Индустрии')(class="section-hero__breadcrumb breadcrumb--white")
+			h1.section-hero__title
+				span.text-weight-light Индустрия
+				|
+				| Fashion
+			p.section-hero__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость
+				br
+				| и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+			img.section-hero__bg(src="images/section-hero/bg1.jpg", alt)
+	// Section Results
+	.section-results.container
+		.section-results__row
+			// Col
+			.section-results__col
+				p.section-results__value 5 млн
+				p.section-results__text Выгрузка (коробов) / год
+			// Col
+			.section-results__col
+				p.section-results__value 100 млн
+				p.section-results__text Приемка (штук) / год
+			// Col
+			.section-results__col
+				p.section-results__value 400 тыс
+				p.section-results__text Восстановление качества
+					br
+					|(штук) / год
+			// Col
+			.section-results__col
+				p.section-results__value 15 млн
+				p.section-results__text Стикеров (штук) / год
+		a.button.button--blue.button--md.section-results__button Связаться с нами
+	// Section Advantages
+	section.section-advantages.container
+		h2.h2.text-blue.section-advantages__title
+			span.text-blue-light Учитываем
+			|
+			|
+			span.text-red все
+			|
+			| особенности
+			br
+			| индустрии Fashion
+		.section-advantages__grid
+			// Card
+			a.section-advantages__card(href="#")
+				.section-advantages__card-title-box
+					+svg("chevron-right")(class="section-advantages__card-arrow")
+					h3.section-advantages__card-title Ярко выраженная сезонность
+				p.section-advantages__card-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).
+			// Card
+			a.section-advantages__card(href="#")
+				.section-advantages__card-title-box
+					+svg("chevron-right")(class="section-advantages__card-arrow")
+					h3.section-advantages__card-title Обширный справочник
+				p.section-advantages__card-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).
+			// Card
+			a.section-advantages__card(href="#")
+				.section-advantages__card-title-box
+					+svg("chevron-right")(class="section-advantages__card-arrow")
+					h3.section-advantages__card-title Срок оказания услуг
+				p.section-advantages__card-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).
+			// Card
+			a.section-advantages__card(href="#")
+				.section-advantages__card-title-box
+					+svg("chevron-right")(class="section-advantages__card-arrow")
+					h3.section-advantages__card-title Предпродажная подготовка
+				p.section-advantages__card-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).
+			// Card
+			a.section-advantages__card(href="#")
+				.section-advantages__card-title-box
+					+svg("chevron-right")(class="section-advantages__card-arrow")
+					h3.section-advantages__card-title Таможенный склад
+				p.section-advantages__card-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).
+			// Card
+			a.section-advantages__card(href="#")
+				.section-advantages__card-title-box
+					+svg("chevron-right")(class="section-advantages__card-arrow")
+					h3.section-advantages__card-title Срок оказания услуг
+				p.section-advantages__card-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).
+	// Section Request
+	section.section-request.container
+		.section-request__row
+			.section-request__col
+				h2.h2.text-blue.section-request__title Все
+					|
+					|
+					span.text-blue-light складские услуги
+					br
+					| у одного оператора
+				.tabs.tabs--simple
+					ul.tabs__nav-list
+						li.tabs__nav-elem
+							button.tabs__nav-button.tabs__nav-button--active(data-content="content1") Сортировка
+						li.tabs__nav-elem
+							button.tabs__nav-button(data-content="content2") Склад
+						li.tabs__nav-elem
+							button.tabs__nav-button(data-content="content3") Доп.услуги
+						li.tabs__nav-elem
+							button.tabs__nav-button(data-content="content4") Дистрибуция
+					.tabs__content-box
+						// Content
+						.tabs__content.tabs__content--active#content1
+							ul.list-arrow.list-arrow--red.section-request__list
+								li.list-arrow__elem Cтикеровка, маркировка (включая Честный Знак)
+								li.list-arrow__elem Переупаковка
+								li.list-arrow__elem Копакинг
+								li.list-arrow__elem Измерение МГХ
+							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
+						// Content
+						.tabs__content#content2
+							ul.list-arrow.list-arrow--red.section-request__list
+								li.list-arrow__elem Переупаковка
+								li.list-arrow__elem Копакинг
+								li.list-arrow__elem Измерение МГХ
+							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
+						// Content
+						.tabs__content#content3
+							ul.list-arrow.list-arrow--red.section-request__list
+								li.list-arrow__elem Cтикеровка, маркировка (включая Честный Знак)
+								li.list-arrow__elem Переупаковка
+								li.list-arrow__elem Измерение МГХ
+							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
+						// Content
+						.tabs__content#content4
+							ul.list-arrow.list-arrow--red.section-request__list
+								li.list-arrow__elem Cтикеровка, маркировка (включая Честный Знак)
+								li.list-arrow__elem Переупаковка
+								li.list-arrow__elem Копакинг
+							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
+			.section-request__col
+				img.section-request__img(src="images/section-request/img.svg", alt)
+
+	// Section Description
+	.section-description.container
+		.section-description__grid
+			// Panel
+			article.section-description__panel
+				img.section-description__panel-img(src="images/section-description/img1.jpg", alt)
+				h2.section-description__panel-title Личный кабинет клиента
+				p.section-description__panel-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).
+			// Panel
+			article.section-description__panel
+				img.section-description__panel-img(src="images/section-description/img2.jpg", alt)
+				h2.section-description__panel-title Легкая интеграция
+				p.section-description__panel-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).
+			// Panel
+			article.section-description__panel
+				h2.section-description__panel-title Служба качества
+				p.section-description__panel-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).
+			// Panel
+			article.section-description__panel
+				h2.section-description__panel-title Собственная WMS система
+				p.section-description__panel-text Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).
+
+	// Section Slider
+	.section-slider
+		.container
+			.swiper.slider.slider--simple.section-slider__slider
+				.swiper-wrapper
+					// Slide
+					.swiper-slide.slider__slide.slider__slide--video
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/section-slider/slide1.jpg", alt)
+						button.slider__play-button
+							+svg("play")(class="slider__play-icon")
+					// Slide
+					.swiper-slide.slider__slide
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/section-slider/slide2.jpg", alt)
+					// Slide
+					.swiper-slide.slider__slide
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/section-slider/slide3.jpg", alt)
+					// Slide
+					.swiper-slide.slider__slide
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/section-slider/slide4.jpg", alt)
+					// Slide
+					.swiper-slide.slider__slide
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/section-slider/slide1.jpg", alt)
+					// Slide
+					.swiper-slide.slider__slide
+						.slider__slide-bg-box
+							img.slider__slide-bg(src="images/section-slider/slide2.jpg", alt)
+				.slider__nav-box
+					.slider__nav
+						button.slider__btn.slider__btn--prev(aria-label="Назад")
+							+svg("chevron-slider")(class="slider__btn-arrow")
+						button.slider__btn.slider__btn--next(aria-label="Вперед")
+							+svg("chevron-slider")(class="slider__btn-arrow")
+
+	// Section Contacts
+	section.section-contacts.section-contacts--blue
+		.container
+			h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
+			form.section-contacts__form
+				.section-contacts__form-row
+					.section-contacts__form-col.section-contacts__form-col--inputs
+						input.form-control.form-control--round.section-contacts__form-input(type="text", placeholder="Имя")
+						input.form-control.form-control--round.section-contacts__form-input(type="tel", placeholder="*Телефон")
+						input.form-control.form-control--round.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
+					.section-contacts__form-col.section-contacts__form-col--message
+						textarea.form-control.form-control--round.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
+				.section-contacts__form-submit-box
+					button.button.button--outline-white.button--lg.section-contacts__form-submit Отправить
+
+

@@ -11,6 +11,7 @@
 	&--outline-blue {
 		border: 3px solid $color-blue;
 		border-radius: 50px;
+		background-color: $color-transparent;
 		color: $color-blue;
 		transition: background-color $transition-default, color $transition-default;
 
@@ -19,6 +20,14 @@
 			color: $color-white;
 		}
 	}
+
+	&--outline-white {
+		 border: 3px solid $color-white;
+		 border-radius: 50px;
+		background-color: $color-transparent;
+		 color: $color-white;
+		 transition: background-color $transition-default, color $transition-default;
+	 }
 
 	&--blue {
 		border: 3px solid $color-blue;
@@ -58,6 +67,12 @@
 		font-weight: 700;
 
 		&.button--with-icon {
+			padding-top: 19px;
+			padding-bottom: 19px;
+		}
+
+		&.button--text-big {
+			font-size: 18px;
 			padding-top: 19px;
 			padding-bottom: 19px;
 		}

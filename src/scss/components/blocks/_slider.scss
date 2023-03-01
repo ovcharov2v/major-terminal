@@ -14,6 +14,16 @@
 		&--wide {
 			width: 800px;
 		}
+
+		&--video {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.slider--simple & {
+			padding-bottom: 0;
+		}
 	}
 
 	&__slide-bg-box {
@@ -79,6 +89,10 @@
 		&:disabled {
 			color: $color-blue-light;
 			cursor: not-allowed;
+
+			.slider--simple & {
+				color: $color-black;
+			}
 		}
 
 		&--prev {
@@ -99,11 +113,28 @@
 		}
 	}
 
+	&__nav-box {
+		.slider--simple & {
+			position: relative;
+			z-index: 10;
+			transform: translateY(-50%);
+			text-align: center;
+		}
+	}
+
 	&__nav {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+
+		.slider--simple & {
+			display: inline-flex;
+			margin: 0;
+			padding: 11px 18px;
+			border-radius: 40px;
+			background-color: $color-white;
+		}
 	}
 
 	&__pagintaion {
@@ -130,5 +161,32 @@
 		&:hover {
 			background-color: $color-blue-medium;
 		}
+	}
+
+	&__play-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 107px;
+		height: 107px;
+		padding: 0;
+		background-color: $color-white;
+		border: none;
+		border-radius: 50%;
+		color: #d9d9d9;
+
+		&:hover {
+			color: $color-blue;
+		}
+	}
+	&__play-icon {
+		width: 46px;
+		height: 46px;
+	transform: translateX(6px);
+		transition: color $transition-default;
 	}
 }
