@@ -2641,11 +2641,11 @@ a {
     -webkit-transition: background-color 0.2s ease, color 0.2s ease;
     -o-transition: background-color 0.2s ease, color 0.2s ease;
     transition: background-color 0.2s ease, color 0.2s ease; }
-    .section-press-list__year:hover {
-      background-color: #e3f0ff; }
     .section-press-list__year--active {
       background-color: #004996;
       color: #fff; }
+    .section-press-list__year:not(.section-press-list__year--active):hover {
+      background-color: #e3f0ff; }
   .section-press-list__search {
     width: 290px;
     max-width: 100%; }
