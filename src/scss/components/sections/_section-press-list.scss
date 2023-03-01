@@ -31,13 +31,13 @@
 		text-align: center;
 		transition: background-color $transition-default, color $transition-default;
 
-		&:hover {
-			background-color: lighten($color-blue, 65%);
-		}
-
 		&--active {
 			background-color: $color-blue;
 			color: $color-white;
+		}
+
+		&:not(.section-press-list__year--active):hover {
+			background-color: lighten($color-blue, 65%);
 		}
 	}
 
