@@ -1,0 +1,99 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Индустрии"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], 'Индустрии')
+
+	// Section Industries
+	section.section-industries.container
+		h1.h1.text-blue.section-industries__title Индустрии
+		p.section-industries__description Обладаем экспертизой в различных областях, что делает нас профессионалами.
+		.section-industries__grid
+			// Card
+			a.section-industries__card.section-industries__card--top.card.card--text-top(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Fashion
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg1.jpg", alt)
+			// Card
+			a.section-industries__card.section-industries__card--top-wide.card.card--text-top(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Healthcare
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg2.jpg", alt)
+			// Card
+			a.section-industries__card.section-industries__card--top.card.card--text-top(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Automotive
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg3.jpg", alt)
+			// Card
+			a.section-industries__card.section-industries__card--bottom-wide.card.card--text-top(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title FMCG
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg4.jpg", alt)
+			// Card
+			a.section-industries__card.section-industries__card--bottom.card.card--text-top(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Telecom
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg5.jpg", alt)
+			// Card
+			a.section-industries__card.section-industries__card--bottom-wide.card.card--text-top(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title POSM
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-ready/bg6.jpg", alt)
+	// Section Invite
+	.section-invite
+		.container
+			.section-invite__row
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Вебинары
+							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Наши кейсы
+							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+
+
+
