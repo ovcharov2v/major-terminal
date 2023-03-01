@@ -191,6 +191,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/section-slider.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/section-slider.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var slider = document.querySelector('.section-slider__slider');
+  if (!slider) return;
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]],
+    slidesPerView: 3,
+    spaceBetween: 32,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.slider__btn--next',
+      prevEl: '.slider__btn--prev'
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/tabs.js":
 /*!***********************************!*\
   !*** ./src/js/components/tabs.js ***!
@@ -245,6 +273,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_section_services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/section-services */ "./src/js/components/section-services.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_section_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/section-slider */ "./src/js/components/section-slider.js");
+
 
 
 
