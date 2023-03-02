@@ -4,7 +4,7 @@
 	padding-top: 78px;
 	padding-bottom: 87px;
 	background-color: #E4EDF3;
-	background-image: url("../images/section-contacts/bg.jpg") ;
+	background-image: url("../images/section-contacts/bg.jpg");
 	background-repeat: no-repeat;
 	background-size: 50% auto;
 	background-position: right top;
@@ -30,6 +30,10 @@
 		}
 	}
 
+	&--job {
+		padding-top: 50px;
+	}
+
 	&__title {
 		margin-top: 0;
 		margin-bottom: 71px;
@@ -39,30 +43,57 @@
 			font-size: 32px;
 			line-height: 48px;
 		}
+
+		.section-contacts--job & {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-bottom: 47px;
+			font-family: $font-secondary;
+			font-size: 50px;
+			line-height: 100px;
+			font-weight: 700;
+			text-align: unset;
+		}
 	}
 
 	&__form {
 		width: 100%;
 		max-width: 1060px;
 		margin: 0 auto;
+
+		.section-contacts--job & {
+			margin: 0;
+		}
 	}
 
 	&__form-row {
 		display: flex;
 		margin: 0 -20px 73px;
+
+		.section-contacts--job & {
+			margin-bottom: 63px;
+		}
 	}
 
 	&__form-col {
 		width: 100%;
-		max-width: 45%;
 		padding: 0 20px;
 
 		&--inputs {
 			max-width: 45%;
+
+			.section-contacts--job & {
+				max-width: 46%;
+			}
 		}
 
 		&--message {
 			max-width: 55%;
+
+			.section-contacts--job & {
+				max-width: 54%;
+			}
 		}
 	}
 
@@ -79,6 +110,12 @@
 				margin-bottom: 30px;
 			}
 		}
+
+		.section-contacts--job & {
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
 	}
 
 	&__form-textarea {
@@ -89,10 +126,58 @@
 
 	&__form-submit-box {
 		text-align: center;
+
+		.section-contacts--job & {
+			display: flex;
+			align-items: center;
+			text-align: unset;
+		}
 	}
 
 	&__form-submit {
 		width: 100%;
 		max-width: 350px;
+	}
+
+	&__call-text {
+		margin-left: 30px;
+		font-family: $font-primary;
+		font-size: 24px;
+		line-height: 100px;
+		font-weight: 600;
+	}
+
+	&__call-link {
+		color: inherit;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__form-upload-text {
+		margin-top: 0;
+		margin-bottom: 47px;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-white;
+	}
+
+	&__form-upload-input {
+		display: none;
+	}
+
+	&__form-upload-label {
+		margin: 0;
+		padding: 12px 32px;
+		border: 1px dashed $color-white;
+		border-radius: 40px;
+		font-family: $font-additional;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-white;
+		cursor: pointer;
 	}
 }

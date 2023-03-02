@@ -1,0 +1,82 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Карточка вакансии"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], 'Вакансии')(class="container")
+
+	// Section Vacancy item
+	section.section-vacancy-item
+		.container
+			h2.h2.text-blue.section-vacancy-item__title Вакансии по рекламациям, Москва
+			.section-vacancy-item__description
+				p.section-vacancy-item__salary от 99 000 ₽ / мес.
+				button.button.button--blue.button--sm.button--text-big.section-vacancy-item__button Оставить заявку
+				p.section-vacancy-item__date Размещено: 3 дня назад
+			// Panel
+			.section-vacancy-item__panel
+				h3.section-vacancy-item__panel-title Обязанности
+				.section-vacancy-item__panel-row
+					ul.list-arrow.list-arrow--blue.section-vacancy-item__panel-list
+						li.list-arrow__elem Планирование и организация международных контейнерных перевозок
+						li.list-arrow__elem Контроль собственного контейнерного парка, организация
+						li.list-arrow__elem Взаимодействие с транспортными компаниями РФ, и иностранными агентами
+					ul.list-arrow.list-arrow--blue.section-vacancy-item__panel-list
+						li.list-arrow__elem Планирование и организация международных контейнерных перевозок
+						li.list-arrow__elem Контроль собственного контейнерного парка, организация
+						li.list-arrow__elem Взаимодействие с транспортными компаниями РФ, и иностранными агентами
+			// Panel
+			.section-vacancy-item__panel
+				h3.section-vacancy-item__panel-title Требования
+				.section-vacancy-item__panel-row
+					ul.list-arrow.list-arrow--blue.section-vacancy-item__panel-list
+						li.list-arrow__elem Знание рынка контейнерных перевозок
+						li.list-arrow__elem Знание систем слежения и дислокации ЖД вагонов и контейнеров кругооборота парка и его полной загрузки на каждом плече
+						li.list-arrow__elem Знание специализированных программ по контролю за контейнерным оборудованием
+					ul.list-arrow.list-arrow--blue.section-vacancy-item__panel-list
+						li.list-arrow__elem Опыт работы с контейнерами не менее 3 лет
+						li.list-arrow__elem Знание английского языка от Upper-Intermediate
+						li.list-arrow__elem Готовность работать с цифрами и массивами данных
+			// Panel
+			.section-vacancy-item__panel
+				h3.section-vacancy-item__panel-title Условия работы
+				.section-vacancy-item__panel-row
+					ul.list-arrow.list-arrow--blue.section-vacancy-item__panel-list
+						li.list-arrow__elem График 5/2, с 9-00 до 18-00, с перерывом на обед
+						li.list-arrow__elem Реальные перспективы карьерного и профессионального роста
+						li.list-arrow__elem Оформление по ТК РФ
+						li.list-arrow__elem Корпоративный транспорт: из Москвы от м. Строгино (30 минут), из Красногорска, из Нахабино, из Истры
+						li.list-arrow__elem Работа в молодой команде профессионалов
+	// Section Contacts
+	section.section-contacts.section-contacts--blue.section-contacts--job
+		.container
+			h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
+				span.section-contacts__call-text Или позвоните нам:
+					|
+					|
+					a.section-contacts__call-link(href="tel:+74951112233") +7 (495) 111-22-33
+			form.section-contacts__form
+				.section-contacts__form-row
+					.section-contacts__form-col.section-contacts__form-col--inputs
+						input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
+						input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
+						input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
+					.section-contacts__form-col.section-contacts__form-col--message
+						textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
+				.section-contacts__form-submit-box
+					.section-contacts__form-col.section-contacts__form-col--inputs
+						button.button.button--white.button--lg.section-contacts__form-submit Отправить
+					.section-contacts__form-col.section-contacts__form-col--message
+						p.section-contacts__form-upload-text Загрузите Ваше резюме –  это повысит шансы на ответ
+						input#upload.section-contacts__form-upload-input(type="file")
+						label.section-contacts__form-upload-label(for="upload") Загрузить файл
+
