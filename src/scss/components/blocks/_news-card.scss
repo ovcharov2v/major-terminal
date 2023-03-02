@@ -36,6 +36,10 @@
 		padding-top: 240px;
 	}
 
+	&--small {
+		padding-top: 183px;
+	}
+
 	&--radius-small {
 		&::before {
 			border-radius: 10px;
@@ -67,6 +71,9 @@
 			max-height: 240px;
 		}
 
+		.news-card--small & {
+			max-height: 183px;
+		}
 		.news-card--radius-small & {
 			border-radius: 10px;
 		}
@@ -89,6 +96,14 @@
 
 		.news-card--big:hover & {
 			transform: translateX(30px);
+		}
+
+		.news-card--small & {
+			max-width: calc(100% - 40px);
+		}
+
+		.news-card--small:hover & {
+			transform: translate(20px, -22px);
 		}
 	}
 
