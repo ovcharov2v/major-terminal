@@ -5,11 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Описание">
-		<title>Индустрия</title>
+		<title>Список вакансий</title>
 		<link rel="icon" href="favicons/favicon.ico">
 		<link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="stylesheet" href="./css/main.css?v=1677799533408">
+		<link rel="stylesheet" href="./css/main.css?v=1677799532589">
 	</head>
 	<body>
 		<!-- Header-->
@@ -81,268 +81,143 @@
 			</div>
 		</header>
 		<main>
-			<!-- Section Hero-->
-			<section class="section-hero">
+			<!-- Breadcrumbs-->
+			<div class="breadcrumb container">
+				<ul class="breadcrumb__list">
+					<li class="breadcrumb__item">
+						<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+						<svg class="breadcrumb__arrow">
+							<use xlink:href="#chevron-right"></use>
+						</svg>
+					</li>
+					<li class="breadcrumb__item"><span class="breadcrumb__current">Вакансии</span></li>
+				</ul>
+			</div>
+			<!-- Section Vacancy-->
+			<section class="section-vacancy">
 				<div class="container">
-					<!-- Breadcrumbs-->
-					<div class="breadcrumb section-hero__breadcrumb breadcrumb--white">
-						<ul class="breadcrumb__list">
-							<li class="breadcrumb__item">
-								<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
-								<svg class="breadcrumb__arrow">
-									<use xlink:href="#chevron-right"></use>
-								</svg>
-							</li>
-							<li class="breadcrumb__item"><span class="breadcrumb__current">Индустрии</span></li>
-						</ul>
+					<div class="job-search section-vacancy__search">
+						<form class="job-search__row">
+							<div class="dropdown">
+								<div class="dropdown__value-box">
+									<input class="dropdown__value" type="text" value="Москва" disabled>
+									<svg class="dropdown__arrow">
+										<use xlink:href="#chevron-dropdown"></use>
+									</svg>
+								</div>
+								<ul class="dropdown__options-list">
+									<li class="dropdown__option dropdown__option--selected" data-value="Москва">Москва</li>
+									<li class="dropdown__option" data-value="Санкт-Петербург">Санкт-Петербург</li>
+									<li class="dropdown__option" data-value="Нижний Новгород">Нижний Новгород</li>
+								</ul>
+							</div>
+							<div class="dropdown">
+								<div class="dropdown__value-box">
+									<input class="dropdown__value" type="text" value="Менеджмент" disabled>
+									<svg class="dropdown__arrow">
+										<use xlink:href="#chevron-dropdown"></use>
+									</svg>
+								</div>
+								<ul class="dropdown__options-list">
+									<li class="dropdown__option dropdown__option--selected" data-value="Менеджмент">Менеджмент</li>
+									<li class="dropdown__option" data-value="IT">IT</li>
+									<li class="dropdown__option" data-value="HR отдел">HR отдел</li>
+									<li class="dropdown__option" data-value="Склад">Склад</li>
+									<li class="dropdown__option" data-value="Служба качества">Служба качества</li>
+								</ul>
+							</div>
+							<button class="button button--outline-blue button--md button--text-big" type="submit">Найти</button>
+						</form>
 					</div>
-					<h1 class="section-hero__title"><span class="text-weight-light">Индустрия</span>
-						Fashion
-					</h1>
-					<p class="section-hero__text">Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость<br>и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.</p><img class="section-hero__bg" src="images/section-hero/bg1.jpg" alt>
+					<h2 class="h2 text-blue section-vacancy__title">Вакансии, Менеджмент</h2>
+					<p class="section-vacancy__subtitle">Найдено вакансий: 225</p>
+					<div class="section-vacancy__grid">
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary section-vacancy__item-salary--big">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">
+									<svg class="section-vacancy__item-icon">
+										<use xlink:href="#fire"></use>
+									</svg>Менеджер по рекламациям
+								</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+						<!-- Vacancy--><a class="section-vacancy__item" href="#">
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-city">г.Москва</p>
+								<p class="section-vacancy__item-salary">45 000 ₽</p>
+							</div>
+							<div class="section-vacancy__item-row">
+								<p class="section-vacancy__item-title">Менеджер по рекламациям</p><span class="section-vacancy__item-button">Подробнее</span>
+							</div></a>
+					</div>
 				</div>
 			</section>
-			<!-- Section Results-->
-			<div class="section-results container">
-				<div class="section-results__row">
-					<!-- Col-->
-					<div class="section-results__col">
-						<p class="section-results__value">5 млн</p>
-						<p class="section-results__text">Выгрузка (коробов) / год</p>
-					</div>
-					<!-- Col-->
-					<div class="section-results__col">
-						<p class="section-results__value">100 млн</p>
-						<p class="section-results__text">Приемка (штук) / год</p>
-					</div>
-					<!-- Col-->
-					<div class="section-results__col">
-						<p class="section-results__value">400 тыс</p>
-						<p class="section-results__text">Восстановление качества<br>(штук) / год</p>
-					</div>
-					<!-- Col-->
-					<div class="section-results__col">
-						<p class="section-results__value">15 млн</p>
-						<p class="section-results__text">Стикеров (штук) / год</p>
-					</div>
-				</div><a class="button button--blue button--md section-results__button">Связаться с нами</a>
-			</div>
-			<!-- Section Advantages-->
-			<section class="section-advantages container">
-				<h2 class="h2 text-blue section-advantages__title"><span class="text-blue-light">Учитываем</span>
-					<span class="text-red">все</span>
-					особенности<br>индустрии Fashion
-				</h2>
-				<div class="section-advantages__grid">
-					<!-- Card--><a class="section-advantages__card" href="#">
-						<div class="section-advantages__card-title-box">
-							<svg class="section-advantages__card-arrow">
-								<use xlink:href="#chevron-right"></use>
-							</svg>
-							<h3 class="section-advantages__card-title">Ярко выраженная сезонность</h3>
-						</div>
-						<p class="section-advantages__card-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).</p></a>
-					<!-- Card--><a class="section-advantages__card" href="#">
-						<div class="section-advantages__card-title-box">
-							<svg class="section-advantages__card-arrow">
-								<use xlink:href="#chevron-right"></use>
-							</svg>
-							<h3 class="section-advantages__card-title">Обширный справочник</h3>
-						</div>
-						<p class="section-advantages__card-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).</p></a>
-					<!-- Card--><a class="section-advantages__card" href="#">
-						<div class="section-advantages__card-title-box">
-							<svg class="section-advantages__card-arrow">
-								<use xlink:href="#chevron-right"></use>
-							</svg>
-							<h3 class="section-advantages__card-title">Срок оказания услуг</h3>
-						</div>
-						<p class="section-advantages__card-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).</p></a>
-					<!-- Card--><a class="section-advantages__card" href="#">
-						<div class="section-advantages__card-title-box">
-							<svg class="section-advantages__card-arrow">
-								<use xlink:href="#chevron-right"></use>
-							</svg>
-							<h3 class="section-advantages__card-title">Предпродажная подготовка</h3>
-						</div>
-						<p class="section-advantages__card-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).</p></a>
-					<!-- Card--><a class="section-advantages__card" href="#">
-						<div class="section-advantages__card-title-box">
-							<svg class="section-advantages__card-arrow">
-								<use xlink:href="#chevron-right"></use>
-							</svg>
-							<h3 class="section-advantages__card-title">Таможенный склад</h3>
-						</div>
-						<p class="section-advantages__card-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).</p></a>
-					<!-- Card--><a class="section-advantages__card" href="#">
-						<div class="section-advantages__card-title-box">
-							<svg class="section-advantages__card-arrow">
-								<use xlink:href="#chevron-right"></use>
-							</svg>
-							<h3 class="section-advantages__card-title">Срок оказания услуг</h3>
-						</div>
-						<p class="section-advantages__card-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков).</p></a>
-				</div>
-			</section>
-			<!-- Section Request-->
-			<section class="section-request container">
-				<div class="section-request__row">
-					<div class="section-request__col">
-						<h2 class="h2 text-blue section-request__title">
-							Все
-							<span class="text-blue-light">складские услуги</span><br>у одного оператора
-						</h2>
-						<div class="tabs tabs--simple">
-							<ul class="tabs__nav-list">
-								<li class="tabs__nav-elem">
-									<button class="tabs__nav-button tabs__nav-button--active" data-content="content1">Сортировка</button>
-								</li>
-								<li class="tabs__nav-elem">
-									<button class="tabs__nav-button" data-content="content2">Склад</button>
-								</li>
-								<li class="tabs__nav-elem">
-									<button class="tabs__nav-button" data-content="content3">Доп.услуги</button>
-								</li>
-								<li class="tabs__nav-elem">
-									<button class="tabs__nav-button" data-content="content4">Дистрибуция</button>
-								</li>
-							</ul>
-							<div class="tabs__content-box">
-								<!-- Content-->
-								<div class="tabs__content tabs__content--active" id="content1">
-									<ul class="list-arrow list-arrow--red section-request__list">
-										<li class="list-arrow__elem">Cтикеровка, маркировка (включая Честный Знак)</li>
-										<li class="list-arrow__elem">Переупаковка</li>
-										<li class="list-arrow__elem">Копакинг</li>
-										<li class="list-arrow__elem">Измерение МГХ</li>
-									</ul><a class="button button--blue button--md section-request__button" href="#">Оставить заявку</a>
-								</div>
-								<!-- Content-->
-								<div class="tabs__content" id="content2">
-									<ul class="list-arrow list-arrow--red section-request__list">
-										<li class="list-arrow__elem">Переупаковка</li>
-										<li class="list-arrow__elem">Копакинг</li>
-										<li class="list-arrow__elem">Измерение МГХ</li>
-									</ul><a class="button button--blue button--md section-request__button" href="#">Оставить заявку</a>
-								</div>
-								<!-- Content-->
-								<div class="tabs__content" id="content3">
-									<ul class="list-arrow list-arrow--red section-request__list">
-										<li class="list-arrow__elem">Cтикеровка, маркировка (включая Честный Знак)</li>
-										<li class="list-arrow__elem">Переупаковка</li>
-										<li class="list-arrow__elem">Измерение МГХ</li>
-									</ul><a class="button button--blue button--md section-request__button" href="#">Оставить заявку</a>
-								</div>
-								<!-- Content-->
-								<div class="tabs__content" id="content4">
-									<ul class="list-arrow list-arrow--red section-request__list">
-										<li class="list-arrow__elem">Cтикеровка, маркировка (включая Честный Знак)</li>
-										<li class="list-arrow__elem">Переупаковка</li>
-										<li class="list-arrow__elem">Копакинг</li>
-									</ul><a class="button button--blue button--md section-request__button" href="#">Оставить заявку</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="section-request__col"><img class="section-request__img" src="images/section-request/img.svg" alt></div>
-				</div>
-			</section>
-			<!-- Section Description-->
-			<div class="section-description container">
-				<div class="section-description__grid">
-					<!-- Panel-->
-					<article class="section-description__panel"><img class="section-description__panel-img" src="images/section-description/img1.jpg" alt>
-						<h2 class="section-description__panel-title">Личный кабинет клиента</h2>
-						<p class="section-description__panel-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).</p>
-					</article>
-					<!-- Panel-->
-					<article class="section-description__panel"><img class="section-description__panel-img" src="images/section-description/img2.jpg" alt>
-						<h2 class="section-description__panel-title">Легкая интеграция</h2>
-						<p class="section-description__panel-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).</p>
-					</article>
-					<!-- Panel-->
-					<article class="section-description__panel">
-						<h2 class="section-description__panel-title">Служба качества</h2>
-						<p class="section-description__panel-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).</p>
-					</article>
-					<!-- Panel-->
-					<article class="section-description__panel">
-						<h2 class="section-description__panel-title">Собственная WMS система</h2>
-						<p class="section-description__panel-text">Собственная система управления складом (WMS) с расширенными возможностями по учету дополнительных параметров товара (более 30 признаков). Зонирование товарных остатков по брендам, коллекциям, виду товара (одежда/ обувь/ аксессуары).</p>
-					</article>
-				</div>
-			</div>
-			<!-- Section Slider-->
-			<div class="section-slider">
+			<!-- Section Video link-->
+			<section class="section-video-link">
 				<div class="container">
-					<div class="swiper slider slider--simple section-slider__slider">
-						<div class="swiper-wrapper">
-							<!-- Slide-->
-							<div class="swiper-slide slider__slide slider__slide--video">
-								<div class="slider__slide-bg-box"><img class="slider__slide-bg" src="images/section-slider/slide1.jpg" alt></div>
-								<button class="slider__play-button">
-									<svg class="slider__play-icon">
-										<use xlink:href="#play"></use>
-									</svg>
-								</button>
-							</div>
-							<!-- Slide-->
-							<div class="swiper-slide slider__slide">
-								<div class="slider__slide-bg-box"><img class="slider__slide-bg" src="images/section-slider/slide2.jpg" alt></div>
-							</div>
-							<!-- Slide-->
-							<div class="swiper-slide slider__slide">
-								<div class="slider__slide-bg-box"><img class="slider__slide-bg" src="images/section-slider/slide3.jpg" alt></div>
-							</div>
-							<!-- Slide-->
-							<div class="swiper-slide slider__slide">
-								<div class="slider__slide-bg-box"><img class="slider__slide-bg" src="images/section-slider/slide4.jpg" alt></div>
-							</div>
-							<!-- Slide-->
-							<div class="swiper-slide slider__slide">
-								<div class="slider__slide-bg-box"><img class="slider__slide-bg" src="images/section-slider/slide1.jpg" alt></div>
-							</div>
-							<!-- Slide-->
-							<div class="swiper-slide slider__slide">
-								<div class="slider__slide-bg-box"><img class="slider__slide-bg" src="images/section-slider/slide2.jpg" alt></div>
-							</div>
-						</div>
-						<div class="slider__nav-box">
-							<div class="slider__nav">
-								<button class="slider__btn slider__btn--prev" aria-label="Назад">
-									<svg class="slider__btn-arrow">
-										<use xlink:href="#chevron-slider"></use>
-									</svg>
-								</button>
-								<button class="slider__btn slider__btn--next" aria-label="Вперед">
-									<svg class="slider__btn-arrow">
-										<use xlink:href="#chevron-slider"></use>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Section Contacts-->
-			<section class="section-contacts section-contacts--blue">
-				<div class="container">
-					<h2 class="text-white section-contacts__title">Есть вопросы? Свяжитесь с нами!</h2>
-					<form class="section-contacts__form">
-						<div class="section-contacts__form-row">
-							<div class="section-contacts__form-col section-contacts__form-col--inputs">
-								<input class="form-control form-control--round section-contacts__form-input" type="text" placeholder="Имя">
-								<input class="form-control form-control--round section-contacts__form-input" type="tel" placeholder="*Телефон">
-								<input class="form-control form-control--round section-contacts__form-input" type="email" placeholder="*Адрес электронной почты">
-							</div>
-							<div class="section-contacts__form-col section-contacts__form-col--message">
-								<textarea class="form-control form-control--round form-control--textarea section-contacts__form-textarea" placeholder="*Комментарий..."></textarea>
-							</div>
-						</div>
-						<div class="section-contacts__form-submit-box">
-							<button class="button button--outline-white button--lg section-contacts__form-submit">Отправить</button>
-						</div>
-					</form>
+					<h2 class="section-video-link__title">Посмотрите как мы работаем<br>и отдыхаем Major life 2023</h2><a class="button button--blue button--white-shadow button--md button--with-icon" href="#">
+						<svg class="button__icon">
+							<use xlink:href="#play"></use>
+						</svg>Посмотреть видео</a>
 				</div>
 			</section>
 		</main>
@@ -410,8 +285,8 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1677799533408"></script>
-		<script src="./js/main.js?v=1677799533408"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1677799532589"></script>
+		<script src="./js/main.js?v=1677799532589"></script><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="telegram">
 		<circle cx="25" cy="25" r="25" fill="currentColor"></circle>
 		<path d="M33.4399 18.6223L30.2711 33.566C30.0319 34.6205 29.4086 34.883 28.5229 34.3865L23.6944 30.8285L21.3649 33.0695C21.1069 33.3275 20.8916 33.5428 20.3944 33.5428L20.7416 28.6258L29.6899 20.54C30.0791 20.1935 29.6051 20.0008 29.0854 20.348L18.0229 27.314L13.2604 25.823C12.2246 25.4998 12.2059 24.7873 13.4764 24.29L32.1041 17.1133C32.9666 16.79 33.7211 17.3053 33.4399 18.623V18.6223Z" fill="white"></path>

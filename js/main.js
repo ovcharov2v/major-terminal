@@ -155,6 +155,43 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/components/dropdown.js":
+/*!***************************************!*\
+  !*** ./src/js/components/dropdown.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdownList = document.querySelectorAll('.dropdown');
+  if (dropdownList.length) {
+    dropdownList.forEach(function (dropdown) {
+      dropdown.addEventListener('click', function (evt) {
+        evt.stopPropagation();
+        if (!evt.target.closest(dropdown.querySelector('.dropdown__list-box'))) {
+          dropdown.classList.toggle('dropdown--active');
+        }
+      });
+      var input = dropdown.querySelector('.dropdown__value');
+      var optionsList = dropdown.querySelectorAll('.dropdown__option');
+      optionsList.forEach(function (option) {
+        option.addEventListener('click', function (e) {
+          e.preventDefault();
+          input.value = option.dataset.value;
+        });
+      });
+    });
+  }
+  document.addEventListener('click', closeAllSelect);
+  function closeAllSelect() {
+    dropdownList.forEach(function (dropdown) {
+      dropdown.classList.remove('dropdown--active');
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/section-services.js":
 /*!***********************************************!*\
   !*** ./src/js/components/section-services.js ***!
@@ -274,6 +311,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_section_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/section-slider */ "./src/js/components/section-slider.js");
+/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
