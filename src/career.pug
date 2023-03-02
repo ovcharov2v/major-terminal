@@ -1,0 +1,121 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Карьера"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	// Section Hero
+	section.section-hero.section-hero--career
+		.container
+			+breadcrumb(['Главная'], 'Карьера')(class="section-hero__breadcrumb breadcrumb--white")
+			h1.section-hero__title Карьера в Ma
+				span.text-red j
+				| or Terminal
+			p.section-hero__text Осуществление перевозки и оформления Карнета АТА выставочных макетов фюзеляжа
+				br
+				| дальнемагистрального бизнес-джета Bombardier
+			.section-hero__job-search
+				p.section-hero__job-label Поиск по вакансиям
+				form.section-hero__job-row
+					.dropdown
+						.dropdown__value-box
+							input.dropdown__value(type="text", value="Москва", disabled)
+							+svg("chevron-dropdown")(class="dropdown__arrow")
+						ul.dropdown__options-list
+							li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
+							li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
+							li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
+					.dropdown
+						.dropdown__value-box
+							input.dropdown__value(type="text", value="Менеджмент", disabled)
+							+svg("chevron-dropdown")(class="dropdown__arrow")
+						ul.dropdown__options-list
+							li.dropdown__option.dropdown__option--selected(data-value="Менеджмент") Менеджмент
+							li.dropdown__option(data-value="IT") IT
+							li.dropdown__option(data-value="HR отдел") HR отдел
+							li.dropdown__option(data-value="Склад") Склад
+							li.dropdown__option(data-value="Служба качества") Служба качества
+					button.button.button--outline-white.button--md.button--text-big(type="submit") Найти
+			img.section-hero__bg(src="images/section-hero/bg2.jpg", alt)
+
+	// Section Services
+	section.section-services.section-services--career
+		.container
+			.section-services__title-box
+				h2.h2.text-blue.section-services__title Категории вакансий
+				a.button.button--white.button--sm(href="#") Все категории
+			.section-services__nav.nav-row
+				ul.nav-list
+					li.nav-list__elem
+						a.nav-list__link.nav-list__link--active(href="#") Менеджмент
+					li.nav-list__elem
+						a.nav-list__link(href="#") IT
+					li.nav-list__elem
+						a.nav-list__link(href="#") HR отдел
+					li.nav-list__elem
+						a.nav-list__link(href="#") Склад
+					li.nav-list__elem
+						a.nav-list__link(href="#") Служба
+							br
+							| качества
+
+	// Section Career
+	section.section-career.container
+		// Block
+		.section-career__block
+			.section-career__block-col
+				h2.h2.text-blue.section-career__title Работать в Мэйджор Терминал — одно удовольствие
+				ul.list-arrow.list-arrow--blue-heavy.list-arrow--arrow-center.section-career__list
+					li.list-arrow__elem Карьерный и профессиональный рост
+						br
+						| (система наставничества и кадровый резерв)
+					li.list-arrow__elem Привлекательная система материальной и нематериальной мотивации;
+					li.list-arrow__elem Корпоративная культура и сильная команда профессионалов
+					li.list-arrow__elem Корпоративное обучение (внутреннее и внешнее), возможность изучения английского языка, корпоративная библиотека;
+			.section-career__block-col
+				.section-career__block-img-box
+					img.section-career__block-img(src="images/section-career/img1.jpg", alt)
+		// Block
+		.section-career__block
+			.section-career__block-col
+				ul.list-arrow.list-arrow--blue-heavy.list-arrow--arrow-center.section-career__list
+					li.list-arrow__elem Корпоративные тарифы на сотовую связь;
+					li.list-arrow__elem Скидки на туристические поездки;
+					li.list-arrow__elem Юридическая помощь;
+					li.list-arrow__elem Добровольное медицинское страхование для сотрудников и родственников;
+					li.list-arrow__elem Корпоративные мероприятия
+						br
+						| (для сотрудников и для детей сотрудников)
+			.section-career__block-col
+				.section-career__block-img-box
+					img.section-career__block-img(src="images/section-career/img2.jpg", alt)
+		// Block
+		.section-career__block
+			.section-career__block-col
+				ul.list-arrow.list-arrow--blue-heavy.list-arrow--arrow-center.section-career__list
+					li.list-arrow__elem Скидки на покупку и обслуживание автомобиля в дилерских центрах Major Auto
+					li.list-arrow__elem Возможность аренды автомобиля на корпоративных условиях;
+					li.list-arrow__elem Корпоративное питание
+					li.list-arrow__elem Карьерный и профессиональный рост (система наставничества и кадровый резерв)
+					li.list-arrow__elem Привлекательная система материальной и нематериальной мотивации;
+			.section-career__block-col
+				.section-career__block-img-box
+					img.section-career__block-img(src="images/section-career/img3.jpg", alt)
+
+	// Section Video link
+	section.section-video-link
+		.container
+			h2.section-video-link__title Посмотрите как мы работаем
+				br
+				| и отдыхаем Major life 2023
+			a.button.button--blue.button--white-shadow.button--md.button--with-icon(href="#")
+				+svg("play")(class="button__icon")
+				| Посмотреть видео

@@ -1,15 +1,29 @@
 .dropdown {
+	position: relative;
+	color: $color-black;
+
+	&--active {
+		z-index: 10;
+	}
+
 	&--with-flag {
 	}
 
 	&__value-box {
 		position: relative;
 		cursor: pointer;
+		border-radius: 25px;
+		background-color: $color-white;
+		overflow: hidden;
+
+		.dropdown--with-flag & {
+			border-radius: 0;
+		}
 	}
 
 	&__value {
 		width: 100%;
-		padding-right: 15px;
+		padding: 21px 50px 21px 26px;
 		border: none;
 		background-color: $color-transparent;
 		font-family: $font-additional;
@@ -23,7 +37,7 @@
 		}
 
 		.dropdown--with-flag & {
-			padding-left: 34px;
+			padding: 0 15px 0 34px;
 		}
 	}
 
@@ -37,15 +51,74 @@
 	}
 
 	&__options-list {
-		display: none;
+		position: absolute;
+		z-index: -1;
+		top: calc(100% - 1px);
+		left: 0;
+		min-width: 100%;
+		margin: 0;
+		padding: 28px;
+		background-color: $color-white;
+		border-radius: 25px;
+		font-family: $font-additional;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+		list-style-type: none;
+		transform: scaleY(0);
+		transform-origin: 50% 0;
+		transition: transform 0.1s;
+		box-shadow: 0 5px 10px rgba($color-blue, .15);
+
+		.dropdown--active & {
+			transform: scaleY(1);
+		}
+
+		.dropdown--with-flag & {
+			padding: 14px;
+			border-radius: 10px;
+		}
+	}
+
+	&__option {
+		position: relative;
+		font-family: $font-additional;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+		cursor: pointer;
+		transition: color $transition-default;
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+
+		&:hover {
+			color: $color-blue;
+		}
+
+		.dropdown--with-flag & {
+			padding-left: 32px;
+		}
 	}
 
 	&__arrow {
 		position: absolute;
 		top: 50%;
-		right: 0;
+		right: 21px;
 		transform: translateY(-50%);
-		width: 10px;
-		height: 5px;
+		width: 16px;
+		height: 8px;
+		transition: transform $transition-default;
+
+		.dropdown--active & {
+			transform: translateY(-50%) rotate(-180deg);
+		}
+
+		.dropdown--with-flag & {
+			right: 0;
+			width: 10px;
+			height: 5px;
+		}
 	}
 }

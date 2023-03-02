@@ -99,4 +99,8 @@
 		height: 24px;
 		margin-right: 8px;
 	}
+
+	&--white-shadow {
+		box-shadow: 0 0 0 5px $color-white;
+	}
 }

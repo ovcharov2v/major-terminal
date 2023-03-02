@@ -107,48 +107,49 @@ block content
 						a.nav-list__link(href="#") Стикеровка
 					li.nav-list__elem
 						a.nav-list__link(href="#") Работа с комплектами
-			// Slider
-			.swiper.slider.section-services__slider
-				.swiper-wrapper
-					// Slide
-					.swiper-slide.slider__slide.slider__slide--wide
-						.slider__slide-bg-box
-							img.slider__slide-bg(src="images/services/slide-bg1.jpg", alt)
-						p.slider__slide-text Складские терминалы Ma
-							span.text-red j
-							| or
-						p.slider__slide-title Логопарк Major
-					// Slide
-					.swiper-slide.slider__slide
-						.slider__slide-bg-box
-							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
-						p.slider__slide-title М9
-					// Slide
-					.swiper-slide.slider__slide.slider__slide--bg-blue
-						.slider__slide-bg-box
-							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
-						p.slider__slide-title Истра
-					// Slide
-					.swiper-slide.slider__slide.slider__slide--bg-light-blue
-						.slider__slide-bg-box
-							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
-						p.slider__slide-title Истра
-					// Slide
-					.swiper-slide.slider__slide.slider__slide--bg-light-blue
-						.slider__slide-bg-box
-							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
-						p.slider__slide-title Истра
-					// Slide
-					.swiper-slide.slider__slide.slider__slide--bg-light-blue
-						.slider__slide-bg-box
-							img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
-						p.slider__slide-title Истра
-			.slider__nav
-				button.slider__btn.slider__btn--prev(aria-label="Назад")
-					+svg("chevron-slider")(class="slider__btn-arrow")
-				.slider__pagination
-				button.slider__btn.slider__btn--next(aria-label="Вперед")
-					+svg("chevron-slider")(class="slider__btn-arrow")
+	// Section Slider terminal
+	.section-slider-terminal.container
+		.swiper.slider.section-services__slider
+			.swiper-wrapper
+				// Slide
+				.swiper-slide.slider__slide.slider__slide--wide
+					.slider__slide-bg-box
+						img.slider__slide-bg(src="images/services/slide-bg1.jpg", alt)
+					p.slider__slide-text Складские терминалы Ma
+						span.text-red j
+						| or
+					p.slider__slide-title Логопарк Major
+				// Slide
+				.swiper-slide.slider__slide
+					.slider__slide-bg-box
+						img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+					p.slider__slide-title М9
+				// Slide
+				.swiper-slide.slider__slide.slider__slide--bg-blue
+					.slider__slide-bg-box
+						img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+					p.slider__slide-title Истра
+				// Slide
+				.swiper-slide.slider__slide.slider__slide--bg-light-blue
+					.slider__slide-bg-box
+						img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+					p.slider__slide-title Истра
+				// Slide
+				.swiper-slide.slider__slide.slider__slide--bg-light-blue
+					.slider__slide-bg-box
+						img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+					p.slider__slide-title Истра
+				// Slide
+				.swiper-slide.slider__slide.slider__slide--bg-light-blue
+					.slider__slide-bg-box
+						img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+					p.slider__slide-title Истра
+		.slider__nav
+			button.slider__btn.slider__btn--prev(aria-label="Назад")
+				+svg("chevron-slider")(class="slider__btn-arrow")
+			.slider__pagination
+			button.slider__btn.slider__btn--next(aria-label="Вперед")
+				+svg("chevron-slider")(class="slider__btn-arrow")
 
 	// Section Partner
 	section.section-partner.container

@@ -1,7 +1,12 @@
 .section-services {
 	padding-top: 58px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 	overflow: hidden;
+
+	&--career {
+		padding-top: 76px;
+		padding-bottom: 45px;
+	}
 
 	&__title-box {
 		display: flex;
@@ -15,6 +20,5 @@
 	}
 
 	&__nav {
-		margin-bottom: 130px;
 	}
 }
