@@ -1,0 +1,136 @@
+.section-text {
+	padding-top: 20px;
+	padding-bottom: 93px;
+
+	&__content-box {
+		display: flex;
+		max-width: 1554px;
+	}
+
+	&__content {
+		padding-right: 134px;
+	}
+
+	&__aside {
+		flex-shrink: 0;
+		width: 364px;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+
+	&__cite {
+		position: relative;
+		margin: 0 0 28px 0;
+		padding: 35px 79px 35px 52px;
+		background-color: $color-white;
+		border-radius: 10px;
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 600;
+
+		&::before {
+			position: absolute;
+			top: 42px;
+			bottom: 42px;
+			left: 22px;
+			width: 4px;
+			background-color: $color-blue;
+			content: "";
+		}
+	}
+
+	&__subtitle {
+		margin-top: 0;
+		margin-bottom: 19px;
+		font-size: 24px;
+		line-height: 50px;
+		font-weight: 700;
+	}
+
+	&__text {
+		margin-top: 0;
+		margin-bottom: 26px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	&__text-small {
+		margin-bottom: 26px;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	&__line {
+		margin: 50px 0;
+		width: 100px;
+		height: 10px;
+		background-color: $color-blue;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		margin-bottom: 68px;
+		border-radius: 10px;
+	}
+
+	&__info {
+		padding-top: 33px;
+	}
+
+	&__score {
+		margin-top: 0;
+		margin-bottom: 16px;
+		font-size: 18px;
+		line-height: 36px;
+		font-weight: 700;
+	}
+
+	&__label {
+		margin-top: 0;
+		margin-bottom: 29px;
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 700;
+	}
+
+	&__score-form {
+		display: flex;
+		margin: 0 -9px;
+	}
+
+	&__radio {
+		display: none;
+	}
+
+	&__radio-label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 62px;
+		height: 62px;
+		margin: 0 9px;
+		border-radius: 50%;
+		border: 1px solid $color-blue;
+		font-size: 32px;
+		line-height: 50px;
+		font-weight: 300;
+		color: $color-blue;
+		cursor: pointer;
+		transition: background-color $transition-default, color $transition-default;
+
+		&:hover {
+			background-color: lighten($color-blue, 65%);
+		}
+
+		.section-text__radio:checked + & {
+			background-color: $color-blue;
+			color: $color-white;
+		}
+	}
+}

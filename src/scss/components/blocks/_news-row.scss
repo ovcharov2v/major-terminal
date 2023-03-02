@@ -2,6 +2,10 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	&--col {
+		display: block;
+	}
+
 	&__card-box {
 		width: 100%;
 		max-width: 33.3333%;
@@ -9,6 +13,12 @@
 
 		.news-row--two-col & {
 			max-width: 50%;
+		}
+
+		.news-row--col & {
+			max-width: 100%;
+			margin-bottom: 37px;
+			padding: 0;
 		}
 	}
 }

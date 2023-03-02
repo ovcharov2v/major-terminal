@@ -44,6 +44,7 @@
 
 	&--white {
 		background-color: $color-white;
+		border: none;
 		color: $color-blue;
 		transition: box-shadow $transition-default, color $transition-default;
 
@@ -84,6 +85,13 @@
 		font-size: 14px;
 		line-height: 18px;
 		font-weight: 500;
+
+		&.button--text-big {
+			font-family: $font-additional;
+			font-size: 20px;
+			padding-top: 15px;
+			padding-bottom: 16px;
+		}
 	}
 
 	&--xs {
@@ -98,5 +106,9 @@
 		width: 24px;
 		height: 24px;
 		margin-right: 8px;
+	}
+
+	&--white-shadow {
+		box-shadow: 0 0 0 5px $color-white;
 	}
 }

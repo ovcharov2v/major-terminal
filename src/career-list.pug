@@ -1,0 +1,127 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Список вакансий"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], 'Вакансии')(class="container")
+
+	// Section Vacancy
+	section.section-vacancy
+		.container
+			.job-search.section-vacancy__search
+				form.job-search__row
+					.dropdown
+						.dropdown__value-box
+							input.dropdown__value(type="text", value="Москва", disabled)
+							+svg("chevron-dropdown")(class="dropdown__arrow")
+						ul.dropdown__options-list
+							li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
+							li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
+							li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
+					.dropdown
+						.dropdown__value-box
+							input.dropdown__value(type="text", value="Менеджмент", disabled)
+							+svg("chevron-dropdown")(class="dropdown__arrow")
+						ul.dropdown__options-list
+							li.dropdown__option.dropdown__option--selected(data-value="Менеджмент") Менеджмент
+							li.dropdown__option(data-value="IT") IT
+							li.dropdown__option(data-value="HR отдел") HR отдел
+							li.dropdown__option(data-value="Склад") Склад
+							li.dropdown__option(data-value="Служба качества") Служба качества
+					button.button.button--outline-blue.button--md.button--text-big(type="submit") Найти
+			h2.h2.text-blue.section-vacancy__title Вакансии, Менеджмент
+			p.section-vacancy__subtitle Найдено вакансий: 225
+			.section-vacancy__grid
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary.section-vacancy__item-salary--big 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title
+							+svg("fire")(class="section-vacancy__item-icon")
+							|Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+				// Vacancy
+				a.section-vacancy__item(href="#")
+					.section-vacancy__item-row
+						p.section-vacancy__item-city г.Москва
+						p.section-vacancy__item-salary 45 000 ₽
+					.section-vacancy__item-row
+						p.section-vacancy__item-title Менеджер по рекламациям
+						span.section-vacancy__item-button Подробнее
+
+	// Section Video link
+	section.section-video-link
+		.container
+			h2.section-video-link__title Посмотрите как мы работаем
+				br
+				| и отдыхаем Major life 2023
+			a.button.button--blue.button--white-shadow.button--md.button--with-icon(href="#")
+				+svg("play")(class="button__icon")
+				| Посмотреть видео

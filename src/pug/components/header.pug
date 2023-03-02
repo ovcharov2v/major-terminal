@@ -29,10 +29,10 @@ header.header
 						input.dropdown__value(type="text", value="Русский", disabled)
 						+svg("chevron-dropdown")(class="dropdown__arrow")
 					ul.dropdown__options-list
-						li.dropdown__option.dropdown__option--selected
+						li.dropdown__option.dropdown__option--selected(data-value="Русский")
 							+svg("flag-ru")(class="dropdown__flag")
 							| Русский
-						li.dropdown__option
+						li.dropdown__option(data-value="English")
 							+svg("flag-ru")(class="dropdown__flag")
 							| English
 	// Navigation
