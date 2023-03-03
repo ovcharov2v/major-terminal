@@ -19,6 +19,10 @@
 		padding-bottom: 83px;
 	}
 
+	&--with-cards {
+		margin-bottom: 109px;
+	}
+
 	&__bg {
 		position: absolute;
 		z-index: -2;
@@ -43,6 +47,13 @@
 		.section-hero--career & {
 			margin-bottom: 47px;
 		}
+
+		.section-hero--department & {
+			margin-bottom: 41px;
+			font-size: 32px;
+			line-height: 32px;
+			font-weight: 700;
+		}
 	}
 
 	&__text {
@@ -53,5 +64,45 @@
 		.section-hero--career & {
 			margin-bottom: 54px;
 		}
+
+		.section-hero--department & {
+			margin-bottom: 33px;
+			font-family: $font-secondary;
+			font-size: 24px;
+			line-height: 24px;
+		}
+	}
+
+	&__card-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 36px;
+		margin-bottom: -109px;
+	}
+
+	&__card {
+		width: 100%;
+		padding: 54px 50px 74px;
+		background-color: $color-white;
+		border-radius: 10px;
+		text-align: center;
+		color: $color-black;
+	}
+
+	&__card-title {
+		margin-top: 0;
+		margin-bottom: 24px;
+		font-size: 32px;
+		line-height: 50px;
+		font-weight: 700;
+		color: $color-blue;
+	}
+
+	&__card-text {
+		margin: 0;
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 700;
 	}
 }
