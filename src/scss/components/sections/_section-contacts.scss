@@ -61,9 +61,11 @@
 	&__form-row {
 		display: flex;
 		margin: 0 -20px 73px;
+		transform: translateX(46px);
 
 		.section-contacts--job & {
 			margin-bottom: 63px;
+			transform: none;
 		}
 	}
 

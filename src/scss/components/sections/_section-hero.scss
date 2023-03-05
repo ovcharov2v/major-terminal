@@ -21,6 +21,7 @@
 
 	&--with-cards {
 		margin-bottom: 109px;
+		padding-bottom: 11px;
 	}
 
 	&__bg {
@@ -49,7 +50,7 @@
 		}
 
 		.section-hero--department & {
-			margin-bottom: 41px;
+			margin-bottom: 43px;
 			font-size: 32px;
 			line-height: 32px;
 			font-weight: 700;
@@ -73,7 +74,7 @@
 		}
 
 		.section-hero--department & {
-			margin-bottom: 33px;
+			margin-bottom: 57px;
 			font-family: $font-secondary;
 			font-size: 24px;
 			line-height: 24px;
@@ -103,7 +104,7 @@
 		font-size: 32px;
 		line-height: 50px;
 		font-weight: 700;
-		color: $color-blue;
+		color: $color-blue-medium;
 	}
 
 	&__card-text {
@@ -111,5 +112,11 @@
 		font-size: 14px;
 		line-height: 21px;
 		font-weight: 700;
+	}
+
+	&__results-row {
+		.section-hero--department & {
+			margin-bottom: 84px;
+		}
 	}
 }
