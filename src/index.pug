@@ -240,14 +240,18 @@ block content
 	// Section Contacts
 	section.section-contacts
 		.container
-			h2.h2.text-blue.section-contacts__title Есть вопросы? Свяжитесь с нами!
+			h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
 			form.section-contacts__form
 				.section-contacts__form-row
 					.section-contacts__form-col.section-contacts__form-col--inputs
-						input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
-						input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
-						input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
+						.section-contacts__input-box
+							input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
+						.section-contacts__input-box
+							input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
+						.section-contacts__input-box
+							input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
 					.section-contacts__form-col.section-contacts__form-col--message
-						textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
+						.section-contacts__textarea-box
+							textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
 				.section-contacts__form-submit-box
-					button.button.button--blue.button--lg.section-contacts__form-submit Отправить
+					button.button.button--white.button--lg.section-contacts__form-submit Отправить

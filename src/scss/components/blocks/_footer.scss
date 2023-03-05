@@ -4,8 +4,8 @@
 
 	&__container {
 		position: relative;
-		padding-top: 56px;
-		padding-bottom: 50px;
+		padding-top: 124px;
+		padding-bottom: 76px;
 		z-index: 0;
 		height: 100%;
 
@@ -19,7 +19,7 @@
 		}
 
 		&::before {
-			top: 48px;
+			top: 124px;
 			left: 30px;
 			width: 330px;
 			height: 430px;
@@ -27,7 +27,7 @@
 		}
 
 		&::after {
-			bottom: -14px;
+			bottom: 104px;
 			right: -60px;
 			width: 606px;
 			height: 340px;

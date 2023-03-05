@@ -1,22 +1,22 @@
 .results {
-	padding-top: 60px;
-	padding-bottom: 30px;
-
-	&--department {
-		padding-top: 24px;
-	}
-
 	&__row {
 		display: flex;
-		align-items: stretch;
-		margin: 0 -60px 32px;
+		margin: 0 -70px 45px;
+
+		.results--white-line & {
+			margin: 0 -60px 32px;
+		}
 	}
 
 	&__col {
 		position: relative;
-		height: 100%;
-		margin: 0 60px;
-		padding-bottom: 34px;
+		margin: 0 70px;
+		padding-bottom: 19px;
+
+		.results--white-line & {
+			margin: 0 60px;
+			padding-bottom: 34px;
+		}
 
 		&::after {
 			position: absolute;
@@ -30,7 +30,7 @@
 			content: "";
 		}
 
-		.results--department & {
+		.results--white-line & {
 			&::after {
 				background-color: $color-white;
 			}
@@ -39,11 +39,16 @@
 
 	&__value {
 		margin-top: 0;
-		margin-bottom: 19px;
-		font-size: 24px;
+		margin-bottom: 10px;
+		font-size: 32px;
 		line-height: 1.2;
 		font-weight: 800;
 		letter-spacing: .01em;
+
+		.results--white-line & {
+			margin-bottom: 19px;
+			font-size: 24px;
+		}
 	}
 
 	&__text {
@@ -52,8 +57,13 @@
 		font-family: $font-secondary;
 		font-size: 14px;
 		line-height: 1;
-		font-weight: 600;
+		font-weight: 700;
 		letter-spacing: .01em;
+
+		.results--white-line & {
+			font-size: 14px;
+			font-weight: 600;
+		}
 	}
 
 	&__button {
