@@ -1,6 +1,11 @@
 .slider {
 	overflow: visible;
 
+	&--one-slide {
+		position: relative;
+		overflow: hidden;
+	}
+
 	&__slide {
 		position: relative;
 		display: flex;
@@ -22,6 +27,10 @@
 		}
 
 		.slider--simple & {
+			padding-bottom: 0;
+		}
+
+		.slider--one-slide & {
 			padding-bottom: 0;
 		}
 	}
@@ -135,6 +144,17 @@
 			border-radius: 40px;
 			background-color: $color-white;
 		}
+
+		.slider--one-slide & {
+			position: absolute;
+			z-index: 10;
+			bottom: 48px;
+			right: 57px;
+			margin: 0;
+			padding: 10px 20px;
+			background-color: $color-white;
+			border-radius: 25px;
+		}
 	}
 
 	&__pagintaion {
@@ -183,10 +203,11 @@
 			color: $color-blue;
 		}
 	}
+
 	&__play-icon {
 		width: 46px;
 		height: 46px;
-	transform: translateX(6px);
+		transform: translateX(6px);
 		transition: color $transition-default;
 	}
 }

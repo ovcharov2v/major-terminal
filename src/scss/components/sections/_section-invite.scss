@@ -31,7 +31,7 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 100%;
-		padding: 58px 52px 58px 45px;
+		padding: 45px 52px 45px 45px;
 		border-radius: 25px;
 		background-color: $color-white;
 		font-family: $font-secondary;
@@ -44,8 +44,8 @@
 
 	&__card-title {
 		margin-top: 0;
-		margin-bottom: 18px;
-		font-size: 24px;
+		margin-bottom: 26px;
+		font-size: 32px;
 		line-height: 32px;
 		font-weight: 700;
 		color: $color-blue;
@@ -58,10 +58,10 @@
 
 	&__card-text {
 		width: 100%;
-		max-width: 390px;
+		max-width: 513px;
 		margin: 0;
-		font-size: 16px;
-		line-height: 14px;
+		font-size: 25px;
+		line-height: 25px;
 		font-weight: 500;
 		color: $color-black;
 		transition: color $transition-default;

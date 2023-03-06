@@ -33,6 +33,10 @@
 			height: 340px;
 			background-image: url("../images/footer/bg2.svg");
 		}
+
+		.footer--low-top-padding & {
+			padding-top: 14px;
+		}
 	}
 
 	&__row {

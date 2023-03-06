@@ -1,0 +1,97 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Наши терминалы"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+		footerLowTopPadding = true
+
+block content
+	+breadcrumb(['Главная'], 'Наши терминалы')(class="container")
+	// Section Terminals
+	section.section-terminals.container
+		.section-terminals__title-box
+			h2.h2.text-blue.section-terminals__title Наши терминалы
+			.section-terminals__dropdown-row
+				.dropdown.dropdown--gray-border.section-terminals__dropdown
+					.dropdown__value-box
+						input.dropdown__value(type="text", value="Москва", disabled)
+						+svg("chevron-dropdown")(class="dropdown__arrow")
+					ul.dropdown__options-list
+						li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
+						li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
+						li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
+				.dropdown.dropdown--gray-border.section-terminals__dropdown
+					.dropdown__value-box
+						input.dropdown__value(type="text", value="Москва", disabled)
+						+svg("chevron-dropdown")(class="dropdown__arrow")
+					ul.dropdown__options-list
+						li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
+						li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
+						li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
+		.section-terminals__content-box
+			.section-terminals__content
+				h3.text-blue.section-terminals__cities Кулон-Истра
+				p.section-terminals__description Городской округ Истра, деревня Давыдовское, ул. Дачная, стр. 5 Расстояние от МКАД по Новорижскому шоссе - 48 км. ~ 37 мин.
+				ul.section-terminals__data-list
+					li.section-terminals__data
+						p.section-terminals__data-value 2008
+						p.section-terminals__data-text Год постройки
+					li.section-terminals__data
+						p.section-terminals__data-text Склад класса А+
+					li.section-terminals__data
+						p.section-terminals__data-text Крытый Пандус
+					li.section-terminals__data
+						p.section-terminals__data-value 16
+						p.section-terminals__data-text Грузовых доков
+					li.section-terminals__data.section-terminals__data--with-blue-rect
+						p.section-terminals__data-value 12 м
+						p.section-terminals__data-text Рабочая высота
+					li.section-terminals__data
+						p.section-terminals__data-value 15,5 тыс.
+						p.section-terminals__data-text Площадь склада, м2
+					li.section-terminals__data
+						p.section-terminals__data-text 1 док на 1000 м2
+			.section-terminals__slider-box
+				.swiper.slider.slider--one-slide.section-terminals__slider
+					.swiper-wrapper
+						// Slide
+						.swiper-slide.slider__slide
+							.slider__slide-bg-box
+								img.slider__slide-bg(src="images/section-terminals/slide1.jpg", alt)
+						// Slide
+						.swiper-slide.slider__slide
+							.slider__slide-bg-box
+								img.slider__slide-bg(src="images/section-terminals/slide1.jpg", alt)
+					.slider__nav
+						button.slider__btn.slider__btn--prev(aria-label="Назад")
+							+svg("chevron-slider")(class="slider__btn-arrow")
+						.slider__pagination
+						button.slider__btn.slider__btn--next(aria-label="Вперед")
+							+svg("chevron-slider")(class="slider__btn-arrow")
+	// Section Invite
+	.section-invite
+		.container
+			.section-invite__row
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Вебинары
+							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Наши кейсы
+							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+
+

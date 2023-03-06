@@ -19,6 +19,10 @@
 		.dropdown--with-flag & {
 			border-radius: 0;
 		}
+
+		.dropdown--gray-border & {
+			border: 1px solid #E2E2E2;
+		}
 	}
 
 	&__value {
@@ -39,6 +43,11 @@
 		.dropdown--with-flag & {
 			padding: 0 15px 0 34px;
 		}
+		.dropdown--gray-border & {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
 	}
 
 	&__flag {
