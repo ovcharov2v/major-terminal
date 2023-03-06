@@ -45,7 +45,7 @@ block content
 					.results__col
 						p.results__value 15 млн
 						p.results__text Стикеров (штук) / год
-				a.button.button--white.button--md.results__button Связаться с нами
+				a.button.button--white.button--md.results__button(href="#") Связаться с нами
 	// Section Request
 	section.section-request.container
 		h2.h2.text-blue.section-request__title
@@ -92,7 +92,7 @@ block content
 					button.tabs__nav-button(data-content="content4") Дистрибуция
 			.tabs__content-box
 				// Content
-				.section-request__tab-content.section-request__tab-content--n1.tabs__content.tabs__content--active#content1
+				.section-request__tab-content.tabs__content.tabs__content--active#content1
 					.section-request__content-row
 						.section-request__col
 							h2.h2.text-blue.section-request__content-title Все
@@ -110,7 +110,7 @@ block content
 						.section-request__col
 							img.section-request__img(src="images/section-request/img.svg", alt)
 				// Content
-				.section-request__tab-content.section-request__tab-content--n2.tabs__content#content2
+				.section-request__tab-content.tabs__content#content2
 					.section-request__content-row
 						.section-request__col
 							h2.h2.text-blue.section-request__title Возможности Major Terminal позволяют организовать
@@ -127,25 +127,39 @@ block content
 							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
 						.section-request__col
 							img.section-request__img(src="images/section-request/img2.svg", alt)
-					// Content
-				.section-request__tab-content.tabs__content#content3
+				// Content
+				.section-request__tab-content.section-request__tab-content--n1.tabs__content.tabs__content--active#content3
 					.section-request__content-row
 						.section-request__col
-							ul.list-arrow.list-arrow--red.section-request__list
-								li.list-arrow__elem Cтикеровка, маркировка (включая Честный Знак)
-								li.list-arrow__elem Переупаковка
-								li.list-arrow__elem Измерение МГХ
-							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
-						.section-request__col
-							img.section-request__img(src="images/section-request/img.svg", alt)
-					// Content
-				.section-request__tab-content.tabs__content#content4
-					.section-request__content-row
-						.section-request__col
+							h2.h2.text-blue.section-request__content-title Все
+								|
+								|
+								span.text-blue-light складские услуги
+								br
+								| у одного оператора
 							ul.list-arrow.list-arrow--red.section-request__list
 								li.list-arrow__elem Cтикеровка, маркировка (включая Честный Знак)
 								li.list-arrow__elem Переупаковка
 								li.list-arrow__elem Копакинг
+								li.list-arrow__elem Измерение МГХ
+							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
+						.section-request__col
+							img.section-request__img(src="images/section-request/img.svg", alt)
+				// Content
+				.section-request__tab-content.section-request__tab-content--n1.tabs__content.tabs__content--active#content4
+					.section-request__content-row
+						.section-request__col
+							h2.h2.text-blue.section-request__content-title Все
+								|
+								|
+								span.text-blue-light складские услуги
+								br
+								| у одного оператора
+							ul.list-arrow.list-arrow--red.section-request__list
+								li.list-arrow__elem Cтикеровка, маркировка (включая Честный Знак)
+								li.list-arrow__elem Переупаковка
+								li.list-arrow__elem Копакинг
+								li.list-arrow__elem Измерение МГХ
 							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
 						.section-request__col
 							img.section-request__img(src="images/section-request/img.svg", alt)

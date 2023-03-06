@@ -49,6 +49,10 @@
 			flex-grow: 1;
 			padding: 0;
 		}
+
+		.tabs__nav-list--three-col & {
+			max-width: 33.333333%;
+		}
 	}
 
 	&__nav-button {
@@ -124,7 +128,6 @@
 			}
 
 			&--active {
-
 				&::after {
 					transform: scaleX(1);
 				}

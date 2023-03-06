@@ -1,0 +1,84 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Услуги"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], 'Услуги')(class="container")
+
+	// Section Service list
+	section.section-service-list.container
+		h1.h1.text-blue.section-service-list__title Услуги
+		p.section-service-list__description Предоставляем полный спектр складских услуг для Вашего бизнеса
+		.section-service-list__grid
+			// Card
+			a.section-service-list__card.card.card--text-top.card--text-top-medium(href="#")
+				.card__text-box
+					p.card__text Major Terminal обладает богатым опытом работы
+						br
+						| с клиентами сектора Fashion.
+					p.card__text-line Компания активно внедряет современные технологии в
+						br
+						| сфере логистики, особенно актуальные в данном сегменте.
+				.card__title-box
+					p.card__title Фулфилмент
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-service-list/bg1.jpg", alt)
+			// Card
+			a.section-service-list__card.card.card--text-top.card--text-top-medium(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Упаковка
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-service-list/bg2.jpg", alt)
+			// Card
+			a.section-service-list__card.card.card--text-top.card--text-top-medium(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Хранение товара
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-service-list/bg3.jpg", alt)
+			// Card
+			a.section-service-list__card.card.card--text-top.card--text-top-medium(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Таможенный склад
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-service-list/bg4.jpg", alt)
+			// Card
+			a.section-service-list__card.card.card--text-top.card--text-top-medium(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Комплектация
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-service-list/bg5.jpg", alt)
+			// Card
+			a.section-service-list__card.card.card--text-top.card--text-top-medium(href="#")
+				.card__text-box
+					p.card__text Наши решения адаптированы для индустрии Beauty&Luxury. Безопасность, устойчивость и гибкость при работе c маршрутами выхода на рынок — наши главные приоритеты, способствующие изменениям в цепочке поставок.
+				.card__title-box
+					p.card__title Сортировка
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-service-list/bg6.jpg", alt)
+		.section-service-list__button-row
+			button.button.button--outline-blue.button--sm.button--text-medium.section-service-list__button Показать еще
+
+
