@@ -2,11 +2,20 @@
 	padding-top: 5px;
 	padding-bottom: 31px;
 
+	&--other {
+		padding-top: 70px;
+		padding-bottom: 16px;
+	}
+
 	&__title-box {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 39px;
+
+		.section-case-list--other & {
+			margin-bottom: 60px;
+		}
 	}
 
 	&__title {

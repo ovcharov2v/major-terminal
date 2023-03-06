@@ -1,0 +1,129 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Карточка кейса"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+		footerLowTopPadding = true
+
+block content
+	// Section Hero
+	section.section-hero.section-hero--with-cards.section-hero--case
+		.container
+			+breadcrumb(['Главная'], 'Кейсы')(class="section-hero__breadcrumb breadcrumb--white")
+			h1.section-hero__title Доставка и оформление негабаритных
+				br
+				|выставочных макетов фюзеляжа самолета
+			p.section-hero__text Осуществление перевозки и оформления Карнета АТА выставочных макетов фюзеляжа
+				br
+				| дальнемагистрального бизнес-джета Bombardier
+			img.section-hero__bg(src="images/section-hero/bg1.jpg", alt)
+			// Cards
+			.section-hero__card-row
+				article.section-hero__card
+					h2.section-hero__card-title Задача
+					ul.list-arrow.list-arrow--blue
+						li.list-arrow__elem Осуществление портового экспедирования
+						li.list-arrow__elem Оформление ввоза на территорию РФ выставочного оборудования по процедуре
+							br
+							| Карнет АТА в максимально короткие сроки
+						li.list-arrow__elem Доставка негабаритных выставочных макетов фюзеляжа
+				article.section-hero__card
+					h2.section-hero__card-title Сложности
+					ul.list-arrow.list-arrow--blue
+						li.list-arrow__elem Знание рынка контейнерных перевозок
+						li.list-arrow__elem Знание систем слежения и дислокации ЖД вагонов и контейнеров
+							br
+							| кругооборота парка и его полной загрузки на каждом плече
+						li.list-arrow__elem Знание специализированных программ по контролю за контейнерным оборудованием
+
+	.container
+		// Decision
+		arcticle.decision
+			h2.h2.decision__title Решение
+			p.decision__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы. Срок исполнения: 2 месяц с момента первого обращения, перевозка по готовности груза – 10 дней
+
+	// Section Case list
+	section.section-case-list.section-case-list--other.container
+		.section-case-list__title-box
+			h2.h2.text-blue.section-case-list__title Другие кейсы
+		.section-case-list__grid
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Fashion
+					li.card__tag Складское хранение
+					li.card__tag Вешальное хранение
+					li.card__tag Еще (7)
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс FMCG (табак)
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg1.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Fashion
+					li.card__tag Fashion
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс FMCG (Healthcare)
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg2.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag FMCG
+					li.card__tag Складское хранение
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс FMCG (алкоголь)
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg3.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Fashion
+					li.card__tag Fashion
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс Fashion
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg4.jpg", alt)
+		.section-case-list__button-row
+			button.button.button--outline-blue.button--md.button--text-big.section-case-list__button Показать еще
+
+	// Section Invite
+	.section-invite
+		.container
+			.section-invite__row
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Вебинары
+							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Наши кейсы
+							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+
+

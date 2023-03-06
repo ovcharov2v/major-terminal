@@ -1,0 +1,23 @@
+.decision {
+	display: block;
+	margin: 0;
+	padding: 64px;
+	border-radius: 10px;
+	background-color: $color-white;
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 26px;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 700;
+	}
+
+	&__text {
+		margin: 0;
+		font-family: $font-secondary;
+		font-size: 18px;
+		line-height: 16px;
+		font-weight: 500;
+	}
+}

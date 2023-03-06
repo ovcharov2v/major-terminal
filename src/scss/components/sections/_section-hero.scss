@@ -24,6 +24,11 @@
 		padding-bottom: 11px;
 	}
 
+	&--case {
+		margin-bottom: 290px;
+		padding-bottom: 42px;
+	}
+
 	&__bg {
 		position: absolute;
 		z-index: -2;
@@ -55,6 +60,10 @@
 			line-height: 32px;
 			font-weight: 700;
 		}
+
+		.section-hero--case & {
+			margin-bottom: 60px;
+		}
 	}
 
 	&__text {
@@ -79,6 +88,10 @@
 			font-size: 24px;
 			line-height: 24px;
 		}
+
+		.section-hero--case & {
+			margin-bottom: 70px;
+		}
 	}
 
 	&__card-row {
@@ -87,6 +100,10 @@
 		grid-template-rows: auto;
 		grid-column-gap: 36px;
 		margin-bottom: -109px;
+
+		.section-hero--case & {
+			margin-bottom: -290px;
+		}
 	}
 
 	&__card {
@@ -96,6 +113,11 @@
 		border-radius: 10px;
 		text-align: center;
 		color: $color-black;
+
+		.section-hero--case & {
+			padding: 46px 68px 31px;
+			text-align: left;
+		}
 	}
 
 	&__card-title {
@@ -105,6 +127,11 @@
 		line-height: 50px;
 		font-weight: 700;
 		color: $color-blue-medium;
+
+		.section-hero--case & {
+			font-size: 24px;
+			color: $color-black;
+		}
 	}
 
 	&__card-text {
