@@ -43,9 +43,15 @@
 		.dropdown--with-flag & {
 			padding: 0 15px 0 34px;
 		}
+
 		.dropdown--gray-border & {
 			padding-top: 25px;
 			padding-bottom: 25px;
+		}
+
+		.dropdown--multi-select & {
+			padding-top: 19px;
+			padding-bottom: 19px;
 		}
 
 	}
@@ -128,6 +134,54 @@
 			right: 0;
 			width: 10px;
 			height: 5px;
+		}
+	}
+
+	&__value-counter {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 32px;
+		height: 32px;
+		margin-left: 10px;
+		background-color: $color-blue;
+		border-radius: 32px;
+		font-family: $font-additional;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-white;;
+	}
+
+	&__checkbox {
+		cursor: pointer;
+	}
+
+	&__checkbox-input {
+		display: none;
+	}
+
+	&__checkbox-text {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			display: block;
+			width: 18px;
+			height: 18px;
+			margin-right: 8px;
+			border-radius: 6px;
+			border: 1px solid $color-blue;
+			content: "";
+			transition: background-color $transition-default, box-shadow $transition-default;
+		}
+
+		.dropdown__checkbox-input:checked + & {
+			&::before {
+				background-color: $color-blue;
+				box-shadow: inset 0 0 0 4px $color-white;
+			}
 		}
 	}
 }

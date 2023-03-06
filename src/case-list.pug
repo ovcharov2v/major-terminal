@@ -1,0 +1,146 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Наши кейсы"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+		footerLowTopPadding = true
+
+block content
+	+breadcrumb(['Главная'], 'Наши кейсы')(class="container")
+	// Section Case list
+	section.section-case-list.container
+		.section-case-list__title-box
+			h2.h2.text-blue.section-case-list__title Наши кейсы
+			.section-case-list__dropdown-row
+				.dropdown.dropdown--gray-border.dropdown--multi-select.section-case-list__dropdown
+					.dropdown__value-box
+						.dropdown__value Индустрии
+							span.dropdown__value-counter 0
+						+svg("chevron-dropdown")(class="dropdown__arrow")
+					ul.dropdown__options-list
+						li.dropdown__option
+							label.dropdown__checkbox
+								input.dropdown__checkbox-input(type="checkbox", value="Индустрия 1")
+								span.dropdown__checkbox-text Индустрия 1
+						li.dropdown__option
+							label.dropdown__checkbox
+								input.dropdown__checkbox-input(type="checkbox", value="Индустрия 2")
+								span.dropdown__checkbox-text Индустрия 2
+						li.dropdown__option
+							label.dropdown__checkbox
+								input.dropdown__checkbox-input(type="checkbox", value="Индустрия 3")
+								span.dropdown__checkbox-text Индустрия 3
+				.dropdown.dropdown--gray-border.section-case-list__dropdown
+					.dropdown__value-box
+						input.dropdown__value(type="text", value="Москва", disabled)
+						+svg("chevron-dropdown")(class="dropdown__arrow")
+					ul.dropdown__options-list
+						li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
+						li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
+						li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
+		p.section-case-list__description Всего найдено: 145
+		.section-case-list__grid
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Fashion
+					li.card__tag Складское хранение
+					li.card__tag Вешальное хранение
+					li.card__tag Еще (7)
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс FMCG (табак)
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg1.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Fashion
+					li.card__tag Fashion
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс FMCG (Healthcare)
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg2.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag FMCG
+					li.card__tag Складское хранение
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс FMCG (алкоголь)
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg3.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Fashion
+					li.card__tag Fashion
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс Fashion
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg4.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Automotive
+					li.card__tag Складское хранение
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс Automotive
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg5.jpg", alt)
+			// Card
+			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+				ul.card__tag-list
+					li.card__tag Fashion
+					li.card__tag Fashion
+				.card__text-box
+					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
+				.card__title-box
+					p.card__title Кейс PoSM
+					+svg("chevron-right-big")(class="card__arrow")
+				.card__bg-box
+					img.card__bg(src="images/section-cases/bg6.jpg", alt)
+		.section-case-list__button-row
+			button.button.button--white.button--md.button--text-big.section-case-list__button Показать еще
+
+	// Section Invite
+	.section-invite
+		.container
+			.section-invite__row
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Вебинары
+							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Наши кейсы
+							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+
+
