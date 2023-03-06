@@ -279,15 +279,12 @@ document.addEventListener('DOMContentLoaded', function () {
           currentContent.classList.add('tabs__content--hide');
           activeContent.classList.add('tabs__content--show');
           setTimeout(function () {
+            currentContent.classList.remove('tabs__content--active', 'tabs__content--hide');
+            activeContent.classList.remove('tabs__content--show');
             activeContent.classList.add('tabs__content--active');
             activeNavBtn.classList.remove('tabs__nav-button--active');
             navBtn.classList.add('tabs__nav-button--active');
-          }, 50);
-          setTimeout(function () {
-            currentContent.classList.remove('tabs__content--active', 'tabs__content--hide');
-            activeContent.classList.add('tabs__content--active');
-            activeContent.classList.remove('tabs__content--show');
-          }, 400);
+          }, 300);
         }
       });
     });
