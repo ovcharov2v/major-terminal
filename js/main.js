@@ -166,20 +166,34 @@ document.addEventListener('DOMContentLoaded', function () {
   var dropdownList = document.querySelectorAll('.dropdown');
   if (dropdownList.length) {
     dropdownList.forEach(function (dropdown) {
-      dropdown.addEventListener('click', function (evt) {
-        evt.stopPropagation();
-        if (!evt.target.closest(dropdown.querySelector('.dropdown__list-box'))) {
-          dropdown.classList.toggle('dropdown--active');
-        }
-      });
-      var input = dropdown.querySelector('.dropdown__value');
-      var optionsList = dropdown.querySelectorAll('.dropdown__option');
-      optionsList.forEach(function (option) {
-        option.addEventListener('click', function (e) {
-          e.preventDefault();
-          input.value = option.dataset.value;
+      // Multi select
+      if (dropdown.classList.contains('dropdown--multi-select')) {
+        var counter = dropdown.querySelector('.dropdown__value-counter');
+        dropdown.addEventListener('click', function (evt) {
+          evt.stopPropagation();
+          if (!evt.target.closest('.dropdown__options-list')) {
+            dropdown.classList.toggle('dropdown--active');
+          } else {
+            var checkedOptions = dropdown.querySelectorAll(':checked').length;
+            counter.innerHTML = checkedOptions.toString();
+          }
         });
-      });
+      }
+      // Single select
+      else {
+        dropdown.addEventListener('click', function (evt) {
+          evt.stopPropagation();
+          dropdown.classList.toggle('dropdown--active');
+        });
+        var input = dropdown.querySelector('.dropdown__value');
+        var optionsList = dropdown.querySelectorAll('.dropdown__option');
+        optionsList.forEach(function (option) {
+          option.addEventListener('click', function (e) {
+            e.preventDefault();
+            input.value = option.dataset.value;
+          });
+        });
+      }
     });
   }
   document.addEventListener('click', closeAllSelect);
@@ -256,6 +270,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/section-terminals.js":
+/*!************************************************!*\
+  !*** ./src/js/components/section-terminals.js ***!
+  \************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var slider = document.querySelector('.section-terminals__slider');
+  if (!slider) return;
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
+    slidesPerView: 1,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.slider__btn--next',
+      prevEl: '.slider__btn--prev'
+    },
+    pagination: {
+      el: '.slider__pagination',
+      clickable: true,
+      bulletActiveClass: 'slider__bullet--active',
+      renderBullet: function renderBullet(index, className) {
+        return "<button class=\"slider__bullet swiper-pagination-bullet\" aria-label=\"\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 ".concat(index, "\"></button>");
+      }
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/tabs.js":
 /*!***********************************!*\
   !*** ./src/js/components/tabs.js ***!
@@ -310,6 +359,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_section_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/section-slider */ "./src/js/components/section-slider.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_section_terminals__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/section-terminals */ "./src/js/components/section-terminals.js");
+
 
 
 
