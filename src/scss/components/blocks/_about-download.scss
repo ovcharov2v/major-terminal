@@ -1,0 +1,39 @@
+.about-download {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&__block {
+		padding: 32px 40px 29px;
+		background-color: $color-white;
+		border-radius: 25px;
+		font-family: $font-secondary;
+		font-weight: 800;
+		color: $color-blue;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 16px;
+		font-family: $font-secondary;
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	&__link {
+		margin: 0;
+		font-family: $font-secondary;
+		font-size: 14px;
+		line-height: 18px;
+		color: $color-blue;
+		transition: color $transition-default;
+
+		&:hover {
+			color: $color-red;
+		}
+	}
+}

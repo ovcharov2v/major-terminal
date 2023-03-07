@@ -1,0 +1,191 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "О нас"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+		footerLowTopPadding = true
+
+block content
+	+breadcrumb(['Главная'], 'О нас')(class="container")
+
+	section.section-about.container
+		h2.h2.text-blue.section-about__title О нас
+		// Tabs
+		.tabs.tabs--blue.tabs--blue-no-bottom-border
+			ul.tabs__nav-list
+				li.tabs__nav-elem
+					button.tabs__nav-button.tabs__nav-button--active(data-content="content1") Общая информация
+				li.tabs__nav-elem
+					button.tabs__nav-button(data-content="content2") Управление
+				li.tabs__nav-elem
+					button.tabs__nav-button(data-content="content3") История развития
+				li.tabs__nav-elem
+					button.tabs__nav-button(data-content="content4") Лицензии и сертификаты
+			.tabs__content-box
+				// Content
+				.section-about__tab-content.tabs__content.tabs__content--active#content1
+					.about-people
+						// Card
+						figure.about-people__card
+							.about-people__photo-box
+								//img.about-people__photo(src="", alt)
+							figcaption.about-people__caption-box
+								p.about-people__name Алексей Пономарев
+								p.about-people__job-title Генеральный менеджер
+						// Card
+						figure.about-people__card
+							.about-people__photo-box
+								//img.about-people__photo(src="", alt)
+							figcaption.about-people__caption-box
+								p.about-people__name Дмитрий Зубарев
+								p.about-people__job-title Генеральный менеджер
+						// Card
+						figure.about-people__card
+							.about-people__photo-box
+								//img.about-people__photo(src="", alt)
+							figcaption.about-people__caption-box
+								p.about-people__name Елена Степина
+								p.about-people__job-title Финансовый директор
+						// Card
+						figure.about-people__card
+							.about-people__photo-box
+								//img.about-people__photo(src="", alt)
+							figcaption.about-people__caption-box
+								p.about-people__name Андрей Стрельников
+								p.about-people__job-title Руководитель отдела технологии
+						// Card
+						figure.about-people__card
+							.about-people__photo-box
+								//img.about-people__photo(src="", alt)
+							figcaption.about-people__caption-box
+								p.about-people__name Александр Карманов
+								p.about-people__job-title Коммерческий директор
+						// Card
+						figure.about-people__card
+							.about-people__photo-box
+								//img.about-people__photo(src="", alt)
+							figcaption.about-people__caption-box
+								p.about-people__name Юрий Павлюк
+								p.about-people__job-title Руководитель отдела продаж
+				// Content
+				.section-about__tab-content.tabs__content#content2
+					ul.about-download
+						// Block
+						li.about-download__block
+							p.about-download__title LLC Major Cargo Service
+							a.about-download__link(href="#" download) Скачать .pdf
+						// Block
+						li.about-download__block
+							p.about-download__title LLC Major Cargo Service
+							a.about-download__link(href="#" download) Скачать .pdf
+						// Block
+						li.about-download__block
+							p.about-download__title LLC Major Cargo Service
+							a.about-download__link(href="#" download) Скачать .pdf
+						// Block
+						li.about-download__block
+							p.about-download__title LLC Major Cargo Service
+							a.about-download__link(href="#" download) Скачать .pdf
+						// Block
+						li.about-download__block
+							p.about-download__title LLC Major Cargo Service
+							a.about-download__link(href="#" download) Скачать .pdf
+						// Block
+						li.about-download__block
+							p.about-download__title LLC Major Cargo Service
+							a.about-download__link(href="#" download) Скачать .pdf
+
+				// Content
+				.section-about__tab-content.tabs__content#content3
+					.timeline
+						// Block
+						.timeline__block.timeline__block--left
+							p.timeline__year 2011
+							p.timeline__title Образование
+								br
+								| Major Cargo Service
+							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи.
+							p.timeline__text Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
+						// Block
+						.timeline__block.timeline__block--right.timeline__block--image
+							img.timeline__image(src="images/section-about/timeline1.jpg", alt)
+							p.timeline__year 2013
+							p.timeline__title Образование
+								br
+								| Major Cargo Service
+							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи. Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
+						// Block
+						.timeline__block.timeline__block--left.timeline__block--image
+							img.timeline__image(src="images/section-about/timeline2.jpg", alt)
+							p.timeline__year 2015
+							p.timeline__title Открытие логопарка
+								br
+								| Major Terminal
+							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи. Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
+						// Block
+						.timeline__block.timeline__block--last.timeline__block--fullwidth
+							p.timeline__year 2018
+							p.timeline__title Образование
+								br
+								| Major Cargo Service
+							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи. Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
+
+
+				// Content
+				.section-about__tab-content.tabs__content#content4
+					.about-gallery
+						.about-gallery__grid
+							// Col
+							.about-gallery__col
+								img.about-gallery__image(src="images/section-about/cert1.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
+							// Col
+							.about-gallery__col
+								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
+							// Col
+							.about-gallery__col
+								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert4.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert1.jpg", alt)
+							// Col
+							.about-gallery__col
+								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
+							// Col
+							.about-gallery__col
+								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert5.jpg", alt)
+								img.about-gallery__image(src="images/section-about/cert1.jpg", alt)
+						.about-gallery__button-row
+							button.button.button--sm.button--outline-blue.button--text-big.about-gallery__button Показать еще
+
+
+	// Section Invite
+	.section-invite
+		.container
+			.section-invite__row
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Вебинары
+							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+				.section-invite__col
+					// Card
+					a.section-invite__card(href="#")
+						.section-invite__card-content
+							p.section-invite__card-title Наши кейсы
+							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
+						+svg("chevron-right-big")(class="section-invite__card-arrow")
+
+
