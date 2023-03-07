@@ -1,5 +1,14 @@
 // Header
 header.header
+	// Search
+	.header__search-form
+		form.search-form
+			.container
+				.search-form__row
+					button.search-form__submit(aria-label="Искать")
+						+svg("search-loupe")(class="search-form__submit-icon")
+					input.search-form__input(placeholder="Поиск...")
+					button.search-form__close-button.js-search-toggle(type="button", aria-label="Закрыть поиск")
 	// Top block
 	.header__row
 		.header__top-box.container
@@ -18,10 +27,9 @@ header.header
 				|
 				| — Секретариат
 			.header__search
-				form.search-form
-					button.search-form__submit(aria-label="Искать")
-						+svg("search-loupe")(class="search-form__submit-icon")
-					input.search-form__input(placeholder="Поиск...")
+					button.header__search-button.js-search-toggle
+						+svg("search-loupe")(class="header__search-button-icon")
+						|Поиск...
 			.header__lang
 				.dropdown.dropdown--with-flag
 					.dropdown__value-box
