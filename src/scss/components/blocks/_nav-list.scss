@@ -16,20 +16,21 @@
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-		padding: 16px 20px;
+		padding: 16px 22px;
 		border-radius: 25px;
 		background-color: #e7eef4;
-		border: 2px solid #e7eef4;
+		font-family: $font-secondary;
 		font-size: 24px;
 		line-height: 24px;
 		letter-spacing: .01em;
 		color: $color-blue;
+		font-weight: 700;
 		text-align: center;
-		transition: background-color $transition-default, border-color $transition-default;
+		transition: background-color $transition-default, color $transition-default;
 
 		&:hover {
-			background-color: $color-transparent;
-			border-color: $color-blue;
+			background-color: $color-blue;
+			color: $color-white;
 		}
 	}
 }

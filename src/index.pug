@@ -18,7 +18,7 @@ block content
 			h1.h1.text-blue.section-ready__title Готовые
 				|
 				|
-				strong.strong.text-blue-light складские решения
+				strong.strong.text-blue-light решения для индустрий
 			a.button.button--white.button--sm(href="#") Все индустрии
 		.section-ready__grid
 			// Card
@@ -28,7 +28,7 @@ block content
 					+svg("chevron-right")(class="card__arrow")
 				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
-					img.card__bg(src="images/section-ready/bg1.jpg", alt)
+					img.card__bg(src="images/section-ready/bg7.jpg", alt)
 			// Card
 			a.section-ready__card.card(href="#")
 				.card__title-box
@@ -36,7 +36,7 @@ block content
 					+svg("chevron-right")(class="card__arrow")
 				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
-					img.card__bg(src="images/section-ready/bg2.jpg", alt)
+					img.card__bg(src="images/section-ready/bg8.jpg", alt)
 			// Card
 			a.section-ready__card.card(href="#")
 				.card__title-box
@@ -68,7 +68,8 @@ block content
 					+svg("chevron-right")(class="card__arrow")
 				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
-					img.card__bg(src="images/section-ready/bg6.jpg", alt)
+					img.card__bg(src="images/section-ready/bg9.jpg", alt)
+
 
 	// Section Nav
 	.section-nav.container
@@ -79,10 +80,12 @@ block content
 					span.section-nav__text-box Вход в MAP
 			li.section-nav__elem
 				a.section-nav__link(href="#")
-					| Наши вакансии
+					+svg("users")(class="section-nav__icon")
+					span.section-nav__text-box Наши вакансии
 			li.section-nav__elem.section-nav__elem--wide
 				a.section-nav__link(href="#")
-					| Вебинар о складской деятельности - 31.03
+					+svg("play-circle")(class="section-nav__icon")
+					span.section-nav__text-box Новые реалии рынка труда в сфере логистики
 
 	// Section Services
 	section.section-services
@@ -94,7 +97,7 @@ block content
 					span.text-blue Ma
 						span.text-red j
 						| or Terminal
-				a.button.button--white.button--sm(href="#") Все услуги
+				a.button.button--outline-blue.button--sm.section-services__title-btn(href="#") Все услуги
 			.section-services__nav.nav-row
 				ul.nav-list
 					li.nav-list__elem
@@ -106,10 +109,12 @@ block content
 					li.nav-list__elem
 						a.nav-list__link(href="#") Стикеровка
 					li.nav-list__elem
-						a.nav-list__link(href="#") Работа с комплектами
+						a.nav-list__link(href="#") Работа
+							br
+							| с комплектами
 	// Section Slider terminal
 	.section-slider-terminal.container
-		.swiper.slider.section-services__slider
+		.swiper.slider.slider--with-wide-slide.section-services__slider
 			.swiper-wrapper
 				// Slide
 				.swiper-slide.slider__slide.slider__slide--wide

@@ -119,11 +119,12 @@
 	&__title {
 		margin: 0;
 		font-size: 24px;
-		line-height: 32px;
+		line-height: 25px;
 		font-weight: 900;
 
 		.news-card--big & {
 			font-size: 32px;
+			line-height: 32px;
 		}
 	}
 }

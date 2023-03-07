@@ -27,16 +27,16 @@
 		background-color: $color-white;
 		border-radius: 25px;
 		font-family: $font-secondary;
-		font-size: 18px;
+		font-size: 24px;
 		line-height: 32px;
 		font-weight: 700;
-		color: #484848;
+		color: $color-blue;
 		box-shadow: 0 0 10px rgba($color-blue, .0);
-		transition: box-shadow $transition-default, color $transition-default;
+		transition: background-color $transition-default, color $transition-default;
 
 		&:hover {
-			color: $color-blue;
-			box-shadow: 0 0 10px rgba($color-blue, .15);
+			background-color: $color-blue;
+			color: $color-white;
 		}
 
 	}
@@ -45,8 +45,15 @@
 		margin-right: 18px;
 	}
 
+	&__icon {
+		width: 64px;
+		height: 64px;
+		margin-right: 10px;
+	}
+
 	&__text-box {
 		flex-grow: 1;
+		margin: 0 auto;
 		text-align: center;
 	}
 }
