@@ -206,6 +206,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/header.js":
+/*!*************************************!*\
+  !*** ./src/js/components/header.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.header');
+  var searchFormToggle = document.querySelectorAll('.js-search-toggle');
+  searchFormToggle.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (header.classList.contains('header--search-shown')) {
+        header.classList.remove('header--search-shown');
+        setTimeout(function () {
+          header.classList.remove('header--search-show');
+        }, 300);
+      } else {
+        header.classList.add('header--search-show');
+        setTimeout(function () {
+          header.classList.add('header--search-shown');
+        }, 50);
+      }
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/section-services.js":
 /*!***********************************************!*\
   !*** ./src/js/components/section-services.js ***!
@@ -353,13 +382,16 @@ document.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_section_services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/section-services */ "./src/js/components/section-services.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_section_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/section-slider */ "./src/js/components/section-slider.js");
-/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
-/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_section_terminals__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/section-terminals */ "./src/js/components/section-terminals.js");
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header */ "./src/js/components/header.js");
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_header__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_section_services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/section-services */ "./src/js/components/section-services.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_section_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/section-slider */ "./src/js/components/section-slider.js");
+/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_section_terminals__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/section-terminals */ "./src/js/components/section-terminals.js");
+
 
 
 
