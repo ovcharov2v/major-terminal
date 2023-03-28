@@ -1,39 +1,29 @@
 .section-contacts {
 	position: relative;
 	z-index: 0;
-	padding-top: 78px;
-	padding-bottom: 87px;
-	background-color: $color-blue;
-	background-image: url("../images/section-contacts/bg.jpg");
-	background-repeat: no-repeat;
-	background-size: 50% auto;
-	background-position: right top;
+	padding-top: 98px;
+	background-color: $color-blue-light3;
 	overflow: hidden;
-
-	&::before {
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg, $color-blue 53%, rgba(#fff, 0) 100%);
-		content: "";
-	}
 
 	&--job {
 		padding-top: 50px;
 	}
 
+	&__row {
+		display: grid;
+		grid-template-columns: 1.35fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	&__img {
+		width: 111%;
+		transform: translate(-0.7%, -11.3%);
+	}
+
 	&__title {
 		margin-top: 0;
 		margin-bottom: 71px;
-		text-align: center;
-
-		.section-contacts--blue & {
-			//font-size: 32px;
-			//line-height: 48px;
-		}
+		color: $color-blue;
 
 		.section-contacts--job & {
 			display: flex;
@@ -60,8 +50,7 @@
 
 	&__form-row {
 		display: flex;
-		margin: 0 -20px 73px;
-		transform: translateX(46px);
+		margin: 0 -16px 35px;
 
 		.section-contacts--job & {
 			margin-bottom: 63px;
@@ -71,10 +60,10 @@
 
 	&__form-col {
 		width: 100%;
-		padding: 0 20px;
+		padding: 0 16px;
 
 		&--inputs {
-			max-width: 45%;
+			max-width: 43%;
 
 			.section-contacts--job & {
 				max-width: 46%;
@@ -82,7 +71,7 @@
 		}
 
 		&--message {
-			max-width: 55%;
+			max-width: 57%;
 
 			.section-contacts--job & {
 				max-width: 54%;
@@ -99,46 +88,19 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		border-radius: 25px;
-	}
-
-	&__input-box,
-	&__textarea-box {
-		position: relative;
-
-		&::after {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			background-color: $color-blue-light2;
-			border-radius: 10px 10px 25px 10px;
-			content: "";
-		}
 	}
 
 	&__input-box {
 		&:not(:last-child) {
 			margin-bottom: 23px;
 		}
-
-		&::after {
-			width: 16px;
-			height: 16px;
-		}
 	}
 
 	&__textarea-box {
 		height: 100%;
-
-		&::after {
-			width: 36px;
-			height: 36px;
-		}
 	}
 
 	&__form-submit-box {
-		text-align: center;
-
 		.section-contacts--job & {
 			display: flex;
 			align-items: center;
@@ -148,7 +110,7 @@
 
 	&__form-submit {
 		width: 100%;
-		max-width: 350px;
+		max-width: 255px;
 	}
 
 	&__call-text {

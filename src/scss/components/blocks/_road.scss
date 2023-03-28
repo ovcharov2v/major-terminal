@@ -1,0 +1,25 @@
+.road {
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+
+	&::after {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: -30px;
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/road-bg/road1.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		content: "";
+	}
+
+	&--blue {
+		&::after {
+			background-image: url("../images/road-bg/road2.svg");
+		}
+	}
+}

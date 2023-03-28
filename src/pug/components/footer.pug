@@ -1,6 +1,6 @@
 // Footer
-footer.footer(class=typeof footerLowTopPadding === "undefined" ? "" : "footer--low-top-padding")
-	.container.footer__container
+footer.footer
+	.container
 		.footer__row
 			// Nav col
 			.footer__col
@@ -57,17 +57,17 @@ footer.footer(class=typeof footerLowTopPadding === "undefined" ? "" : "footer--l
 					li.footer__nav-elem
 						a.footer__nav-link(href="#") Преимущества
 					li.footer__nav-elem
-						a.footer__nav-link(href="#") Карьера
+						a.footer__nav-link(href="#") Наши вакансии
 			// Contact col
-			.footer__col.footer__col--contacts
+			.footer__col
 				a.footer__logo-link(href="/")
-					img.footer__logo(src="images/common/logo.svg", alt="Major")
-				p.footer__text-secretariat
+					img.footer__logo(src="images/common/logo-major-terminal.svg", alt="Major")
+				.footer__links-box
 					a.footer__link(href="tel:84957376006") 8 (495) 737 60 06
-					|
-					| — Секретариат
-				a.footer__link.footer__link--mail(href="mailto:info@mjr-terminal.ru") info@mjr-terminal.ru
-				a.footer__link.footer__link--contacts(href="/") Связаться с нами
+						|
+						| — Секретариат
+					a.footer__link(href="mailto:info@major-terminal.ru") info@major-terminal.ru
+				a.footer__link-contacts(href="/") Связаться с нами
 				p.footer__text Мы в социальных сетях
 				ul.footer__social.social
 					li.social__elem
@@ -76,3 +76,14 @@ footer.footer(class=typeof footerLowTopPadding === "undefined" ? "" : "footer--l
 					li.social__elem
 						a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Telegram")
 							+svg("telegram")(class="social__link-icon")
+		// Copyright
+		.footer__copyright
+			.footer__copyright-col
+				p.footer__copyright-text
+					|2023 © Major Terminal.
+					br
+					| Все права защищены. Использование текстовой или графической информации  с сайта major-terminal.ru возможно исключительно с разрешения правообладателя.
+			.footer__copyright-col
+				a.footer__copyright-link(href="#") Пользовательское соглашение
+			.footer__copyright-col
+				a.footer__copyright-link(href="#") Политика конфиденциальности

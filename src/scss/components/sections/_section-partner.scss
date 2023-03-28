@@ -1,6 +1,24 @@
 .section-partner {
-	padding-top: 70px;
-	padding-bottom: 30px;
+	position: relative;
+	z-index: 0;
+	padding-top: 79px;
+	padding-bottom: 86px;
+
+	&::before {position: absolute;
+		z-index: -2;
+		top: 0;
+		right: -64px;
+		left: -64px;
+		height: 100%;
+		border-radius: 25px;
+		background-color: $color-blue;
+		background-image: linear-gradient(to right, #004996 21.1%, rgba(0, 0, 0, 0) 80.7%), url("../images/section-partner/bg.jpg");
+		background-size: cover, cover;
+		background-position: center center;
+		background-repeat: no-repeat, no-repeat;
+		content: "";
+
+	}
 
 	&__row {
 		display: flex;
@@ -19,40 +37,77 @@
 		}
 
 		&--content {
-			padding-top: 7px;
-			max-width: 43%;
-			background-image: url("../images/section-partner/bg2.svg");
-			background-size: contain;
-			background-position: 20px center;
-			background-repeat: no-repeat;
+			max-width: 62.2%;
 		}
 	}
 
 	&__title {
 		width: 100%;
-		max-width: 487px;
+		max-width: 750px;
 		margin-top: 0;
-		margin-bottom: 60px;
+		margin-bottom: 34px;
 	}
 
 	&__text {
+		font-family: $font-secondary2;
+		max-width: 670px;
 		margin-top: 0;
-		margin-bottom: 58px;
-		font-family: $font-secondary;
-		font-size: 24px;
-		line-height: 24px;
-		font-weight: 300;
-	}
-
-	&__button-row {
-		display: flex;
-		margin: 0 -15px;
-		align-items: center;
+		margin-bottom: 51px;
+		font-size: 28px;
+		line-height: 28px;
+		font-weight: 500;
 	}
 
 	&__button {
 		width: 100%;
 		max-width: 247px;
-		margin: 0 15px;
+		font-size: 24px;
+	}
+
+	&__link-list {
+		display: flex;
+		padding: 22px 68px 22px;
+		margin: 0 0 71px;
+		justify-content: space-between;
+		border-radius: 25px;
+		background-color: $color-white;
+		list-style-type: none;
+	}
+
+	&__link-elem {
+		padding: 0 12px;
+	}
+
+	&__link {
+		position: relative;
+		padding-bottom: 5px;
+		font-size: 24px;
+		line-height: 24px;
+		letter-spacing: .01em;
+		font-weight: 700;
+		color: $color-blue;
+		transition: color $transition-default;
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 100%;
+			max-width: 19px;
+			height: 4px;
+			border-radius: 4px;
+			background-color: $color-red;
+			transform: translateX(-50%) scaleX(0);
+			content: "";
+			transition: transform $transition-default;
+		}
+
+		&:hover {
+			color: $color-red;
+
+			&::after {
+				transform: translateX(-50%);
+			}
+		}
 	}
 }

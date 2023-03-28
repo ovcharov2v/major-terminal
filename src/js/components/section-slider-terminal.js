@@ -1,7 +1,7 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
-	const slider = document.querySelector('.section-services__slider')
+	const slider = document.querySelector('.section-slider-terminal__slider')
 	if(!slider) return
 
 	new Swiper(slider, {

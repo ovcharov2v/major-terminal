@@ -17,8 +17,6 @@
 		display: flex;
 		flex-direction: column;
 		height: auto;
-		width: calc(25% - 32px);
-		padding-bottom: 34px;
 		border-radius: 25px;
 		user-select: none;
 
@@ -57,17 +55,22 @@
 
 	&__slide-title {
 		position: absolute;
-		bottom: 0;
+		bottom: 33px;
 		right: 50%;
 		transform: translateX(50%);
 		margin: 0;
-		padding: 28px 49px;
+		padding: 17px 57px;
+		white-space: nowrap;
 		border-radius: 25px;
-		background-color: $color-white;
+		background: linear-gradient(to left, rgba(0, 73, 150, 0.85) 0%, rgba(0, 73, 150, 0) 100%);
 		font-family: $font-secondary;
 		font-size: 24px;
 		line-height: 1;
 		font-weight: 700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $color-white;
 
 		.slider__slide--wide & {
 			right: 70px;
@@ -215,5 +218,11 @@
 		height: 46px;
 		transform: translateX(6px);
 		transition: color $transition-default;
+	}
+
+	&__map-icon {
+		width: 33px;
+		height: 47px;
+		margin-right: 18px;
 	}
 }

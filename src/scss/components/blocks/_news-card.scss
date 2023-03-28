@@ -83,7 +83,7 @@
 		position: relative;
 		z-index: 1;
 		max-width: calc(100% - 60px);
-		padding-top: 24px;
+		padding-top: 38px;
 		transition: transform $transition-default;
 
 		.news-card:hover & {
@@ -109,18 +109,20 @@
 
 	&__time {
 		display: block;
-		margin-bottom: 8px;
+		margin-bottom: 9px;
 		font-family: $font-additional;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 32px;
 		font-weight: 700;
+		opacity: 0.5;
 	}
 
 	&__title {
+		font-family: $font-secondary2;
 		margin: 0;
-		font-size: 24px;
-		line-height: 25px;
-		font-weight: 900;
+		font-size: 28px;
+		line-height: 1;
+		font-weight: 500;
 
 		.news-card--big & {
 			font-size: 32px;

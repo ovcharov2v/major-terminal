@@ -1,0 +1,52 @@
+.simple-card {
+	position: relative;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	border-radius: 25px;
+	min-height: 395px;
+	overflow: hidden;
+	color: $color-white;
+	padding: 40px 44px;
+
+	&::before {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(90.25deg, rgba(225, 0, 0, 0.5) 12.82%, rgba(0, 73, 150, 0) 79.82%), url("data:image/svg+xml,%3Csvg width='77' height='158' viewBox='0 0 77 158' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 145L61 79L13 13' stroke='white' stroke-width='25' stroke-linecap='round'/%3E%3C/svg%3E");
+		background-size: cover, 77px 158px;
+		background-position: center, center;
+		background-repeat: no-repeat, no-repeat;
+		content: "";
+		opacity: 0;
+		transition: opacity .2s linear;
+	}
+
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-family: $font-additional;
+		font-size: 28px;
+		line-height: 1;
+	}
+
+	&__bg {
+		position: absolute;
+		z-index: -2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
