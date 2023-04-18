@@ -6,7 +6,6 @@
 	justify-content: flex-end;
 	align-items: flex-start;
 	border-radius: 25px;
-	min-height: 395px;
 	overflow: hidden;
 	color: $color-white;
 	padding: 40px 44px;
@@ -38,6 +37,7 @@
 		font-family: $font-additional;
 		font-size: 28px;
 		line-height: 1;
+		font-weight: 700;
 	}
 
 	&__bg {
