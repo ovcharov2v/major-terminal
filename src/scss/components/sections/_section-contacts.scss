@@ -13,7 +13,10 @@
 		grid-column-gap: 90px;
 	}
 
-	&__form-box {}
+	&__form-box {
+		position: relative;
+	}
+
 	&__img-box {}
 
 	&__img {
@@ -153,5 +156,56 @@
 		font-weight: 700;
 		color: $color-white;
 		cursor: pointer;
+	}
+
+	&__form-layer {
+		transition: opacity $transition-default;
+
+		&--form {
+			.section-contacts__form--submitted & {
+				opacity: 0;
+			}
+		}
+
+		&--success {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			visibility: hidden;
+
+			.section-contacts__form--submitted & {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__submitted-icon {
+		display: block;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 45px;
+	}
+
+	&__submitted-title {
+		margin-top: 0;
+		margin-bottom: 55px;
+	}
+
+	&__submitted-text {
+		margin-top: 0;
+		margin-bottom: 68px;
+		font-family: $font-secondary;
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+
+	&__form-reset {
+		width: 100%;
+		max-width: 246px;
 	}
 }

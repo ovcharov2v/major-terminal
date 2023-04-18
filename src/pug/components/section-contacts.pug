@@ -3,25 +3,32 @@ section.section-contacts
 	.container
 		.section-contacts__row
 			.section-contacts__form-box
-				h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
-				form.section-contacts__form
-					.section-contacts__form-row
-						.section-contacts__form-col.section-contacts__form-col--inputs
-							.section-contacts__input-box
-								input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
-							.section-contacts__input-box
-								input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
-							.section-contacts__input-box
-								input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
-						.section-contacts__form-col.section-contacts__form-col--message
-							.section-contacts__textarea-box
-								textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
-					.section-contacts__form-submit-box
-						//.section-contacts__form-col.section-contacts__form-col--inputs
-						button.button.button--blue.button--lg.section-contacts__form-submit Отправить
-						//-.section-contacts__form-col.section-contacts__form-col--message
-							p.section-contacts__form-upload-text Загрузите Ваше резюме –  это повысит шансы на ответ
-							input#upload.section-contacts__form-upload-input(type="file")
-							label.section-contacts__form-upload-label(for="upload") Загрузить файл
+				form.section-contacts__form(action="#")
+					.section-contacts__form-layer.section-contacts__form-layer--form
+						h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
+						.section-contacts__form-row
+							.section-contacts__form-col.section-contacts__form-col--inputs
+								.section-contacts__input-box
+									input.form-control.section-contacts__form-input(type="text", name="name", placeholder="Имя")
+								.section-contacts__input-box
+									input.form-control.section-contacts__form-input(type="tel", name="phone", placeholder="*Телефон")
+								.section-contacts__input-box
+									input.form-control.section-contacts__form-input(type="email", name="email", placeholder="*Адрес электронной почты")
+							.section-contacts__form-col.section-contacts__form-col--message
+								.section-contacts__textarea-box
+									textarea.form-control.form-control--textarea.section-contacts__form-textarea(name="message", placeholder="*Комментарий...")
+						.section-contacts__form-submit-box
+							//.section-contacts__form-col.section-contacts__form-col--inputs
+							button.button.button--blue.button--lg.section-contacts__form-submit Отправить
+							//-.section-contacts__form-col.section-contacts__form-col--message
+								p.section-contacts__form-upload-text Загрузите Ваше резюме –  это повысит шансы на ответ
+								input#upload.section-contacts__form-upload-input(type="file")
+								label.section-contacts__form-upload-label(for="upload") Загрузить файл
+
+					.section-contacts__form-layer.section-contacts__form-layer--success
+						+svg("submitted-form")(class="section-contacts__submitted-icon")
+						h3.h2.text-blue.section-contacts__submitted-title Спасибо! Ваше сообщение принято.
+						p.text-blue.section-contacts__submitted-text В ближайшее время с Вами свяжется менеджер по указанным контактным данным.
+						button.button--blue.button--lg.section-contacts__form-reset(type="reset") Написать еще
 			.section-contacts__img-box
 				img.section-contacts__img(src="images/common/warehouse.svg", alt)
