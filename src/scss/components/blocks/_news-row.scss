@@ -1,25 +1,12 @@
 .news-row {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -15px;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 32px;
+	grid-row-gap: 52px;
 
-	&--col {
-		display: block;
-	}
-
-	&__card-box {
-		width: 100%;
-		max-width: 33.3333%;
-		padding: 0 15px;
-
-		.news-row--two-col & {
-			max-width: 50%;
-		}
-
-		.news-row--col & {
-			max-width: 100%;
-			margin-bottom: 37px;
-			padding: 0;
-		}
+	&--two-col {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 50px;
 	}
 }

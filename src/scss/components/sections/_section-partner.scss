@@ -1,49 +1,35 @@
 .section-partner {
 	position: relative;
-	z-index: 0;
-	padding-top: 79px;
-	padding-bottom: 86px;
 
-	&::before {position: absolute;
-		z-index: -2;
-		top: 0;
-		right: -64px;
-		left: -64px;
-		height: 100%;
-		border-radius: 25px;
-		background-color: $color-blue;
-		background-image: linear-gradient(to right, #004996 21.1%, rgba(0, 0, 0, 0) 80.7%), url("../images/section-partner/bg.jpg");
-		background-size: cover, cover;
-		background-position: center center;
-		background-repeat: no-repeat, no-repeat;
-		content: "";
+	&__content {
+		position: relative;
+		z-index: 0;
+		padding: 79px 54px 86px;
 
-	}
-
-	&__row {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin: 0 -15px;
+		&::before {position: absolute;
+			z-index: -2;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			border-radius: 25px;
+			background-color: $color-blue;
+			background-image: url("../images/section-partner/bg.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			content: "";
+		}
 	}
 
 	&__col {
 		width: 100%;
-		padding: 0 15px;
-
-		&--img {
-			text-align: center;
-			max-width: 57%;
-		}
-
-		&--content {
-			max-width: 62.2%;
-		}
+		max-width: 996px;
 	}
 
 	&__title {
 		width: 100%;
-		max-width: 750px;
+		max-width: 830px;
 		margin-top: 0;
 		margin-bottom: 34px;
 	}
@@ -85,7 +71,7 @@
 		line-height: 24px;
 		letter-spacing: .01em;
 		font-weight: 700;
-		color: $color-blue;
+		color: #014A97;
 		transition: color $transition-default;
 
 		&::after {
@@ -102,7 +88,8 @@
 			transition: transform $transition-default;
 		}
 
-		&:hover {
+		&:hover,
+		&--active {
 			color: $color-red;
 
 			&::after {

@@ -10,44 +10,50 @@ append vars
 		link.icon = "favicons/favicon.ico"
 		link.icon16x16 = "favicons/favicon-16x16.png"
 		link.icon32x32 = "favicons/favicon-32x32.png"
-		footerLowTopPadding = true
 
 block content
+	+breadcrumb(['Главная'], 'Кейсы')(class="container")
 	// Section Hero
-	section.section-hero.section-hero--with-cards.section-hero--case
+	section.section-hero.section-hero--case
 		.container
-			+breadcrumb(['Главная'], 'Кейсы')(class="section-hero__breadcrumb breadcrumb--white")
-			h1.section-hero__title Доставка и оформление негабаритных
-				br
-				|выставочных макетов фюзеляжа самолета
-			p.section-hero__text Осуществление перевозки и оформления Карнета АТА выставочных макетов фюзеляжа
-				br
-				| дальнемагистрального бизнес-джета Bombardier
-			img.section-hero__bg(src="images/section-hero/bg1.jpg", alt)
-			// Cards
-			.section-hero__card-row
-				article.section-hero__card
-					h2.section-hero__card-title Задача
-					ul.list-arrow.list-arrow--blue
-						li.list-arrow__elem Осуществление портового экспедирования
-						li.list-arrow__elem Оформление ввоза на территорию РФ выставочного оборудования по процедуре
-							br
-							| Карнет АТА в максимально короткие сроки
-						li.list-arrow__elem Доставка негабаритных выставочных макетов фюзеляжа
-				article.section-hero__card
-					h2.section-hero__card-title Сложности
-					ul.list-arrow.list-arrow--blue
-						li.list-arrow__elem Знание рынка контейнерных перевозок
-						li.list-arrow__elem Знание систем слежения и дислокации ЖД вагонов и контейнеров
-							br
-							| кругооборота парка и его полной загрузки на каждом плече
-						li.list-arrow__elem Знание специализированных программ по контролю за контейнерным оборудованием
+			.section-hero__content
+				h1.section-hero__title Интеграция с транспортными компаниями
+				p.section-hero__text Реализация функционала интеграции с транспортными компаниями (Healthcare|POSM)
+				img.section-hero__bg(src="images/section-hero/bg5.jpg", alt)
 
-	.container
-		// Decision
-		arcticle.decision
-			h2.h2.decision__title Решение
-			p.decision__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы. Срок исполнения: 2 месяц с момента первого обращения, перевозка по готовности груза – 10 дней
+	// Section Case item
+	.section-case-item.container
+		// Panel
+		.section-case-item__panel
+			h3.section-case-item__panel-title Задача
+			.section-case-item__panel-row
+				ul.list-arrow.list-arrow--blue.section-case-item__panel-list
+					li.list-arrow__elem Реализовать интеграцию с транспортными компаниями
+					li.list-arrow__elem Упростить документооборот
+		// Panel
+		.section-case-item__panel
+			h3.section-case-item__panel-title Сложности
+			.section-case-item__panel-row
+				ul.list-arrow.list-arrow--blue.section-case-item__panel-list
+					li.list-arrow__elem Большое количество договор с разными транспортными компаниями
+					li.list-arrow__elem Административные расходы на обработку процесса со стороны клиента
+					li.list-arrow__elem Невозможность формирования накладных и прочих документов
+		// Panel
+		.section-case-item__panel
+			h3.section-case-item__panel-title Решение
+			p.section-case-item__text Наша компания реализовала для клиента интеграцию со следующими компаниями:
+			ul.section-case-item__list
+				li Мэйджор Экспресс
+				li Курьер Сервис Экспресс
+				li СДЕК (возможность реализации выдачи груза через ПВЗ)
+				li DPD (возможность реализации выдачи груза через ПВЗ)
+				li Pony Express
+			p.section-case-item__text Реализовав интеграцию с транспортными компаниями, наши клиенты получают следующие плюсы:
+			ul.section-case-item__list
+				li экономия времени своих сотрудников на формирование накладных и передачи документов – по окончанию комплектации заказа, автоматически, заказу присваивается уникальный номер перевозчика (накладная). Номер накладной печатается на отгрузочном стикере. Передача груза в ТК происходит путем считывания ШК накладной с отгрузочного стикера. Никакие доп. документы перевозчика на груз наносить не требуется
+				li экономия времени своих сотрудников на формирование заказов в системе перевозчика для вывоза собранных грузов – по интеграции передается информация по требуемой дате вывоза груза. К указанной дате ТК подает машину нужного объема и забирает подготовленные к отгрузке заказы.
+				li Просмотр статусов накладных по всем транспортным компаниям через одно окно. В системе MAP реализованы отчеты для просмотра информации по дате отгрузке со склада, плановой дате/ фактической дате поступления накладной получателю. Для ПВЗ доступна информация о фактической дате поступления груза в пункт выдачи
+				li Информирование конечного получателя об изменении статуса накладной путем отправки уведомлений на электронную почту.
 
 	// Section Case list
 	section.section-case-list.section-case-list--other.container
@@ -80,50 +86,3 @@ block content
 					+svg("chevron-right-big")(class="card__arrow")
 				.card__bg-box
 					img.card__bg(src="images/section-cases/bg2.jpg", alt)
-			// Card
-			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
-				ul.card__tag-list
-					li.card__tag FMCG
-					li.card__tag Складское хранение
-				.card__text-box
-					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
-				.card__title-box
-					p.card__title Кейс FMCG (алкоголь)
-					+svg("chevron-right-big")(class="card__arrow")
-				.card__bg-box
-					img.card__bg(src="images/section-cases/bg3.jpg", alt)
-			// Card
-			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
-				ul.card__tag-list
-					li.card__tag Fashion
-					li.card__tag Fashion
-				.card__text-box
-					p.card__text Здесь будет чуть больше информации по описанию для данного кейса
-				.card__title-box
-					p.card__title Кейс Fashion
-					+svg("chevron-right-big")(class="card__arrow")
-				.card__bg-box
-					img.card__bg(src="images/section-cases/bg4.jpg", alt)
-		.section-case-list__button-row
-			button.button.button--outline-blue.button--md.section-case-list__button Показать еще
-
-	// Section Invite
-	.section-invite
-		.container
-			.section-invite__row
-				.section-invite__col
-					// Card
-					a.section-invite__card(href="#")
-						.section-invite__card-content
-							p.section-invite__card-title Вебинары
-							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
-						+svg("chevron-right-big")(class="section-invite__card-arrow")
-				.section-invite__col
-					// Card
-					a.section-invite__card(href="#")
-						.section-invite__card-content
-							p.section-invite__card-title Наши кейсы
-							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
-						+svg("chevron-right-big")(class="section-invite__card-arrow")
-
-

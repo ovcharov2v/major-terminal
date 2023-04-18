@@ -12,78 +12,60 @@ append vars
 		link.icon32x32 = "favicons/favicon-32x32.png"
 
 block content
-	+breadcrumb(['Главная'], 'Пресс-релизы')(class="container")
+	+breadcrumb(['Главная', 'Пресс-релизы'], 'Логистика в период ограничений на 06 октября')(class="container")
 	// Section News
 	section.section-text.container
+		img.section-text__hero-img(src="images/section-text/hero.jpg", alt)
 		.section-text__content-box
-			// Content
-			.section-text__content
-				h1.h2.text-blue.section-text__title Логистика в период
-					br
-					| ограничений на 06 октября
-				blockquote.section-text__cite
-					| Железнодорожные перевозки  Доставка грузов из Юго-Восточной Азии – РФ, Калининград по ЖД. Major Cargo Service организует перевозки из Азии в Калининград. Маршрут перевозки: Китай, Чэнду – Хоргос/Алашанькоу – Белый Раст – порт Усть-Луга – КМТП. До Китая груз из других частей ЮВА доставляют мультимодальным транспортом. Импортное ТО груза возможно как в Калининграде, так и на ст. Белый Раст (Москва). Морской сервис из ОАЭ
-				h2.section-text__subtitle Подзаголовок h2
-				p.section-text__text Возможна доставка контейнеров в порты Xiamen, Lianyungang, Xingang (Tianjin), Qingdao, Dalian с использованием фидерных судов. Предварительная дата окончания приемки грузов 28.10.2022. Выход судна из СПб 05.11.2022. Транзитный срок 45-50 дней.  Возможность экспортных отправок из Санкт-Петербурга. В конце октября и ноябре из порта СПб будет два судна под экспорт в Индию. ETS SPB 23/10/22 - порт выгрузки Nhava Sheva, отгрузки с ПЛП. ETS SPB 14/11/22 - порт выгрузки Nhava Sheva и Chennai, отгрузка с ПЛП. Для котировки ставки необходимо обязательно предоставить наименование отправителя/получателя и код ТНВЭД.   Новый вариант доставки из Китая прямым чартерным судном до порта Санкт-Петербург. Маршрут NINGBO / SHANGHAI / QINGDAO / NANSHA — PETROLESPORT (порт Санкт-Петербург)  Плановые даты отправления/прибытия: NINGBO — ETS 23.10 SHANGHAI — ETS 24.10, QINGDAO — ETS 28.10, NANSHA — ETS 02.11,  ST. PETERSBURG PLP — ETA 08.12 Международные авиаперевозки Предлагаем доступные емкости на чартерах из Гонконга. Транзитный срок 14-18 часов, Boeing 777.
-				p.section-text__text-small Принимаем грузы, содержащие батарейки. Авиа из ОАЭ с Узбекскими авиакомпаниями - часто рейсов 5 дней в неделю, транзитное время 2-3 дня, при этом требуется получить разрешение от МИД ОАЭ. Выдача разрешения занимает 1-2 дня.  Международные Автоперевозки  Комментарии к Постановлению Правительства РФ от 30.09.2022 № 1728 "О МЕРАХ ПО РЕАЛИЗАЦИИ УКАЗА ПРЕЗИДЕНТА РОССИЙСКОЙ ФЕДЕРАЦИИ ОТ 29 СЕНТЯБРЯ 2022 Г. N 681 "О НЕКОТОРЫХ ВОПРОСАХ ОСУЩЕСТВЛЕНИЯ МЕЖДУНАРОДНЫХ АВТОМОБИЛЬНЫХ ПЕРЕВОЗОК ГРУЗОВ" Список кодов ТН ВЭД, на которые не распространяется запрет, формировался не ФТС России, а федеральными органами исполнительной власти (Минпромторгом, Минэкономразвития, Минсельхозом). Комментарии по включению/невключению определенных кодов ТНВЭД можно получить адресно у данных ведомств.
-				hr.section-text__line
-				img.section-text__image(src="images/section-text/img.jpg", alt)
-				p.section-text__text В целях открытия транзита перевозчикам необходимо заранее указывать в товаросопроводительных документах те терминалы, которые поименованы в Постановлении Правительства РФ № 1728 в качестве места доставки товаров. В противном случае таможенный орган на основание статьи 117 Федерального закона № 289-ФЗ будет самостоятельно определять место доставки, возможно неудобное для участника ВЭД. На дорогах общего пользования РФ именно Ространснадзор будет осуществлять проверку исполнения вновь установленных законодательных норм. Предварительно административная ответственность будет устанавливаться в соответствии с главой 11 КоАП РФ. Временный ввоз на транспортное средство международной перевозки (далее – «ТСМП») (как на тягач, так и на прицеп или полуприцеп) открывается в МАПП, и то лицо, которому открыт временный ввоз ТСМП, обязано его вывезти.
-				// Info
-				.section-text__info
-					p.section-text__score Средняя оценка материала: 4,5
-					p.section-text__label Оставьте свою оценку
-					form.section-text__score-form
-						input.section-text__radio#score1(type="radio", name="score", value="1")
-						label.section-text__radio-label(for="score1") 1
-						input.section-text__radio#score2(type="radio", name="score", value="2")
-						label.section-text__radio-label(for="score2") 2
-						input.section-text__radio#score3(type="radio", name="score", value="3")
-						label.section-text__radio-label(for="score3") 3
-						input.section-text__radio#score4(type="radio", name="score", value="4")
-						label.section-text__radio-label(for="score4") 4
-						input.section-text__radio#score5(type="radio", name="score", value="5")
-						label.section-text__radio-label(for="score5") 5
-			// Aside
-			aside.news-row.news-row--col.section-text__aside
-				// News
-				.news-row__card-box
-					a.news-card.news-card--small.news-card--radius-small(href="#")
-						img.news-card__img(src="images/common/news3.jpg", alt)
-						.news-card__content-box
-							time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-							p.news-card__title Логистика в период ограничений на 06 октября
-				// News
-				.news-row__card-box
-					a.news-card.news-card--small.news-card--radius-small(href="#")
-						img.news-card__img(src="images/common/news3.jpg", alt)
-						.news-card__content-box
-							time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-							p.news-card__title Логистика в период ограничений на 06 октября
-				// News
-				.news-row__card-box
-					a.news-card.news-card--small.news-card--radius-small(href="#")
-						img.news-card__img(src="images/common/news3.jpg", alt)
-						.news-card__content-box
-							time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
-							p.news-card__title Логистика в период ограничений на 06 октября
-
-	// Section Contacts
-	section.section-contacts
-		.container
-			h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
-			form.section-contacts__form
-				.section-contacts__form-row
-					.section-contacts__form-col.section-contacts__form-col--inputs
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
-					.section-contacts__form-col.section-contacts__form-col--message
-						.section-contacts__textarea-box
-							textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
-				.section-contacts__form-submit-box
-					button.button.button--white.button--lg.section-contacts__form-submit Отправить
-
+			time.section-text__date 06 октября 2022 г.
+			h1.h2.text-blue.section-text__title Логистика в период
+				br
+				| ограничений на 06 октября
+			blockquote.section-text__cite
+				| Железнодорожные перевозки  Доставка грузов из Юго-Восточной Азии – РФ, Калининград по ЖД. Major Cargo Service организует перевозки из Азии в Калининград. Маршрут перевозки: Китай, Чэнду – Хоргос/Алашанькоу – Белый Раст – порт Усть-Луга – КМТП. До Китая груз из других частей ЮВА доставляют мультимодальным транспортом. Импортное ТО груза возможно как в Калининграде, так и на ст. Белый Раст (Москва). Морской сервис из ОАЭ
+			h2.section-text__subtitle Подзаголовок h2
+			p.section-text__text Возможна доставка контейнеров в порты Xiamen, Lianyungang, Xingang (Tianjin), Qingdao, Dalian с использованием фидерных судов. Предварительная дата окончания приемки грузов 28.10.2022. Выход судна из СПб 05.11.2022. Транзитный срок 45-50 дней.  Возможность экспортных отправок из Санкт-Петербурга. В конце октября и ноябре из порта СПб будет два судна под экспорт в Индию. ETS SPB 23/10/22 - порт выгрузки Nhava Sheva, отгрузки с ПЛП. ETS SPB 14/11/22 - порт выгрузки Nhava Sheva и Chennai, отгрузка с ПЛП. Для котировки ставки необходимо обязательно предоставить наименование отправителя/получателя и код ТНВЭД.   Новый вариант доставки из Китая прямым чартерным судном до порта Санкт-Петербург. Маршрут NINGBO / SHANGHAI / QINGDAO / NANSHA — PETROLESPORT (порт Санкт-Петербург)  Плановые даты отправления/прибытия: NINGBO — ETS 23.10 SHANGHAI — ETS 24.10, QINGDAO — ETS 28.10, NANSHA — ETS 02.11,  ST. PETERSBURG PLP — ETA 08.12 Международные авиаперевозки Предлагаем доступные емкости на чартерах из Гонконга. Транзитный срок 14-18 часов, Boeing 777.
+			p.section-text__text-small Принимаем грузы, содержащие батарейки. Авиа из ОАЭ с Узбекскими авиакомпаниями - часто рейсов 5 дней в неделю, транзитное время 2-3 дня, при этом требуется получить разрешение от МИД ОАЭ. Выдача разрешения занимает 1-2 дня.  Международные Автоперевозки  Комментарии к Постановлению Правительства РФ от 30.09.2022 № 1728 "О МЕРАХ ПО РЕАЛИЗАЦИИ УКАЗА ПРЕЗИДЕНТА РОССИЙСКОЙ ФЕДЕРАЦИИ ОТ 29 СЕНТЯБРЯ 2022 Г. N 681 "О НЕКОТОРЫХ ВОПРОСАХ ОСУЩЕСТВЛЕНИЯ МЕЖДУНАРОДНЫХ АВТОМОБИЛЬНЫХ ПЕРЕВОЗОК ГРУЗОВ" Список кодов ТН ВЭД, на которые не распространяется запрет, формировался не ФТС России, а федеральными органами исполнительной власти (Минпромторгом, Минэкономразвития, Минсельхозом). Комментарии по включению/невключению определенных кодов ТНВЭД можно получить адресно у данных ведомств.
+			hr.section-text__line
+			img.section-text__image(src="images/section-text/img.jpg", alt)
+			p.section-text__text В целях открытия транзита перевозчикам необходимо заранее указывать в товаросопроводительных документах те терминалы, которые поименованы в Постановлении Правительства РФ № 1728 в качестве места доставки товаров. В противном случае таможенный орган на основание статьи 117 Федерального закона № 289-ФЗ будет самостоятельно определять место доставки, возможно неудобное для участника ВЭД. На дорогах общего пользования РФ именно Ространснадзор будет осуществлять проверку исполнения вновь установленных законодательных норм. Предварительно административная ответственность будет устанавливаться в соответствии с главой 11 КоАП РФ. Временный ввоз на транспортное средство международной перевозки (далее – «ТСМП») (как на тягач, так и на прицеп или полуприцеп) открывается в МАПП, и то лицо, которому открыт временный ввоз ТСМП, обязано его вывезти.
+			// Info
+			.section-text__info
+				p.section-text__score Средняя оценка материала: 4,5
+				p.section-text__label Оставьте свою оценку
+				form.section-text__score-form
+					input.section-text__radio#score1(type="radio", name="score", value="1")
+					label.section-text__radio-label(for="score1") 1
+					input.section-text__radio#score2(type="radio", name="score", value="2")
+					label.section-text__radio-label(for="score2") 2
+					input.section-text__radio#score3(type="radio", name="score", value="3")
+					label.section-text__radio-label(for="score3") 3
+					input.section-text__radio#score4(type="radio", name="score", value="4")
+					label.section-text__radio-label(for="score4") 4
+					input.section-text__radio#score5(type="radio", name="score", value="5")
+					label.section-text__radio-label(for="score5") 5
+		.news-row
+			// News
+			a.news-card.news-card--small(href="#")
+				img.news-card__img(src="images/common/news1.jpg", alt)
+				.news-card__content-box
+					time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+					p.news-card__title Логистика в период ограничений
+						br
+						| на 06 октября
+			// News
+			a.news-card.news-card--small(href="#")
+				img.news-card__img(src="images/common/news2.jpg", alt)
+				.news-card__content-box
+					time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+					p.news-card__title Логистика в период ограничений
+						br
+						| на 06 октября
+			// News
+			a.news-card.news-card--small(href="#")
+				img.news-card__img(src="images/common/news3.jpg", alt)
+				.news-card__content-box
+					time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
+					p.news-card__title Логистика в период ограничений
+						br
+						| на 06 октября

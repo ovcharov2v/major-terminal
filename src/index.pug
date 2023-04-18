@@ -13,7 +13,7 @@ append vars
 
 block content
 	// Section Ready
-	section.section-ready.road
+	section.section-ready.road.road--center
 		.container
 			.section-ready__title-box
 				h1.h1.section-ready__title Готовые
@@ -23,15 +23,15 @@ block content
 				a.button-arrow(href="#") Все индустрии
 			.simple-card-row
 				// Card
-				a.simple-card(href="#")
+				a.simple-card.section-ready__card(href="#")
 					h3.simple-card__title Fashion
 					img.simple-card__bg(src="images/simple-card/img1.jpg", alt)
 				// Card
-				a.simple-card(href="#")
+				a.simple-card.section-ready__card(href="#")
 					h3.simple-card__title Healthcare
 					img.simple-card__bg(src="images/simple-card/img2.jpg", alt)
 				// Card
-				a.simple-card(href="#")
+				a.simple-card.section-ready__card(href="#")
 					h3.simple-card__title Automotive
 					img.simple-card__bg(src="images/simple-card/img3.jpg", alt)
 				.simple-card-row__links
@@ -43,7 +43,7 @@ block content
 	section.section-services
 		.container
 			.section-services__title-box
-				h2.h2.section-services__title Услуги
+				h2.h2.section-services__title Продукты и услуги
 					|
 					|
 					span.text-blue Ma
@@ -177,21 +177,21 @@ block content
 
 	// Section Partner
 	section.section-partner.container
-		.section-partner__row
-			.section-partner__col.section-partner__col--content
+		.section-partner__content
+			.section-partner__col
 				ul.section-partner__link-list
 					li.section-partner__link-elem
 						a.section-partner__link(href="#") 4PL оператор
 					li.section-partner__link-elem
-						a.section-partner__link(href="#") Возможности
+						a.section-partner__link(href="#") Логопарк
 					li.section-partner__link-elem
 						a.section-partner__link(href="#") О Major Terminal
 					li.section-partner__link-elem
-						a.section-partner__link(href="#") Дистрибуция
+						a.section-partner__link(href="#") Ценности
 				h2.h2.text-white.section-partner__title Ma
 					span.text-red j
-					| or Terminal – Ваш надежный партнер в cкладском бизнесе
-				p.section-partner__text.text-white Major Terminal является частью 4PL-оператора Major Logistics, которые имеет колоссальный опыт и экспертизу в широком спектре услуг
+					| or Terminal – надежный поставщик всего комплекса складских услуг
+				p.section-partner__text.text-white Major Terminal является частью 4PL-оператора Major Logistics, и имеет колоссальный опыт и экспертизу в широком спектре складских услуг
 				a.button.button--outline-white.button--md.section-partner__button(href="#") Подробнее о нас
 
 	// Section News
@@ -260,25 +260,3 @@ block content
 									.news-card__content-box
 										time.news-card__time(datetime="2022-09-06") 06 октября 2022 г.
 										p.news-card__title Логистика в период ограничений на 06 октября
-	// Section Contacts
-	section.section-contacts
-		.container
-			.section-contacts__row
-				.section-contacts__col
-					h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
-					form.section-contacts__form
-						.section-contacts__form-row
-							.section-contacts__form-col.section-contacts__form-col--inputs
-								.section-contacts__input-box
-									input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
-								.section-contacts__input-box
-									input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
-								.section-contacts__input-box
-									input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
-							.section-contacts__form-col.section-contacts__form-col--message
-								.section-contacts__textarea-box
-									textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
-						.section-contacts__form-submit-box
-							button.button.button--blue.button--lg.section-contacts__form-submit Отправить
-				.section-contacts__col
-					img.section-contacts__img(src="images/section-contacts/img.svg", alt)

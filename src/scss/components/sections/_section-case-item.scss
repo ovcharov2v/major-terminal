@@ -1,38 +1,6 @@
-.section-vacancy-item {
+.section-case-item {
 	padding-top: 15px;
-	padding-bottom: 128px;
-
-	&__title {
-		margin-top: 0;
-		margin-bottom: 28px;
-	}
-
-	&__description {
-		display: flex;
-		align-items: center;
-		margin-bottom: 62px;
-	}
-
-	&__salary {
-		margin: 0 39px 0 0;
-		font-size: 32px;
-		line-height: 50px;
-		font-weight: 700;
-	}
-
-	&__button {
-		width: 100%;
-		max-width: 236px;
-		margin-right: 20px;
-	}
-
-	&__date {
-		margin: 0 0 0 auto;
-		font-size: 16px;
-		line-height: 32px;
-		font-weight: 700;
-		opacity: .5;
-	}
+	padding-bottom: 47px;
 
 	&__panel {
 		padding: 42px 66px 23px;
@@ -40,7 +8,7 @@
 		background-image: linear-gradient(to left, rgba(242, 246, 250, 0) 0%, #F2F6FA 100%);
 
 		&:not(:last-child) {
-			margin-bottom: 22px;
+			margin-bottom: 52px;
 		}
 	}
 
@@ -63,5 +31,29 @@
 
 	&__panel-list {
 		margin: 0;
+	}
+
+	&__text {
+		margin-top: 0;
+		margin-bottom: 10px;
+		font-family: $font-secondary2;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 900;
+	}
+
+	&__list {
+		padding-left: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
+		list-style-position: inside;
+		font-family: $font-secondary2;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 500;
+
+		&:last-child {
+			margin-bottom: 25px;
+		}
 	}
 }

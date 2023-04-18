@@ -29,7 +29,7 @@
 	}
 
 	&--big {
-		padding-top: 254px;
+		padding-top: 280px;
 	}
 
 	&--medium {
@@ -37,7 +37,7 @@
 	}
 
 	&--small {
-		padding-top: 183px;
+		padding-top: 160px;
 	}
 
 	&--radius-small {
@@ -64,7 +64,7 @@
 		}
 
 		.news-card--big & {
-			max-height: 254px;
+			max-height: 280px;
 		}
 
 		.news-card--medium & {
@@ -72,7 +72,7 @@
 		}
 
 		.news-card--small & {
-			max-height: 183px;
+			max-height: 160px;
 		}
 		.news-card--radius-small & {
 			border-radius: 10px;
@@ -83,7 +83,7 @@
 		position: relative;
 		z-index: 1;
 		max-width: calc(100% - 60px);
-		padding-top: 38px;
+		padding-top: 36px;
 		transition: transform $transition-default;
 
 		.news-card:hover & {

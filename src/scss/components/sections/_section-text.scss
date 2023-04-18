@@ -1,19 +1,27 @@
 .section-text {
 	padding-top: 20px;
-	padding-bottom: 93px;
+	padding-bottom: 74px;
+
+	&__hero-img {
+		display: block;
+		width: 100%;
+		margin-bottom: 41px;
+		border-radius: 25px;
+	}
 
 	&__content-box {
-		display: flex;
-		max-width: 1554px;
+		max-width: 1080px;
+		margin: 0 auto 90px;
 	}
 
-	&__content {
-		padding-right: 134px;
-	}
-
-	&__aside {
-		flex-shrink: 0;
-		width: 364px;
+	&__date {
+		display: inline-block;
+		margin-bottom: 31px;
+		font-family: $font-additional;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		color: rgba($color-black, .5);
 	}
 
 	&__title {
@@ -25,7 +33,7 @@
 		position: relative;
 		margin: 0 0 28px 0;
 		padding: 35px 79px 35px 52px;
-		background-color: $color-white;
+		background-color: $color-blue-light3;
 		border-radius: 10px;
 		font-size: 14px;
 		line-height: 24px;

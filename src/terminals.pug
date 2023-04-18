@@ -10,7 +10,6 @@ append vars
 		link.icon = "favicons/favicon.ico"
 		link.icon16x16 = "favicons/favicon-16x16.png"
 		link.icon32x32 = "favicons/favicon-32x32.png"
-		footerLowTopPadding = true
 
 block content
 	+breadcrumb(['Главная'], 'Наши терминалы')(class="container")
@@ -22,7 +21,7 @@ block content
 				.dropdown.dropdown--gray-border.section-terminals__dropdown
 					.dropdown__value-box
 						input.dropdown__value(type="text", value="Москва", disabled)
-						+svg("chevron-dropdown")(class="dropdown__arrow")
+						+svg("chevron-dropdown", true)(class="dropdown__arrow")
 					ul.dropdown__options-list
 						li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
 						li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
@@ -30,27 +29,32 @@ block content
 				.dropdown.dropdown--gray-border.section-terminals__dropdown
 					.dropdown__value-box
 						input.dropdown__value(type="text", value="Москва", disabled)
-						+svg("chevron-dropdown")(class="dropdown__arrow")
+						+svg("chevron-dropdown", true)(class="dropdown__arrow")
 					ul.dropdown__options-list
 						li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
 						li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
 						li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
 		.section-terminals__content-box
 			.section-terminals__content
-				h3.text-blue.section-terminals__cities Кулон-Истра
-				p.section-terminals__description Городской округ Истра, деревня Давыдовское, ул. Дачная, стр. 5 Расстояние от МКАД по Новорижскому шоссе - 48 км. ~ 37 мин.
+				.section-terminals__city-title-box
+					+svg("map-marker-blue")(class="section-terminals__city-title-icon")
+					h3.text-blue.section-terminals__cities Кулон-Истра
+				p.section-terminals__description Городской округ Истра, деревня Давыдовское, ул. Дачная, стр. 5
+					br
+					|Расстояние от МКАД по Новорижскому шоссе - 48 км. ~ 37 мин.
 				ul.section-terminals__data-list
 					li.section-terminals__data
 						p.section-terminals__data-value 2008
 						p.section-terminals__data-text Год постройки
 					li.section-terminals__data
-						p.section-terminals__data-text Склад класса А+
+						p.section-terminals__data-value A
+						p.section-terminals__data-text Класс складов
 					li.section-terminals__data
 						p.section-terminals__data-text Крытый Пандус
 					li.section-terminals__data
 						p.section-terminals__data-value 16
 						p.section-terminals__data-text Грузовых доков
-					li.section-terminals__data.section-terminals__data--with-blue-rect
+					li.section-terminals__data
 						p.section-terminals__data-value 12 м
 						p.section-terminals__data-text Рабочая высота
 					li.section-terminals__data
@@ -75,23 +79,3 @@ block content
 						.slider__pagination
 						button.slider__btn.slider__btn--next(aria-label="Вперед")
 							+svg("chevron-slider")(class="slider__btn-arrow")
-	// Section Invite
-	.section-invite
-		.container
-			.section-invite__row
-				.section-invite__col
-					// Card
-					a.section-invite__card(href="#")
-						.section-invite__card-content
-							p.section-invite__card-title Вебинары
-							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
-						+svg("chevron-right-big")(class="section-invite__card-arrow")
-				.section-invite__col
-					// Card
-					a.section-invite__card(href="#")
-						.section-invite__card-content
-							p.section-invite__card-title Наши кейсы
-							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
-						+svg("chevron-right-big")(class="section-invite__card-arrow")
-
-

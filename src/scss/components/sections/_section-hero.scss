@@ -1,32 +1,21 @@
 .section-hero {
 	position: relative;
 	z-index: 0;
-	padding-bottom: 67px;
 	color: $color-white;
 
-	&::before {
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg, #00539F 30%, rgba(0, 83, 159, 0) 79.38%);
-		content: "";
-	}
-
 	&--career {
-		padding-bottom: 83px;
-	}
-
-	&--with-cards {
-		margin-bottom: 109px;
-		padding-bottom: 11px;
+		margin-top: 15px;
+		margin-bottom: 20px;
 	}
 
 	&--case {
-		margin-bottom: 290px;
-		padding-bottom: 42px;
+		margin-top: 10px;
+		margin-bottom: 58px;
+	}
+
+	&__content {
+		position: relative;
+		padding: 67px 56px 53px 34px;
 	}
 
 	&__bg {
@@ -37,6 +26,14 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+
+		.section-hero--career & {
+			border-radius: 25px;
+		}
+
+		.section-hero--case & {
+			border-radius: 25px;
+		}
 	}
 
 	&__breadcrumb {
@@ -51,7 +48,11 @@
 		font-weight: 900;
 
 		.section-hero--career & {
-			margin-bottom: 47px;
+			font-family: $font-secondary;
+			font-size: 72px;
+			line-height: 72px;
+			font-weight: 700;
+			margin-bottom: 0;
 		}
 
 		.section-hero--department & {
@@ -62,7 +63,11 @@
 		}
 
 		.section-hero--case & {
-			margin-bottom: 60px;
+			font-family: $font-secondary;
+			font-size: 72px;
+			line-height: 72px;
+			font-weight: 700;
+			margin-bottom: 27px;
 		}
 	}
 
@@ -80,6 +85,18 @@
 
 		.section-hero--career & {
 			margin-bottom: 54px;
+			font-family: $font-secondary2;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		.section-hero--case & {
+			margin-top: 0;
+			margin-bottom: 38px;
+			font-family: $font-secondary;
+			font-size: 24px;
+			line-height: 24px;
 		}
 
 		.section-hero--department & {
@@ -88,62 +105,46 @@
 			font-size: 24px;
 			line-height: 24px;
 		}
-
-		.section-hero--case & {
-			margin-bottom: 70px;
-		}
-	}
-
-	&__card-row {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto;
-		grid-column-gap: 36px;
-		margin-bottom: -109px;
-
-		.section-hero--case & {
-			margin-bottom: -290px;
-		}
-	}
-
-	&__card {
-		width: 100%;
-		padding: 54px 50px 74px;
-		background-color: $color-white;
-		border-radius: 10px;
-		text-align: center;
-		color: $color-black;
-
-		.section-hero--case & {
-			padding: 46px 68px 31px;
-			text-align: left;
-		}
-	}
-
-	&__card-title {
-		margin-top: 0;
-		margin-bottom: 24px;
-		font-size: 32px;
-		line-height: 50px;
-		font-weight: 700;
-		color: $color-blue-medium;
-
-		.section-hero--case & {
-			font-size: 24px;
-			color: $color-black;
-		}
-	}
-
-	&__card-text {
-		margin: 0;
-		font-size: 14px;
-		line-height: 21px;
-		font-weight: 700;
 	}
 
 	&__results-row {
 		.section-hero--department & {
 			margin-bottom: 84px;
 		}
+	}
+
+	&__title-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 47px;
+	}
+
+	&__title-img {}
+
+	&__call-text {
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 700;
+	}
+
+	&__call-link {
+		color: inherit;
+		transition: color $transition-default;
+
+		&:hover {
+			color: $color-red;
+		}
+	}
+
+	&__job-search-row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__job-search {
+		width: 100%;
+		max-width: 980px;
+		margin-right: 30px;
 	}
 }

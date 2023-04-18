@@ -1,12 +1,24 @@
 .section-terminals {
 	padding-top: 5px;
-	padding-bottom: 17px;
+	padding-bottom: 114px;
 
 	&__title-box {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 78px;
+	}
+
+	&__city-title-box {
+		display: flex;
+		align-items: center;
+		margin-bottom: 25px;
+	}
+
+	&__city-title-icon {
+		width: 24px;
+		height: 35px;
+		margin-right: 18px;
 	}
 
 	&__title {
@@ -26,6 +38,7 @@
 
 	&__content-box {
 		display: flex;
+		column-gap: 32px;
 	}
 
 	&__content {
@@ -35,8 +48,7 @@
 	}
 
 	&__cities {
-		margin-top: 0;
-		margin-bottom: 25px;
+		margin: 0;
 		font-size: 32px;
 		line-height: 32px;
 		font-weight: 700;
@@ -48,7 +60,7 @@
 		max-width: calc(100% - 220px);
 		margin-top: 0;
 		margin-bottom: 78px;
-		font-family: $font-secondary;
+		font-family: $font-secondary2;
 		font-size: 18px;
 		line-height: 18px;
 		font-weight: 500;
@@ -71,7 +83,7 @@
 		align-items: center;
 		min-height: 110px;
 		padding: 5px 10px;
-		background-color: $color-white;
+		background-color: $color-blue-light3;
 		border-radius: 25px;
 		font-family: $font-secondary;
 		line-height: 32px;
@@ -107,11 +119,11 @@
 	}
 
 	&__slider-box {
-		width: calc(50% + 120px);
-		margin-left: -120px;
+		width: 50%;
 	}
 
 	&__slider {
 		width: 100%;
+		height: 100%;
 	}
 }

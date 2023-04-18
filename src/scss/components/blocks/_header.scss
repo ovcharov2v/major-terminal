@@ -136,6 +136,10 @@
 	}
 
 	&__nav-elem {
+		display: inline-block;
+		&--parent-with-short-list {
+			position: relative;
+		}
 	}
 
 	&__nav-link {
@@ -162,7 +166,7 @@
 			transition: background-color $transition-default, transform $transition-default, opacity $transition-default;
 		}
 
-		&:hover,
+		.header__nav-elem:hover &,
 		&--active {
 			color: $color-red;
 
@@ -202,5 +206,106 @@
 		flex-shrink: 0;
 		width: 32px;
 		margin-right: 6px;
+	}
+
+	&__nav-child {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding-top: 63px;
+		padding-bottom: 77px;
+		background-color: #fff;
+		box-shadow: 0 4px 30px rgba($color-blue-medium, .1);
+
+		.header__nav-elem--parent:hover & {
+			display: block;
+		}
+
+		.header__nav-elem--parent-with-short-list & {
+			padding-top: 31px;
+			padding-bottom: 31px;
+		}
+
+		.header__nav-elem--parent-with-blocks & {
+			padding-top: 58px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__nav-child-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		grid-gap: 21px 21px;
+		margin-top: 0;
+		margin-bottom: 66px;
+		padding: 0;
+		list-style-type: none;
+
+		.header__nav-elem--parent-with-short-list & {
+			grid-template-columns: 1fr;
+			margin-bottom: 0;
+		}
+
+		.header__nav-elem--parent-with-blocks & {
+			grid-row-gap: 34px;
+			margin-bottom: 48px;
+		}
+	}
+
+	&__nav-child-elem {}
+
+	&__nav-child-link {
+		position: relative;
+		z-index: 0;
+		overflow: hidden;
+		font-family: $font-secondary;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 700;
+		color: $color-blue-medium;
+		transition: color $transition-default;
+
+		&:hover {
+			color: $color-red;
+		}
+
+		.header__nav-elem--parent-with-blocks &  {
+			display: block;
+			font-family: $font-additional;
+			font-size: 32px;
+			line-height: 32px;
+			font-weight: 900;
+			padding: 44px 47px;
+			border-radius: 25px;
+			background-color: $color-blue;
+			color: $color-white;
+			transition: background-color $transition-default;
+
+			&:hover {
+				background-color: darken($color-blue, 10%);
+			}
+		}
+	}
+
+	&__nav-child-btn {
+		display: inline-block;
+	}
+
+	&__nav-child-link-bg {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: opacity $transition-default;
+
+		.header__nav-child-link:hover & {
+			opacity: 0;
+		}
 	}
 }

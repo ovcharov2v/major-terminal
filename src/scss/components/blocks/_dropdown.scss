@@ -44,6 +44,11 @@
 			outline: none;
 		}
 
+		.dropdown--big-text & {
+			font-size: 18px;
+			line-height: 18px;
+		}
+
 		.dropdown--with-flag & {
 			padding: 0 15px 0 34px;
 		}
@@ -124,6 +129,11 @@
 
 		.dropdown--with-flag & {
 			padding-left: 32px;
+		}
+
+		.dropdown--big-text & {
+			font-size: 18px;
+			line-height: 18px;
 		}
 	}
 

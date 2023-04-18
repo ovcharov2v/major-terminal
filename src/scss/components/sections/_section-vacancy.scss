@@ -1,6 +1,6 @@
 .section-vacancy {
 	padding-top: 30px;
-	padding-bottom: 81px;
+	padding-bottom: 118px;
 
 	&__search {
 		margin-bottom: 44px;
@@ -24,19 +24,20 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto;
-		grid-column-gap: 40px;
-		grid-row-gap: 35px;
+		grid-column-gap: 31px;
+		grid-row-gap: 32px;
 	}
 
 	&__item {
-		padding: 30px 22px 32px;
-		border: 1px solid #E2E2E2;
+		padding: 30px 30px 32px;
+		border: 1px solid #C5E0F2;
 		border-radius: 10px;
-		background-color: $color-white;
+		background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #F2F6FA 100%);
 		color: $color-black;
 		transition: background-color $transition-default, color $transition-default, border-color $transition-default;
 
 		&:hover {
+			background-image: none;
 			background-color: $color-blue;
 			border-color: $color-blue;
 			color: $color-white;
@@ -58,7 +59,20 @@
 		font-size: 14px;
 		line-height: 32px;
 		font-weight: 700;
-		opacity: .5;
+		color: #7A7B7E;
+		transition: color $transition-default;
+
+		.section-vacancy__item:hover & {
+			color: $color-white;
+		}
+	}
+
+	&__item-city-marker {
+		display: inline-block;
+		width: 12px;
+		height: 18px;
+		transform: translateY(3px);
+		margin-right: 7px;
 	}
 
 	&__item-salary {
@@ -78,8 +92,8 @@
 		display: flex;
 		align-items: center;
 		margin: 0;
-		font-family: $font-additional;
-		font-size: 18px;
+		font-family: $font-secondary;
+		font-size: 24px;
 		line-height: 32px;
 		font-weight: 700;
 	}
@@ -100,7 +114,8 @@
 
 		.section-vacancy__item:hover & {
 			border-color: $color-white;
-			color: $color-white;
+			background-color: $color-white;
+			color: $color-blue;
 		}
 	}
 

@@ -45,18 +45,66 @@ header.header
 				img.header__logo-img(src="images/common/logo-major-terminal.svg", alt="Major Terminal")
 			nav.header__nav
 				ul.header__nav-list
-					li.header__nav-elem
-						a.header__nav-link.header__nav-link--active(href="#") Индустрии
-					li.header__nav-elem
+					li.header__nav-elem.header__nav-elem--parent.header__nav-elem--parent-with-blocks
+						a.header__nav-link(href="#") Индустрии
+						.header__nav-child
+							.container
+								ul.header__nav-child-list
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Fashion
+											img.header__nav-child-link-bg(src="images/simple-card/img1.jpg", alt)
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Healthcare
+											img.header__nav-child-link-bg(src="images/simple-card/img2.jpg", alt)
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Automotive
+											img.header__nav-child-link-bg(src="images/simple-card/img3.jpg", alt)
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") FMCG
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Telecom
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") POSM
+								a.button-arrow.header__nav-child-btn(href="#") Все индустрии
+					li.header__nav-elem.header__nav-elem--parent
 						a.header__nav-link(href="#") Услуги
+						.header__nav-child
+							.container
+								ul.header__nav-child-list
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Ответственное хранение
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Фуллфилмент
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Упаковка
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Кросс-докинг
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Таможенный склад
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Копакинг
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Производственная логистика
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Еще услуга
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Еще услуга
+								a.button-arrow.header__nav-child-btn(href="#") Все услуги
 					li.header__nav-elem
 						a.header__nav-link(href="#") Кейсы
-					li.header__nav-elem
+					li.header__nav-elem.header__nav-elem--parent.header__nav-elem--parent-with-short-list
 						a.header__nav-link(href="#") Устойчивое развитие
+						.header__nav-child
+							.container
+								ul.header__nav-child-list
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Служба качества
+									li.header__nav-child-elem
+										a.header__nav-child-link(href="#") Охрана труда
 					li.header__nav-elem
 						a.header__nav-link(href="#") Пресс-релизы
 					li.header__nav-elem
-						a.header__nav-link(href="#") Карьера
+						a.header__nav-link.header__nav-link--active(href="#") Карьера
 					li.header__nav-elem
 						a.header__nav-link(href="#") Терминалы
 					li.header__nav-elem
