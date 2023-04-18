@@ -1,14 +1,11 @@
 .section-404 {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding-top: 60px;
-	padding-bottom: 144px;
-	background-image: url("../images/section-404/bg-404.svg");
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
+	padding-bottom: 166px;
 	text-align: center;
 
 	&__img {
@@ -27,13 +24,13 @@
 
 	&__text {
 		margin: 0;
+		font-family: $font-secondary2;
 		font-size: 24px;
 		line-height: 32px;
-		font-weight: 300;
+		font-weight: 900;
 	}
 
 	&__link {
-		font-weight: 700;
 		color: $color-blue;
 		transition: color $transition-default;
 

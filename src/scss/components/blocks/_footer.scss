@@ -1,7 +1,7 @@
 .footer {
 	font-family: $font-secondary2;
 	font-weight: 500;
-	background-color: $color-white;
+	background-color: $color-blue-light3;
 	overflow: hidden;
 
 	&__row {
@@ -9,9 +9,10 @@
 		grid-template-columns: repeat(3, 1fr) 373px;
 		grid-template-rows: auto;
 		justify-content: space-between;
-		padding-top: 75px;
+		padding-top: 87px;
 		padding-bottom: 54px;
-		border-bottom: 1px solid $color-blue-light3;
+		border-bottom: 1px solid $color-blue;
+		border-top: 12px solid $color-blue;
 	}
 
 	&__nav-title {
@@ -40,14 +41,16 @@
 		color: #090909;
 		transition: color $transition-default;
 
-		&:hover {
+		&:hover,
+		&--active {
 			color: $color-red;
 		}
 	}
 
 	&__logo-link {
 		display: inline-block;
-		margin-bottom: 48px;
+		width: 110px;
+		margin-bottom: 57px;
 	}
 
 	&__logo {
@@ -100,7 +103,6 @@
 		align-items: flex-end;
 		margin: 0 -24px;
 		padding-top: 37px;
-		padding-bottom: 37px;
 		padding-bottom: 37px;
 		font-size: 14px;
 		line-height: 1;

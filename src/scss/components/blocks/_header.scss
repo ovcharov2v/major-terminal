@@ -79,21 +79,10 @@
 		}
 	}
 
-	&__search {
-		display: flex;
-		align-items: center;
-		width: 184px;
-		height: 100%;
-		padding: 5px 20px;
-		border-style: solid;
-		border-color: rgba(#3C3C3C26, .15);
-		border-width: 0 1px;
-	}
-
 	&__search-button {
 		display: flex;
 		align-items: center;
-		padding: 10px 4px;
+		padding: 0;
 		border: none;
 		background-color: $color-transparent;
 		font-family: $font-additional;
@@ -123,15 +112,16 @@
 	&__nav-box {
 		display: flex;
 		align-items: center;
-		height: 90px;
 	}
 
 	&__logo-link {
 		display: inline-block;
+		margin-top: 18px;
+		margin-right: 10px;
 	}
 
 	&__logo-img {
-		width: 117px;
+		width: 82px;
 	}
 
 	&__nav {
@@ -151,7 +141,7 @@
 	&__nav-link {
 		position: relative;
 		display: inline-block;
-		padding: 36px 8px;
+		padding: 44px 16px 49px;
 		font-family: $font-secondary;
 		font-size: 22px;
 		line-height: 1px;

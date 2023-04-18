@@ -23,10 +23,8 @@ header.header
 				a.header__phone(href="tel:84957376006") 8 (495) 737 60 06
 				|
 				| — Секретариат
-			.header__search
-					button.header__search-button.js-search-toggle
-						+svg("search-loupe")(class="header__search-button-icon")
-						|Поиск...
+			button.header__search-button.js-search-toggle(aria-label="Поиск")
+				+svg("search-loupe")(class="header__search-button-icon")
 			.header__lang
 				.dropdown.dropdown--with-flag
 					.dropdown__value-box

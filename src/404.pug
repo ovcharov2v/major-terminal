@@ -15,30 +15,12 @@ append vars
 block content
 	+breadcrumb(['Главная'], '404 ошибка')(class="container")
 	// Section 404
-	section.section-404.container
-		img.section-404__img(src="images/section-404/img-404.svg", alt)
-		h1.section-404__title 404
-		p.section-404__text Что-то пошло не так! Нужная страница не найдена
-			br
-			|Вы можете перейти на
-			|
-			a.section-404__link(href="/") главную страницу
-	// Section Invite
-	.section-invite
+	section.section-404.road
 		.container
-			.section-invite__row
-				.section-invite__col
-					// Card
-					a.section-invite__card(href="#")
-						.section-invite__card-content
-							p.section-invite__card-title Вебинары
-							p.section-invite__card-text Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн
-						+svg("chevron-right-big")(class="section-invite__card-arrow")
-				.section-invite__col
-					// Card
-					a.section-invite__card(href="#")
-						.section-invite__card-content
-							p.section-invite__card-title Наши кейсы
-							p.section-invite__card-text Изучите наш опыт в сфере складской логистики и получите похожее решение
-						+svg("chevron-right-big")(class="section-invite__card-arrow")
-
+			img.section-404__img(src="images/section-404/img-404.svg", alt)
+			h1.section-404__title 404
+			p.section-404__text Что-то пошло не так! Нужная страница не найдена
+				br
+				|Вы можете перейти на
+				|
+				a.section-404__link(href="/") главную страницу
