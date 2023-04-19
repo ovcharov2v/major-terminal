@@ -245,6 +245,11 @@ document.addEventListener('DOMContentLoaded', function () {
           option.addEventListener('click', function (e) {
             e.preventDefault();
             input.value = option.dataset.value;
+            if (dropdown.classList.contains('dropdown--with-flag')) {
+              var currentFlag = dropdown.querySelector('.dropdown__value-box .dropdown__flag');
+              var nextFlag = option.querySelector('.dropdown__flag');
+              currentFlag.src = nextFlag.src;
+            }
           });
         });
       }

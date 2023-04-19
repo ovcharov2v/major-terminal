@@ -9,7 +9,7 @@
 		<link rel="icon" href="favicons/favicon.ico">
 		<link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="stylesheet" href="./css/main.css?v=1681864342585">
+		<link rel="stylesheet" href="./css/main.css?v=1681947577465">
 	</head>
 	<body>
 		<!-- Header-->
@@ -47,26 +47,15 @@
 					</button>
 					<div class="header__lang">
 						<div class="dropdown dropdown--with-flag">
-							<div class="dropdown__value-box">
-								<svg class="dropdown__flag">
-									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#flag-ru"></use>
-								</svg>
+							<div class="dropdown__value-box"><img class="dropdown__flag" src="images/common/flag-ru.svg" alt>
 								<input class="dropdown__value" type="text" value="Русский" disabled>
 								<svg class="dropdown__arrow">
-									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-dropdown"></use>
+									<use xlink:href="#chevron-dropdown"></use>
 								</svg>
 							</div>
 							<ul class="dropdown__options-list">
-								<li class="dropdown__option dropdown__option--selected" data-value="Русский">
-									<svg class="dropdown__flag">
-										<use xlink:href="images/svg-sprite/svg-sprite-static.svg#flag-ru"></use>
-									</svg>Русский
-								</li>
-								<li class="dropdown__option" data-value="English">
-									<svg class="dropdown__flag">
-										<use xlink:href="images/svg-sprite/svg-sprite-static.svg#flag-ru"></use>
-									</svg>English
-								</li>
+								<li class="dropdown__option dropdown__option--selected" data-value="Русский"><img class="dropdown__flag" src="images/common/flag-ru.svg" alt>Русский</li>
+								<li class="dropdown__option" data-value="English"><img class="dropdown__flag" src="images/common/flag-en.svg" alt>English</li>
 							</ul>
 						</div>
 					</div>
@@ -130,303 +119,148 @@
 			</div>
 		</header>
 		<main>
+			<!-- Breadcrumbs-->
+			<div class="breadcrumb container">
+				<ul class="breadcrumb__list">
+					<li class="breadcrumb__item">
+						<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+						<svg class="breadcrumb__arrow">
+							<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
+						</svg>
+					</li>
+					<li class="breadcrumb__item"><span class="breadcrumb__current">Услуга</span></li>
+				</ul>
+			</div>
 			<!-- Section Hero-->
 			<section class="section-hero section-hero--industry">
 				<div class="container">
-					<!-- Breadcrumbs-->
-					<div class="breadcrumb section-hero__breadcrumb breadcrumb--white">
-						<ul class="breadcrumb__list">
-							<li class="breadcrumb__item">
-								<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
-								<svg class="breadcrumb__arrow">
-									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-								</svg>
-							</li>
-							<li class="breadcrumb__item">
-								<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Услуга">Услуга</a>
-								<svg class="breadcrumb__arrow">
-									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-								</svg>
-							</li>
-							<li class="breadcrumb__item"><span class="breadcrumb__current">Фулфилмент</span></li>
-						</ul>
-					</div>
-					<h1 class="section-hero__title">Фулфилмент</h1>
-					<p class="section-hero__text">Фулфилмент на аутсорсе от эксперта в области складских операций</p><img class="section-hero__bg" src="images/section-hero/bg4.jpg" alt>
-					<!-- Results-->
-					<div class="results">
-						<div class="results__row">
-							<!-- Col-->
-							<div class="results__col">
-								<p class="results__value">5 млн</p>
-								<p class="results__text">Единиц товаров<br>на fullfilment складе</p>
-							</div>
-							<!-- Col-->
-							<div class="results__col">
-								<p class="results__value">65 тыс.</p>
-								<p class="results__text">Единиц товаров<br>на fullfilment складе</p>
-							</div>
-							<!-- Col-->
-							<div class="results__col">
-								<p class="results__value">170 тыс</p>
-								<p class="results__text">Кол-во м2 складов</p>
-							</div>
-						</div><a class="button button--white button--md results__button" href="#">Связаться с нами</a>
+					<div class="section-hero__content">
+						<h1 class="section-hero__title">Фулфилмент</h1>
+						<p class="section-hero__text">Фулфилмент на аутсорсе от эксперта в области складских операций</p><img class="section-hero__bg" src="images/section-hero/bg7.jpg" alt>
 					</div>
 				</div>
 			</section>
-			<!-- Section Request-->
-			<section class="section-request section-request--service container">
-				<h2 class="h2 text-blue section-request__title">Полный комплекс услуг по Фулфилменту</h2>
-				<div class="section-request__row section-request__row--three-col">
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Организация забора товара с любого склада</p></a></div>
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Прием товара</p></a></div>
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Ответственное хранение</p></a></div>
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Комплектация и упаковка интернет заказов</p></a></div>
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Комплектация и упаковка интернет заказов</p></a></div>
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Подготовка товара к отгрузки на маркетплейс ( FBO)</p></a></div>
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Доставка</p></a></div>
-					<!-- Link-->
-					<div class="section-request__link-box"><a class="section-request__link" href="#">
-							<svg class="section-request__link-arrow">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
-							</svg>
-							<p class="section-request__link-title">Комплектация и упаковка заказов FBS</p></a></div>
+			<!-- Section Success-->
+			<div class="section-success container">
+				<div class="section-success__grid">
+					<div class="section-success__elem">
+						<p class="section-success__value">5 млн</p>
+						<p class="section-success__text">Выгрузка (коробов) / год</p>
+					</div>
+					<div class="section-success__elem">
+						<p class="section-success__value">100 млн</p>
+						<p class="section-success__text">Приемка (штук) / год</p>
+					</div>
+					<div class="section-success__elem">
+						<p class="section-success__value">400 тыс</p>
+						<p class="section-success__text">Восстановление качества</p>
+					</div>
+					<div class="section-success__elem">
+						<p class="section-success__value">15 млн</p>
+						<p class="section-success__text">Стикеров (штук) / год</p>
+					</div>
 				</div>
-				<!-- Tabs-->
-				<div class="tabs tabs--blue">
-					<ul class="tabs__nav-list tabs__nav-list--three-col">
-						<li class="tabs__nav-elem">
-							<button class="tabs__nav-button tabs__nav-button--active" data-content="content1">FBO и FBS</button>
-						</li>
-						<li class="tabs__nav-elem">
-							<button class="tabs__nav-button" data-content="content2">Интеграция с маркетплейсами</button>
-						</li>
-						<li class="tabs__nav-elem">
-							<button class="tabs__nav-button" data-content="content3">Омниканальный склад</button>
-						</li>
-					</ul>
-					<div class="tabs__content-box">
-						<!-- Content-->
-						<div class="section-request__tab-content tabs__content tabs__content--active" id="content1">
-							<div class="section-request__content-row">
-								<div class="section-request__col">
-									<h2 class="h2 text-blue section-request__content-title section-request__content-title--with-line">Работа по FBS и FBO<br>на одном складе</h2>
-									<p class="section-request__content-text">Продавать на маркетплейсах можно по<br>разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку.</p>
-									<p class="section-request__content-text section-request__content-text--small">Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки. В каждой схеме есть свои преимущества и недостатки.</p><a class="button button--blue button--md section-request__button" href="#">Оставить заявку</a>
-								</div>
-								<div class="section-request__col"><img class="section-request__img section-request__img--no-overflow" src="images/section-request/img3.svg" alt></div>
+			</div>
+			<!-- Section Service range-->
+			<section class="section-service-range">
+				<div class="container">
+					<h2 class="h2 section-service-range__title">Полный комплекс услуг<br><span class="text-red">по фулфилменту</span></h2>
+					<div class="links-row section-service-range__links"><a class="links-row__link" href="#">Организация забора товара</a><a class="links-row__link" href="#">Прием товара</a><a class="links-row__link" href="#">Комплектация и упаковка</a><a class="links-row__link" href="#">Комплектация и упаковка FBS заказов</a><a class="links-row__link" href="#">Доставка</a><a class="links-row__link" href="#">Подготовка товара к отгрузке на маркетплейсы</a></div>
+				</div>
+				<!-- Section Partner-->
+				<div class="section-partner section-partner--type2 section-partner--blue container">
+					<div class="section-partner__content">
+						<ul class="section-partner__link-list">
+							<li class="section-partner__link-elem"><a class="section-partner__link" href="#">FBO и FBS</a></li>
+							<li class="section-partner__link-elem"><a class="section-partner__link" href="#">Возможности интеграций</a></li>
+							<li class="section-partner__link-elem"><a class="section-partner__link" href="#">Омниканальность</a></li>
+						</ul>
+						<div class="section-partner__row">
+							<div class="section-partner__col section-partner__col--content">
+								<h3 class="h2 section-partner__title">Работа по FBS и FBO на<br>одном складе</h3>
+								<p class="section-partner__text section-partner__text--type2">Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку.<br><br><span class="text-weight-light">Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.</span></p><a class="button button--outline-blue button--md section-partner__button" href="#">Оставить заявку</a>
 							</div>
-						</div>
-						<!-- Content-->
-						<div class="section-request__tab-content section-request__tab-content--n2 tabs__content" id="content2">
-							<div class="section-request__content-row">
-								<div class="section-request__col">
-									<h2 class="h2 text-blue section-request__title">Возможности Major Terminal позволяют организовать<br><span class="text-weight-light">следующие типы хранения для индустрии</span>
-										
-										Fashion
-									</h2>
-									<ul class="list-arrow list-arrow--two-col list-arrow--red section-request__list">
-										<li class="list-arrow__elem">Стеллажное</li>
-										<li class="list-arrow__elem">Полочное</li>
-										<li class="list-arrow__elem">Напольное</li>
-										<li class="list-arrow__elem">Вашельное</li>
-									</ul><a class="button button--blue button--md section-request__button" href="#">Оставить заявку</a>
-								</div>
-								<div class="section-request__col"><img class="section-request__img" src="images/section-request/img2.svg" alt></div>
-							</div>
-							<!-- Content-->
-						</div>
-						<!-- Content-->
-						<div class="section-request__tab-content tabs__content" id="content3">
-							<div class="section-request__content-row">
-								<div class="section-request__col">
-									<ul class="list-arrow list-arrow--red section-request__list">
-										<li class="list-arrow__elem">Cтикеровка, маркировка (включая Честный Знак)</li>
-										<li class="list-arrow__elem">Переупаковка</li>
-										<li class="list-arrow__elem">Измерение МГХ</li>
-									</ul><a class="button button--blue button--md section-request__button" href="#">Оставить заявку</a>
-								</div>
-								<div class="section-request__col"><img class="section-request__img" src="images/section-request/img.svg" alt></div>
-							</div>
+							<div class="section-partner__col section-partner__col--img"><img class="section-partner__image" src="images/section-partner/img2.svg" alt></div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- Section Description-->
-			<div class="section-description section-description--with-icon-row container">
-				<h2 class="h2 text-blue section-description__title">Опции и преимущества</h2>
-				<div class="section-description__adv-icon-row">
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon section-description__icon--full-time">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon1"></use>
-							</svg>
+			<section class="section-description section-description--service container">
+				<h2 class="h2 section-description__title">Преимущества Major</h2>
+				<div class="section-description__panel-grid">
+					<!-- Panel-->
+					<article class="section-description__panel">
+						<div class="section-description__panel-content">
+							<h3 class="section-description__panel-title">Личный кабинет клиента</h3>
+							<p class="section-description__panel-text">Управление и отчетность в едином личном кабинете с множеством полезных функций</p><a class="section-description__panel-link" href="#">Перейти в кабинет</a>
+						</div><img class="section-description__panel-img" src="images/section-description/img1.png" alt>
+					</article>
+					<!-- Panel-->
+					<article class="section-description__panel"><img class="section-description__panel-img" src="images/section-description/img2.svg" alt>
+						<div class="section-description__panel-content">
+							<h3 class="section-description__panel-title">Интеграция с WMS системой</h3>
+							<p class="section-description__panel-text">Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.</p><a class="section-description__panel-link" href="#">Узнать подробнее</a>
 						</div>
-						<figcaption class="section-description__adv-icon-text">Работа 24/7</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon2"></use>
-							</svg>
+					</article>
+					<!-- Panel-->
+					<article class="section-description__panel"><img class="section-description__panel-img" src="images/section-description/img3.svg" alt>
+						<div class="section-description__panel-content">
+							<h3 class="section-description__panel-title">Служба качества</h3>
+							<p class="section-description__panel-text">Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.</p><a class="section-description__panel-link" href="#">Узнать подробнее</a>
 						</div>
-						<figcaption class="section-description__adv-icon-text">Персональный<br>менеджер</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon3"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">Прозрачная<br>тарификация</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon4"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">Кросс-докинг</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon5"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">Прием<br>наложенных<br>платежей</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon6"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">Служба контроля<br>качества</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon7"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">Комплектация<br>промо-наборов</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon section-description__icon--part-pay">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon8"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">Частичный<br>выкуп заказа</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description__adv-icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon9"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">Работа с B2B и B2C</figcaption>
-					</figure>
-					<!-- Icon col-->
-					<figure class="section-description__adv-icon-col">
-						<div class="section-description__adv-icon-box">
-							<svg class="section-description_adv-_icon">
-								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#advantage-icon10"></use>
-							</svg>
-						</div>
-						<figcaption class="section-description__adv-icon-text">SLA<br>зафиксированные<br>контрактом</figcaption>
-					</figure>
+					</article>
+					<!-- Panel-->
+					<article class="section-description__panel">
+						<div class="section-description__panel-content">
+							<h3 class="section-description__panel-title">Интеграция с системами клиента</h3>
+							<p class="section-description__panel-text">Собственный департамент разработки помогут реализовать решение для автоматизации ваших бизнес процессов.</p><a class="section-description__panel-link" href="#">Скачать презентацию</a>
+						</div><img class="section-description__panel-img" src="images/section-description/img4.svg" alt>
+					</article>
 				</div>
-				<div class="section-description__grid1">
-					<!-- Panel-->
-					<div class="section-description__panel section-description__panel--with-blue-box">
-						<ul class="section-description__list">
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon1.png" alt></span>Доступ</li>
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon5.png" alt></span>Документы</li>
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon2.png" alt></span>Безопасность</li>
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon6.png" alt></span>Отчеты</li>
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon3.png" alt></span>Каталог</li>
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon7.png" alt></span>Качество</li>
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon4.png" alt></span>24/7</li>
-							<li class="section-description__list-elem"><span class="section-description__icon-box"><img class="section-description__icon" src="images/section-description/icon8.png" alt></span>Управление</li>
-						</ul>
-						<div class="section-description__panel-row">
-							<div class="section-description__panel-blue-box">
-								<h3 class="section-description__panel-title">Личный кабинет клиента</h3>
-								<p class="section-description__panel-text">Управление и отчетность в едином личном кабинете<br>с множеством полезных функций</p>
-							</div><img class="section-description__panel-logo" src="images/section-description/logo.png" alt>
-						</div>
-					</div>
-					<!-- Panel-->
-					<div class="section-description__panel section-description__panel--with-image section-description__panel--corner--bottom-right"><img class="section-description__panel-img" src="images/section-description/img2.jpg" alt>
-						<div class="section-description__panel-content-box">
-							<h3 class="section-description__panel-title">Интеграция с системами клиента</h3>
-							<p class="section-description__panel-text">Система управления складом и транспортом, а также собственный департамент разработки помогут реализовать решение для автоматизации ваших уникальных процессов.</p>
-						</div>
-					</div>
-				</div>
-				<div class="section-description__grid2">
-					<!-- Panel-->
-					<div class="section-description__panel section-description__panel--corner--top-left">
-						<h3 class="section-description__panel-title">Служба качества</h3>
-						<p class="section-description__panel-text">Разработка стандартов качества, правил<br>и инструкций компании</p><a class="section-description__panel-link" href="#">Узнать подробнее</a>
-					</div>
-					<!-- Panel-->
-					<div class="section-description__panel section-description__panel--corner--top-right">
-						<h3 class="section-description__panel-title">Интеграция с WMS системой</h3>
-						<p class="section-description__panel-text">Система управления складом Major собственной разработки.<br>Команда разработчиков и поддержки WMS в режиме 24/7.</p><a class="section-description__panel-link" href="#">Узнать подробнее</a>
-					</div>
-				</div>
-			</div>
+			</section>
+			<!-- Section Icon list-->
+			<section class="section-icon-list container">
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon1.svg" alt></div>
+					<figcaption class="section-icon-list__text">Круглосуточная<br>поддержка</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon2.svg" alt></div>
+					<figcaption class="section-icon-list__text">Персональный<br>менеджер</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon3.svg" alt></div>
+					<figcaption class="section-icon-list__text">Прозрачная<br>тарификация</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon4.svg" alt></div>
+					<figcaption class="section-icon-list__text">Кросс-докинг</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon5.svg" alt></div>
+					<figcaption class="section-icon-list__text">Наложенный<br>платеж</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon6.svg" alt></div>
+					<figcaption class="section-icon-list__text">Служба контроля<br>качества</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon7.svg" alt></div>
+					<figcaption class="section-icon-list__text">Комплектакция<br>промо-наборов</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon8.svg" alt></div>
+					<figcaption class="section-icon-list__text">Частичный<br>выкуп заказа</figcaption>
+				</figure>
+				<figure class="section-icon-list__elem">
+					<div class="section-icon-list__icon-box"><img class="section-icon-list__icon" src="images/section-icon-list/icon9.svg" alt></div>
+					<figcaption class="section-icon-list__text">Работа с B2B и B2C<br>клиентами</figcaption>
+				</figure>
+			</section>
 			<!-- Section Experience-->
 			<section class="section-experience container">
-				<h2 class="h2 text-blue section-experience__title">Наш опыт в фулфилменте</h2>
+				<h2 class="h2 section-experience__title">Наш опыт в фулфилменте</h2>
 				<div class="section-experience__grid">
 					<!-- Card--><a class="section-experience__card card card--experience card--with-tag-line" href="#">
 						<ul class="card__tag-list">
@@ -439,7 +273,7 @@
 								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right-big"></use>
 							</svg>
 						</div>
-						<div class="card__bg-box"><img class="card__bg" src="images/section-experience/bg1.jpg" alt></div></a>
+						<div class="card__bg-box"><img class="card__bg" src="images/section-experience/bg3.jpg" alt></div></a>
 					<!-- Card--><a class="section-experience__card card card--experience card--with-tag-line" href="#">
 						<ul class="card__tag-list">
 							<li class="card__tag">Fashion</li>
@@ -451,52 +285,28 @@
 								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right-big"></use>
 							</svg>
 						</div>
-						<div class="card__bg-box"><img class="card__bg" src="images/section-experience/bg1.jpg" alt></div></a>
+						<div class="card__bg-box"><img class="card__bg" src="images/section-experience/bg4.jpg" alt></div></a>
 				</div>
 			</section>
-			<!-- Section Other services-->
-			<section class="section-other-services container">
-				<h2 class="h2 text-blue section-other-services__title">Другие услуги</h2>
-				<div class="section-other-services__grid">
-					<!-- Card--><a class="section-other-services__card card card--other-services" href="#">
+			<!-- Section Service list-->
+			<section class="section-service-list section-service-list--service container">
+				<h2 class="h2 section-service-list__title">Другие услуги</h2>
+				<div class="section-service-list__grid">
+					<!-- Card--><a class="section-service-list__card card card--with-icon card--small-radius" href="#"><img class="card__icon" src="images/section-service-list/icon1.svg">
 						<div class="card__title-box">
-							<p class="card__title">Комплектация</p>
+							<p class="card__title">Ответственное<br>хранение</p>
 						</div><span class="button button--white button--xs card__btn-more">Подробнее</span>
-						<div class="card__bg-box"><img class="card__bg" src="images/section-other-services/bg1.jpg" alt></div></a>
-					<!-- Card--><a class="section-other-services__card card card--other-services" href="#">
+						<div class="card__bg-box"><img class="card__bg" src="images/section-service-list/bg7.jpg" alt></div></a>
+					<!-- Card--><a class="section-service-list__card card card--with-icon card--small-radius" href="#"><img class="card__icon" src="images/section-service-list/icon2.svg">
 						<div class="card__title-box">
-							<p class="card__title">Сортировка</p>
+							<p class="card__title">Складская<br>обработка</p>
 						</div><span class="button button--white button--xs card__btn-more">Подробнее</span>
-						<div class="card__bg-box"><img class="card__bg" src="images/section-other-services/bg1.jpg" alt></div></a>
-				</div>
-			</section>
-			<!-- Section Contacts-->
-			<section class="section-contacts">
-				<div class="container">
-					<h2 class="h2 text-white section-contacts__title">Есть вопросы? Свяжитесь с нами!</h2>
-					<form class="section-contacts__form">
-						<div class="section-contacts__form-row">
-							<div class="section-contacts__form-col section-contacts__form-col--inputs">
-								<div class="section-contacts__input-box">
-									<input class="form-control section-contacts__form-input" type="text" placeholder="Имя">
-								</div>
-								<div class="section-contacts__input-box">
-									<input class="form-control section-contacts__form-input" type="tel" placeholder="*Телефон">
-								</div>
-								<div class="section-contacts__input-box">
-									<input class="form-control section-contacts__form-input" type="email" placeholder="*Адрес электронной почты">
-								</div>
-							</div>
-							<div class="section-contacts__form-col section-contacts__form-col--message">
-								<div class="section-contacts__textarea-box">
-									<textarea class="form-control form-control--textarea section-contacts__form-textarea" placeholder="*Комментарий..."></textarea>
-								</div>
-							</div>
-						</div>
-						<div class="section-contacts__form-submit-box">
-							<button class="button button--white button--lg section-contacts__form-submit">Отправить</button>
-						</div>
-					</form>
+						<div class="card__bg-box"><img class="card__bg" src="images/section-service-list/bg8.jpg" alt></div></a>
+					<!-- Card--><a class="section-service-list__card card card--with-icon card--small-radius" href="#"><img class="card__icon" src="images/section-service-list/icon3.svg">
+						<div class="card__title-box">
+							<p class="card__title">Копакинг</p>
+						</div><span class="button button--white button--xs card__btn-more">Подробнее</span>
+						<div class="card__bg-box"><img class="card__bg" src="images/section-service-list/bg9.jpg" alt></div></a>
 				</div>
 			</section>
 		</main>
@@ -616,8 +426,8 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1681864342587"></script>
-		<script src="./js/main.js?v=1681864342587"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1681947577466"></script>
+		<script src="./js/main.js?v=1681947577466"></script><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="telegram">
 		<circle cx="25" cy="25" r="25" fill="currentColor"></circle>
 		<path d="M33.4399 18.6223L30.2711 33.566C30.0319 34.6205 29.4086 34.883 28.5229 34.3865L23.6944 30.8285L21.3649 33.0695C21.1069 33.3275 20.8916 33.5428 20.3944 33.5428L20.7416 28.6258L29.6899 20.54C30.0791 20.1935 29.6051 20.0008 29.0854 20.348L18.0229 27.314L13.2604 25.823C12.2246 25.4998 12.2059 24.7873 13.4764 24.29L32.1041 17.1133C32.9666 16.79 33.7211 17.3053 33.4399 18.623V18.6223Z" fill="white"></path>
@@ -625,9 +435,6 @@
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="vk">
 		<circle cx="25" cy="25" r="25" fill="currentColor"></circle>
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M35.7203 20.1875C35.8872 19.6587 35.7203 19.2744 34.982 19.2744H32.5272C31.908 19.2744 31.622 19.6109 31.4552 19.9709C31.4552 19.9709 30.1923 23.0459 28.4289 25.0395C27.857 25.6161 27.595 25.8083 27.2852 25.8083C27.1183 25.8083 26.9036 25.6161 26.9036 25.0878V20.1627C26.9036 19.5383 26.7133 19.25 26.1887 19.25H22.3281C21.9466 19.25 21.7084 19.5383 21.7084 19.8266C21.7084 20.427 22.5902 20.5714 22.6853 22.2528V25.9062C22.6853 26.6989 22.5447 26.8438 22.2325 26.8438C21.3986 26.8438 19.3731 23.7448 18.1581 20.2137C17.9219 19.5144 17.6819 19.25 17.0622 19.25H14.5839C13.8691 19.25 13.75 19.5861 13.75 19.9466C13.75 20.5953 14.5839 23.862 17.6341 28.1858C19.6595 31.1389 22.5428 32.7261 25.1402 32.7261C26.7133 32.7261 26.9036 32.3656 26.9036 31.7652V29.5311C26.9036 28.8106 27.0466 28.6906 27.5472 28.6906C27.9044 28.6906 28.548 28.8823 30.0016 30.2998C31.6694 31.9813 31.9553 32.75 32.8848 32.75H35.3392C36.0541 32.75 36.3878 32.3895 36.197 31.693C35.9828 30.9964 35.1723 29.9877 34.1238 28.7867C33.5519 28.1145 32.6941 27.3697 32.432 27.0092C32.0748 26.5287 32.17 26.3366 32.432 25.9044C32.4081 25.9044 35.4109 21.6284 35.7203 20.1856" fill="white"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
-		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="youtube">
 		<g clip-path="url(#clip0_1902_2023)">
@@ -640,6 +447,16 @@
 				<rect width="36" height="36" fill="white"></rect>
 			</clipPath>
 		</defs>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
+		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="file-download">
+		<path d="M16.59 10H15V5C15 4.45 14.55 4 14 4H10C9.45 4 9 4.45 9 5V10H7.41C6.52 10 6.07 11.08 6.7 11.71L11.29 16.3C11.68 16.69 12.31 16.69 12.7 16.3L17.29 11.71C17.92 11.08 17.48 10 16.59 10ZM5 20C5 20.55 5.45 21 6 21H18C18.55 21 19 20.55 19 20C19 19.45 18.55 19 18 19H6C5.45 19 5 19.45 5 20Z" fill="currentColor"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 42" id="file-pdf">
+		<path opacity="0.2" d="M29.0521 14.4375H19.7188V5.25L29.0521 14.4375Z" fill="currentColor"></path>
+		<path d="M31.7174 24.9375C31.7174 25.2856 31.577 25.6194 31.3269 25.8656C31.0769 26.1117 30.7377 26.25 30.3841 26.25H26.3841V28.875H29.0508C29.4044 28.875 29.7435 29.0133 29.9936 29.2594C30.2436 29.5056 30.3841 29.8394 30.3841 30.1875C30.3841 30.5356 30.2436 30.8694 29.9936 31.1156C29.7435 31.3617 29.4044 31.5 29.0508 31.5H26.3841V34.125C26.3841 34.4731 26.2436 34.8069 25.9936 35.0531C25.7435 35.2992 25.4044 35.4375 25.0508 35.4375C24.6972 35.4375 24.358 35.2992 24.108 35.0531C23.8579 34.8069 23.7174 34.4731 23.7174 34.125V24.9375C23.7174 24.5894 23.8579 24.2556 24.108 24.0094C24.358 23.7633 24.6972 23.625 25.0508 23.625H30.3841C30.7377 23.625 31.0769 23.7633 31.3269 24.0094C31.577 24.2556 31.7174 24.5894 31.7174 24.9375ZM9.71745 28.2188C9.71745 29.4371 9.22578 30.6055 8.35061 31.467C7.47544 32.3285 6.28846 32.8125 5.05078 32.8125H3.71745V34.125C3.71745 34.4731 3.57697 34.8069 3.32692 35.0531C3.07687 35.2992 2.73774 35.4375 2.38411 35.4375C2.03049 35.4375 1.69135 35.2992 1.44131 35.0531C1.19126 34.8069 1.05078 34.4731 1.05078 34.125V24.9375C1.05078 24.5894 1.19126 24.2556 1.44131 24.0094C1.69135 23.7633 2.03049 23.625 2.38411 23.625H5.05078C6.28846 23.625 7.47544 24.109 8.35061 24.9705C9.22578 25.832 9.71745 27.0004 9.71745 28.2188ZM7.05078 28.2188C7.05078 27.6966 6.84007 27.1958 6.46499 26.8266C6.08992 26.4574 5.58121 26.25 5.05078 26.25H3.71745V30.1875H5.05078C5.58121 30.1875 6.08992 29.9801 6.46499 29.6109C6.84007 29.2417 7.05078 28.7409 7.05078 28.2188ZM21.7174 29.5312C21.7174 31.0977 21.0853 32.6 19.9601 33.7076C18.8349 34.8152 17.3087 35.4375 15.7174 35.4375H13.0508C12.6972 35.4375 12.358 35.2992 12.108 35.0531C11.8579 34.8069 11.7174 34.4731 11.7174 34.125V24.9375C11.7174 24.5894 11.8579 24.2556 12.108 24.0094C12.358 23.7633 12.6972 23.625 13.0508 23.625H15.7174C17.3087 23.625 18.8349 24.2473 19.9601 25.3549C21.0853 26.4625 21.7174 27.9648 21.7174 29.5312ZM19.0508 29.5312C19.0508 28.661 18.6996 27.8264 18.0745 27.2111C17.4493 26.5957 16.6015 26.25 15.7174 26.25H14.3841V32.8125H15.7174C16.6015 32.8125 17.4493 32.4668 18.0745 31.8514C18.6996 31.2361 19.0508 30.4015 19.0508 29.5312ZM1.05078 18.375V6.5625C1.05078 5.86631 1.33173 5.19863 1.83183 4.70634C2.33193 4.21406 3.0102 3.9375 3.71745 3.9375H19.7174C19.8926 3.93736 20.0661 3.9712 20.2279 4.03707C20.3898 4.10294 20.5369 4.19956 20.6608 4.32141L29.9941 13.5089C30.1179 13.6309 30.216 13.7757 30.283 13.935C30.3499 14.0943 30.3843 14.2651 30.3841 14.4375V18.375C30.3841 18.7231 30.2436 19.0569 29.9936 19.3031C29.7435 19.5492 29.4044 19.6875 29.0508 19.6875C28.6972 19.6875 28.358 19.5492 28.108 19.3031C27.8579 19.0569 27.7174 18.7231 27.7174 18.375V15.75H19.7174C19.3638 15.75 19.0247 15.6117 18.7746 15.3656C18.5246 15.1194 18.3841 14.7856 18.3841 14.4375V6.5625H3.71745V18.375C3.71745 18.7231 3.57697 19.0569 3.32692 19.3031C3.07687 19.5492 2.73774 19.6875 2.38411 19.6875C2.03049 19.6875 1.69135 19.5492 1.44131 19.3031C1.19126 19.0569 1.05078 18.7231 1.05078 18.375ZM21.0508 13.125H25.8324L21.0508 8.41805V13.125Z" fill="currentColor"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" id="map-marker-small">
 		<path d="M6 1C3.23801 1 1 3.28394 1 6.10325C1 8.92113 6 16 6 16C6 16 11 8.92113 11 6.10325C11 3.28394 8.76092 1 6 1ZM6 8.19194C4.84143 8.19194 3.90238 7.23241 3.90238 6.05104C3.90238 4.86706 4.84143 3.90938 6 3.90938C7.15972 3.90938 8.09803 4.86706 8.09803 6.05104C8.09803 7.23241 7.15972 8.19194 6 8.19194Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
