@@ -9,7 +9,7 @@
 		<link rel="icon" href="favicons/favicon.ico">
 		<link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="stylesheet" href="./css/main.css?v=1680039940382">
+		<link rel="stylesheet" href="./css/main.css?v=1681864339588">
 	</head>
 	<body>
 		<!-- Header-->
@@ -21,7 +21,7 @@
 						<div class="search-form__row">
 							<button class="search-form__submit" aria-label="Искать">
 								<svg class="search-form__submit-icon">
-									<use xlink:href="#search-loupe"></use>
+									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#search-loupe"></use>
 								</svg>
 							</button>
 							<input class="search-form__input" placeholder="Поиск...">
@@ -40,33 +40,31 @@
 					<p class="header__text"><a class="header__phone" href="tel:84957376006">8 (495) 737 60 06</a>
 						— Секретариат
 					</p>
-					<div class="header__search">
-						<button class="header__search-button js-search-toggle">
-							<svg class="header__search-button-icon">
-								<use xlink:href="#search-loupe"></use>
-							</svg>Поиск...
-						</button>
-					</div>
+					<button class="header__search-button js-search-toggle" aria-label="Поиск">
+						<svg class="header__search-button-icon">
+							<use xlink:href="images/svg-sprite/svg-sprite-static.svg#search-loupe"></use>
+						</svg>
+					</button>
 					<div class="header__lang">
 						<div class="dropdown dropdown--with-flag">
 							<div class="dropdown__value-box">
 								<svg class="dropdown__flag">
-									<use xlink:href="#flag-ru"></use>
+									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#flag-ru"></use>
 								</svg>
 								<input class="dropdown__value" type="text" value="Русский" disabled>
 								<svg class="dropdown__arrow">
-									<use xlink:href="#chevron-dropdown"></use>
+									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-dropdown"></use>
 								</svg>
 							</div>
 							<ul class="dropdown__options-list">
 								<li class="dropdown__option dropdown__option--selected" data-value="Русский">
 									<svg class="dropdown__flag">
-										<use xlink:href="#flag-ru"></use>
+										<use xlink:href="images/svg-sprite/svg-sprite-static.svg#flag-ru"></use>
 									</svg>Русский
 								</li>
 								<li class="dropdown__option" data-value="English">
 									<svg class="dropdown__flag">
-										<use xlink:href="#flag-ru"></use>
+										<use xlink:href="images/svg-sprite/svg-sprite-static.svg#flag-ru"></use>
 									</svg>English
 								</li>
 							</ul>
@@ -79,12 +77,50 @@
 				<div class="header__nav-box container"><a class="header__logo-link" href="/"><img class="header__logo-img" src="images/common/logo-major-terminal.svg" alt="Major Terminal"></a>
 					<nav class="header__nav">
 						<ul class="header__nav-list">
-							<li class="header__nav-elem"><a class="header__nav-link header__nav-link--active" href="#">Индустрии</a></li>
-							<li class="header__nav-elem"><a class="header__nav-link" href="#">Услуги</a></li>
+							<li class="header__nav-elem header__nav-elem--parent header__nav-elem--parent-with-blocks"><a class="header__nav-link" href="#">Индустрии</a>
+								<div class="header__nav-child">
+									<div class="container">
+										<ul class="header__nav-child-list">
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Fashion<img class="header__nav-child-link-bg" src="images/simple-card/img1.jpg" alt></a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Healthcare<img class="header__nav-child-link-bg" src="images/simple-card/img2.jpg" alt></a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Automotive<img class="header__nav-child-link-bg" src="images/simple-card/img3.jpg" alt></a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">FMCG</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Telecom</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">POSM</a></li>
+										</ul><a class="button-arrow header__nav-child-btn" href="#">Все индустрии</a>
+									</div>
+								</div>
+							</li>
+							<li class="header__nav-elem header__nav-elem--parent"><a class="header__nav-link" href="#">Услуги</a>
+								<div class="header__nav-child">
+									<div class="container">
+										<ul class="header__nav-child-list">
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Ответственное хранение</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Фуллфилмент</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Упаковка</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Кросс-докинг</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Таможенный склад</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Копакинг</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Производственная логистика</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Еще услуга</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Еще услуга</a></li>
+										</ul><a class="button-arrow header__nav-child-btn" href="#">Все услуги</a>
+									</div>
+								</div>
+							</li>
 							<li class="header__nav-elem"><a class="header__nav-link" href="#">Кейсы</a></li>
-							<li class="header__nav-elem"><a class="header__nav-link" href="#">Устойчивое развитие</a></li>
+							<li class="header__nav-elem header__nav-elem--parent header__nav-elem--parent-with-short-list"><a class="header__nav-link" href="#">Устойчивое развитие</a>
+								<div class="header__nav-child">
+									<div class="container">
+										<ul class="header__nav-child-list">
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Служба качества</a></li>
+											<li class="header__nav-child-elem"><a class="header__nav-child-link" href="#">Охрана труда</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
 							<li class="header__nav-elem"><a class="header__nav-link" href="#">Пресс-релизы</a></li>
-							<li class="header__nav-elem"><a class="header__nav-link" href="#">Карьера</a></li>
+							<li class="header__nav-elem"><a class="header__nav-link header__nav-link--active" href="#">Карьера</a></li>
 							<li class="header__nav-elem"><a class="header__nav-link" href="#">Терминалы</a></li>
 							<li class="header__nav-elem"><a class="header__nav-link" href="#">О нас</a></li>
 							<li class="header__nav-elem"><a class="header__nav-link" href="#">Контакты</a></li>
@@ -100,47 +136,66 @@
 					<li class="breadcrumb__item">
 						<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
 						<svg class="breadcrumb__arrow">
-							<use xlink:href="#chevron-right"></use>
+							<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
 						</svg>
 					</li>
 					<li class="breadcrumb__item"><span class="breadcrumb__current">404 ошибка</span></li>
 				</ul>
 			</div>
 			<!-- Section 404-->
-			<section class="section-404 container"><img class="section-404__img" src="images/section-404/img-404.svg" alt>
-				<h1 class="section-404__title">404</h1>
-				<p class="section-404__text">Что-то пошло не так! Нужная страница не найдена<br>Вы можете перейти на
-					<a class="section-404__link" href="/">главную страницу</a>
-				</p>
+			<section class="section-404 road">
+				<div class="container"><img class="section-404__img" src="images/section-404/img-404.svg" alt>
+					<h1 class="section-404__title">404</h1>
+					<p class="section-404__text">Что-то пошло не так! Нужная страница не найдена<br>Вы можете перейти на
+						<a class="section-404__link" href="/">главную страницу</a>
+					</p>
+				</div>
 			</section>
-			<!-- Section Invite-->
-			<div class="section-invite">
-				<div class="container">
-					<div class="section-invite__row">
-						<div class="section-invite__col">
-							<!-- Card--><a class="section-invite__card" href="#">
-								<div class="section-invite__card-content">
-									<p class="section-invite__card-title">Вебинары</p>
-									<p class="section-invite__card-text">Познакомьтесь с современными тенденциями складской деятельности в режиме онлайн</p>
+		</main>
+		<!-- Section Contacts-->
+		<section class="section-contacts">
+			<div class="container">
+				<div class="section-contacts__row">
+					<div class="section-contacts__form-box">
+						<form class="section-contacts__form" action="#">
+							<div class="section-contacts__form-layer section-contacts__form-layer--form">
+								<h2 class="h2 text-white section-contacts__title">Есть вопросы? Свяжитесь с нами!</h2>
+								<div class="section-contacts__form-row">
+									<div class="section-contacts__form-col section-contacts__form-col--inputs">
+										<div class="section-contacts__input-box">
+											<input class="form-control section-contacts__form-input" type="text" name="name" placeholder="Имя"/>
+										</div>
+										<div class="section-contacts__input-box">
+											<input class="form-control section-contacts__form-input" type="tel" name="phone" placeholder="*Телефон"/>
+										</div>
+										<div class="section-contacts__input-box">
+											<input class="form-control section-contacts__form-input" type="email" name="email" placeholder="*Адрес электронной почты"/>
+										</div>
+									</div>
+									<div class="section-contacts__form-col section-contacts__form-col--message">
+										<div class="section-contacts__textarea-box">
+											<textarea class="form-control form-control--textarea section-contacts__form-textarea" name="message" placeholder="*Комментарий..."></textarea>
+										</div>
+									</div>
 								</div>
-								<svg class="section-invite__card-arrow">
-									<use xlink:href="#chevron-right-big"></use>
-								</svg></a>
-						</div>
-						<div class="section-invite__col">
-							<!-- Card--><a class="section-invite__card" href="#">
-								<div class="section-invite__card-content">
-									<p class="section-invite__card-title">Наши кейсы</p>
-									<p class="section-invite__card-text">Изучите наш опыт в сфере складской логистики и получите похожее решение</p>
+								<div class="section-contacts__form-submit-box">
+									<button class="button button--blue button--lg section-contacts__form-submit">Отправить</button>
 								</div>
-								<svg class="section-invite__card-arrow">
-									<use xlink:href="#chevron-right-big"></use>
-								</svg></a>
-						</div>
+							</div>
+							<div class="section-contacts__form-layer section-contacts__form-layer--success">
+								<svg class="section-contacts__submitted-icon">
+									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#submitted-form"></use>
+								</svg>
+								<h3 class="h2 text-blue section-contacts__submitted-title">Спасибо! Ваше сообщение принято.</h3>
+								<p class="text-blue section-contacts__submitted-text">В ближайшее время с Вами свяжется менеджер по указанным контактным данным.</p>
+								<button class="button--blue button--lg section-contacts__form-reset" type="reset">Написать еще</button>
+							</div>
+						</form>
 					</div>
+					<div class="section-contacts__img-box"><img class="section-contacts__img" src="images/common/warehouse.svg" alt="alt"/></div>
 				</div>
 			</div>
-		</main>
+		</section>
 		<!-- Footer-->
 		<footer class="footer">
 			<div class="container">
@@ -149,7 +204,7 @@
 					<div class="footer__col">
 						<p class="footer__nav-title">Индустрии</p>
 						<ul class="footer__nav-list">
-							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Fashion</a></li>
+							<li class="footer__nav-elem"><a class="footer__nav-link footer__nav-link--active" href="#">Fashion</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Telecom</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Helthcare</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Автомотив</a></li>
@@ -194,7 +249,7 @@
 						<ul class="footer__social social">
 							<li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noreferrer" aria-label="Youtube">
 									<svg class="social__link-icon">
-										<use xlink:href="#youtube-blue"></use>
+										<use xlink:href="#youtube"></use>
 									</svg></a></li>
 							<li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noreferrer" aria-label="Telegram">
 									<svg class="social__link-icon">
@@ -213,39 +268,20 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1680039940383"></script>
-		<script src="./js/main.js?v=1680039940383"></script><svg width="0" height="0" class="hidden">
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 22" id="play">
-		<path d="M18 11L0 21.3923V0.607696L18 11Z" fill="currentColor"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="play-circle">
-		<path d="M25.3335 44L44.0002 32L25.3335 20V44ZM32.0002 58.6667C28.3113 58.6667 24.8446 57.9662 21.6002 56.5653C18.3557 55.1645 15.5335 53.2649 13.1335 50.8667C10.7335 48.4667 8.83394 45.6445 7.43483 42.4C6.03572 39.1556 5.33527 35.6889 5.3335 32C5.3335 28.3111 6.03394 24.8445 7.43483 21.6C8.83572 18.3556 10.7353 15.5333 13.1335 13.1333C15.5335 10.7333 18.3557 8.83379 21.6002 7.43468C24.8446 6.03557 28.3113 5.33512 32.0002 5.33334C35.6891 5.33334 39.1557 6.03379 42.4002 7.43468C45.6446 8.83557 48.4668 10.7351 50.8668 13.1333C53.2668 15.5333 55.1673 18.3556 56.5682 21.6C57.969 24.8445 58.6686 28.3111 58.6668 32C58.6668 35.6889 57.9664 39.1556 56.5655 42.4C55.1646 45.6445 53.2651 48.4667 50.8668 50.8667C48.4668 53.2667 45.6446 55.1671 42.4002 56.568C39.1557 57.9689 35.6891 58.6685 32.0002 58.6667ZM32.0002 53.3333C37.9557 53.3333 43.0002 51.2667 47.1335 47.1333C51.2668 43 53.3335 37.9556 53.3335 32C53.3335 26.0445 51.2668 21 47.1335 16.8667C43.0002 12.7333 37.9557 10.6667 32.0002 10.6667C26.0446 10.6667 21.0002 12.7333 16.8668 16.8667C12.7335 21 10.6668 26.0445 10.6668 32C10.6668 37.9556 12.7335 43 16.8668 47.1333C21.0002 51.2667 26.0446 53.3333 32.0002 53.3333Z" fill="currentColor"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search-loupe">
-		<path d="M10 18C11.775 17.9996 13.4988 17.4054 14.897 16.312L19.293 20.708L20.707 19.294L16.311 14.898C17.405 13.4997 17.9996 11.7754 18 10C18 5.589 14.411 2 10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18ZM10 4C13.309 4 16 6.691 16 10C16 13.309 13.309 16 10 16C6.691 16 4 13.309 4 10C4 6.691 6.691 4 10 4Z" fill="currentColor"></path>
-	</symbol>
+		<script src="./js/vendor.js?v=1681864339590"></script>
+		<script src="./js/main.js?v=1681864339590"></script><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="telegram">
 		<circle cx="25" cy="25" r="25" fill="currentColor"></circle>
 		<path d="M33.4399 18.6223L30.2711 33.566C30.0319 34.6205 29.4086 34.883 28.5229 34.3865L23.6944 30.8285L21.3649 33.0695C21.1069 33.3275 20.8916 33.5428 20.3944 33.5428L20.7416 28.6258L29.6899 20.54C30.0791 20.1935 29.6051 20.0008 29.0854 20.348L18.0229 27.314L13.2604 25.823C12.2246 25.4998 12.2059 24.7873 13.4764 24.29L32.1041 17.1133C32.9666 16.79 33.7211 17.3053 33.4399 18.623V18.6223Z" fill="white"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" id="time">
-		<path d="M20.9825 3.5C11.3225 3.5 3.5 11.34 3.5 21C3.5 30.66 11.3225 38.5 20.9825 38.5C30.66 38.5 38.5 30.66 38.5 21C38.5 11.34 30.66 3.5 20.9825 3.5ZM21 35C13.265 35 7 28.735 7 21C7 13.265 13.265 7 21 7C28.735 7 35 13.265 35 21C35 28.735 28.735 35 21 35ZM20.615 12.25H20.51C19.81 12.25 19.25 12.81 19.25 13.51V21.77C19.25 22.3825 19.565 22.96 20.1075 23.275L27.37 27.6325C27.965 27.9825 28.735 27.8075 29.085 27.2125C29.1729 27.0708 29.2313 26.9129 29.2569 26.7481C29.2824 26.5833 29.2746 26.4151 29.2338 26.2534C29.1929 26.0918 29.12 25.94 29.0193 25.8071C28.9185 25.6742 28.7921 25.563 28.6475 25.48L21.875 21.455V13.51C21.875 12.81 21.315 12.25 20.615 12.25Z" fill="#004996"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 109" id="user">
-		<path d="M54.5013 18.1667C59.3194 18.1667 63.9402 20.0807 67.3471 23.4876C70.754 26.8945 72.668 31.5153 72.668 36.3334C72.668 41.1515 70.754 45.7722 67.3471 49.1791C63.9402 52.586 59.3194 54.5 54.5013 54.5C49.6832 54.5 45.0624 52.586 41.6555 49.1791C38.2486 45.7722 36.3346 41.1515 36.3346 36.3334C36.3346 31.5153 38.2486 26.8945 41.6555 23.4876C45.0624 20.0807 49.6832 18.1667 54.5013 18.1667ZM54.5013 63.5834C74.5755 63.5834 90.8346 71.7129 90.8346 81.75V90.8334H18.168V81.75C18.168 71.7129 34.4271 63.5834 54.5013 63.5834Z" fill="white"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="users">
-		<path d="M44.5844 52.672L42.8777 39.008C42.6359 37.0726 41.6953 35.2922 40.2328 34.0017C38.7704 32.7111 36.8868 31.9993 34.9364 32H29.0591C27.1095 32.0006 25.2273 32.713 23.7659 34.0034C22.3046 35.2939 21.3648 37.0735 21.1231 39.008L19.4137 52.672C19.3199 53.4227 19.3869 54.1848 19.6102 54.9076C19.8335 55.6304 20.208 56.2975 20.7089 56.8645C21.2098 57.4314 21.8256 57.8853 22.5154 58.1961C23.2052 58.5068 23.9532 58.6672 24.7097 58.6667H39.2911C40.0474 58.6668 40.7951 58.5061 41.4845 58.1952C42.174 57.8844 42.7895 57.4304 43.2901 56.8635C43.7907 56.2965 44.165 55.6296 44.3881 54.907C44.6113 54.1843 44.6782 53.4225 44.5844 52.672Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-		<path d="M32 21.3333C36.4183 21.3333 40 17.7516 40 13.3333C40 8.91507 36.4183 5.33334 32 5.33334C27.5817 5.33334 24 8.91507 24 13.3333C24 17.7516 27.5817 21.3333 32 21.3333Z" stroke="currentColor" stroke-width="3"></path>
-		<path d="M10.6668 29.3334C13.6123 29.3334 16.0002 26.9455 16.0002 24C16.0002 21.0545 13.6123 18.6667 10.6668 18.6667C7.72131 18.6667 5.3335 21.0545 5.3335 24C5.3335 26.9455 7.72131 29.3334 10.6668 29.3334Z" stroke="currentColor" stroke-width="3"></path>
-		<path d="M53.3333 29.3334C56.2789 29.3334 58.6667 26.9455 58.6667 24C58.6667 21.0545 56.2789 18.6667 53.3333 18.6667C50.3878 18.6667 48 21.0545 48 24C48 26.9455 50.3878 29.3334 53.3333 29.3334Z" stroke="currentColor" stroke-width="3"></path>
-		<path d="M10.6669 37.3333H9.8509C8.58839 37.3332 7.36677 37.7809 6.40337 38.5968C5.43996 39.4128 4.79724 40.544 4.58956 41.7893L3.70156 47.1227C3.57413 47.8868 3.61469 48.6695 3.82041 49.4164C4.02614 50.1632 4.3921 50.8563 4.89284 51.4474C5.39357 52.0385 6.01706 52.5134 6.71994 52.8391C7.42283 53.1648 8.18822 53.3334 8.9629 53.3333H18.6669M53.3336 37.3333H54.1496C55.4121 37.3332 56.6337 37.7809 57.5971 38.5968C58.5605 39.4128 59.2032 40.544 59.4109 41.7893L60.2989 47.1227C60.4263 47.8868 60.3858 48.6695 60.18 49.4164C59.9743 50.1632 59.6084 50.8563 59.1076 51.4474C58.6069 52.0385 57.9834 52.5134 57.2805 52.8391C56.5776 53.1648 55.8122 53.3334 55.0376 53.3333H45.3336" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="vk">
 		<circle cx="25" cy="25" r="25" fill="currentColor"></circle>
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M35.7203 20.1875C35.8872 19.6587 35.7203 19.2744 34.982 19.2744H32.5272C31.908 19.2744 31.622 19.6109 31.4552 19.9709C31.4552 19.9709 30.1923 23.0459 28.4289 25.0395C27.857 25.6161 27.595 25.8083 27.2852 25.8083C27.1183 25.8083 26.9036 25.6161 26.9036 25.0878V20.1627C26.9036 19.5383 26.7133 19.25 26.1887 19.25H22.3281C21.9466 19.25 21.7084 19.5383 21.7084 19.8266C21.7084 20.427 22.5902 20.5714 22.6853 22.2528V25.9062C22.6853 26.6989 22.5447 26.8438 22.2325 26.8438C21.3986 26.8438 19.3731 23.7448 18.1581 20.2137C17.9219 19.5144 17.6819 19.25 17.0622 19.25H14.5839C13.8691 19.25 13.75 19.5861 13.75 19.9466C13.75 20.5953 14.5839 23.862 17.6341 28.1858C19.6595 31.1389 22.5428 32.7261 25.1402 32.7261C26.7133 32.7261 26.9036 32.3656 26.9036 31.7652V29.5311C26.9036 28.8106 27.0466 28.6906 27.5472 28.6906C27.9044 28.6906 28.548 28.8823 30.0016 30.2998C31.6694 31.9813 31.9553 32.75 32.8848 32.75H35.3392C36.0541 32.75 36.3878 32.3895 36.197 31.693C35.9828 30.9964 35.1723 29.9877 34.1238 28.7867C33.5519 28.1145 32.6941 27.3697 32.432 27.0092C32.0748 26.5287 32.17 26.3366 32.432 25.9044C32.4081 25.9044 35.4109 21.6284 35.7203 20.1856" fill="white"></path>
 	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="youtube-blue">
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
+		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="youtube">
 		<g clip-path="url(#clip0_1902_2023)">
 			<path d="M8.96094 20.28H10.4209V27.5H11.8209V20.28H13.2809V19.06H8.96094V20.28ZM16.3409 26C16.1009 26.28 15.2809 26.84 15.2809 26.04V21.26H14.0409V26.48C14.0409 28.06 15.6209 27.64 16.3609 26.82V27.5H17.6009V21.26H16.3609V26H16.3409ZM20.9609 21.22C20.2409 21.22 19.7809 21.76 19.7809 21.76V19.04H18.5209V27.5H19.7809V27.02C19.7809 27.02 20.2009 27.58 20.9609 27.58C21.6209 27.58 22.1209 27 22.1209 26.2V22.74C22.1209 21.8 21.6809 21.22 20.9609 21.22ZM20.8209 26.04C20.8209 26.5 20.5009 26.72 20.0809 26.54C19.9675 26.487 19.8656 26.4123 19.7809 26.32V22.44C19.8609 22.36 19.9609 22.3 20.0409 22.24C20.4809 22.02 20.8209 22.36 20.8209 22.82V26.04ZM25.4409 25.72C25.4409 26.2 25.1809 26.52 24.8809 26.54C24.5609 26.56 24.2409 26.3 24.2409 25.72V24.54H26.6209V22.94C26.6271 22.6964 26.5842 22.454 26.4949 22.2273C26.4055 22.0005 26.2716 21.794 26.1009 21.62C25.7569 21.3062 25.3066 21.1346 24.8409 21.14C24.4009 21.14 23.9409 21.28 23.5809 21.56C23.2009 21.86 22.9609 22.32 22.9609 22.94V25.74C22.9609 26.3 23.1409 26.74 23.4209 27.06C23.7609 27.42 24.2209 27.62 24.7009 27.64C25.2809 27.66 25.9009 27.42 26.2609 26.92C26.4809 26.62 26.6209 26.22 26.6209 25.74V25.42H25.4409V25.72ZM24.2409 22.94C24.2409 22.6 24.4409 22.2 24.8209 22.2C25.2009 22.2 25.4409 22.56 25.4409 22.94V23.58H24.2409V22.94Z" fill="currentColor"></path>
 			<path d="M17.9414 2.78016e-08C15.5775 0.000131314 13.2367 0.465871 11.0528 1.37063C8.86887 2.27538 6.88452 3.60144 5.21307 5.27308C3.54162 6.94472 2.21578 8.92921 1.31127 11.1132C0.406754 13.2973 -0.058725 15.6381 -0.0585937 18.002C-0.0584624 20.3659 0.407277 22.7067 1.31203 24.8906C2.21679 27.0745 3.54284 29.0589 5.21448 30.7303C6.88612 32.4018 8.87061 33.7276 11.0546 34.6321C13.2387 35.5367 15.5795 36.0021 17.9434 36.002C22.7176 36.0017 27.2961 34.105 30.6717 30.7289C34.0474 27.3529 35.9437 22.7742 35.9434 18C35.9431 13.2258 34.0464 8.64732 30.6703 5.27166C27.2943 1.89601 22.7156 -0.000265118 17.9414 2.78016e-08ZM21.1014 6.74H22.7014V12.1C22.7014 12.44 22.8614 12.44 22.9214 12.44C23.1614 12.44 23.5214 12.18 23.7014 12V6.72H25.3014V13.8H23.7014V13.18C23.4814 13.38 23.2614 13.54 23.0414 13.66C22.7414 13.82 22.4614 13.88 22.1814 13.88C22.0281 13.8873 21.8751 13.8607 21.7333 13.8019C21.5915 13.7431 21.4645 13.6537 21.3614 13.54C21.1814 13.32 21.1014 12.98 21.1014 12.56V6.74ZM16.0014 8.6C16.0014 7.5 16.9014 6.6 18.0014 6.6C19.1014 6.6 20.0014 7.5 20.0014 8.6V12C20.0014 13.1 19.1014 14 18.0014 14C16.9014 14 16.0014 13.1 16.0014 12V8.6ZM11.8414 4.3L12.8014 7.82L13.7814 4.3H15.6014L13.7214 9.86V13.8H11.9414V9.86L10.0214 4.3H11.8414ZM27.6414 29.38C26.6214 30.38 17.9814 30.4 17.9814 30.4C17.9814 30.4 9.36141 30.38 8.32141 29.38C7.30141 28.38 7.30141 23.4 7.30141 23.36C7.30141 23.34 7.30141 18.36 8.32141 17.34C9.34141 16.34 17.9814 16.32 17.9814 16.32C17.9814 16.32 26.6014 16.34 27.6414 17.34C28.6614 18.34 28.6814 23.32 28.6814 23.36C28.6814 23.36 28.6814 28.36 27.6414 29.38Z" fill="currentColor"></path>
@@ -257,37 +293,10 @@
 			</clipPath>
 		</defs>
 	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="youtube-red">
-		<circle cx="25" cy="25" r="25" fill="#E10000"></circle>
-		<path d="M34.543 20.498C35 22.28 35 26 35 26C35 26 35 29.72 34.543 31.502C34.289 32.487 33.546 33.262 32.605 33.524C30.896 34 25 34 25 34C25 34 19.107 34 17.395 33.524C16.45 33.258 15.708 32.484 15.457 31.502C15 29.72 15 26 15 26C15 26 15 22.28 15.457 20.498C15.711 19.513 16.454 18.738 17.395 18.476C19.107 18 25 18 25 18C25 18 30.896 18 32.605 18.476C33.55 18.742 34.292 19.516 34.543 20.498ZM23 29.5L29 26L23 22.5V29.5Z" fill="white"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
-		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24" id="chevron-list-blue">
-		<path d="M3 21L12 12L3 3" stroke="#004996" stroke-width="5" stroke-linecap="round"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 36" id="chevron-right">
-		<path d="M2 34L18 18L2 2" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 70" id="chevron-right-big">
-		<path d="M1 69L36 35L1 0.999998" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 24" id="chevron-slider">
-		<path d="M2.8 24L0 21.2L9.2 12L0 2.8L2.8 0L14.8 12L2.8 24Z" fill="currentColor"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="fire">
-		<path d="M16.5 8.00004C16.5 9.50004 16 11.5 13.6 12.3C14.3 10.6 14.4 8.90004 13.9 7.30004C13.2 5.20004 10.9 3.60004 9.3 2.70004C8.9 2.40004 8.2 2.80004 8.3 3.40004C8.3 4.50004 8 6.10004 6.3 7.80004C4.1 10 3 12.3 3 14.5C3 17.4 5 21 9 21C5 17 8 13.5 8 13.5C8.8 19.4 13 21 15 21C16.7 21 20 19.8 20 14.6C20 11.5 18.7 9.10004 17.6 7.70004C17.3 7.20004 16.6 7.50004 16.5 8.00004Z" fill="#E10000"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="flag-ru">
-		<path d="M0 9.375H24V14.625H0V9.375Z" fill="#1B75BB"></path>
-		<path d="M20.25 3.75H3.75C1.26488 3.75 0 5.59688 0 7.875V9.375H24V7.875C24 5.59688 22.7351 3.75 20.25 3.75Z" fill="#E6E7E8"></path>
-		<path d="M0 16.125C0 18.4031 1.26488 20.25 3.75 20.25H20.25C22.7351 20.25 24 18.4031 24 16.125V14.625H0V16.125Z" fill="#EC1C24"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 44" id="map-marker">
-		<path d="M15.5 2C8.04263 2 2 8.0905 2 15.6087C2 23.123 15.5 42 15.5 42C15.5 42 29 23.123 29 15.6087C29 8.0905 22.9545 2 15.5 2ZM15.5 21.1785C12.3719 21.1785 9.83642 18.6198 9.83642 15.4694C9.83642 12.3121 12.3719 9.75834 15.5 9.75834C18.6312 9.75834 21.1647 12.3121 21.1647 15.4694C21.1647 18.6198 18.6312 21.1785 15.5 21.1785Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" id="map-marker-small">
+		<path d="M6 1C3.23801 1 1 3.28394 1 6.10325C1 8.92113 6 16 6 16C6 16 11 8.92113 11 6.10325C11 3.28394 8.76092 1 6 1ZM6 8.19194C4.84143 8.19194 3.90238 7.23241 3.90238 6.05104C3.90238 4.86706 4.84143 3.90938 6 3.90938C7.15972 3.90938 8.09803 4.86706 8.09803 6.05104C8.09803 7.23241 7.15972 8.19194 6 8.19194Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
 </svg>
-
+<img class="hidden" src="images/svg-sprite/svg-sprite-static.svg" alt>
 	</body>
 </html>
