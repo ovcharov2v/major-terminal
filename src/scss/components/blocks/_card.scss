@@ -7,6 +7,17 @@
 	color: $color-white;
 	overflow: hidden;
 
+	&--small-radius {
+		border-radius: 10px;
+	}
+
+	&--with-icon {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 48px 42px;
+	}
+
 	&--text-top {
 		display: flex;
 		flex-direction: column;
@@ -114,6 +125,12 @@
 				opacity: 1;
 			}
 		}
+
+		.card--with-icon & {
+			&::after {
+				background: #004996;
+			}
+		}
 	}
 
 	&__bg {
@@ -172,6 +189,11 @@
 			width: 100%;
 			max-width: 147px;
 		}
+		.card--with-icon & {
+			width: 100%;
+			max-width: 147px;
+			padding: 4px 14px;
+		}
 	}
 
 	&__tag-list {
@@ -197,5 +219,11 @@
 			font-family: $font-secondary;
 			font-weight: 700;
 		}
+	}
+
+	&__icon {
+		display: inline-block;
+		margin-bottom: auto;
+		max-height: 90px;
 	}
 }

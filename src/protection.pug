@@ -1,0 +1,45 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Охрана труда"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], 'Охрана труда')(class="container")
+	// Section Hero
+	section.section-hero.section-hero--simple
+		.container
+			.section-hero__content
+				p.section-hero__slogan.text-white Движение вперед, внимание к деталям
+				img.section-hero__img(src="images/section-hero/squares.svg", alt)
+				img.section-hero__bg(src="images/section-hero/bg8.jpg", alt)
+	// Section Success
+	.section-success.section-success--department.container
+		h2.h1.text-blue.section-success__title Охрана труда
+		p.section-success__subtitle Нашу компанию отличают высокие требования по охране труда. Охрана труда призвана решить главную задачу — предотвратить травматизм на производстве и возникновение профессиональных заболеваний, а также минимизировать социальные последствия. С помощью проведения специальных мероприятий каждое рабочее место гарантирует низкий или социально-приемлемый риск.
+		.section-success__grid.section-success__grid--two-col
+			.section-success__elem
+				p.section-success__value ISO 45001
+				p.section-success__text Соответствуем международным стандартом для систем менеджмента  охраны труда и производственной безопасности
+			.section-success__elem
+				p.section-success__value OHSAS 18001
+				p.section-success__text Соответствуем международным стандартом для систем менеджмента  охраны труда и производственной безопасности
+			.section-success__elem
+				p.section-success__value Информирование работников
+				p.section-success__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы.
+			.section-success__elem
+				p.section-success__value Культура безопасного поведения
+				p.section-success__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы.
+			.section-success__elem
+				p.section-success__value Анализируем и оцениваем риски
+				p.section-success__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы.
+			.section-success__elem
+				p.section-success__value Внедрение Near-miss карт
+				p.section-success__text Внедряются карты Near-miss (карты наблюдения) в том числе и через QR код. Здесь будет более детальное описание.

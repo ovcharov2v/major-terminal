@@ -2,12 +2,81 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 
-	&__title {
+	&__nav-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
 		margin-top: 0;
-		margin-bottom: 34px;
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		margin: 0;
 	}
 
 	&__tab-content {
-		padding-top: 64px;
+		padding-top: 30px;
+
+		&--no-top-padding {
+			padding-top: 0;
+			padding-bottom: 90px;
+		}
+	}
+
+	&__tab-navs {
+		max-width: 1220px;
+		margin-bottom: 0;
+	}
+
+	&__text-block {
+		max-width: 1280px;
+		margin-top: 93px;
+		margin-bottom: 24px;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 300;
+	}
+
+	&__timeline {
+		position: relative;
+		&::before,
+		&::after {
+			position: absolute;
+			top: 0;
+			width: 30px;
+			height: 100%;
+			content: "";
+		}
+
+		&::before {
+			left: 0;
+			background: linear-gradient(to right, #fff, transparent);
+		}
+
+		&::after {
+			right: 0;
+			background: linear-gradient(to left, #fff, transparent);
+		}
+	}
+
+	&__timeline-img {
+		display: block;
+		width: 100%;
+		margin-top: -60px;
+	}
+
+	&__download {
+		padding-top: 20px;
+	}
+
+	&__download-btn-box {
+		margin-top: 67px;
+		margin-bottom: 67px;
+		text-align: center;
+	}
+
+	&__download-btn {
+		width: 100%;
+		max-width: 248px;
 	}
 }

@@ -12,275 +12,156 @@ append vars
 		link.icon32x32 = "favicons/favicon-32x32.png"
 
 block content
+	+breadcrumb(['Главная'], 'Услуга')(class="container")
 	// Section Hero
 	section.section-hero.section-hero--industry
 		.container
-			+breadcrumb(['Главная', 'Услуга'], 'Фулфилмент')(class="section-hero__breadcrumb breadcrumb--white")
-			h1.section-hero__title Фулфилмент
-			p.section-hero__text Фулфилмент на аутсорсе от эксперта в области складских операций
-			img.section-hero__bg(src="images/section-hero/bg4.jpg", alt)
-			// Results
-			.results
-				.results__row
-					// Col
-					.results__col
-						p.results__value 5 млн
-						p.results__text Единиц товаров
+			.section-hero__content
+				h1.section-hero__title Фулфилмент
+				p.section-hero__text Фулфилмент на аутсорсе от эксперта в области складских операций
+				img.section-hero__bg(src="images/section-hero/bg7.jpg", alt)
+	// Section Success
+	.section-success.container
+		.section-success__grid
+			.section-success__elem
+				p.section-success__value 5 млн
+				p.section-success__text Выгрузка (коробов) / год
+			.section-success__elem
+				p.section-success__value 100 млн
+				p.section-success__text Приемка (штук) / год
+			.section-success__elem
+				p.section-success__value 400 тыс
+				p.section-success__text Восстановление качества
+			.section-success__elem
+				p.section-success__value 15 млн
+				p.section-success__text Стикеров (штук) / год
+
+	// Section Service range
+	section.section-service-range
+		.container
+			h2.h2.section-service-range__title Полный комплекс услуг
+				br
+				span.text-red по фулфилменту
+			.links-row.section-service-range__links
+				a.links-row__link(href="#") Организация забора товара
+				a.links-row__link(href="#") Прием товара
+				a.links-row__link(href="#") Комплектация и упаковка
+				a.links-row__link(href="#") Комплектация и упаковка FBS заказов
+				a.links-row__link(href="#") Доставка
+				a.links-row__link(href="#") Подготовка товара к отгрузке на маркетплейсы
+		// Section Partner
+		.section-partner.section-partner--type2.section-partner--blue.container
+			.section-partner__content
+				ul.section-partner__link-list
+					li.section-partner__link-elem
+						a.section-partner__link(href="#") FBO и FBS
+					li.section-partner__link-elem
+						a.section-partner__link(href="#") Возможности интеграций
+					li.section-partner__link-elem
+						a.section-partner__link(href="#") Омниканальность
+				.section-partner__row
+					.section-partner__col.section-partner__col--content
+						h3.h2.section-partner__title Работа по FBS и FBO на
 							br
-							| на fullfilment складе
-					// Col
-					.results__col
-						p.results__value 65 тыс.
-						p.results__text Единиц товаров
+							|одном складе
+						p.section-partner__text.section-partner__text--type2 Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку.
 							br
-							| на fullfilment складе
-					// Col
-					.results__col
-						p.results__value 170 тыс
-						p.results__text Кол-во м2 складов
-				a.button.button--white.button--md.results__button(href="#") Связаться с нами
-
-	// Section Request
-	section.section-request.section-request--service.container
-		h2.h2.text-blue.section-request__title Полный комплекс услуг по Фулфилменту
-		.section-request__row.section-request__row--three-col
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Организация забора товара с любого склада
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Прием товара
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Ответственное хранение
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Комплектация и упаковка интернет заказов
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Комплектация и упаковка интернет заказов
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Подготовка товара к отгрузки на маркетплейс ( FBO)
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Доставка
-			// Link
-			.section-request__link-box
-				a.section-request__link(href="#")
-					+svg("chevron-right")(class="section-request__link-arrow")
-					p.section-request__link-title Комплектация и упаковка заказов FBS
-
-		// Tabs
-		.tabs.tabs--blue
-			ul.tabs__nav-list.tabs__nav-list--three-col
-				li.tabs__nav-elem
-					button.tabs__nav-button.tabs__nav-button--active(data-content="content1") FBO и FBS
-				li.tabs__nav-elem
-					button.tabs__nav-button(data-content="content2") Интеграция с маркетплейсами
-				li.tabs__nav-elem
-					button.tabs__nav-button(data-content="content3") Омниканальный склад
-			.tabs__content-box
-				// Content
-				.section-request__tab-content.tabs__content.tabs__content--active#content1
-					.section-request__content-row
-						.section-request__col
-							h2.h2.text-blue.section-request__content-title.section-request__content-title--with-line Работа по FBS и FBO
-								br
-								| на одном складе
-							p.section-request__content-text Продавать на маркетплейсах можно по
-								br
-								| разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку.
-
-							p.section-request__content-text.section-request__content-text--small Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки. В каждой схеме есть свои преимущества и недостатки.
-							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
-						.section-request__col
-							img.section-request__img.section-request__img--no-overflow(src="images/section-request/img3.svg", alt)
-				// Content
-				.section-request__tab-content.section-request__tab-content--n2.tabs__content#content2
-					.section-request__content-row
-						.section-request__col
-							h2.h2.text-blue.section-request__title Возможности Major Terminal позволяют организовать
-								br
-								span.text-weight-light следующие типы хранения для индустрии
-								|
-								|
-								| Fashion
-							ul.list-arrow.list-arrow--two-col.list-arrow--red.section-request__list
-								li.list-arrow__elem Стеллажное
-								li.list-arrow__elem Полочное
-								li.list-arrow__elem Напольное
-								li.list-arrow__elem Вашельное
-							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
-						.section-request__col
-							img.section-request__img(src="images/section-request/img2.svg", alt)
-					// Content
-				// Content
-				.section-request__tab-content.tabs__content#content3
-					.section-request__content-row
-						.section-request__col
-							ul.list-arrow.list-arrow--red.section-request__list
-								li.list-arrow__elem Cтикеровка, маркировка (включая Честный Знак)
-								li.list-arrow__elem Переупаковка
-								li.list-arrow__elem Измерение МГХ
-							a.button.button--blue.button--md.section-request__button(href="#") Оставить заявку
-						.section-request__col
-							img.section-request__img(src="images/section-request/img.svg", alt)
-
+							br
+							span.text-weight-light Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.
+						a.button.button--outline-blue.button--md.section-partner__button(href="#") Оставить заявку
+					.section-partner__col.section-partner__col--img
+						img.section-partner__image(src="images/section-partner/img2.svg", alt)
 	// Section Description
-	.section-description.section-description--with-icon-row.container
-		h2.h2.text-blue.section-description__title Опции и преимущества
-		.section-description__adv-icon-row
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon1")(class="section-description__adv-icon section-description__icon--full-time")
-				figcaption.section-description__adv-icon-text Работа 24/7
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon2")(class="section-description__adv-icon")
-				figcaption.section-description__adv-icon-text Персональный
-					br
-					| менеджер
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon3")(class="section-description__adv-icon")
-				figcaption.section-description__adv-icon-text Прозрачная
-					br
-					| тарификация
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon4")(class="section-description__adv-icon")
-				figcaption.section-description__adv-icon-text Кросс-докинг
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon5")(class="section-description__adv-icon")
-				figcaption.section-description__adv-icon-text Прием
-					br
-					| наложенных
-					br
-					| платежей
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon6")(class="section-description__adv-icon")
-				figcaption.section-description__adv-icon-text Служба контроля
-					br
-					| качества
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon7")(class="section-description__adv-icon")
-				figcaption.section-description__adv-icon-text Комплектация
-					br
-					| промо-наборов
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon8")(class="section-description__adv-icon section-description__icon--part-pay")
-				figcaption.section-description__adv-icon-text Частичный
-					br
-					| выкуп заказа
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon9")(class="section-description__adv-icon")
-				figcaption.section-description__adv-icon-text Работа с B2B и B2C
-			// Icon col
-			figure.section-description__adv-icon-col
-				.section-description__adv-icon-box
-					+svg("advantage-icon10")(class="section-description_adv-_icon")
-				figcaption.section-description__adv-icon-text SLA
-					br
-					| зафиксированные
-					br
-					| контрактом
-		.section-description__grid1
+	section.section-description.section-description--service.container
+		h2.h2.section-description__title Преимущества Major
+		.section-description__panel-grid
 			// Panel
-			.section-description__panel.section-description__panel--with-blue-box
-				ul.section-description__list
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon1.png", alt)
-						| Доступ
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon5.png", alt)
-						| Документы
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon2.png", alt)
-						| Безопасность
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon6.png", alt)
-						| Отчеты
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon3.png", alt)
-						| Каталог
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon7.png", alt)
-						| Качество
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon4.png", alt)
-						| 24/7
-					li.section-description__list-elem
-						span.section-description__icon-box
-							img.section-description__icon(src="images/section-description/icon8.png", alt)
-						| Управление
-				.section-description__panel-row
-					.section-description__panel-blue-box
-						h3.section-description__panel-title Личный кабинет клиента
-						p.section-description__panel-text Управление и отчетность в едином личном кабинете
-							br
-							| с множеством полезных функций
-					img.section-description__panel-logo(src="images/section-description/logo.png", alt)
+			article.section-description__panel
+				.section-description__panel-content
+					h3.section-description__panel-title Личный кабинет клиента
+					p.section-description__panel-text Управление и отчетность в едином личном кабинете с множеством полезных функций
+					a.section-description__panel-link(href="#") Перейти в кабинет
+				img.section-description__panel-img(src="images/section-description/img1.png", alt)
 			// Panel
-			.section-description__panel.section-description__panel--with-image.section-description__panel--corner--bottom-right
-				img.section-description__panel-img(src="images/section-description/img2.jpg", alt)
-				.section-description__panel-content-box
-					h3.section-description__panel-title Интеграция с системами клиента
-					p.section-description__panel-text Система управления складом и транспортом, а также собственный департамент разработки помогут реализовать решение для автоматизации ваших уникальных процессов.
-		.section-description__grid2
+			article.section-description__panel
+				img.section-description__panel-img(src="images/section-description/img2.svg", alt)
+				.section-description__panel-content
+					h3.section-description__panel-title Интеграция с WMS системой
+					p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
+					a.section-description__panel-link(href="#") Узнать подробнее
 			// Panel
-			.section-description__panel.section-description__panel--corner--top-left
-				h3.section-description__panel-title Служба качества
-				p.section-description__panel-text Разработка стандартов качества, правил
-					br
-					| и инструкций компании
-				a.section-description__panel-link(href="#") Узнать подробнее
+			article.section-description__panel
+				img.section-description__panel-img(src="images/section-description/img3.svg", alt)
+				.section-description__panel-content
+					h3.section-description__panel-title Служба качества
+					p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
+					a.section-description__panel-link(href="#") Узнать подробнее
 			// Panel
-			.section-description__panel.section-description__panel--corner--top-right
-				h3.section-description__panel-title Интеграция с WMS системой
-				p.section-description__panel-text Система управления складом Major собственной разработки.
-					br
-					| Команда разработчиков и поддержки WMS в режиме 24/7.
-				a.section-description__panel-link(href="#") Узнать подробнее
+			article.section-description__panel
+				.section-description__panel-content
+					h3.section-description__panel-title Интеграция с системами клиента
+					p.section-description__panel-text Собственный департамент разработки помогут реализовать решение для автоматизации ваших бизнес процессов.
+					a.section-description__panel-link(href="#") Скачать презентацию
+				img.section-description__panel-img(src="images/section-description/img4.svg", alt)
+
+	// Section Icon list
+	section.section-icon-list.container
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon1.svg", alt)
+			figcaption.section-icon-list__text Круглосуточная
+				br
+				|поддержка
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon2.svg", alt)
+			figcaption.section-icon-list__text Персональный
+				br
+				|менеджер
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon3.svg", alt)
+			figcaption.section-icon-list__text Прозрачная
+				br
+				|тарификация
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon4.svg", alt)
+			figcaption.section-icon-list__text Кросс-докинг
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon5.svg", alt)
+			figcaption.section-icon-list__text Наложенный
+				br
+				|платеж
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon6.svg", alt)
+			figcaption.section-icon-list__text Служба контроля
+				br
+				|качества
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon7.svg", alt)
+			figcaption.section-icon-list__text Комплектакция
+				br
+				|промо-наборов
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon8.svg", alt)
+			figcaption.section-icon-list__text Частичный
+				br
+				|выкуп заказа
+		figure.section-icon-list__elem
+			.section-icon-list__icon-box
+				img.section-icon-list__icon(src="images/section-icon-list/icon9.svg", alt)
+			figcaption.section-icon-list__text Работа с B2B и B2C
+				br
+				|клиентами
 
 	// Section Experience
 	section.section-experience.container
-		h2.h2.text-blue.section-experience__title Наш опыт в фулфилменте
+		h2.h2.section-experience__title Наш опыт в фулфилменте
 		.section-experience__grid
 			// Card
 			a.section-experience__card.card.card--experience.card--with-tag-line(href="#")
@@ -291,7 +172,7 @@ block content
 					p.card__title Спортивная одежда
 					+svg("chevron-right-big")(class="card__arrow")
 				.card__bg-box
-					img.card__bg(src="images/section-experience/bg1.jpg", alt)
+					img.card__bg(src="images/section-experience/bg3.jpg", alt)
 			// Card
 			a.section-experience__card.card.card--experience.card--with-tag-line(href="#")
 				ul.card__tag-list
@@ -301,43 +182,36 @@ block content
 					p.card__title Электроника
 					+svg("chevron-right-big")(class="card__arrow")
 				.card__bg-box
-					img.card__bg(src="images/section-experience/bg1.jpg", alt)
-
-
-	// Section Other services
-	section.section-other-services.container
-		h2.h2.text-blue.section-other-services__title Другие услуги
-		.section-other-services__grid
+					img.card__bg(src="images/section-experience/bg4.jpg", alt)
+	// Section Service list
+	section.section-service-list.section-service-list--service.container
+		h2.h2.section-service-list__title Другие услуги
+		.section-service-list__grid
 			// Card
-			a.section-other-services__card.card.card--other-services(href="#")
+			a.section-service-list__card.card.card--with-icon.card--small-radius(href="#")
+				img.card__icon(src="images/section-service-list/icon1.svg")
 				.card__title-box
-					p.card__title Комплектация
+					p.card__title Ответственное
+						br
+						|хранение
 				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
-					img.card__bg(src="images/section-other-services/bg1.jpg", alt)
+					img.card__bg(src="images/section-service-list/bg7.jpg", alt)
 			// Card
-			a.section-other-services__card.card.card--other-services(href="#")
+			a.section-service-list__card.card.card--with-icon.card--small-radius(href="#")
+				img.card__icon(src="images/section-service-list/icon2.svg")
 				.card__title-box
-					p.card__title Сортировка
+					p.card__title Складская
+						br
+						|обработка
 				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
-					img.card__bg(src="images/section-other-services/bg1.jpg", alt)
-
-	// Section Contacts
-	section.section-contacts
-		.container
-			h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
-			form.section-contacts__form
-				.section-contacts__form-row
-					.section-contacts__form-col.section-contacts__form-col--inputs
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
-					.section-contacts__form-col.section-contacts__form-col--message
-						.section-contacts__textarea-box
-							textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
-				.section-contacts__form-submit-box
-					button.button.button--white.button--lg.section-contacts__form-submit Отправить
+					img.card__bg(src="images/section-service-list/bg8.jpg", alt)
+			// Card
+			a.section-service-list__card.card.card--with-icon.card--small-radius(href="#")
+				img.card__icon(src="images/section-service-list/icon3.svg")
+				.card__title-box
+					p.card__title Копакинг
+				span.button.button--white.button--xs.card__btn-more Подробнее
+				.card__bg-box
+					img.card__bg(src="images/section-service-list/bg9.jpg", alt)

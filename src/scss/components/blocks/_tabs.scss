@@ -1,7 +1,7 @@
 .tabs {
 	overflow: hidden;
 
-	&--blue {
+	&--small {
 		position: relative;
 		padding-bottom: 50px;
 
@@ -11,15 +11,9 @@
 			left: 0;
 			right: 0;
 			height: 5px;
-			background-color: #429EDD;
+			background-color: #F2F6FA;
 			border-radius: 4px;
 			content: "";
-		}
-
-		&.tabs--blue-no-bottom-border {
-			&::after {
-				content: none;
-			}
 		}
 	}
 
@@ -29,7 +23,7 @@
 		padding-left: 0;
 		list-style-type: none;
 
-		.tabs--blue & {
+		.tabs--small & {
 			position: relative;
 			display: flex;
 			width: 100%;
@@ -41,7 +35,7 @@
 				left: 0;
 				width: 100%;
 				height: 5px;
-				background-color: #429EDD;
+				background-color: #F2F6FA;
 				border-radius: 5px;
 				content: "";
 			}
@@ -51,7 +45,7 @@
 	&__nav-elem {
 		padding: 0 24px;
 
-		.tabs--blue & {
+		.tabs--small & {
 			flex-grow: 1;
 			padding: 0;
 		}
@@ -104,7 +98,7 @@
 			}
 		}
 
-		.tabs--blue & {
+		.tabs--small & {
 			position: relative;
 			z-index: 1;
 			display: flex;
@@ -118,7 +112,7 @@
 			line-height: 1;
 			font-weight: 700;
 			letter-spacing: .01em;
-			color: #429EDD;
+			color: #004996;
 
 			&::after {
 				max-width: 100%;
@@ -127,7 +121,7 @@
 				right: 0;
 				opacity: 1;
 				transform: scaleX(0);
-				background-color: $color-blue;
+				background-color: $color-red;
 				height: 5px;
 			}
 

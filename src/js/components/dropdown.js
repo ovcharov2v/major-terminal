@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
 					option.addEventListener('click', (e) => {
 						e.preventDefault();
 						input.value = option.dataset.value
+						if(dropdown.classList.contains('dropdown--with-flag')) {
+							const currentFlag = dropdown.querySelector('.dropdown__value-box .dropdown__flag')
+							const nextFlag = option.querySelector('.dropdown__flag')
+							currentFlag.src = nextFlag.src
+						}
 					})
 				})
 			}

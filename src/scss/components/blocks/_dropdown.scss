@@ -107,6 +107,9 @@
 		.dropdown--with-flag & {
 			padding: 14px;
 			border-radius: 10px;
+			left: auto;
+			right: 0;
+			min-width: calc(100% + 14px);
 		}
 	}
 

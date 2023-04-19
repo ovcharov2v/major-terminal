@@ -12,97 +12,45 @@ append vars
 		link.icon32x32 = "favicons/favicon-32x32.png"
 
 block content
+	+breadcrumb(['Главная'], 'Отдел службы качества')(class="container")
 	// Section Hero
-	section.section-hero.section-hero--with-cards.section-hero--department
+	section.section-hero.section-hero--simple
 		.container
-			+breadcrumb(['Главная'], 'Устойчивое развитие')(class="section-hero__breadcrumb breadcrumb--white")
-			h1.section-hero__title Отдел службы качества
-			p.section-hero__text Многоуровневая система контроля и анализа деятельности
-			img.section-hero__bg(src="images/section-hero/bg2.jpg", alt)
-			// Results
-			.section-hero__results-row.results.results--white-line
-				.results__row
-					// Col
-					.results__col
-						p.results__value 98,75%
-						p.results__text Своевременность приемки
-					// Col
-					.results__col
-						p.results__value 99,25%
-						p.results__text Точность подготовки заказа
-					// Col
-					.results__col
-						p.results__value NPS - 93%
-						p.results__text Чистый индекс поддержки
-							br
-							| клиентов
-					// Col
-					.results__col
-						p.results__value 96%
-						p.results__text Удовлетворенность
-							br
-							| клиентов
-			// Cards
-			.section-hero__card-row
-				article.section-hero__card
-					h2.section-hero__card-title ISO 13485:2017
-					p.section-hero__card-text Соответсуствуем требованиям
-						br
-						| производителей медицинских изделий
-				article.section-hero__card
-					h2.section-hero__card-title ISO 9001:2015
-					p.section-hero__card-text Certificate No.: RU004490 Bureau Veritas,
-						br
-						| UKAS management system
-
-
-
-	// Section Actions
-	.section-actions.container
-		section.section-actions__col
-			h2.section-actions__title Самоинспекция складских площадок
-			ul.section-actions__list
-				li.section-actions__list-elem Документирование
-				li.section-actions__list-elem Зонирование
-				li.section-actions__list-elem Санитарное состояние
-			ul.section-actions__list
-				li.section-actions__list-elem Обращение с товаром
-				li.section-actions__list-elem Инфраструктура
-				li.section-actions__list-elem Оборудование
-		section.section-actions__col
-			h2.section-actions__title Проведение внутренних аудитов
-			ul.section-actions__list
-				li.section-actions__list-elem Документирование
-				li.section-actions__list-elem Зонирование
-				li.section-actions__list-elem Санитарное состояние
-			ul.section-actions__list
-				li.section-actions__list-elem Обращение с товаром
-				li.section-actions__list-elem Инфраструктура
-				li.section-actions__list-elem Оборудование
-		section.section-actions__col
-			h2.section-actions__title.section-actions__title--low-margin Corrective and preventive action
-			p.section-actions__text Температурный режим хранения, выполнение согласованного регламента по обращению с товарами, требующими особых условий хранения и обработки
-		section.section-actions__col
-			h2.section-actions__title.section-actions__title--low-margin Обратная связь
-			p.section-actions__text Регулярные опросы действующих клиентов о качестве сервиса
-
-	// Section Contacts
-	section.section-contacts
-		.container
-			h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
-			form.section-contacts__form
-				.section-contacts__form-row
-					.section-contacts__form-col.section-contacts__form-col--inputs
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
-					.section-contacts__form-col.section-contacts__form-col--message
-						.section-contacts__textarea-box
-							textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
-				.section-contacts__form-submit-box
-					button.button.button--white.button--lg.section-contacts__form-submit Отправить
-
-
+			.section-hero__content
+				p.section-hero__slogan.text-white Движение вперед, внимание к деталям
+				img.section-hero__img(src="images/section-hero/squares.svg", alt)
+				img.section-hero__bg(src="images/section-hero/bg8.jpg", alt)
+	// Section Success
+	.section-success.section-success--department.container
+		h1.h1.text-blue.section-success__title Служба качества
+		p.section-success__subtitle Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы. Срок исполнения: 2 месяц с момента первого обращения, перевозка по готовности груза – 10 дней
+		.section-success__grid
+			.section-success__elem
+				p.section-success__value 98,75%
+				p.section-success__text Своевременность приемки
+			.section-success__elem
+				p.section-success__value 99,25%
+				p.section-success__text Точность подготовки заказа
+			.section-success__elem
+				p.section-success__value NPS - 93%
+				p.section-success__text Чистый индекс поддержки клиентов
+			.section-success__elem
+				p.section-success__value 96%
+				p.section-success__text Удовлетворенность
+		.section-success__grid.section-success__grid--two-col
+			.section-success__elem
+				p.section-success__value ISO 13485:2017
+				p.section-success__text Соответсуствуем требованиям
+					br
+					|производителей медицинских изделий
+			.section-success__elem
+				p.section-success__value ISO 9001:2015
+				p.section-success__text Certificate No.: RU004490 Bureau Veritas,
+					br
+					|UKAS management system
+			.section-success__elem
+				p.section-success__value Проведение внутренних аудитов
+				p.section-success__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы.
+			.section-success__elem
+				p.section-success__value Сбр обратной связи
+				p.section-success__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы.

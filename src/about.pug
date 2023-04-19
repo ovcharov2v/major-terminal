@@ -14,155 +14,239 @@ append vars
 block content
 	+breadcrumb(['Главная'], 'О нас')(class="container")
 
-	section.section-about.container
-		h2.h2.text-blue.section-about__title О нас
-		// Tabs
-		.tabs.tabs--blue.tabs--blue-no-bottom-border
-			ul.tabs__nav-list
-				li.tabs__nav-elem
-					button.tabs__nav-button.tabs__nav-button--active(data-content="content1") Общая информация
-				li.tabs__nav-elem
-					button.tabs__nav-button(data-content="content2") Управление
-				li.tabs__nav-elem
-					button.tabs__nav-button(data-content="content3") История развития
-				li.tabs__nav-elem
-					button.tabs__nav-button(data-content="content4") Лицензии и сертификаты
+	// Section Hero
+	section.section-hero.section-hero--simple.section-hero--about
+		.container
+			.section-hero__content
+				p.section-hero__slogan.text-white Движение вперед, внимание к деталям
+				img.section-hero__img(src="images/section-hero/squares.svg", alt)
+				img.section-hero__bg(src="images/section-hero/bg8.jpg", alt)
+
+	section.section-about.tabs.tabs--small
+			.section-about__nav-box.container
+				h2.h2.text-blue.section-about__title О нас
+				// Tabs
+				.ul.tabs__nav-list.section-about__tab-navs
+					li.tabs__nav-elem
+						button.tabs__nav-button.tabs__nav-button--active(data-content="content1") Общая информация
+					li.tabs__nav-elem
+						button.tabs__nav-button(data-content="content2") Управление
+					li.tabs__nav-elem
+						button.tabs__nav-button(data-content="content3") История развития
+					li.tabs__nav-elem
+						button.tabs__nav-button(data-content="content4") Документы
 			.tabs__content-box
 				// Content
-				.section-about__tab-content.tabs__content.tabs__content--active#content1
-					.about-people
-						// Card
-						figure.about-people__card
-							.about-people__photo-box
-								//img.about-people__photo(src="", alt)
-							figcaption.about-people__caption-box
-								p.about-people__name Алексей Пономарев
-								p.about-people__job-title Генеральный менеджер
-						// Card
-						figure.about-people__card
-							.about-people__photo-box
-								//img.about-people__photo(src="", alt)
-							figcaption.about-people__caption-box
-								p.about-people__name Дмитрий Зубарев
-								p.about-people__job-title Генеральный менеджер
-						// Card
-						figure.about-people__card
-							.about-people__photo-box
-								//img.about-people__photo(src="", alt)
-							figcaption.about-people__caption-box
-								p.about-people__name Елена Степина
-								p.about-people__job-title Финансовый директор
-						// Card
-						figure.about-people__card
-							.about-people__photo-box
-								//img.about-people__photo(src="", alt)
-							figcaption.about-people__caption-box
-								p.about-people__name Андрей Стрельников
-								p.about-people__job-title Руководитель отдела технологии
-						// Card
-						figure.about-people__card
-							.about-people__photo-box
-								//img.about-people__photo(src="", alt)
-							figcaption.about-people__caption-box
-								p.about-people__name Александр Карманов
-								p.about-people__job-title Коммерческий директор
-						// Card
-						figure.about-people__card
-							.about-people__photo-box
-								//img.about-people__photo(src="", alt)
-							figcaption.about-people__caption-box
-								p.about-people__name Юрий Павлюк
-								p.about-people__job-title Руководитель отдела продаж
-				// Content
-				.section-about__tab-content.tabs__content#content2
-					ul.about-download
-						// Block
-						li.about-download__block
-							p.about-download__title LLC Major Cargo Service
-							a.about-download__link(href="#" download) Скачать .pdf
-						// Block
-						li.about-download__block
-							p.about-download__title LLC Major Cargo Service
-							a.about-download__link(href="#" download) Скачать .pdf
-						// Block
-						li.about-download__block
-							p.about-download__title LLC Major Cargo Service
-							a.about-download__link(href="#" download) Скачать .pdf
-						// Block
-						li.about-download__block
-							p.about-download__title LLC Major Cargo Service
-							a.about-download__link(href="#" download) Скачать .pdf
-						// Block
-						li.about-download__block
-							p.about-download__title LLC Major Cargo Service
-							a.about-download__link(href="#" download) Скачать .pdf
-						// Block
-						li.about-download__block
-							p.about-download__title LLC Major Cargo Service
-							a.about-download__link(href="#" download) Скачать .pdf
-
-				// Content
-				.section-about__tab-content.tabs__content#content3
-					.timeline
-						// Block
-						.timeline__block.timeline__block--left
-							p.timeline__year 2011
-							p.timeline__title Образование
-								br
-								| Major Cargo Service
-							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи.
-							p.timeline__text Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
-						// Block
-						.timeline__block.timeline__block--right.timeline__block--image
-							img.timeline__image(src="images/section-about/timeline1.jpg", alt)
-							p.timeline__year 2013
-							p.timeline__title Образование
-								br
-								| Major Cargo Service
-							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи. Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
-						// Block
-						.timeline__block.timeline__block--left.timeline__block--image
-							img.timeline__image(src="images/section-about/timeline2.jpg", alt)
-							p.timeline__year 2015
-							p.timeline__title Открытие логопарка
-								br
-								| Major Terminal
-							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи. Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
-						// Block
-						.timeline__block.timeline__block--last.timeline__block--fullwidth
-							p.timeline__year 2018
-							p.timeline__title Образование
-								br
-								| Major Cargo Service
-							p.timeline__text Это самая главная ценность нашей компании! Для нас наши Клиенты - это наша семья. Успех наших Клиентов - это наш успех, их неудачи - это наши неудачи. Именно поэтому мы постоянно мониторим нужды наших Клиентов, предлагая новые, максимально эффективные и выгодные решения.
-
+				.tabs__content.tabs__content--active#content1
+					// Section Success
+					.section-success.section-success--about.container
+						p.section-success__text-block Major - российская транспортно-логистическая группа компаний, основанная в 2001 году. Мы оказываем широкий спектр услуг в области грузовых перевозок, таможенного оформления, складского хранения и обработки грузов. Обеспечивая стратегическое управление цепочками поставок, мы повышаем конкурентоспособность наших клиентов, делая их логистику максимально эффективной.
+						.section-success__grid
+							.section-success__elem
+								p.section-success__value 2007
+								p.section-success__text Год основная компании
+							.section-success__elem
+								p.section-success__value 40 тыс.
+								p.section-success__text Обработка заказов в сутки
+							.section-success__elem
+								p.section-success__value 1,2 млн
+								p.section-success__text Отгруженных заказов в месяц
+							.section-success__elem
+								p.section-success__value 176 000 м2
+								p.section-success__text Площадь складов в управлении
+					// Section Partner
+					section.section-partner.container
+						.section-partner__content
+							.section-partner__col
+								ul.section-partner__link-list
+									li.section-partner__link-elem
+										a.section-partner__link(href="#") 4PL оператор
+									li.section-partner__link-elem
+										a.section-partner__link(href="#") Логопарк
+									li.section-partner__link-elem
+										a.section-partner__link(href="#") О Major Terminal
+									li.section-partner__link-elem
+										a.section-partner__link(href="#") Ценности
+								h2.h2.text-white.section-partner__title Ma
+									span.text-red j
+									| or Terminal – надежный поставщик всего комплекса складских услуг
+								p.section-partner__text.text-white Major Terminal является частью 4PL-оператора Major Logistics, и имеет колоссальный опыт и экспертизу в широком спектре складских услуг
+								a.button.button--outline-white.button--md.section-partner__button(href="#") Подробнее о нас
+					.container
+						p.section-about__text-block Major - российская транспортно-логистическая группа компаний, основанная в 2001 году. Мы оказываем широкий спектр услуг в области грузовых перевозок, таможенного оформления, складского хранения и обработки грузов. Обеспечивая стратегическое управление цепочками поставок, мы повышаем конкурентоспособность наших клиентов, делая их логистику максимально эффективной.
+					// Section Ready
+					section.section-ready.section-ready--about
+						.container
+							.section-ready__title-box
+								h2.h1.section-ready__title Экспертиза в 6 индустриях
+							.simple-card-row
+								// Card
+								a.simple-card.section-ready__card(href="#")
+									h3.simple-card__title Fashion
+									img.simple-card__bg(src="images/simple-card/img1.jpg", alt)
+								// Card
+								a.simple-card.section-ready__card(href="#")
+									h3.simple-card__title Healthcare
+									img.simple-card__bg(src="images/simple-card/img2.jpg", alt)
+								// Card
+								a.simple-card.section-ready__card(href="#")
+									h3.simple-card__title Automotive
+									img.simple-card__bg(src="images/simple-card/img3.jpg", alt)
+								.simple-card-row__links
+									a.simple-card-row__link(href="#") Telecom
+									a.simple-card-row__link(href="#") POSM
+									a.simple-card-row__link(href="#") FMCG
+					// Section Slider terminal
+					section.section-slider-terminal.road.road--blue
+						.container
+							.section-slider-terminal__row
+								.section-slider-terminal__col
+									h2.h2.section-slider-terminal__title
+										|Складские терминалы
+										br
+										span.text-blue Ma
+											span.text-red j
+											|or
+										|
+										|
+										|Terminal
+									p.section-slider-terminal__text Собственные складские площади класса А+
+									.slider__nav
+										button.slider__btn.slider__btn--prev(aria-label="Назад")
+											+svg("chevron-slider")(class="slider__btn-arrow")
+										.slider__pagination
+										button.slider__btn.slider__btn--next(aria-label="Вперед")
+											+svg("chevron-slider")(class="slider__btn-arrow")
+								.swiper.slider.slider--index.section-slider-terminal__slider
+									.swiper-wrapper
+										// Slide
+										.swiper-slide.slider__slide
+											.slider__slide-bg-box
+												img.slider__slide-bg(src="images/services/slide-bg3.jpg", alt)
+											p.slider__slide-title
+												+svg("map-marker")(class="slider__map-icon")
+												|Логопарк Major
+										// Slide
+										.swiper-slide.slider__slide
+											.slider__slide-bg-box
+												img.slider__slide-bg(src="images/services/slide-bg4.jpg", alt)
+											p.slider__slide-title
+												+svg("map-marker")(class="slider__map-icon")
+												|М9
+										// Slide
+										.swiper-slide.slider__slide.slider__slide--bg-blue
+											.slider__slide-bg-box
+												img.slider__slide-bg(src="images/services/slide-bg5.jpg", alt)
+											p.slider__slide-title
+												+svg("map-marker")(class="slider__map-icon")
+												|Истра
+										// Slide
+										.swiper-slide.slider__slide.slider__slide--bg-light-blue
+											.slider__slide-bg-box
+												img.slider__slide-bg(src="images/services/slide-bg6.jpg", alt)
+											p.slider__slide-title
+												+svg("map-marker")(class="slider__map-icon")
+												|Истра
+										// Slide
+										.swiper-slide.slider__slide.slider__slide--bg-light-blue
+											.slider__slide-bg-box
+												img.slider__slide-bg(src="images/services/slide-bg6.jpg", alt)
+											p.slider__slide-title
+												+svg("map-marker")(class="slider__map-icon")
+												|Истра
+										// Slide
+										.swiper-slide.slider__slide.slider__slide--bg-light-blue
+											.slider__slide-bg-box
+												img.slider__slide-bg(src="images/services/slide-bg2.jpg", alt)
+											p.slider__slide-title
+												+svg("map-marker")(class="slider__map-icon")
+												|Истра
 
 				// Content
 				.section-about__tab-content.tabs__content#content4
-					.about-gallery
-						.about-gallery__grid
-							// Col
-							.about-gallery__col
-								img.about-gallery__image(src="images/section-about/cert1.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
-							// Col
-							.about-gallery__col
-								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
-							// Col
-							.about-gallery__col
-								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert4.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert1.jpg", alt)
-							// Col
-							.about-gallery__col
-								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert3.jpg", alt)
-							// Col
-							.about-gallery__col
-								img.about-gallery__image(src="images/section-about/cert2.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert5.jpg", alt)
-								img.about-gallery__image(src="images/section-about/cert1.jpg", alt)
-						.about-gallery__button-row
-							button.button.button--sm.button--outline-blue.about-gallery__button Показать еще
+					.container
+						ul.about-download.section-about__download
+							// Block
+							li.about-download__block
+								a.about-download__link(href="#" download)
+									p.about-download__title
+										+svg("file-pdf", true)(class="about-download__pdf-icon")
+										| ISO 13485:2017
+									+svg("file-download", true)(class="about-download__download-icon")
+							// Block
+							li.about-download__block
+								a.about-download__link(href="#" download)
+									p.about-download__title
+										+svg("file-pdf", true)(class="about-download__pdf-icon")
+										| ISO 13485:2017
+									+svg("file-download", true)(class="about-download__download-icon")
+							// Block
+							li.about-download__block
+								a.about-download__link(href="#" download)
+									p.about-download__title
+										+svg("file-pdf", true)(class="about-download__pdf-icon")
+										| ISO 13485:2017
+									+svg("file-download", true)(class="about-download__download-icon")
+							// Block
+							li.about-download__block
+								a.about-download__link(href="#" download)
+									p.about-download__title
+										+svg("file-pdf", true)(class="about-download__pdf-icon")
+										| ISO 13485:2017
+									+svg("file-download", true)(class="about-download__download-icon")
+						.section-about__download-btn-box
+							button.button.button--outline-blue.button--md.section-about__download-btn Показать еще
+				// Content
+				.section-about__tab-content.section-about__tab-content--no-top-padding.tabs__content#content3
+					.section-about__timeline
+						img.section-about__timeline-img(src="images/section-about/timeline.svg", alt)
+				// Content
+				.section-about__tab-content.tabs__content#content2
+					// Section Success
+					.section-success.section-success--personal.container
+						.section-success__grid
+							.section-success__elem
+								p.section-success__value Пономарев Алексей
+								p.section-success__text Генеральный менеджер
+							.section-success__elem
+								p.section-success__value Зубарев Дмитрий
+								p.section-success__text Генеральный  директор
+							.section-success__elem
+								p.section-success__value Степина Елена
+								p.section-success__text Финансовый директор
+							.section-success__elem
+								p.section-success__value Карманов Александр
+								p.section-success__text Коммерческий директор
+							.section-success__elem
+								p.section-success__value Павлюк Юрий
+								p.section-success__text Руководитель отдела продаж
+							.section-success__elem
+								p.section-success__value Ерохин Кирилл
+								p.section-success__text Директор по персоналу
+							.section-success__elem
+								p.section-success__value Стрельников Андрей
+								p.section-success__text Генеральный директор ОКТИЗ
+							.section-success__elem
+								p.section-success__value Скрипкина Наталья
+								p.section-success__text Руководитель отдела по работе с клиентами
+							.section-success__elem
+								p.section-success__value Хуторной Алексей
+								p.section-success__text Заместитель руководителя отдела по работе с ключевыми клиентами
+							.section-success__elem
+								p.section-success__value Мальцев Кирилл
+								p.section-success__text Руководитель отдела производственного инжиниринга
+							.section-success__elem
+								p.section-success__value Юхновская Юлия
+								p.section-success__text Руководитель службы качества
+							.section-success__elem
+								p.section-success__value Фить Юрий
+								p.section-success__text Заместитель генерального директора по вопросам охраны труда и техники безопасности
+							.section-success__elem
+								p.section-success__value Бутырев Богдан
+								p.section-success__text Руководитель отдела по работе с ключевыми клиентами
+							.section-success__elem
+								p.section-success__value Лесников Виктор
+								p.section-success__text Руководитель направления электронная коммерция
+							.section-success__elem
+								p.section-success__value Королева Елена
+								p.section-success__text Руководитель направления Медицина

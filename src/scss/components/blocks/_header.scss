@@ -144,8 +144,12 @@
 
 	&__nav-link {
 		position: relative;
-		display: inline-block;
-		padding: 44px 16px 49px;
+		z-index: 10;
+		padding: 30px 16px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 90px;
 		font-family: $font-secondary;
 		font-size: 22px;
 		line-height: 1px;

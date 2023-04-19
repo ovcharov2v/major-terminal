@@ -1,0 +1,23 @@
+.links-row {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 23px;
+	row-gap: 16px;
+
+	&__link {
+		padding: 8px 30px 10px;
+		font-family: $font-secondary;
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 700;
+		border-radius: 30px;
+		background-color: $color-blue-light3;
+		color: #062444;
+		transition: background-color $transition-default, color $transition-default;
+
+		&:hover {
+			background-color: #062444;
+			color: $color-white;
+		}
+	}
+}
