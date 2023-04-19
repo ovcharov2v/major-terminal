@@ -1,7 +1,7 @@
 # Dream-heads Major
 
 ## Demo
-[https://ovcharov2v.github.io/dreamheads-major/](https://ovcharov2v.github.io/dreamheads-major/)
+[https://ovcharov2v.github.io/major-termina/](https://ovcharov2v.github.io/major-termina/)
 
 ## Setup
 Download or clone repo.\
