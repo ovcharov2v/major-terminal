@@ -429,6 +429,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/section-text.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/section-text.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var sectionText = document.querySelector('.section-text');
+  var cutBtn = document.querySelector('.section-text__cut-button');
+  if (!cutBtn) return;
+  cutBtn.addEventListener('click', function () {
+    sectionText.classList.toggle('section-text--active');
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/tabs.js":
 /*!***********************************!*\
   !*** ./src/js/components/tabs.js ***!
@@ -488,6 +506,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_section_terminals__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/section-terminals */ "./src/js/components/section-terminals.js");
 /* harmony import */ var _components_section_slider_terminal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/section-slider-terminal */ "./src/js/components/section-slider-terminal.js");
 /* harmony import */ var _components_contacts_form__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/contacts-form */ "./src/js/components/contacts-form.js");
+/* harmony import */ var _components_section_text__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/section-text */ "./src/js/components/section-text.js");
+/* harmony import */ var _components_section_text__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_section_text__WEBPACK_IMPORTED_MODULE_9__);
+
 
 
 

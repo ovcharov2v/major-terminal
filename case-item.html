@@ -9,7 +9,7 @@
 		<link rel="icon" href="favicons/favicon.ico">
 		<link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="stylesheet" href="./css/main.css?v=1681947575325">
+		<link rel="stylesheet" href="./css/main.css?v=1682376782476">
 	</head>
 	<body>
 		<!-- Header-->
@@ -32,13 +32,13 @@
 			</div>
 			<!-- Top block-->
 			<div class="header__row">
-				<div class="header__top-box container">
+				<div class="header__top-box container"><a class="header__logo-link header__logo-link--mobile" href="/"><img class="header__logo-img" src="images/common/logo-major-terminal.svg" alt="Major Terminal"></a>
 					<ul class="header__logo-list">
 						<li class="header__logo-list-elem"><a class="header__logo-list-link" href="#" target="_blank" rel="noreferrer"><img class="header__logo-list-img" src="images/common/logo-major-squares.svg" alt="Major"></a></li>
 						<li class="header__logo-list-elem"><a class="header__logo-list-link" href="#" target="_blank" rel="noreferrer"><img class="header__logo-list-img" src="images/common/logo-major-e.png" alt="Major"></a></li>
 					</ul>
-					<p class="header__text"><a class="header__phone" href="tel:84957376006">8 (495) 737 60 06</a>
-						— Секретариат
+					<p class="header__text"><a class="header__phone" href="tel:84957376006">8 (495) 737 60 06</a><span class="header__text-dash">—</span>
+						Секретариат
 					</p>
 					<button class="header__search-button js-search-toggle" aria-label="Поиск">
 						<svg class="header__search-button-icon">
@@ -59,10 +59,15 @@
 							</ul>
 						</div>
 					</div>
+					<button class="header__burger-btn" aria-label="Мобильное меню">
+						<svg class="header__burger">
+							<use xlink:href="#burger"></use>
+						</svg>
+					</button>
 				</div>
 			</div>
 			<!-- Navigation-->
-			<div class="header__row">
+			<div class="header__row header__row--nav">
 				<div class="header__nav-box container"><a class="header__logo-link" href="/"><img class="header__logo-img" src="images/common/logo-major-terminal.svg" alt="Major Terminal"></a>
 					<nav class="header__nav">
 						<ul class="header__nav-list">
@@ -145,23 +150,19 @@
 				<!-- Panel-->
 				<div class="section-case-item__panel">
 					<h3 class="section-case-item__panel-title">Задача</h3>
-					<div class="section-case-item__panel-row">
-						<ul class="list-arrow list-arrow--blue section-case-item__panel-list">
-							<li class="list-arrow__elem">Реализовать интеграцию с транспортными компаниями</li>
-							<li class="list-arrow__elem">Упростить документооборот</li>
-						</ul>
-					</div>
+					<ul class="list-arrow list-arrow--blue section-case-item__panel-list">
+						<li class="list-arrow__elem">Реализовать интеграцию с транспортными компаниями</li>
+						<li class="list-arrow__elem">Упростить документооборот</li>
+					</ul>
 				</div>
 				<!-- Panel-->
 				<div class="section-case-item__panel">
 					<h3 class="section-case-item__panel-title">Сложности</h3>
-					<div class="section-case-item__panel-row">
-						<ul class="list-arrow list-arrow--blue section-case-item__panel-list">
-							<li class="list-arrow__elem">Большое количество договор с разными транспортными компаниями</li>
-							<li class="list-arrow__elem">Административные расходы на обработку процесса со стороны клиента</li>
-							<li class="list-arrow__elem">Невозможность формирования накладных и прочих документов</li>
-						</ul>
-					</div>
+					<ul class="list-arrow list-arrow--blue section-case-item__panel-list">
+						<li class="list-arrow__elem">Большое количество договор с разными транспортными компаниями</li>
+						<li class="list-arrow__elem">Административные расходы на обработку процесса со стороны клиента</li>
+						<li class="list-arrow__elem">Невозможность формирования накладных и прочих документов</li>
+					</ul>
 				</div>
 				<!-- Panel-->
 				<div class="section-case-item__panel">
@@ -302,7 +303,7 @@
 					<!-- Nav col-->
 					<div class="footer__col">
 						<p class="footer__nav-title">Major Terminal</p>
-						<ul class="footer__nav-list">
+						<ul class="footer__nav-list footer__nav-list--show-laptop">
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">О нас</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Кейсы</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Пресс-релизы</a></li>
@@ -316,7 +317,7 @@
 					<div class="footer__col"><a class="footer__logo-link" href="/"><img class="footer__logo" src="images/common/logo-major-terminal.svg" alt="Major"></a>
 						<div class="footer__links-box"><a class="footer__link" href="tel:84957376006">
 								8 (495) 737 60 06
-								— Секретариат</a><a class="footer__link" href="mailto:info@major-terminal.ru">info@major-terminal.ru</a></div><a class="footer__link-contacts" href="/">Связаться с нами</a>
+								<span class="footer__link-hide-mobile">— Секретариат</span></a><a class="footer__link" href="mailto:info@major-terminal.ru">info@major-terminal.ru</a></div><a class="footer__link-contacts" href="/">Связаться с нами</a>
 						<p class="footer__text">Мы в социальных сетях</p>
 						<ul class="footer__social social">
 							<li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noreferrer" aria-label="Youtube">
@@ -335,13 +336,31 @@
 					<div class="footer__copyright-col">
 						<p class="footer__copyright-text">2023 © Major Terminal.<br>Все права защищены. Использование текстовой или графической информации  с сайта major-terminal.ru возможно исключительно с разрешения правообладателя.</p>
 					</div>
-					<div class="footer__copyright-col"><a class="footer__copyright-link" href="#">Пользовательское соглашение</a></div>
-					<div class="footer__copyright-col"><a class="footer__copyright-link" href="#">Политика конфиденциальности</a></div>
+					<div class="footer__copyright-col footer__copyright-col--link"><a class="footer__copyright-link" href="#">Пользовательское соглашение</a></div>
+					<div class="footer__copyright-col footer__copyright-col--link"><a class="footer__copyright-link" href="#">Политика конфиденциальности</a></div>
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1681947575326"></script>
-		<script src="./js/main.js?v=1681947575326"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1682376782477"></script>
+		<script src="./js/main.js?v=1682376782477"></script><svg width="0" height="0" class="hidden">
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="burger">
+		<rect width="24" height="5.71429" fill="currentColor"></rect>
+		<rect y="9.14258" width="24" height="5.71429" fill="currentColor"></rect>
+		<rect y="18.2861" width="24" height="5.71429" fill="currentColor"></rect>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
+		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="file-download">
+		<path d="M16.59 10H15V5C15 4.45 14.55 4 14 4H10C9.45 4 9 4.45 9 5V10H7.41C6.52 10 6.07 11.08 6.7 11.71L11.29 16.3C11.68 16.69 12.31 16.69 12.7 16.3L17.29 11.71C17.92 11.08 17.48 10 16.59 10ZM5 20C5 20.55 5.45 21 6 21H18C18.55 21 19 20.55 19 20C19 19.45 18.55 19 18 19H6C5.45 19 5 19.45 5 20Z" fill="currentColor"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 42" id="file-pdf">
+		<path opacity="0.2" d="M29.0521 14.4375H19.7188V5.25L29.0521 14.4375Z" fill="currentColor"></path>
+		<path d="M31.7174 24.9375C31.7174 25.2856 31.577 25.6194 31.3269 25.8656C31.0769 26.1117 30.7377 26.25 30.3841 26.25H26.3841V28.875H29.0508C29.4044 28.875 29.7435 29.0133 29.9936 29.2594C30.2436 29.5056 30.3841 29.8394 30.3841 30.1875C30.3841 30.5356 30.2436 30.8694 29.9936 31.1156C29.7435 31.3617 29.4044 31.5 29.0508 31.5H26.3841V34.125C26.3841 34.4731 26.2436 34.8069 25.9936 35.0531C25.7435 35.2992 25.4044 35.4375 25.0508 35.4375C24.6972 35.4375 24.358 35.2992 24.108 35.0531C23.8579 34.8069 23.7174 34.4731 23.7174 34.125V24.9375C23.7174 24.5894 23.8579 24.2556 24.108 24.0094C24.358 23.7633 24.6972 23.625 25.0508 23.625H30.3841C30.7377 23.625 31.0769 23.7633 31.3269 24.0094C31.577 24.2556 31.7174 24.5894 31.7174 24.9375ZM9.71745 28.2188C9.71745 29.4371 9.22578 30.6055 8.35061 31.467C7.47544 32.3285 6.28846 32.8125 5.05078 32.8125H3.71745V34.125C3.71745 34.4731 3.57697 34.8069 3.32692 35.0531C3.07687 35.2992 2.73774 35.4375 2.38411 35.4375C2.03049 35.4375 1.69135 35.2992 1.44131 35.0531C1.19126 34.8069 1.05078 34.4731 1.05078 34.125V24.9375C1.05078 24.5894 1.19126 24.2556 1.44131 24.0094C1.69135 23.7633 2.03049 23.625 2.38411 23.625H5.05078C6.28846 23.625 7.47544 24.109 8.35061 24.9705C9.22578 25.832 9.71745 27.0004 9.71745 28.2188ZM7.05078 28.2188C7.05078 27.6966 6.84007 27.1958 6.46499 26.8266C6.08992 26.4574 5.58121 26.25 5.05078 26.25H3.71745V30.1875H5.05078C5.58121 30.1875 6.08992 29.9801 6.46499 29.6109C6.84007 29.2417 7.05078 28.7409 7.05078 28.2188ZM21.7174 29.5312C21.7174 31.0977 21.0853 32.6 19.9601 33.7076C18.8349 34.8152 17.3087 35.4375 15.7174 35.4375H13.0508C12.6972 35.4375 12.358 35.2992 12.108 35.0531C11.8579 34.8069 11.7174 34.4731 11.7174 34.125V24.9375C11.7174 24.5894 11.8579 24.2556 12.108 24.0094C12.358 23.7633 12.6972 23.625 13.0508 23.625H15.7174C17.3087 23.625 18.8349 24.2473 19.9601 25.3549C21.0853 26.4625 21.7174 27.9648 21.7174 29.5312ZM19.0508 29.5312C19.0508 28.661 18.6996 27.8264 18.0745 27.2111C17.4493 26.5957 16.6015 26.25 15.7174 26.25H14.3841V32.8125H15.7174C16.6015 32.8125 17.4493 32.4668 18.0745 31.8514C18.6996 31.2361 19.0508 30.4015 19.0508 29.5312ZM1.05078 18.375V6.5625C1.05078 5.86631 1.33173 5.19863 1.83183 4.70634C2.33193 4.21406 3.0102 3.9375 3.71745 3.9375H19.7174C19.8926 3.93736 20.0661 3.9712 20.2279 4.03707C20.3898 4.10294 20.5369 4.19956 20.6608 4.32141L29.9941 13.5089C30.1179 13.6309 30.216 13.7757 30.283 13.935C30.3499 14.0943 30.3843 14.2651 30.3841 14.4375V18.375C30.3841 18.7231 30.2436 19.0569 29.9936 19.3031C29.7435 19.5492 29.4044 19.6875 29.0508 19.6875C28.6972 19.6875 28.358 19.5492 28.108 19.3031C27.8579 19.0569 27.7174 18.7231 27.7174 18.375V15.75H19.7174C19.3638 15.75 19.0247 15.6117 18.7746 15.3656C18.5246 15.1194 18.3841 14.7856 18.3841 14.4375V6.5625H3.71745V18.375C3.71745 18.7231 3.57697 19.0569 3.32692 19.3031C3.07687 19.5492 2.73774 19.6875 2.38411 19.6875C2.03049 19.6875 1.69135 19.5492 1.44131 19.3031C1.19126 19.0569 1.05078 18.7231 1.05078 18.375ZM21.0508 13.125H25.8324L21.0508 8.41805V13.125Z" fill="currentColor"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" id="map-marker-small">
+		<path d="M6 1C3.23801 1 1 3.28394 1 6.10325C1 8.92113 6 16 6 16C6 16 11 8.92113 11 6.10325C11 3.28394 8.76092 1 6 1ZM6 8.19194C4.84143 8.19194 3.90238 7.23241 3.90238 6.05104C3.90238 4.86706 4.84143 3.90938 6 3.90938C7.15972 3.90938 8.09803 4.86706 8.09803 6.05104C8.09803 7.23241 7.15972 8.19194 6 8.19194Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="telegram">
 		<circle cx="25" cy="25" r="25" fill="currentColor"></circle>
 		<path d="M33.4399 18.6223L30.2711 33.566C30.0319 34.6205 29.4086 34.883 28.5229 34.3865L23.6944 30.8285L21.3649 33.0695C21.1069 33.3275 20.8916 33.5428 20.3944 33.5428L20.7416 28.6258L29.6899 20.54C30.0791 20.1935 29.6051 20.0008 29.0854 20.348L18.0229 27.314L13.2604 25.823C12.2246 25.4998 12.2059 24.7873 13.4764 24.29L32.1041 17.1133C32.9666 16.79 33.7211 17.3053 33.4399 18.623V18.6223Z" fill="white"></path>
@@ -361,19 +380,6 @@
 				<rect width="36" height="36" fill="white"></rect>
 			</clipPath>
 		</defs>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
-		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="file-download">
-		<path d="M16.59 10H15V5C15 4.45 14.55 4 14 4H10C9.45 4 9 4.45 9 5V10H7.41C6.52 10 6.07 11.08 6.7 11.71L11.29 16.3C11.68 16.69 12.31 16.69 12.7 16.3L17.29 11.71C17.92 11.08 17.48 10 16.59 10ZM5 20C5 20.55 5.45 21 6 21H18C18.55 21 19 20.55 19 20C19 19.45 18.55 19 18 19H6C5.45 19 5 19.45 5 20Z" fill="currentColor"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 42" id="file-pdf">
-		<path opacity="0.2" d="M29.0521 14.4375H19.7188V5.25L29.0521 14.4375Z" fill="currentColor"></path>
-		<path d="M31.7174 24.9375C31.7174 25.2856 31.577 25.6194 31.3269 25.8656C31.0769 26.1117 30.7377 26.25 30.3841 26.25H26.3841V28.875H29.0508C29.4044 28.875 29.7435 29.0133 29.9936 29.2594C30.2436 29.5056 30.3841 29.8394 30.3841 30.1875C30.3841 30.5356 30.2436 30.8694 29.9936 31.1156C29.7435 31.3617 29.4044 31.5 29.0508 31.5H26.3841V34.125C26.3841 34.4731 26.2436 34.8069 25.9936 35.0531C25.7435 35.2992 25.4044 35.4375 25.0508 35.4375C24.6972 35.4375 24.358 35.2992 24.108 35.0531C23.8579 34.8069 23.7174 34.4731 23.7174 34.125V24.9375C23.7174 24.5894 23.8579 24.2556 24.108 24.0094C24.358 23.7633 24.6972 23.625 25.0508 23.625H30.3841C30.7377 23.625 31.0769 23.7633 31.3269 24.0094C31.577 24.2556 31.7174 24.5894 31.7174 24.9375ZM9.71745 28.2188C9.71745 29.4371 9.22578 30.6055 8.35061 31.467C7.47544 32.3285 6.28846 32.8125 5.05078 32.8125H3.71745V34.125C3.71745 34.4731 3.57697 34.8069 3.32692 35.0531C3.07687 35.2992 2.73774 35.4375 2.38411 35.4375C2.03049 35.4375 1.69135 35.2992 1.44131 35.0531C1.19126 34.8069 1.05078 34.4731 1.05078 34.125V24.9375C1.05078 24.5894 1.19126 24.2556 1.44131 24.0094C1.69135 23.7633 2.03049 23.625 2.38411 23.625H5.05078C6.28846 23.625 7.47544 24.109 8.35061 24.9705C9.22578 25.832 9.71745 27.0004 9.71745 28.2188ZM7.05078 28.2188C7.05078 27.6966 6.84007 27.1958 6.46499 26.8266C6.08992 26.4574 5.58121 26.25 5.05078 26.25H3.71745V30.1875H5.05078C5.58121 30.1875 6.08992 29.9801 6.46499 29.6109C6.84007 29.2417 7.05078 28.7409 7.05078 28.2188ZM21.7174 29.5312C21.7174 31.0977 21.0853 32.6 19.9601 33.7076C18.8349 34.8152 17.3087 35.4375 15.7174 35.4375H13.0508C12.6972 35.4375 12.358 35.2992 12.108 35.0531C11.8579 34.8069 11.7174 34.4731 11.7174 34.125V24.9375C11.7174 24.5894 11.8579 24.2556 12.108 24.0094C12.358 23.7633 12.6972 23.625 13.0508 23.625H15.7174C17.3087 23.625 18.8349 24.2473 19.9601 25.3549C21.0853 26.4625 21.7174 27.9648 21.7174 29.5312ZM19.0508 29.5312C19.0508 28.661 18.6996 27.8264 18.0745 27.2111C17.4493 26.5957 16.6015 26.25 15.7174 26.25H14.3841V32.8125H15.7174C16.6015 32.8125 17.4493 32.4668 18.0745 31.8514C18.6996 31.2361 19.0508 30.4015 19.0508 29.5312ZM1.05078 18.375V6.5625C1.05078 5.86631 1.33173 5.19863 1.83183 4.70634C2.33193 4.21406 3.0102 3.9375 3.71745 3.9375H19.7174C19.8926 3.93736 20.0661 3.9712 20.2279 4.03707C20.3898 4.10294 20.5369 4.19956 20.6608 4.32141L29.9941 13.5089C30.1179 13.6309 30.216 13.7757 30.283 13.935C30.3499 14.0943 30.3843 14.2651 30.3841 14.4375V18.375C30.3841 18.7231 30.2436 19.0569 29.9936 19.3031C29.7435 19.5492 29.4044 19.6875 29.0508 19.6875C28.6972 19.6875 28.358 19.5492 28.108 19.3031C27.8579 19.0569 27.7174 18.7231 27.7174 18.375V15.75H19.7174C19.3638 15.75 19.0247 15.6117 18.7746 15.3656C18.5246 15.1194 18.3841 14.7856 18.3841 14.4375V6.5625H3.71745V18.375C3.71745 18.7231 3.57697 19.0569 3.32692 19.3031C3.07687 19.5492 2.73774 19.6875 2.38411 19.6875C2.03049 19.6875 1.69135 19.5492 1.44131 19.3031C1.19126 19.0569 1.05078 18.7231 1.05078 18.375ZM21.0508 13.125H25.8324L21.0508 8.41805V13.125Z" fill="currentColor"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 17" id="map-marker-small">
-		<path d="M6 1C3.23801 1 1 3.28394 1 6.10325C1 8.92113 6 16 6 16C6 16 11 8.92113 11 6.10325C11 3.28394 8.76092 1 6 1ZM6 8.19194C4.84143 8.19194 3.90238 7.23241 3.90238 6.05104C3.90238 4.86706 4.84143 3.90938 6 3.90938C7.15972 3.90938 8.09803 4.86706 8.09803 6.05104C8.09803 7.23241 7.15972 8.19194 6 8.19194Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
 </svg>
 <img class="hidden" src="images/svg-sprite/svg-sprite-static.svg" alt>
