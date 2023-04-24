@@ -1,17 +1,31 @@
 .section-case-list {
-	padding-top: 5px;
+	padding-top: 35px;
 	padding-bottom: 78px;
 
+	@media (min-width: $breakpoint-laptop) {
+		padding-top: 5px;
+		padding-bottom: 78px;
+	}
+
 	&--other {
+		display: none;
 		padding-top: 70px;
 		padding-bottom: 48px;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: block;
+		}
 	}
 
 	&__title-box {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		margin-bottom: 34px;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 34px;
+		}
 
 		.section-case-list--other & {
 			margin-bottom: 60px;
@@ -19,37 +33,75 @@
 	}
 
 	&__title {
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: 30px;
 		font-family: $font-primary;
+
+		@media (max-width: $breakpoint-laptop) {
+			font-size: 24px;
+			line-height: 24px;
+			margin-bottom: 16px;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__description {
 		margin-top: 0;
-		margin-bottom: 50px;
 		font-family: $font-additional;
 		font-size: 12px;
 		line-height: 18px;
 		font-weight: 700;
 		color: rgba($color-black, .5);
+
+		&--mobile {
+			margin-bottom: 21px;
+
+			@media (min-width: $breakpoint-laptop) {
+				display: none;
+			}
+		}
+
+		&--desktop {
+			display: none;
+
+			@media (min-width: $breakpoint-laptop) {
+				display: block;
+				margin-bottom: 50px;
+			}
+		}
 	}
 
 	&__dropdown-row {
-		display: flex;
-		margin: 0 -16px;
+		@media (min-width: $breakpoint-laptop) {
+			display: flex;
+			margin: 0 -16px;
+		}
 	}
 
 	&__dropdown {
-		width: 387px;
-		margin: 0 16px;
+		width: 100%;
+		margin-bottom: 17px;
+
+		@media (min-width: $breakpoint-laptop) {
+			width: 387px;
+			margin: 0 16px;
+		}
 	}
 
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 		grid-template-rows: auto;
 		grid-column-gap: 32px;
 		grid-row-gap: 32px;
 		margin-bottom: 60px;
+
+		@media (min-width: $breakpoint-laptop) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	&__card {

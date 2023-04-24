@@ -54,8 +54,12 @@
 		}
 
 		.list-arrow--blue & {
-			margin-bottom: 27px;
+			margin-bottom: 11px;
 			font-weight: 600;
+
+			@media (min-width: $breakpoint-laptop) {
+				margin-bottom: 27px;
+			}
 
 			&::before {
 				top: 0;

@@ -1,12 +1,17 @@
 .form-control {
-	padding: 17px 23px;
+	padding: 19px 23px;
 	font-family: $font-secondary;
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 18px;
 	background-color: $color-white;
 	border-radius: 10px;
 	border: 1px solid #C5E0F2;
 	transition: border-color $transition-default;
+
+	@media (min-width: $breakpoint-laptop) {
+		padding: 17px 23px;
+		font-size: 18px;
+	}
 
 	&--round {
 		border: none;

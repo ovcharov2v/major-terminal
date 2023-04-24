@@ -20,6 +20,19 @@
 		}
 	}
 
+	&--outline-blue-light {
+		border: 3px solid $color-blue-light;
+		border-radius: 50px;
+		background-color: $color-transparent;
+		color: $color-blue-light;
+		transition: background-color $transition-default, color $transition-default;
+
+		&:hover {
+			background-color: $color-blue-light;
+			color: $color-white;
+		}
+	}
+
 	&--outline-white {
 		border: 3px solid $color-white;
 		border-radius: 50px;
@@ -67,18 +80,26 @@
 	}
 
 	&--lg {
-		padding: 27px 40px;
+		padding: 16px 40px;
 		font-family: $font-secondary;
 		font-size: 24px;
 		line-height: 24px;
 		font-weight: 700;
+
+		@media (min-width: $breakpoint-laptop) {
+			padding: 27px 40px;
+		}
 	}
 
 	&--md {
-		padding: 22px 40px;
+		padding: 18px 40px;
 		font-size: 20px;
 		line-height: 20px;
 		font-weight: 700;
+
+		@media (min-width: $breakpoint-laptop) {
+			padding: 22px 40px;
+		}
 
 		&.button--with-icon {
 			padding-right: 19px;

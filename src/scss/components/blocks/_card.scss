@@ -2,10 +2,14 @@
 	position: relative;
 	z-index: 0;
 	padding: 37px 42px 40px;
-	border-radius: 25px;
+	border-radius: 10px;
 	background-color: $color-blue;
 	color: $color-white;
 	overflow: hidden;
+
+	@media (min-width: $breakpoint-laptop) {
+		border-radius: 25px;
+	}
 
 	&--small-radius {
 		border-radius: 10px;
@@ -31,8 +35,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		min-height: 300px;
+		min-height: 265px;
 		padding: 34px 26px 29px;
+
+		@media (min-width: $breakpoint-laptop) {
+			min-height: 300px;
+		}
 	}
 
 	&--other-services {
@@ -60,15 +68,19 @@
 		}
 
 		.card--cases & {
-			 width: 100%;
-			 margin-bottom: 17px;
-		 }
+			width: 100%;
+			margin-bottom: 0;
+
+			@media (min-width: $breakpoint-laptop) {
+				margin-bottom: 17px;
+			}
+		}
 
 		.card--text-top-medium & {
 			margin-bottom: 29px;
 		}
 
-		.card--other-services &{
+		.card--other-services & {
 			margin-top: auto;
 			margin-bottom: 31px;
 		}
@@ -77,9 +89,13 @@
 	&__title {
 		margin: 0;
 		font-family: $font-additional;
-		font-size: 32px;
+		font-size: 24px;
 		line-height: 36px;
 		font-weight: 900;
+
+		@media (min-width: $breakpoint-laptop) {
+			font-size: 32px;
+		}
 
 		.card--experience &,
 		.card--cases & {
@@ -93,9 +109,14 @@
 
 		.card--experience &,
 		.card--cases & {
+			display: none;
 			width: 40px;
 			height: 74px;
 			margin-right: 23px;
+
+			@media (min-width: $breakpoint-laptop) {
+				display: block;
+			}
 		}
 	}
 
@@ -185,10 +206,12 @@
 			width: 100%;
 			max-width: 140px;
 		}
+
 		.card--other-services & {
 			width: 100%;
 			max-width: 147px;
 		}
+
 		.card--with-icon & {
 			width: 100%;
 			max-width: 147px;
@@ -205,7 +228,7 @@
 	}
 
 	&__tag {
-		margin: 0 8px 8px;
+		margin: 0 8px 16px;
 		padding: 7px 21px;
 		border-radius: 20px;
 		background-color: $color-white;

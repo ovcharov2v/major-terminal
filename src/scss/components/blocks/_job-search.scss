@@ -1,11 +1,14 @@
 .job-search {
 	&__row {
 		display: grid;
-		grid-template-columns: 1fr 1fr 134px;
+		grid-template-columns: 1fr;
 		grid-template-rows: auto;
-		grid-column-gap: 32px;
-		width: 100%;
-		max-width: 978px;
+		grid-row-gap: 30px;
+
+		@media (min-width: $breakpoint-laptop) {
+			grid-template-columns: 1fr 1fr 134px;
+			grid-column-gap: 32px;
+		}
 	}
 
 	&__label {

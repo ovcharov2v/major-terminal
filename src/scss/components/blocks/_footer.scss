@@ -5,14 +5,20 @@
 	overflow: hidden;
 
 	&__row {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr) 373px;
-		grid-template-rows: auto;
-		justify-content: space-between;
-		padding-top: 87px;
-		padding-bottom: 54px;
+		padding-top: 48px;
+		padding-bottom: 34px;
 		border-bottom: 1px solid $color-blue;
-		border-top: 12px solid $color-blue;
+		border-top: 5px solid $color-blue;
+
+		@media (min-width: $breakpoint-laptop) {
+			border-top: 12px solid $color-blue;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr) 373px;
+			grid-template-rows: auto;
+			justify-content: space-between;
+			padding-top: 87px;
+			padding-bottom: 54px;
+		}
 	}
 
 	&__nav-title {
@@ -24,9 +30,24 @@
 	}
 
 	&__nav-list {
+		display: none;
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: block;
+		}
+
+		&--show-laptop {
+			display: block;
+			margin-bottom: 50px;
+
+			@media (min-width: $breakpoint-laptop) {
+				display: block;
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__nav-elem {
@@ -50,7 +71,11 @@
 	&__logo-link {
 		display: inline-block;
 		width: 110px;
-		margin-bottom: 57px;
+		margin-bottom: 48px;
+
+		@media (min-width: $breakpoint-laptop) {
+			margin-bottom: 57px;
+		}
 	}
 
 	&__logo {
@@ -81,6 +106,14 @@
 		}
 	}
 
+	&__link-hide-mobile {
+		display: none;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: inline;
+		}
+	}
+
 	&__link-contacts {
 		display: inline-block;
 		margin-bottom: 20px;
@@ -98,19 +131,38 @@
 	}
 
 	&__copyright {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		margin: 0 -24px;
-		padding-top: 37px;
-		padding-bottom: 64px;
+		padding-top: 29px;
+		padding-bottom: 37px;
 		font-size: 14px;
 		line-height: 1;
 		color: #1E1E1E;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin: 0 -24px;
+			padding-top: 37px;
+			padding-bottom: 64px;
+		}
 	}
 
 	&__copyright-col {
-		padding: 0 24px;
+		display: none;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: block;
+			padding: 0 24px;
+		}
+
+		&--link {
+			display: block;
+			padding: 10px 0;
+
+			@media (min-width: $breakpoint-laptop) {
+				padding: 0 24px;
+			}
+		}
 	}
 
 	&__copyright-text {

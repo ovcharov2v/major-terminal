@@ -1,8 +1,15 @@
 .h1, .h2 {
-	font-family: $font-secondary;
-	font-size: 50px;
-	line-height: 50px;
-	font-weight: 900;
+	font-family: $font-secondary2;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 500;
+
+	@media (min-width: $breakpoint-laptop) {
+		font-family: $font-secondary;
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: 900;
+	}
 }
 
 .strong {

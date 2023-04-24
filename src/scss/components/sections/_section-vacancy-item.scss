@@ -1,43 +1,84 @@
 .section-vacancy-item {
-	padding-top: 15px;
-	padding-bottom: 128px;
+	padding-top: 38px;
+	padding-bottom: 40px;
+
+	@media (min-width: $breakpoint-laptop) {
+		padding-top: 15px;
+		padding-bottom: 128px;
+	}
 
 	&__title {
 		margin-top: 0;
 		margin-bottom: 28px;
+
+		@media (max-width: $breakpoint-laptop) {
+			margin-bottom: 10px;
+			font-size: 24px;
+			line-height: 24px;
+		}
 	}
 
 	&__description {
 		display: flex;
-		align-items: center;
-		margin-bottom: 62px;
+		flex-direction: column;
+		margin-bottom: 38px;
+
+		@media (min-width: $breakpoint-laptop) {
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 62px;
+		}
 	}
 
 	&__salary {
-		margin: 0 39px 0 0;
-		font-size: 32px;
-		line-height: 50px;
+		order: 1;
+		margin: 0 0 20px 0;
+		font-size: 18px;
+		line-height: 24px;
 		font-weight: 700;
+
+		@media (min-width: $breakpoint-laptop) {
+			order: 0;
+			margin: 0 39px 0 0;
+			font-size: 32px;
+			line-height: 50px;
+		}
 	}
 
 	&__button {
+		order: 2;
 		width: 100%;
-		max-width: 236px;
-		margin-right: 20px;
+
+		@media (min-width: $breakpoint-laptop) {
+			order: 0;
+			max-width: 236px;
+			margin-right: 20px;
+		}
 	}
 
 	&__date {
-		margin: 0 0 0 auto;
-		font-size: 16px;
+		order: -1;
+		margin: 0 0 10px 0;
+		font-size: 12px;
 		line-height: 32px;
 		font-weight: 700;
 		opacity: .5;
+
+		@media (min-width: $breakpoint-laptop) {
+			order: 0;
+			margin: 0 0 0 auto;
+			font-size: 16px;
+		}
 	}
 
 	&__panel {
-		padding: 42px 66px 23px;
+		padding: 42px 33px 23px;
 		border-radius: 25px;
 		background-image: linear-gradient(to left, rgba(242, 246, 250, 0) 0%, #F2F6FA 100%);
+
+		@media (min-width: $breakpoint-laptop) {
+			padding: 42px 66px 23px;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 22px;
@@ -46,19 +87,25 @@
 
 	&__panel-title {
 		margin-top: 0;
-		margin-bottom: 40px;
+		margin-bottom: 21px;
 		font-family: $font-secondary;
 		font-size: 24px;
 		line-height: 32px;
 		font-weight: 800;
 		color: $color-blue;
+
+		@media (min-width: $breakpoint-laptop) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__panel-row {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto;
-		grid-column-gap: 32px;
+		@media (min-width: $breakpoint-laptop) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+			grid-column-gap: 32px;
+		}
 	}
 
 	&__panel-list {

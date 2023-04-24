@@ -1,9 +1,13 @@
 .news-row {
 	display: grid;
 	grid-template-rows: auto;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr;
 	grid-column-gap: 32px;
 	grid-row-gap: 52px;
+
+	@media (min-width: $breakpoint-laptop) {
+		grid-template-columns: repeat(3, 1fr);
+	}
 
 	&--two-col {
 		grid-template-columns: repeat(2, 1fr);

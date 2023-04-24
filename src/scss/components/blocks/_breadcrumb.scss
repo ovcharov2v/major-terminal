@@ -1,6 +1,11 @@
 .breadcrumb {
+	display: none;
 	padding-top: 24px;
 	padding-bottom: 24px;
+
+	@media (min-width: $breakpoint-laptop) {
+		display: block;
+	}
 
 	&__list {
 		display: flex;

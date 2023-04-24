@@ -1,27 +1,43 @@
 .section-text {
 	padding-top: 20px;
-	padding-bottom: 74px;
+	padding-bottom: 53px;
+
+	@media (min-width: $breakpoint-laptop) {
+		padding-bottom: 74px;
+	}
 
 	&__hero-img {
 		display: block;
 		width: 100%;
-		margin-bottom: 41px;
+		height: 80px;
+		margin-bottom: 17px;
 		border-radius: 25px;
+
+		@media (min-width: $breakpoint-laptop) {
+			height: 150px;
+			margin-bottom: 41px;
+		}
 	}
 
 	&__content-box {
-		max-width: 1080px;
-		margin: 0 auto 90px;
+		@media (min-width: $breakpoint-laptop) {
+			max-width: 1080px;
+			margin: 0 auto 90px;
+		}
 	}
 
 	&__date {
 		display: inline-block;
 		margin-bottom: 31px;
 		font-family: $font-additional;
-		font-size: 18px;
+		font-size: 12px;
 		line-height: 18px;
 		font-weight: 700;
 		color: rgba($color-black, .5);
+
+		@media (min-width: $breakpoint-laptop) {
+			font-size: 18px;
+		}
 	}
 
 	&__title {
@@ -32,12 +48,16 @@
 	&__cite {
 		position: relative;
 		margin: 0 0 28px 0;
-		padding: 35px 79px 35px 52px;
+		padding: 27px 37px 27px 47px;
 		background-color: $color-blue-light3;
 		border-radius: 10px;
-		font-size: 14px;
+		font-size: 18px;
 		line-height: 24px;
-		font-weight: 600;
+		color: $color-blue;
+
+		@media (min-width: $breakpoint-laptop) {
+			padding: 35px 79px 35px 52px;
+		}
 
 		&::before {
 			position: absolute;
@@ -88,7 +108,13 @@
 	}
 
 	&__info {
-		padding-top: 33px;
+		padding-top: 22px;
+		margin-bottom: 60px;
+
+		@media (min-width: $breakpoint-laptop) {
+			padding-top: 33px;
+			margin-bottom: 0;
+		}
 	}
 
 	&__score {
@@ -117,20 +143,28 @@
 	}
 
 	&__radio-label {
+		flex-shrink: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 62px;
-		height: 62px;
+		width: 52px;
+		height: 52px;
 		margin: 0 9px;
 		border-radius: 50%;
 		border: 1px solid $color-blue;
-		font-size: 32px;
-		line-height: 50px;
+		font-size: 24px;
+		line-height: 40px;
 		font-weight: 300;
 		color: $color-blue;
 		cursor: pointer;
 		transition: background-color $transition-default, color $transition-default;
+
+		@media (min-width: $breakpoint-laptop) {
+			width: 62px;
+			height: 62px;
+			font-size: 32px;
+			line-height: 50px;
+		}
 
 		&:hover {
 			background-color: lighten($color-blue, 65%);
@@ -140,5 +174,34 @@
 			background-color: $color-blue;
 			color: $color-white;
 		}
+	}
+
+	&__cut {
+		display: none;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: block;
+		}
+
+		.section-text--active & {
+			display: block;
+		}
+	}
+
+	&__cut-button-box {
+		text-align: center;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: none;
+		}
+
+		.section-text--active & {
+			display: none;
+		}
+	}
+
+	&__cut-button {
+		width: 100%;
+		max-width: 248px;
 	}
 }

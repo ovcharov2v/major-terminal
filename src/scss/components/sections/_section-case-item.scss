@@ -3,23 +3,34 @@
 	padding-bottom: 47px;
 
 	&__panel {
-		padding: 42px 66px 23px;
+		padding: 30px 32px 23px;
 		border-radius: 25px;
 		background-image: linear-gradient(to left, rgba(242, 246, 250, 0) 0%, #F2F6FA 100%);
 
 		&:not(:last-child) {
-			margin-bottom: 52px;
+			margin-bottom: 22px;
+		}
+
+		@media (min-width: $breakpoint-laptop) {
+			padding: 42px 66px 23px;
+			&:not(:last-child) {
+				margin-bottom: 52px;
+			}
 		}
 	}
 
 	&__panel-title {
 		margin-top: 0;
-		margin-bottom: 40px;
+		margin-bottom: 21px;
 		font-family: $font-secondary;
 		font-size: 24px;
 		line-height: 32px;
 		font-weight: 800;
 		color: $color-blue;
+
+		@media (min-width: $breakpoint-laptop) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__panel-row {

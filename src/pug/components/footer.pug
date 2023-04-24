@@ -43,7 +43,7 @@ footer.footer
 			// Nav col
 			.footer__col
 				p.footer__nav-title Major Terminal
-				ul.footer__nav-list
+				ul.footer__nav-list.footer__nav-list--show-laptop
 					li.footer__nav-elem
 						a.footer__nav-link(href="#") О нас
 					li.footer__nav-elem
@@ -65,7 +65,8 @@ footer.footer
 				.footer__links-box
 					a.footer__link(href="tel:84957376006") 8 (495) 737 60 06
 						|
-						| — Секретариат
+						|
+						span.footer__link-hide-mobile — Секретариат
 					a.footer__link(href="mailto:info@major-terminal.ru") info@major-terminal.ru
 				a.footer__link-contacts(href="/") Связаться с нами
 				p.footer__text Мы в социальных сетях
@@ -83,7 +84,7 @@ footer.footer
 					|2023 © Major Terminal.
 					br
 					| Все права защищены. Использование текстовой или графической информации  с сайта major-terminal.ru возможно исключительно с разрешения правообладателя.
-			.footer__copyright-col
+			.footer__copyright-col.footer__copyright-col--link
 				a.footer__copyright-link(href="#") Пользовательское соглашение
-			.footer__copyright-col
+			.footer__copyright-col.footer__copyright-col--link
 				a.footer__copyright-link(href="#") Политика конфиденциальности
