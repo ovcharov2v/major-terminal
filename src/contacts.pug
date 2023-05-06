@@ -13,93 +13,84 @@ append vars
 
 block content
 	+breadcrumb(['Главная'], 'Контакты')(class="container")
-	// Section Contacts info
-	section.section-contact-info.container
-		h1.h1.section-contact-info__title Контакты
-		.section-contact-info__links
-			.section-contact-info__links-col
-				a.section-contact-info__link(href="tel:84957376006") +7 (495) 737 60 06
-				p.section-contact-info__link-description операционные вопросы
-				a.section-contact-info__link(href="tel:84951169724") +7 (495) 116 97 24
-				p.section-contact-info__link-description отдел продаж
-			.section-contact-info__links-col
-				a.section-contact-info__link.section-contact-info__link--mail(href="mailto:sales_mt@mjr.ru") sales_mt@mjr.ru
-				ul.social.social--big.section-contact-info__social
-					li.social__elem
-						a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Youtube")
-							+svg("vk")(class="social__link-icon")
-					li.social__elem
-						a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Telegram")
-							+svg("telegram")(class="social__link-icon")
-					li.social__elem
-						a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Youtube")
-							+svg("youtube-blue")(class="social__link-icon")
-			.section-contact-info__links-col
-				a.button.button--blue.button--sm.section-contact-info__mail-button(href="mailto:sales_mt@mjr.ru") Написать нам
-		.section-contact-info__object
-			.section-contact-info__object-col.section-contact-info__object-col--text
-				.dropdown.dropdown--logopark.section-contact-info__dropdown
-					.dropdown__value-box
-						input.dropdown__value(type="text", value="Логопарк Major", disabled)
-						+svg("chevron-dropdown")(class="dropdown__arrow")
-					ul.dropdown__options-list
-						li.dropdown__option.dropdown__option--selected(data-value="Логопарк Major") Логопарк Major
-						li.dropdown__option(data-value="Логопарк Major 2") Логопарк Major 2
-						li.dropdown__option(data-value="Логопарк Major 3") Логопарк Major 3
-				h2.section-contact-info__object-title Москва, Логопарк
-					|
-					|
-					span.text-blue Ma
-						span.text-red j
-						| or
-				p.section-contact-info__object-text
-					strong.text-weight-bold  Адрес:
-					|
-					| 143581, Московская область, Истринский муниципальный район, Сельское поселение Павло-Слободское, село Павловская Слобода, ул. Ленина, здание №85
-				.section-contact-info__object-time
-					+svg("time")(class="section-contact-info__object-time-icon")
-					.section-contact-info__object-work-box
-						p.section-contact-info__object-work-text.text-weight-bold  Режим работы терминала:
-						p.section-contact-info__object-work-text Круглосуточно
-				.section-contact-info__object-time
-					+svg("time")(class="section-contact-info__object-time-icon")
-					.section-contact-info__object-work-box
-						p.section-contact-info__object-work-text.text-weight-bold  Режим работы отдела продаж:
-						p.section-contact-info__object-work-text с 09:00 до 18:00
-			.section-contact-info__object-col.section-contact-info__object-col--map
-				img.section-contact-info__map(src="images/section-contact-info/map1.jpg", alt)
-		.section-contact-info__route
-			.section-contact-info__rules
-				.section-contact-info__rules-text-box
-					h2.section-contact-info__rules-title Правила въезда на терминал
-					p.section-contact-info__rules-subtitle Для въезда на терминал необходимо назвать марку, модель и номер авто
-					div.section-contact-info__cite
-						p.section-contact-info__cite-text В случае, если на КПП нет Ваших данных, необходимо связаться с тем, кто дал Вам заказ на доставку и уточнить передавались ли данные на склад.
-						p.section-contact-info__cite-text Если нет – попросить передать данные по Вашей машине и ФИО  на склад по электронной почте. По телефону сотрудники склада пропуска не заказывают.
-					a.section-contact-info__rules-phone(href="tel:89032615560") 8-903-261-55-60
-					p.section-contact-info__rules-text Дежурный диспетчер:
-					p.section-contact-info__rules-text После прохождения КПП следует проехать ул. Дачная, с. 5, крыльцо между 17 и 16 воротами, зарегистрироваться на пункте охраны склада, следовать указаниям сотрудника охраны.
-					p.section-contact-info__rules-text После регистрации на охране, спуститься с крыльца и повернуть направо, справа от 17х ворот будет красная дверь – это диспетчерская, Вам сюда.  Далее следовать указанию диспетчера склада.
-				img.section-contact-info__rules-photo(src="images/section-contact-info/photo.jpg", alt)
-			.section-contact-info__map-route-box
-				img.section-contact-info__map-route(src="images/section-contact-info/map2.jpg", alt)
-
-	// Section Contacts
-	section.section-contacts
+	// Section Hero simple
+	section.section-hero-simple
 		.container
-			h2.h2.text-white.section-contacts__title Есть вопросы? Свяжитесь с нами!
-			form.section-contacts__form
-				.section-contacts__form-row
-					.section-contacts__form-col.section-contacts__form-col--inputs
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="text", placeholder="Имя")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="tel", placeholder="*Телефон")
-						.section-contacts__input-box
-							input.form-control.section-contacts__form-input(type="email", placeholder="*Адрес электронной почты")
-					.section-contacts__form-col.section-contacts__form-col--message
-						.section-contacts__textarea-box
-							textarea.form-control.form-control--textarea.section-contacts__form-textarea(placeholder="*Комментарий...")
-				.section-contacts__form-submit-box
-					button.button.button--white.button--lg.section-contacts__form-submit Отправить
-
+			.section-hero-simple__content
+				p.section-hero-simple__slogan.text-white
+					|Движение вперед,
+					|
+					|
+					br.hide-desktop
+					|внимание к деталям
+				img.section-hero-simple__img(src="images/section-hero/squares.svg", alt)
+				img.section-hero-simple__bg(src="images/section-hero/bg8.jpg", alt)
+	// Section Contacts info
+	section.section-contact-info.road.road--contacts
+		.container
+			h1.h1.section-contact-info__title Контакты
+			.section-contact-info__links
+				.section-contact-info__links-col
+					a.section-contact-info__link(href="tel:84957376006") +7 (495) 737 60 06
+					p.section-contact-info__link-description операционные вопросы
+					a.section-contact-info__link(href="tel:84951169724") +7 (495) 116 97 24
+					p.section-contact-info__link-description отдел продаж
+				.section-contact-info__links-col
+					a.section-contact-info__link.section-contact-info__link--mail(href="mailto:sales_mt@mjr.ru") sales_mt@mjr.ru
+					ul.social.social--big.section-contact-info__social
+						li.social__elem
+							a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Youtube")
+								+svg("vk", true)(class="social__link-icon")
+						li.social__elem
+							a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Telegram")
+								+svg("telegram", true)(class="social__link-icon")
+						li.social__elem
+							a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Youtube")
+								+svg("youtube", true)(class="social__link-icon")
+			.section-contact-info__row
+				.section-contact-info__object
+					h2.section-contact-info__object-title Москва, Логопарк
+						|
+						|
+						span.text-blue Ma
+							span.text-red j
+							| or
+					p.section-contact-info__object-text
+						strong.text-weight-bold  Адрес:
+						|
+						| 143581, Московская область, Истринский муниципальный район, Сельское поселение Павло-Слободское, село Павловская Слобода, ул. Ленина, здание №85
+					.section-contact-info__object-time
+						+svg("time")(class="section-contact-info__object-time-icon")
+						.section-contact-info__object-work-box
+							p.section-contact-info__object-work-text.text-weight-bold  Режим работы терминала:
+							p.section-contact-info__object-work-text Круглосуточно
+					.section-contact-info__object-time
+						+svg("time")(class="section-contact-info__object-time-icon")
+						.section-contact-info__object-work-box
+							p.section-contact-info__object-work-text.text-weight-bold  Режим работы отдела продаж:
+							p.section-contact-info__object-work-text с 09:00 до 18:00
+					.section-contact-info__images.hide-desktop
+						img.section-contact-info__map-route(src="images/section-contact-info/map.jpg", alt)
+						img.section-contact-info__rules-photo(src="images/section-contact-info/photo-mobile.jpg", alt)
+					.section-contact-info__rules
+						h2.section-contact-info__rules-title
+							|Правила въезда на
+							|
+							|
+							br.hide-desktop
+							|терминал
+						p.section-contact-info__rules-subtitle Для въезда на терминал необходимо назвать марку, модель и номер авто
+						div.section-contact-info__cite
+							p.section-contact-info__cite-text В случае, если на КПП нет Ваших данных, необходимо связаться с тем, кто дал Вам заказ на доставку и уточнить передавались ли данные на склад.
+							p.section-contact-info__cite-text Если нет – попросить передать данные по Вашей машине и ФИО  на склад по электронной почте. По телефону сотрудники склада пропуска не заказывают.
+						a.section-contact-info__rules-phone(href="tel:89032615560") 8-903-261-55-60
+						p.section-contact-info__rules-text Дежурный диспетчер:
+						p.section-contact-info__rules-text После прохождения КПП
+							|
+							|
+							strong.text-weight-bold следует проехать ул. Дачная, с. 5, крыльцо между 17 и 16 воротами
+							|, зарегистрироваться на пункте охраны склада, следовать указаниям сотрудника охраны.
+						p.section-contact-info__rules-text После регистрации на охране, спуститься с крыльца и повернуть направо, справа от 17х ворот будет красная дверь – это диспетчерская, Вам сюда.  Далее следовать указанию диспетчера склада.
+				.section-contact-info__images.show-desktop
+					img.section-contact-info__map-route(src="images/section-contact-info/map.jpg", alt)
+					img.section-contact-info__rules-photo(src="images/section-contact-info/photo.jpg", alt)

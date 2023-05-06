@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	new Swiper(slider, {
 		modules: [ Navigation, Pagination ],
-		slidesPerView: 3,
-		spaceBetween: 32,
 		grabCursor: true,
 		navigation: {
 			nextEl: '.slider__btn--next',
@@ -21,5 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
 				return `<button class="slider__bullet swiper-pagination-bullet" aria-label="Страница ${index}"></button>`;
 			},
 		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1.5,
+				spaceBetween: 20
+			},
+			480: {
+				slidesPerView: 1.7,
+				spaceBetween: 25
+			},
+			640: {
+				slidesPerView: 3,
+				spaceBetween: 32
+			}
+		}
 	});
 })

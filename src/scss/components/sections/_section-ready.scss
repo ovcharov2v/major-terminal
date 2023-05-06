@@ -1,16 +1,29 @@
 .section-ready {
-	padding-top: 60px;
-	padding-bottom: 35px;
+	padding-top: 24px;
+	padding-bottom: 20px;
+
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 60px;
+		padding-bottom: 35px;
+	}
 
 	&--about {
-		padding-bottom: 66px;
+		padding-bottom: 26px;
+
+		@media (min-width: $breakpoint-desktop) {
+			padding-bottom: 66px;
+		}
 	}
 
 	&__title-box {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 60px;
+		margin-bottom: 31px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 60px;
+		}
 	}
 
 	&__title {
@@ -18,6 +31,29 @@
 	}
 
 	&__card {
-		height: 398px;
+		height: 80px;
+
+		@media (min-width: $breakpoint-desktop) {
+			height: 398px;
+		}
+	}
+
+	&__arrow-button {
+		&--mobile {
+			margin-top: 30px;
+			width: 100%;
+
+			@media (min-width: $breakpoint-laptop) {
+				display: none;
+			}
+		}
+
+		&--desktop {
+			display: none;
+
+			@media (min-width: $breakpoint-laptop) {
+				display: inline-flex;
+			}
+		}
 	}
 }

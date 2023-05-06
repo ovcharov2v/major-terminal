@@ -1,3 +1,47 @@
 .hidden {
-	display: none;
+	display: none !important;
+}
+
+.overflow-visible {
+	overflow: visible !important;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.hide-desktop {
+	@media (min-width: $breakpoint-desktop) {
+		display: none !important;
+	}
+}
+
+.hide-mobile {
+	@media (max-width: $breakpoint-desktop) {
+		display: none !important;
+	}
+}
+
+.hide-laptop {
+	@media (min-width: $breakpoint-laptop) {
+		display: none !important;
+	}
+}
+
+.show-desktop {
+	@media (max-width: $breakpoint-desktop) {
+		display: none !important;
+	}
+}
+
+.show-laptop {
+	@media (max-width: $breakpoint-laptop) {
+		display: none !important;
+	}
+}
+
+.display-block-mobile {
+	@media (max-width: $breakpoint-desktop) {
+		display: block;
+	}
 }

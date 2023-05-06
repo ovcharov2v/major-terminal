@@ -14,15 +14,9 @@ header.header
 		.header__top-box.container
 			a.header__logo-link.header__logo-link--mobile(href="/")
 				img.header__logo-img(src="images/common/logo-major-terminal.svg", alt="Major Terminal")
-			ul.header__logo-list
-				li.header__logo-list-elem
-					a.header__logo-list-link(href="#", target="_blank", rel="noreferrer")
-						img.header__logo-list-img(src="images/common/logo-major-squares.svg", alt="Major")
-				li.header__logo-list-elem
-					a.header__logo-list-link(href="#", target="_blank", rel="noreferrer")
-						img.header__logo-list-img(src="images/common/logo-major-e.png", alt="Major")
 			p.header__text
 				a.header__phone(href="tel:84957376006") 8 (495) 737 60 06
+				|
 				|
 				span.header__text-dash —
 				|
@@ -44,6 +38,7 @@ header.header
 							| English
 			button.header__burger-btn(aria-label="Мобильное меню")
 				+svg("burger", true)(class="header__burger")
+				+svg("menu-close")(class="header__close")
 	// Navigation
 	.header__row.header__row--nav
 		.header__nav-box.container
@@ -120,3 +115,61 @@ header.header
 			a.header__button-enter(href="#")
 				img.header__button-enter-icon(src="images/common/logo-map.png", alt)
 				|Вход в MAP
+	.header__mobile-menu
+		.container.header__mobile-menu-container
+			ul.header__mobile-menu-list
+				li.header__mobile-menu-elem
+					.header__mobile-menu-link-box
+						a.header__mobile-menu-link(href="#") Индустрии
+						+svg("menu-dropdown")(class="header__mobile-menu-dropdown")
+					ul.header__mobile-menu-child-list
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Fashion
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Telecom
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Helthcare
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Автомотив
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") POSM маркетинг
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") FMCG
+				li.header__mobile-menu-elem
+					.header__mobile-menu-link-box
+						a.header__mobile-menu-link(href="#") Услуги
+						+svg("menu-dropdown")(class="header__mobile-menu-dropdown")
+					ul.header__mobile-menu-child-list
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Ответственное хранение
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Фулфилмент
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Кросс-докинг
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Таможенный склад
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Упаковка
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Копакинг
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Еще услуга
+				li.header__mobile-menu-elem
+					.header__mobile-menu-link-box
+						a.header__mobile-menu-link(href="#") Major Terminal
+						+svg("menu-dropdown")(class="header__mobile-menu-dropdown")
+					ul.header__mobile-menu-child-list
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") О нас
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Кейсы
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Пресс-релизы
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Наши склады
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Контакты
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Преимущества
+						li.header__mobile-menu-child-elem
+							a.header__mobile-menu-child-link(href="") Наши вакансии

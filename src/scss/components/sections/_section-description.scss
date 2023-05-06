@@ -1,6 +1,11 @@
 .section-description {
-	padding-top: 63px;
+	padding-top: 22px;
 	padding-bottom: 50px;
+
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 63px;
+		padding-bottom: 50px;
+	}
 
 	&__title {
 		margin-top: 0;
@@ -8,11 +13,13 @@
 	}
 
 	&__panel-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto;
-		grid-gap: 32px 50px;
-		margin-bottom: 87px;
+		@media (min-width: $breakpoint-desktop) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+			grid-gap: 32px 50px;
+			margin-bottom: 87px;
+		}
 
 		.section-description--service & {
 			margin-bottom: 23px;
@@ -22,45 +29,70 @@
 	&__panel {
 		display: flex;
 		align-items: center;
+		flex-direction: column-reverse;
 		justify-content: space-between;
 		column-gap: 40px;
 		background: linear-gradient(to left, #FFFFFF 0%, #ECF5FC 100%);
 		border-radius: 25px;
-		padding: 36px 50px;
+		padding: 36px 23px;
+
+		@media (min-width: $breakpoint-desktop) {
+			flex-direction: row;
+			padding: 36px 50px;
+		}
+
+		&--image-left {
+			@media (min-width: $breakpoint-desktop) {
+				flex-direction: row-reverse;
+			}
+		}
 	}
 
 	&__panel-content {
-		.section-description__panel-img + & {
-			text-align: right;
+		.section-description__panel--image-left & {
+			@media (min-width: $breakpoint-desktop) {
+				text-align: right;
+			}
 		}
 	}
 
 	&__panel-img {
 		max-width: 100%;
+		flex-shrink: 0;
+		margin-bottom: 40px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__panel-title {
 		margin-top: 0;
 		margin-bottom: 17px;
 		font-family: $font-secondary;
-		font-size: 32px;
-		line-height: 32px;
+		font-size: 18px;
+		line-height: 18px;
 		font-weight: 700;
 		color: $color-blue;
 
-		.section-description__panel-blue-box & {
-			margin-bottom: 21px;
-			color: $color-white;
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 32px;
+			line-height: 32px;
 		}
 	}
 
 	&__panel-text {
 		margin-top: 0;
-		margin-bottom: 15px;
+		margin-bottom: 29px;
 		width: 100%;
 		max-width: 630px;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 18px;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__panel-link {
@@ -71,36 +103,67 @@
 		&:hover {
 			color: $color-red;
 		}
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 14px;
+		}
 	}
 
 	&__text-block {
+		font-family: $font-secondary;
 		max-width: 1260px;
-		font-size: 24px;
-		line-height: 32px;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 300;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 24px;
+			line-height: 32px;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 90px;
 		}
 	}
 
+	.section-description__photo-slider {
+		margin-bottom: 55px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 88px;
+		}
+	}
+
 	&__photo-grid {
-		margin-bottom: 88px;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: auto;
-		grid-column-gap: 32px;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: auto;
+			grid-column-gap: 32px;
+		}
 	}
 
 	&__photo-box {
 		position: relative;
 		border-radius: 25px;
 		overflow: hidden;
+
+		@media (max-width: $breakpoint-desktop) {
+			height: 210px;
+		}
 	}
 
 	&__photo {
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__photo-img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -114,13 +177,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 107px;
-		height: 107px;
+		width: 70px;
+		height: 70px;
 		padding: 0;
 		background-color: $color-white;
 		border: none;
 		border-radius: 50%;
 		color: #d9d9d9;
+
+		@media (min-width: $breakpoint-desktop) {
+			width: 107px;
+			height: 107px;
+		}
 
 		&:hover {
 			color: $color-blue;
@@ -128,9 +196,15 @@
 	}
 
 	&__photo-play-icon {
-		width: 46px;
-		height: 46px;
-		transform: translateX(6px);
+		width: 30px;
+		height: 30px;
+		transform: translateX(3px);
 		transition: color $transition-default;
+
+		@media (min-width: $breakpoint-desktop) {
+			width: 46px;
+			height: 46px;
+			transform: translateX(6px);
+		}
 	}
 }

@@ -18,6 +18,13 @@ footer.footer
 						a.footer__nav-link(href="#") POSM маркетинг
 					li.footer__nav-elem
 						a.footer__nav-link(href="#") FMCG
+				ul.footer__logo-list.footer__logo-list--desktop
+					li.footer__logo-list-elem
+						a.footer__logo-list-link(href="#", target="_blank", rel="noreferrer")
+							img.footer__logo-list-img(src="images/common/logo-major-squares.svg", alt="Major")
+					li.footer__logo-list-elem
+						a.footer__logo-list-link(href="#", target="_blank", rel="noreferrer")
+							img.footer__logo-list-img(src="images/common/logo-major-e.png", alt="Major")
 			// Nav col
 			.footer__col
 				p.footer__nav-title Услуги
@@ -64,19 +71,25 @@ footer.footer
 					img.footer__logo(src="images/common/logo-major-terminal.svg", alt="Major")
 				.footer__links-box
 					a.footer__link(href="tel:84957376006") 8 (495) 737 60 06
-						|
-						|
-						span.footer__link-hide-mobile — Секретариат
 					a.footer__link(href="mailto:info@major-terminal.ru") info@major-terminal.ru
 				a.footer__link-contacts(href="/") Связаться с нами
-				p.footer__text Мы в социальных сетях
-				ul.footer__social.social
-					li.social__elem
-						a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Youtube")
-							+svg("youtube", true)(class="social__link-icon")
-					li.social__elem
-						a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Telegram")
-							+svg("telegram", true)(class="social__link-icon")
+				.footer__social-box
+					.footer__social-wrapper
+						p.footer__text Мы в социальных сетях
+						ul.footer__social.social
+							li.social__elem
+								a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Youtube")
+									+svg("youtube", true)(class="social__link-icon")
+							li.social__elem
+								a.social__link(href="#", target="_blank", rel="noreferrer", aria-label="Telegram")
+									+svg("telegram", true)(class="social__link-icon")
+					ul.footer__logo-list.footer__logo-list--mobile
+						li.footer__logo-list-elem
+							a.footer__logo-list-link(href="#", target="_blank", rel="noreferrer")
+								img.footer__logo-list-img(src="images/common/logo-major-squares.svg", alt="Major")
+						li.footer__logo-list-elem
+							a.footer__logo-list-link(href="#", target="_blank", rel="noreferrer")
+								img.footer__logo-list-img(src="images/common/logo-major-e.png", alt="Major")
 		// Copyright
 		.footer__copyright
 			.footer__copyright-col

@@ -14,15 +14,19 @@ append vars
 block content
 	+breadcrumb(['Главная'], 'Отдел службы качества')(class="container")
 	// Section Hero
-	section.section-hero.section-hero--simple
+	section.section-hero-simple.section-hero-simple--department
 		.container
-			.section-hero__content
-				p.section-hero__slogan.text-white Движение вперед, внимание к деталям
-				img.section-hero__img(src="images/section-hero/squares.svg", alt)
-				img.section-hero__bg(src="images/section-hero/bg8.jpg", alt)
+			.section-hero-simple__content
+				p.section-hero-simple__slogan.text-white Движение вперед,
+					|
+					|
+					br.hide-desktop
+					|внимание к деталям
+				img.section-hero-simple__img(src="images/section-hero/squares.svg", alt)
+				img.section-hero-simple__bg(src="images/section-hero/bg8.jpg", alt)
 	// Section Success
-	.section-success.section-success--department.container
-		h1.h1.text-blue.section-success__title Служба качества
+	.section-success.section-success--department4.container
+		h1.h1.text-blue-medium.section-success__title Служба качества
 		p.section-success__subtitle Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы. Срок исполнения: 2 месяц с момента первого обращения, перевозка по готовности груза – 10 дней
 		.section-success__grid
 			.section-success__elem
@@ -37,7 +41,8 @@ block content
 			.section-success__elem
 				p.section-success__value 96%
 				p.section-success__text Удовлетворенность
-		.section-success__grid.section-success__grid--two-col
+	.section-success.section-success--department2.container
+		.section-success__grid
 			.section-success__elem
 				p.section-success__value ISO 13485:2017
 				p.section-success__text Соответсуствуем требованиям
@@ -49,8 +54,8 @@ block content
 					br
 					|UKAS management system
 			.section-success__elem
-				p.section-success__value Проведение внутренних аудитов
+				p.section-success__value.section-success__value--small-mobile Проведение внутренних аудитов
 				p.section-success__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы.
 			.section-success__elem
-				p.section-success__value Сбр обратной связи
+				p.section-success__value.section-success__value--small-mobile Сбр обратной связи
 				p.section-success__text Благодаря предварительной подготовке к моменту прибытия груза в порт Санкт-Петербурга был согласован и предоставлен необходимый транспорт для дальнейшей транспортировки груза, получены необходимые разрешительные документы.

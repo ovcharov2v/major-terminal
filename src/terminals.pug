@@ -34,14 +34,22 @@ block content
 						li.dropdown__option.dropdown__option--selected(data-value="Москва") Москва
 						li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
 						li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
+		.hide-desktop
+			.section-terminals__city-title-box
+				+svg("map-marker-blue")(class="section-terminals__city-title-icon")
+				h3.text-blue.section-terminals__cities Кулон-Истра
+			p.section-terminals__description Городской округ Истра, деревня Давыдовское, ул. Дачная, стр. 5
+				br.hide-mobile
+				| Расстояние от МКАД по Новорижскому шоссе - 48 км. ~ 37 мин.
 		.section-terminals__content-box
 			.section-terminals__content
-				.section-terminals__city-title-box
-					+svg("map-marker-blue")(class="section-terminals__city-title-icon")
-					h3.text-blue.section-terminals__cities Кулон-Истра
-				p.section-terminals__description Городской округ Истра, деревня Давыдовское, ул. Дачная, стр. 5
-					br
-					|Расстояние от МКАД по Новорижскому шоссе - 48 км. ~ 37 мин.
+				.hide-mobile
+					.section-terminals__city-title-box
+						+svg("map-marker-blue")(class="section-terminals__city-title-icon")
+						h3.text-blue.section-terminals__cities Кулон-Истра
+					p.section-terminals__description Городской округ Истра, деревня Давыдовское, ул. Дачная, стр. 5
+						br
+						|Расстояние от МКАД по Новорижскому шоссе - 48 км. ~ 37 мин.
 				ul.section-terminals__data-list
 					li.section-terminals__data
 						p.section-terminals__data-value 2008

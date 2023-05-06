@@ -14,14 +14,15 @@ append vars
 block content
 	+breadcrumb(['Главная'], 'Услуга')(class="container")
 	// Section Hero
-	section.section-hero.section-hero--industry
+	section.section-hero.section-hero--service
 		.container
 			.section-hero__content
 				h1.section-hero__title Фулфилмент
 				p.section-hero__text Фулфилмент на аутсорсе от эксперта в области складских операций
 				img.section-hero__bg(src="images/section-hero/bg7.jpg", alt)
+			p.section-hero__text.section-hero__text--mobile Фулфилмент на аутсорсе от эксперта в области складских операций
 	// Section Success
-	.section-success.container
+	.section-success.section-success--mobile-two-col.container
 		.section-success__grid
 			.section-success__elem
 				p.section-success__value 5 млн
@@ -31,7 +32,7 @@ block content
 				p.section-success__text Приемка (штук) / год
 			.section-success__elem
 				p.section-success__value 400 тыс
-				p.section-success__text Восстановление качества
+				p.section-success__text Кол-во м2 складов
 			.section-success__elem
 				p.section-success__value 15 млн
 				p.section-success__text Стикеров (штук) / год
@@ -39,125 +40,156 @@ block content
 	// Section Service range
 	section.section-service-range
 		.container
-			h2.h2.section-service-range__title Полный комплекс услуг
-				br
+			h2.h2.section-service-range__title Полный комплекс
+				|
+				|
+				br.hide-desktop
+				|услуг
+				|
+				|
+				br.hide-mobile
 				span.text-red по фулфилменту
 			.links-row.section-service-range__links
-				a.links-row__link(href="#") Организация забора товара
-				a.links-row__link(href="#") Прием товара
-				a.links-row__link(href="#") Комплектация и упаковка
-				a.links-row__link(href="#") Комплектация и упаковка FBS заказов
-				a.links-row__link(href="#") Доставка
-				a.links-row__link(href="#") Подготовка товара к отгрузке на маркетплейсы
+				p.links-row__link Организация забора товара
+				p.links-row__link Прием товара
+				p.links-row__link Комплектация и упаковка
+				p.links-row__link Комплектация и упаковка FBS заказов
+				p.links-row__link Доставка
+				p.links-row__link Подготовка товара к отгрузке на маркетплейсы
 		// Section Partner
-		.section-partner.section-partner--type2.section-partner--blue.container
-			.section-partner__content
-				ul.section-partner__link-list
-					li.section-partner__link-elem
-						a.section-partner__link(href="#") FBO и FBS
-					li.section-partner__link-elem
-						a.section-partner__link(href="#") Возможности интеграций
-					li.section-partner__link-elem
-						a.section-partner__link(href="#") Омниканальность
-				.section-partner__row
-					.section-partner__col.section-partner__col--content
-						h3.h2.section-partner__title Работа по FBS и FBO на
-							br
-							|одном складе
-						p.section-partner__text.section-partner__text--type2 Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку.
-							br
-							br
-							span.text-weight-light Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.
-						a.button.button--outline-blue.button--md.section-partner__button(href="#") Оставить заявку
-					.section-partner__col.section-partner__col--img
-						img.section-partner__image(src="images/section-partner/img2.svg", alt)
+		.section-partner.section-partner--type2.section-partner--bg-blue.container
+			.section-partner__box
+				.section-partner__nav-row
+					ul.section-partner__link-list
+						li.section-partner__link-elem
+							a.section-partner__link.section-partner__link--active(href="#") FBO и FBS
+						li.section-partner__link-elem
+							a.section-partner__link(href="#") Возможности интеграций
+						li.section-partner__link-elem
+							a.section-partner__link(href="#") Омниканальность
+					.dropdown.dropdown--text-blue.dropdown--navigate.section-partner__dropdown
+						.dropdown__value-box
+							input.dropdown__value(type="text", value="FBO и FBS", disabled)
+							+svg("chevron-dropdown", true)(class="dropdown__arrow")
+						ul.dropdown__options-list
+							li.dropdown__option.dropdown__option--selected(data-value="#") FBO и FBS
+							li.dropdown__option(data-value="#") Возможности интеграций
+							li.dropdown__option(data-value="#") Омниканальность
+				.section-partner__content
+					.section-partner__row
+						.section-partner__col.section-partner__col--content
+							h3.h2.section-partner__title.hide-mobile Работа по FBS и FBO на
+								br
+								|одном складе
+							p.section-partner__text Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку.
+								br
+								br
+								span.text-weight-light Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.
+							a.button.button--blue-dark.button--md.section-partner__button.hide-mobile(href="#") Оставить заявку
+							a.button.button--outline-blue.button--md.section-partner__button.hide-desktop(href="#") Оставить заявку
+						.section-partner__col.section-partner__col--img
+							img.section-partner__image(src="images/section-partner/img2.svg", alt)
 	// Section Description
-	section.section-description.section-description--service.container
-		h2.h2.section-description__title Преимущества Major
-		.section-description__panel-grid
-			// Panel
-			article.section-description__panel
-				.section-description__panel-content
-					h3.section-description__panel-title Личный кабинет клиента
-					p.section-description__panel-text Управление и отчетность в едином личном кабинете с множеством полезных функций
-					a.section-description__panel-link(href="#") Перейти в кабинет
-				img.section-description__panel-img(src="images/section-description/img1.png", alt)
-			// Panel
-			article.section-description__panel
-				img.section-description__panel-img(src="images/section-description/img2.svg", alt)
-				.section-description__panel-content
-					h3.section-description__panel-title Интеграция с WMS системой
-					p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
-					a.section-description__panel-link(href="#") Узнать подробнее
-			// Panel
-			article.section-description__panel
-				img.section-description__panel-img(src="images/section-description/img3.svg", alt)
-				.section-description__panel-content
-					h3.section-description__panel-title Служба качества
-					p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
-					a.section-description__panel-link(href="#") Узнать подробнее
-			// Panel
-			article.section-description__panel
-				.section-description__panel-content
-					h3.section-description__panel-title Интеграция с системами клиента
-					p.section-description__panel-text Собственный департамент разработки помогут реализовать решение для автоматизации ваших бизнес процессов.
-					a.section-description__panel-link(href="#") Скачать презентацию
-				img.section-description__panel-img(src="images/section-description/img4.svg", alt)
+	section.section-description.container
+		h2.h2.section-description__title Опции и
+			|
+			|
+			br.hide-desktop
+			| преимущества
+		.swiper.section-description__panel-slider
+			.section-description__panel-grid.swiper-wrapper
+				// Panel
+				article.section-description__panel.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Личный кабинет клиента
+						p.section-description__panel-text Управление и отчетность в едином личном кабинете с множеством полезных функций
+						a.section-description__panel-link(href="#") Перейти в кабинет
+					img.section-description__panel-img(src="images/section-description/img1.png", alt)
+				// Panel
+				article.section-description__panel.section-description__panel--image-left.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Интеграция с WMS системой
+						p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
+						a.section-description__panel-link(href="#") Узнать подробнее
+					img.section-description__panel-img(src="images/section-description/img2.svg", alt)
+				// Panel
+				article.section-description__panel.section-description__panel--image-left.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Служба качества
+						p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
+						a.section-description__panel-link(href="#") Узнать подробнее
+					img.section-description__panel-img(src="images/section-description/img3.svg", alt)
+				// Panel
+				article.section-description__panel.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Интеграция с системами клиента
+						p.section-description__panel-text Собственный департамент разработки помогут реализовать решение для автоматизации ваших бизнес процессов.
+						a.section-description__panel-link(href="#") Скачать презентацию
+					img.section-description__panel-img(src="images/section-description/img4.svg", alt)
+		.slider__nav.hide-desktop
+			button.slider__btn.slider__btn--prev(aria-label="Назад")
+				+svg("chevron-slider")(class="slider__btn-arrow")
+			.slider__pagination
+			button.slider__btn.slider__btn--next(aria-label="Вперед")
+				+svg("chevron-slider")(class="slider__btn-arrow")
 
 	// Section Icon list
 	section.section-icon-list.container
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon1.svg", alt)
-			figcaption.section-icon-list__text Круглосуточная
-				br
-				|поддержка
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon2.svg", alt)
-			figcaption.section-icon-list__text Персональный
-				br
-				|менеджер
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon3.svg", alt)
-			figcaption.section-icon-list__text Прозрачная
-				br
-				|тарификация
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon4.svg", alt)
-			figcaption.section-icon-list__text Кросс-докинг
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon5.svg", alt)
-			figcaption.section-icon-list__text Наложенный
-				br
-				|платеж
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon6.svg", alt)
-			figcaption.section-icon-list__text Служба контроля
-				br
-				|качества
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon7.svg", alt)
-			figcaption.section-icon-list__text Комплектакция
-				br
-				|промо-наборов
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon8.svg", alt)
-			figcaption.section-icon-list__text Частичный
-				br
-				|выкуп заказа
-		figure.section-icon-list__elem
-			.section-icon-list__icon-box
-				img.section-icon-list__icon(src="images/section-icon-list/icon9.svg", alt)
-			figcaption.section-icon-list__text Работа с B2B и B2C
-				br
-				|клиентами
+		.section-icon-list__row
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon1.svg", alt)
+				figcaption.section-icon-list__text Круглосуточная
+					br
+					|поддержка
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon2.svg", alt)
+				figcaption.section-icon-list__text Персональный
+					br
+					|менеджер
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon3.svg", alt)
+				figcaption.section-icon-list__text Прозрачная
+					br
+					|тарификация
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon4.svg", alt)
+				figcaption.section-icon-list__text Кросс-докинг
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon5.svg", alt)
+				figcaption.section-icon-list__text Наложенный
+					br
+					|платеж
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon6.svg", alt)
+				figcaption.section-icon-list__text Служба контроля
+					br
+					|качества
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon7.svg", alt)
+				figcaption.section-icon-list__text Комплектакция
+					br
+					|промо-наборов
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon8.svg", alt)
+				figcaption.section-icon-list__text Частичный
+					br
+					|выкуп заказа
+			figure.section-icon-list__elem
+				.section-icon-list__icon-box
+					img.section-icon-list__icon(src="images/section-icon-list/icon9.svg", alt)
+				figcaption.section-icon-list__text Работа с B2B и B2C
+					|
+					|
+					br.hide-mobile
+					|клиентами
 
 	// Section Experience
 	section.section-experience.container
@@ -183,6 +215,7 @@ block content
 					+svg("chevron-right-big")(class="card__arrow")
 				.card__bg-box
 					img.card__bg(src="images/section-experience/bg4.jpg", alt)
+		button.button.button--outline-blue-light.button--block.button--md.hide-desktop.section-experience__button Показать еще
 	// Section Service list
 	section.section-service-list.section-service-list--service.container
 		h2.h2.section-service-list__title Другие услуги
@@ -215,3 +248,5 @@ block content
 				span.button.button--white.button--xs.card__btn-more Подробнее
 				.card__bg-box
 					img.card__bg(src="images/section-service-list/bg9.jpg", alt)
+		.section-service-list__button-row.hide-desktop
+			button.button.button--outline-blue-light.button--block.button--md.hide-desktop.section-service-list__button Показать еще

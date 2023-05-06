@@ -54,6 +54,19 @@
 		}
 	}
 
+	&--blue-dark {
+		border: 3px solid #072545;
+		border-radius: 50px;
+		background-color: #072545;
+		color: $color-white;
+		transition: background-color $transition-default, border-color $transition-default;
+
+		&:hover {
+			background-color: darken(#072545, 10%);
+			border-color: darken(#072545, 10%);
+		}
+	}
+
 	&--blue-light {
 		border: none;
 		border-radius: 50px;
@@ -148,6 +161,11 @@
 
 	&--white-shadow {
 		box-shadow: 0 0 0 5px $color-white;
+	}
+
+	&--block {
+		display: block;
+		width: 100%;
 	}
 }
 

@@ -1,31 +1,33 @@
 .section-partner {
 	position: relative;
 
-	&__content {
-		position: relative;
-		z-index: 0;
-		padding: 79px 54px 86px;
-
-		&::before {position: absolute;
-			z-index: -2;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 100%;
+	&__box {
+		.section-partner--bg-image & {
+			padding: 50px 26px 61px;
 			border-radius: 25px;
+			background-image: url("../images/section-partner/bg-m.jpg");
 			background-color: $color-blue;
-			background-image: url("../images/section-partner/bg.jpg");
 			background-size: cover;
-			background-position: center;
+			background-position: left center;
 			background-repeat: no-repeat;
-			content: "";
+
+			@media (min-width: $breakpoint-desktop) {
+				padding: 62px 54px 86px;
+				background-image: url("../images/section-partner/bg.jpg");
+				background-position: center;
+			}
 		}
 
-		.section-partner--blue & {
-			padding-bottom: 52px;
-			&::before {
-				background-image: linear-gradient(to right, #EEF6FC 21.1%, rgba(255, 255, 255, 0) 80.7%);
-				background-color: unset;
+		.section-partner--bg-blue & {
+			padding: 50px 26px 52px;
+			border-radius: 25px;
+			background-image: linear-gradient(to right, #EEF6FC 21.1%, rgba(255, 255, 255, 0) 80.7%);
+			background-size: cover;
+			background-position: left center;
+			background-repeat: no-repeat;
+
+			@media (min-width: $breakpoint-desktop) {
+				padding: 55px 50px;
 			}
 		}
 	}
@@ -35,24 +37,36 @@
 		max-width: 996px;
 
 		&--content {
-			.section-partner--blue & {
-				padding-top: 60px;
-				max-width: 70%;
+			.section-partner--bg-blue & {
+				@media (min-width: $breakpoint-desktop) {
+					padding-top: 60px;
+					max-width: 70%;
+				}
 			}
+
 			.section-partner--type2 & {
-				max-width: 50%;
+				@media (min-width: $breakpoint-desktop) {
+					max-width: 50%;
+				}
 			}
 		}
 
 		&--img {
-			.section-partner--blue & {
-				max-width: 30%;
+			.section-partner--bg-blue & {
+				text-align: center;
+				@media (min-width: $breakpoint-desktop) {
+					max-width: 50%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: left;
+				}
 			}
-			.section-partner--type2 & {
-				max-width: 50%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+
+			.section-partner__content--with-lists & {
+				@media (min-width: $breakpoint-desktop) {
+					max-width: 30%;
+				}
 			}
 		}
 	}
@@ -62,56 +76,98 @@
 		max-width: 830px;
 		margin-top: 0;
 		margin-bottom: 34px;
+
+		@media (max-width: $breakpoint-desktop) {
+			margin-bottom: 28px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		@media (max-width: 500px) {
+			padding-right: 30px;
+		}
 	}
 
 	&__text {
 		font-family: $font-secondary2;
 		max-width: 670px;
 		margin-top: 0;
-		margin-bottom: 51px;
-		font-size: 28px;
+		margin-bottom: 40px;
+		font-size: 18px;
 		line-height: 28px;
 		font-weight: 500;
 
-		&--type2 {
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 51px;
+			font-size: 28px;
+		}
+
+		@media (max-width: 500px) {
+			padding-right: 30px;
+		}
+
+		.section-partner--bg-blue & {
 			font-family: $font-secondary;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 24px;
+			color: #062443;
 		}
 	}
 
 	&__button {
 		width: 100%;
-		max-width: 247px;
-		font-size: 24px;
+		font-size: 18px;
+		line-height: 18px;
+
+		@media (min-width: $breakpoint-laptop) {
+			max-width: 247px;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 24px;
+			line-height: 24px;
+		}
 	}
 
 	&__link-list {
-		display: flex;
-		padding: 22px 68px 22px;
-		margin: 0 0 71px;
+		display: none;
 		justify-content: space-between;
 		border-radius: 25px;
 		background-color: $color-white;
 		list-style-type: none;
 
-		.section-partner--blue & {
+		@media (min-width: $breakpoint-laptop) {
 			display: inline-flex;
+			padding: 22px 36px 22px;
+			margin-bottom: 50px;
+			column-gap: 40px;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			padding: 22px 68px 22px;
+			margin-bottom: 71px;
+			column-gap: 63px;
+		}
+
+		.section-partner--bg-blue & {
 			margin-bottom: 6px;
 			padding: 22px 20px;
+
+			@media (min-width: $breakpoint-desktop) {
+				display: inline-flex;
+				padding: 22px 38px;
+			}
 		}
 	}
 
 	&__link-elem {
-		padding: 0 12px;
-
-		.section-partner--blue & {
-			padding: 0 18px;
-		}
 	}
 
 	&__link {
 		position: relative;
 		padding-bottom: 5px;
-		font-size: 24px;
+		font-size: 18px;
 		line-height: 24px;
 		letter-spacing: .01em;
 		font-weight: 700;
@@ -120,16 +176,29 @@
 
 		&::after {
 			position: absolute;
-			bottom: 0;
+			bottom: -7px;
 			left: 50%;
 			width: 100%;
 			max-width: 19px;
-			height: 4px;
+			height: 5px;
 			border-radius: 4px;
 			background-color: $color-red;
 			transform: translateX(-50%) scaleX(0);
 			content: "";
 			transition: transform $transition-default;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		.section-partner--bg-blue & {
+			color: #052343;
+
+			&::after {
+				bottom: -17px;
+			}
 		}
 
 		&:hover,
@@ -139,21 +208,90 @@
 			&::after {
 				transform: translateX(-50%);
 			}
+
+			.section-partner--bg-blue & {
+				color: $color-blue;
+
+				&::after {
+					max-width: 70%;
+				}
+			}
 		}
 	}
 
 	&__list-arrow-block {
-		display: flex;
-		column-gap: 57px;
 		margin-bottom: 42px;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: flex;
+			column-gap: 57px;
+			flex-direction: row;
+		}
 	}
 
 	&__row {
-		display: flex;
-		column-gap: 30px;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: flex;
+			column-gap: 30px;
+		}
 	}
 
 	&__image {
+		margin-top: 60px;
 		max-width: 100%;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-top: 0;
+		}
+
+		&--temp {
+			max-width: 200px;
+			max-height: 200px;
+			margin: 30px auto 0;
+
+			@media (min-width: $breakpoint-desktop) {
+				margin: 0 auto;
+				max-width: 382px;
+				max-height: 382px;
+			}
+		}
+	}
+
+	&__dropdown {
+		margin-bottom: 42px;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: none;
+		}
+	}
+
+
+	&__text2 {
+		margin-top: 0;
+		margin-bottom: 30px;
+		font-family: $font-secondary;
+		font-size: 18px;
+		line-height: 18px;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 24px;
+			line-height: 24px;
+		}
+	}
+
+	&__temperature {
+		margin-top: 0;
+		margin-bottom: 60px;
+		font-family: $font-secondary;
+		font-size: 44px;
+		line-height: 50px;
+		font-weight: 700;
+		color: $color-blue;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 100px;
+			line-height: 100px;
+		}
 	}
 }

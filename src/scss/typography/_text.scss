@@ -10,6 +10,10 @@
 	color: $color-blue-light;
 }
 
+.text-blue-medium {
+	color: $color-blue-medium;
+}
+
 .text-red {
 	color: $color-red;
 }
@@ -20,6 +24,12 @@
 
 .text-weight-light {
 	font-weight: 300;
+}
+
+.text-weight-light-desktop {
+	@media (min-width: $breakpoint-desktop) {
+		font-weight: 300;
+	}
 }
 
 .text-weight-bold {

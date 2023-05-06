@@ -23,19 +23,15 @@
 		.dropdown--gray-border & {
 			border: 1px solid #E2E2E2;
 		}
-
-		.dropdown--logopark & {
-			border: 1px solid #DADADA;
-		}
 	}
 
 	&__value {
 		width: 100%;
-		padding: 21px 50px 21px 26px;
+		padding: 19px 50px 19px 26px;
 		border: none;
 		background-color: $color-transparent;
 		font-family: $font-additional;
-		font-size: 14px;
+		font-size: 18px;
 		line-height: 18px;
 		font-weight: 700;
 		pointer-events: none;
@@ -44,13 +40,11 @@
 			outline: none;
 		}
 
-		.dropdown--big-text & {
-			font-size: 18px;
-			line-height: 18px;
-		}
-
 		.dropdown--with-flag & {
 			padding: 0 15px 0 34px;
+			font-size: 12px;
+			line-height: 18px;
+			font-weight: 600;
 		}
 
 		.dropdown--gray-border & {
@@ -60,7 +54,8 @@
 
 			@media (min-width: $breakpoint-laptop) {
 				padding-top: 25px;
-				padding-bottom: 25px;}
+				padding-bottom: 25px;
+			}
 		}
 
 		.dropdown--multi-select & {
@@ -69,13 +64,13 @@
 
 			@media (min-width: $breakpoint-laptop) {
 				padding-top: 19px;
-				padding-bottom: 19px;}
+				padding-bottom: 19px;
+			}
 		}
 
-		.dropdown--logopark & {
-			padding-top: 15px;
-			padding-bottom: 15px;
-			font-size: 16px;
+		.dropdown--text-blue & {
+			font-family: $font-primary;
+			font-size: 18px;
 			color: $color-blue;
 		}
 	}
@@ -125,7 +120,7 @@
 	&__option {
 		position: relative;
 		font-family: $font-additional;
-		font-size: 14px;
+		font-size: 18px;
 		line-height: 18px;
 		font-weight: 700;
 		cursor: pointer;
@@ -141,11 +136,17 @@
 
 		.dropdown--with-flag & {
 			padding-left: 32px;
+			font-size: 12px;
+			line-height: 18px;
+			font-weight: 700;
 		}
 
-		.dropdown--big-text & {
-			font-size: 18px;
-			line-height: 18px;
+		&--selected {
+			display: none;
+
+			.dropdown--with-flag & {
+				display: block;
+			}
 		}
 	}
 

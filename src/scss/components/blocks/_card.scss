@@ -19,7 +19,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 48px 42px;
+		padding: 34px 25px;
+
+		@media (min-width: $breakpoint-desktop) {
+			padding: 48px 42px;
+		}
 	}
 
 	&--text-top {
@@ -83,6 +87,12 @@
 		.card--other-services & {
 			margin-top: auto;
 			margin-bottom: 31px;
+		}
+
+		.card--with-icon & {
+			@media (max-width: $breakpoint-desktop) {
+				margin-bottom: 23px;
+			}
 		}
 	}
 
@@ -238,6 +248,14 @@
 		font-weight: 500;
 		color: $color-blue;
 
+		&:nth-child(n+3) {
+			display: none;
+
+			@media (min-width: $breakpoint-desktop) {
+				display: inline-block;
+			}
+		}
+
 		.card--cases & {
 			font-family: $font-secondary;
 			font-weight: 700;
@@ -247,6 +265,10 @@
 	&__icon {
 		display: inline-block;
 		margin-bottom: auto;
-		max-height: 90px;
+		max-height: 56px;
+
+		@media (min-width: $breakpoint-desktop) {
+			max-height: 90px;
+		}
 	}
 }

@@ -1,0 +1,35 @@
+.show-more {
+	&__mobile-hide {
+		display: none !important;
+
+		.show-more--active & {
+			display: block !important;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			display: block !important;
+		}
+	}
+
+	&__mobile-hide-flex {
+		display: none !important;
+
+		.show-more--active & {
+			display: flex !important;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			display: flex !important;
+		}
+	}
+
+	&__button {
+		display: block;
+		max-width: 248px;
+		margin: 0 auto;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: none;
+		}
+	}
+}

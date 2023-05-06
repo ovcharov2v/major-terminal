@@ -5,9 +5,29 @@
 		margin-bottom: 110px;
 	}
 
+	&--department2 {
+		@media (min-width: $breakpoint-desktop) {
+			padding-bottom: 80px;
+		}
+	}
+
+	&--department4 {
+		margin-bottom: 13px;
+		@media (min-width: $breakpoint-laptop) {
+			margin-bottom: 24px;
+		}
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 57px;
+		}
+	}
+
 	&--about {
-		margin-top: 80px;
-		margin-bottom: 90px;
+		margin-bottom: 36px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-top: 80px;
+			margin-bottom: 96px;
+		}
 	}
 
 	&--personal {
@@ -16,12 +36,43 @@
 
 	&__grid {
 		display: grid;
-		grid-template: auto / repeat(4, 1fr);
-		grid-gap: 32px;
+		grid-template: auto / 100%;
+		grid-gap: 13px;
 
-		&--two-col {
+		@media (min-width: $breakpoint-laptop) {
+			grid-template: auto / repeat(2, 1fr);
+			grid-gap: 24px;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			grid-template: auto / repeat(4, 1fr);
+			grid-gap: 32px;
+		}
+
+		.section-success--department & {
 			grid-template: auto / repeat(2, 1fr);
 			grid-gap: 61px 32px;
+		}
+
+		.section-success--department2 & {
+			@media (min-width: $breakpoint-desktop) {
+				grid-template: auto / repeat(2, 1fr);
+				grid-gap: 61px 32px;
+			}
+		}
+
+		.section-success--department4 & {
+			@media (min-width: $breakpoint-desktop) {
+				grid-template: auto / repeat(4, 1fr);
+				grid-gap: 61px 32px;
+			}
+		}
+
+		.section-success--mobile-two-col & {
+			@media (max-width: $breakpoint-desktop) {
+				grid-template: auto / repeat(2, 1fr);
+				grid-gap: 16px;
+			}
 		}
 
 		.section-success__grid + & {
@@ -30,14 +81,22 @@
 	}
 
 	&__elem {
-		padding: 34px;
+		padding: 26px;
 		border-radius: 25px;
 		background: linear-gradient(to right, #ECF5FC 0%, rgba(236, 245, 252, 0) 77.01%);
 		text-align: center;
 
-		.section-success__grid--two-col & {
+		@media (min-width: $breakpoint-desktop) {
+			padding: 34px;
+		}
+
+		.section-success--department & {
 			padding-top: 49px;
 			padding-bottom: 49px;
+		}
+
+		.section-success--department2 &, .section-success--department4 & {
+			padding: 45px;
 		}
 
 		.section-success--personal & {
@@ -48,14 +107,36 @@
 
 	&__value {
 		margin-top: 0;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		font-size: 32px;
 		line-height: 1.2;
 		font-weight: 800;
 		color: #07529B;
 
-		.section-success__grid--two-col & {
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 20px;
+		}
+
+		.section-success--department & {
 			color: inherit;
+		}
+
+		.section-success--department2 & {
+			@media (max-width: $breakpoint-desktop) {
+				font-size: 24px;
+			}
+		}
+
+		&--small-mobile {
+			@media (max-width: $breakpoint-desktop) {
+				font-size: 18px !important;
+			}
+		}
+		.section-success--mobile-two-col & {
+			@media (max-width: $breakpoint-desktop) {
+				font-size: 24px;
+				line-height: 1;
+			}
 		}
 
 		.section-success--personal & {
@@ -75,12 +156,15 @@
 		line-height: 1;
 		font-weight: 700;
 
-		.section-success__grid--two-col & {
+		.section-success--department & {
 			max-width: 640px;
 			margin: 0 auto;
-			font-family: $font-secondary;
 			font-size: 24px;
 			line-height: 24px;
+			font-weight: 300;
+		}
+
+		.section-success--department2 & {
 			font-weight: 300;
 		}
 
@@ -89,29 +173,51 @@
 			line-height: 16px;
 			font-weight: 300;
 		}
+
+		.section-success--mobile-two-col & {
+			@media (max-width: $breakpoint-desktop) {
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
 	}
 
 	&__title {
 		margin-top: 0;
-		margin-bottom: 67px;
+		margin-bottom: 19px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 67px;
+		}
 	}
 
 	&__subtitle {
 		max-width: 1220px;
 		margin-top: 0;
 		font-family: $font-secondary;
-		font-size: 24px;
+		font-size: 18px;
 		line-height: 24px;
 		font-weight: 300;
-		margin-bottom: 89px;
+		margin-bottom: 34px;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 24px;
+			margin-bottom: 89px;
+		}
 	}
 
 	&__text-block {
 		max-width: 1220px;
 		margin-top: 0;
-		font-size: 24px;
-		line-height: 32px;
+		font-size: 18px;
+		line-height: 18px;
 		font-weight: 300;
-		margin-bottom: 95px;
+		margin-bottom: 32px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 95px;
+			font-size: 24px;
+			line-height: 32px;
+		}
 	}
 }

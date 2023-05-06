@@ -5,14 +5,22 @@
 	list-style-type: none;
 
 	&--big {
-		margin: 0 -7px;
+		margin: 0 -5px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin: 0 -7px;
+		}
 	}
 
 	&__elem {
 		padding: 0 8px;
 
 		.social--big & {
-			padding: 0 7px;
+			padding: 0 5px;
+
+			@media (min-width: $breakpoint-desktop) {
+				padding: 0 7px;
+			}
 		}
 	}
 

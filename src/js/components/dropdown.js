@@ -27,11 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				optionsList.forEach((option) => {
 					option.addEventListener('click', (e) => {
 						e.preventDefault();
-						input.value = option.dataset.value
-						if(dropdown.classList.contains('dropdown--with-flag')) {
-							const currentFlag = dropdown.querySelector('.dropdown__value-box .dropdown__flag')
-							const nextFlag = option.querySelector('.dropdown__flag')
-							currentFlag.src = nextFlag.src
+
+						if(dropdown.classList.contains('dropdown--navigate')) {
+							window.location.href=option.dataset.value
+						}
+						else {
+							input.value = option.dataset.value
+							dropdown.querySelector('.dropdown__option--selected').classList.remove('dropdown__option--selected')
+							option.classList.add('dropdown__option--selected')
+
+							if(dropdown.classList.contains('dropdown--with-flag')) {
+								const currentFlag = dropdown.querySelector('.dropdown__value-box .dropdown__flag')
+								const nextFlag = option.querySelector('.dropdown__flag')
+								currentFlag.src = nextFlag.src
+							}
 						}
 					})
 				})

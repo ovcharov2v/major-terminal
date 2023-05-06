@@ -20,12 +20,13 @@
 @import "blocks/decision";
 @import "blocks/about-people";
 @import "blocks/about-gallery";
-@import "blocks/about-download";
 @import "blocks/timeline";
 @import "blocks/road";
 @import "blocks/simple-card";
 @import "blocks/simple-card-row";
 @import "blocks/links-row";
+@import "blocks/show-more";
+@import "blocks/section-about-timeline";
 
 @import "sections/section-ready";
 @import "sections/section-nav";
@@ -36,6 +37,7 @@
 @import "sections/section-news";
 @import "sections/section-industries";
 @import "sections/section-invite";
+@import "sections/section-hero-simple";
 @import "sections/section-hero";
 @import "sections/section-request";
 @import "sections/section-description";

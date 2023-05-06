@@ -1,0 +1,158 @@
+.section-about-timeline {
+	position: relative;
+	width: 100%;
+	max-width: 1900px;
+	margin: 0 auto;
+
+	&::after {
+		position: absolute;
+		z-index: -1;
+		top: -100px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/section-about/road.svg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top center;
+		content: "";
+
+		@media (max-width: 1400px) {
+			top: -147px;
+			transform: translateX(-63%);
+			width: 1900px;
+			height: 800px;
+		}
+	}
+
+	&__box {
+		position: relative;
+
+		@media (min-width: 1400px) {
+			height: 733px;
+		}
+	}
+
+	&__marker {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		@media (min-width: 1400px) {
+			position: absolute;
+			transform: translateX(-50%);
+		}
+
+		@media (max-width: 1400px) {
+			margin-bottom: 57px;
+		}
+
+		&:nth-child(2n) {
+			@media (min-width: 1400px) {
+				flex-direction: column-reverse;
+			}
+		}
+
+		&--n1 {
+			@media (min-width: 1400px) {
+				height: 557px;
+				top: 20%;
+				left: 23%;;
+			}
+		}
+
+		&--n2 {
+			@media (min-width: 1400px) {
+				height: 423px;
+				top: 20%;
+				left: 46%;
+			}
+		}
+
+		&--n3 {
+			@media (min-width: 1400px) {
+				height: 408px;
+				top: 28%;
+				left: 74%;
+			}
+		}
+
+		&--n4 {
+			@media (min-width: 1400px) {
+				height: 282px;
+				top: 17%;
+				right: 1%;
+			}
+			@media (min-width: 1900px) {
+				top: 31%;
+				right: -11%;
+			}
+		}
+	}
+
+	&__img {
+		display: block;
+		margin-bottom: 46px;
+		width: 164px;
+		height: 164px;
+		border-radius: 50%;
+		box-shadow: 0 4px 50px rgba(#000, .25);
+	}
+
+	&__value {
+		margin: 0;
+		padding: 18px 34px;
+		border-radius: 25px;
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 700;
+		color: #fff;
+		background-color: $color-blue;
+
+		.section-about-timeline__marker--red & {
+			background-color: $color-red;
+		}
+	}
+
+	&__text {
+		margin: 10px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		flex-grow: 1;
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 700;
+
+		.section-about-timeline__marker:nth-child(2n-1) & {
+			@media (min-width: 1400px) {
+				flex-direction: column-reverse;
+			}
+		}
+		@media (max-width: 1400px) {
+			flex-direction: column-reverse;
+		}
+		&::after {
+			display: block;
+			height: 100%;
+			width: 3px;
+			margin: 10px auto;
+			background-color: rgba($color-blue, .1);
+			content: "";
+		}
+
+		@media (max-width: 1400px) {
+			&::after {
+				height: 65px;
+			}
+		}
+
+		.section-about-timeline__marker--red & {
+			&::after {
+				background-color: $color-red;
+			}
+		}
+	}
+}

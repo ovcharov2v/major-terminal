@@ -39,11 +39,11 @@
 
 	&__title {
 		margin-top: 0;
-		margin-bottom: 48px;
+		margin-bottom: 73px;
 		color: $color-blue;
 
 		@media (max-width: $breakpoint-laptop) {
-			margin-bottom: 71px;
+			margin-bottom: 48px;
 			font-size: 32px;
 			line-height: 32px;
 		}

@@ -36,6 +36,7 @@
 
 		.slider--one-slide & {
 			padding-bottom: 0;
+			min-height: 260px;
 		}
 	}
 
@@ -55,22 +56,28 @@
 
 	&__slide-title {
 		position: absolute;
-		bottom: 33px;
+		bottom: 21px;
 		right: 50%;
 		transform: translateX(50%);
+		min-width: 90px;
 		margin: 0;
-		padding: 17px 57px;
+		padding: 10px 10px;
 		white-space: nowrap;
 		border-radius: 25px;
 		background: linear-gradient(to left, rgba(0, 73, 150, 0.85) 0%, rgba(0, 73, 150, 0) 100%);
 		font-family: $font-secondary;
-		font-size: 24px;
+		font-size: 18px;
 		line-height: 1;
 		font-weight: 700;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		color: $color-white;
+
+		@media (min-width: $breakpoint-desktop) {font-size: 24px;
+			padding: 17px 57px;
+			bottom: 33px;
+		}
 
 		.slider__slide--wide & {
 			right: 70px;
@@ -157,12 +164,21 @@
 		.slider--one-slide & {
 			position: absolute;
 			z-index: 10;
-			bottom: 48px;
-			right: 57px;
-			margin: 0;
+			bottom: 34px;
+			left: 50%;
+			transform: translateX(-50%);
+			margin: 0 auto;
 			padding: 10px 20px;
 			background-color: $color-white;
 			border-radius: 25px;
+
+			@media (min-width: $breakpoint-desktop) {
+				left: unset;
+				bottom: 48px;
+				right: 57px;
+				margin: 0;
+				transform: none;
+			}
 		}
 	}
 
@@ -221,8 +237,14 @@
 	}
 
 	&__map-icon {
-		width: 33px;
-		height: 47px;
-		margin-right: 18px;
+		width: 16px;
+		height: 24px;
+		margin-right: 8px;
+
+		@media (min-width: $breakpoint-desktop) {
+			width: 33px;
+			height: 47px;
+			margin-right: 18px;
+		}
 	}
 }

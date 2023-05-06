@@ -4,30 +4,78 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-top: 60px;
-	padding-bottom: 166px;
+	padding-top: 36px;
+	padding-bottom: 104px;
 	text-align: center;
 
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 60px;
+		padding-bottom: 166px;
+	}
+
+	&__img-box {
+		position: relative;
+		margin: 0 auto 68px;
+		width: 100%;
+		max-width:240px;
+
+		&::before {
+			display: block;
+			padding-top: 145%;
+			content: "";
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			max-width: 400px;
+			margin-bottom: 54px;
+
+			&::before {
+				padding-top: 78%;
+			}
+		}
+	}
+
 	&__img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
 		max-width: 100%;
-		margin-bottom: 54px;
+	}
+
+	&__cross {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: 100%;
 	}
 
 	&__title {
 		margin-top: 0;
-		margin-bottom: 26px;
-		font-size: 200px;
-		line-height: 200px;
+		margin-bottom: 31px;
+		font-size: 100px;
+		line-height: 100px;
 		font-weight: 600;
 		color: $color-blue;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 26px;
+			font-size: 200px;
+			line-height: 200px;
+		}
 	}
 
 	&__text {
 		margin: 0;
 		font-family: $font-secondary2;
-		font-size: 24px;
-		line-height: 32px;
+		font-size: 14px;
+		line-height: 18px;
 		font-weight: 900;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 24px;
+			line-height: 32px;
+		}
 	}
 
 	&__link {

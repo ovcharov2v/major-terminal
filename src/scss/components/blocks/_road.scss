@@ -16,7 +16,12 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: top center;
-		content: "";
+	}
+
+	@media (min-width: $breakpoint-desktop) {
+		&::after {
+			content: "";
+		}
 	}
 
 	&--blue {
@@ -29,6 +34,36 @@
 	&--center {
 		&::after {
 			background-position: center;
+		}
+	}
+
+	&--contacts {
+		&::after {
+			background-position: center 100px;
+		}
+	}
+
+	&--terminal {
+		@media (max-width: $breakpoint-desktop) {
+			&::after {
+				right: 0;
+				top: -83px;
+				background-size: 500% 100%;
+				background-position: center;
+				content: "";
+			}
+		}
+	}
+
+	&--404 {
+		@media (max-width: $breakpoint-desktop) {
+			&::after {
+				right: 0;
+				top: 117px;
+				background-size: 539% 100%;
+				background-position: 65% center;
+				content: "";;
+			}
 		}
 	}
 }

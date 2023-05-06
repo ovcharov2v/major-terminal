@@ -4,10 +4,22 @@
 
 	&__title {
 		margin-top: 0;
-		margin-bottom: 54px;
+		margin-bottom: 43px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 54px;
+		}
 	}
 
 	&__links {
 		margin-bottom: 76px;
+
+		@media (max-width: $breakpoint-desktop) {
+			margin-bottom: 48px;
+			margin-left: -14px;
+			padding-left: 14px;
+			margin-right: -14px;
+			width: calc(100% + 28px);
+		}
 	}
 }

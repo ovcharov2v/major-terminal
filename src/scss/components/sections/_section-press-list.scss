@@ -1,16 +1,30 @@
 .section-press-list {
-	padding-top: 10px;
-	padding-bottom: 93px;
+	padding-top: 22px;
+	padding-bottom: 46px;
+
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 10px;
+		padding-bottom: 93px;
+	}
 
 	&__title-box {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-bottom: 57px;
+		margin-bottom: 55px;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 57px;
+		}
 	}
 
 	&__title {
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: 35px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__nav {
@@ -42,21 +56,56 @@
 	}
 
 	&__search {
+		display: none;
 		width: 290px;
 		max-width: 100%;
+
+		&::placeholder {
+			font-family: $font-additional;
+			font-weight: 700;
+			font-size: 18px;
+			color: rgba(#000, .3)
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			display: block;
+		}
 	}
 
 	&__top-row {
-		margin-bottom: 48px;
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+		grid-row-gap: 25px;
+		margin-bottom: 25px;
+		@media (min-width: $breakpoint-laptop) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 50px;
+			margin-bottom: 48px;
+		}
 	}
 
 	&__bottom-row {
-		margin-bottom: 84px;
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+		grid-column-gap: 32px;
+		grid-row-gap: 25px;
+		margin-bottom: 46px;
+
+		@media (min-width: $breakpoint-laptop) {
+			grid-template-columns: repeat(3, 1fr);
+			grid-row-gap: 52px;
+		}
 	}
 
+	&__news-item {}
+
 	&__button-row {
-		margin-bottom: 20px;
 		text-align: center;
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__button {

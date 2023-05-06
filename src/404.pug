@@ -14,9 +14,11 @@ append vars
 block content
 	+breadcrumb(['Главная'], '404 ошибка')(class="container")
 	// Section 404
-	section.section-404.road
+	section.section-404.road.road--404
 		.container
-			img.section-404__img(src="images/section-404/img-404.svg", alt)
+			.section-404__img-box
+				img.section-404__img(src="images/section-404/img-404.svg", alt)
+				img.section-404__cross(src="images/section-404/cross-404.svg", alt)
 			h1.section-404__title 404
 			p.section-404__text Что-то пошло не так! Нужная страница не найдена
 				br

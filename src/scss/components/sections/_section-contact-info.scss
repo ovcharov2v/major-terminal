@@ -1,52 +1,84 @@
 .section-contact-info {
-	padding-top: 21px;
-	padding-bottom: 123px;
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 21px;
+		padding-bottom: 123px;
+	}
 
 	&__title {
 		margin-top: 0;
-		margin-bottom: 44px;
+		margin-bottom: 21px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 44px;
+		}
 	}
 
 	&__links {
-		display: flex;
-		margin: 0 -72px 74px;
+		@media (min-width: $breakpoint-desktop) {
+			display: flex;
+			margin: 0 -72px 74px;
+		}
 	}
 
 	&__links-col {
-		padding: 0 72px;
+		@media (min-width: $breakpoint-desktop) {
+			padding: 0 72px;
+		}
 	}
 
 	&__link {
 		display: inline-block;
 		margin-bottom: 16px;
-		font-size: 32px;
-		line-height: 32px;
+		font-size: 24px;
+		line-height: 1;
 		font-weight: 700;
 		color: $color-black;
 		transition: color $transition-default;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 32px;
+		}
 
 		&:hover {
 			color: $color-red;
 		}
 
 		&--mail {
-			margin-bottom: 54px;
+			margin-bottom: 44px;
+
+			@media (min-width: $breakpoint-desktop) {
+				margin-bottom: 54px;
+			}
 		}
 	}
 
 	&__link-description {
 		margin-top: 0;
-		margin-bottom: 36px;
-		font-size: 18px;
-		line-height: 18px;
+		margin-bottom: 45px;
+		font-size: 14px;
+		line-height:1;
 		font-weight: 700;
 
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 36px;
+			font-size: 18px;
+		}
+
 		&:last-child {
-			margin-bottom: 0;
+			margin-bottom: 36px;
+
+			@media (min-width: $breakpoint-desktop) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	&__social {
+		margin-bottom: 27px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__mail-button {
@@ -54,49 +86,49 @@
 	}
 
 	&__object {
-		display: flex;
+		width: 100%;
 		margin-bottom: 44px;
-	}
 
-	&__object-col {
-		width: 100%;
-
-		&--text {
-			max-width: 42%;
+		@media (min-width: $breakpoint-desktop) {
+			max-width: 566px;
 		}
-
-		&--map {
-			max-width: 58%;
-		}
-	}
-
-	&__dropdown {
-		width: 100%;
-		max-width: 227px;
-		margin-bottom: 40px;
 	}
 
 	&__object-title {
 		margin-top: 0;
-		margin-bottom: 36px;
+		margin-bottom: 16px;
 		font-family: $font-secondary;
-		font-size: 32px;
+		font-size: 24px;
 		line-height: 48px;
 		font-weight: 700;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 36px;
+			font-size: 32px;
+		}
 	}
 
 	&__object-text {
 		margin-top: 0;
-		margin-bottom: 46px;
-		font-size: 24px;
+		margin-bottom: 38px;
+		font-size:18px;
 		line-height: 24px;
 		font-weight: 300;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 46px;
+			font-size: 24px;
+		}
 	}
 
 	&__object-time {
 		display: flex;
 		align-items: center;
-		margin-bottom: 46px;
+		margin-bottom: 21px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 60px;
+		}
 	}
 
 	&__object-time-icon {
@@ -111,29 +143,28 @@
 	&__object-work-text {
 		margin-top: 0;
 		margin-bottom: 2px;
-		font-size: 24px;
+		font-size: 14px;
 		line-height: 24px;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 24px;
+		}
 	}
 
-	&__map {
+	&__map-route {
 		width: 100%;
 		border-radius: 25px;
-	}
+		margin-top: 10px;
+		margin-bottom: 51px;
 
-	&__route {
-		display: flex;
+		@media (min-width: $breakpoint-desktop) {
+			margin-top: 0;
+			margin-bottom: 95px;
+		}
 	}
 
 	&__rules {
-		position: relative;
-		z-index: 10;
-		width: 100%;
-		max-width: 42%;
-		background-color: $color-white;
-		border-radius: 25px;
 		color: #202020;
-		box-shadow: 0 4px 50px rgba($color-black, .25);
-		overflow: hidden;
 	}
 
 	&__rules-text-box {
@@ -142,30 +173,44 @@
 
 	&__rules-title {
 		margin-top: 0;
-		margin-bottom: 32px;
+		margin-bottom: 24px;
 		font-family: $font-secondary;
-		font-size: 32px;
-		line-height: 40px;
+		font-size: 24px;
+		line-height: 24px;
 		font-weight: 700;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 32px;
+			font-size: 32px;
+			line-height: 40px;
+		}
 	}
 
 	&__rules-subtitle {
 		margin-top: 0;
-		margin-bottom: 40px;
+		margin-bottom: 36px;
 		font-family: $font-secondary;
 		font-size: 14px;
 		line-height: 18px;
 		font-weight: 700;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__cite {
-		margin-bottom: 33px;
-		padding: 0 18px;
+		margin-bottom: 47px;
+		padding: 0 24px;
 		border-left: 4px solid $color-red;
-		font-family: $font-secondary;
 		font-size: 14px;
 		line-height: 18px;
 		font-weight: 300;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 33px;
+			padding: 0 18px;
+		}
 	}
 
 	&__cite-text {
@@ -173,6 +218,8 @@
 	}
 
 	&__rules-phone {
+		display: inline-block;
+		margin-bottom: 10px;
 		font-size: 24px;
 		line-height: 32px;
 		font-weight: 700;
@@ -181,6 +228,10 @@
 
 		&:hover {
 			color: $color-red;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 0;
 		}
 	}
 
@@ -193,23 +244,23 @@
 	}
 
 	&__rules-photo {
-		display: block;
-		margin-top: auto;
 		width: 100%;
 		border-radius: 25px;
-		box-shadow: 0 4px 50px rgba($color-black, .25);
+		box-shadow: 0 4px 50px rgba(#000, .25);
+		margin-bottom: 24px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 0;
+		}
 	}
 
-	&__map-route-box {
-		width: calc(58% + 40px);
-		margin-left: -40px;
-		border-radius: 25px;
-		overflow: hidden;
+	&__row {
+		display: flex;
+		column-gap: 130px;
 	}
 
-	&__map-route {
+	&__images {
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		max-width: 945px;
 	}
 }

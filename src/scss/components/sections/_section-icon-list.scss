@@ -1,12 +1,29 @@
 .section-icon-list {
-	display: grid;
-	grid-template: auto / repeat(6, 1fr);
-	grid-gap: 26px 10px;
-	padding-top: 10px;
-	padding-bottom: 50px;
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 61px;
+		padding-top: 10px;
+		padding-bottom: 50px;
+
+		@media (min-width: $breakpoint-desktop) {
+			justify-content: flex-start;
+			row-gap: 26px;
+		}
+	}
 
 	&__elem {
+		margin: 0;
+		padding: 0 5px;
+		width: 100%;
+		max-width: calc(100% / 2);
+		flex-shrink: 0;
 		text-align: center;
+
+		@media (min-width: $breakpoint-desktop) {
+			max-width: calc(100% / 6);
+		}
 	}
 
 	&__icon-box {

@@ -1,25 +1,53 @@
 .section-about {
-	padding-top: 20px;
 	padding-bottom: 20px;
+
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 20px;
+	}
 
 	&__nav-box {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
 		margin-top: 0;
-		margin-bottom: 40px;
+		margin-bottom: 32px;
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__title {
+		display: none;
 		margin: 0;
+		white-space: nowrap;
+		margin-right: 45px;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: block;
+		}
 	}
 
 	&__tab-content {
-		padding-top: 30px;
+		padding-top: 0;
+
+		@media (min-width: $breakpoint-desktop) {
+			padding-top: 30px;
+		}
 
 		&--no-top-padding {
 			padding-top: 0;
 			padding-bottom: 90px;
+
+			@media (min-width: $breakpoint-desktop) {
+				padding-top: 0;
+				padding-bottom: 90px;
+			}
 		}
 	}
 
@@ -30,49 +58,118 @@
 
 	&__text-block {
 		max-width: 1280px;
-		margin-top: 93px;
-		margin-bottom: 24px;
-		font-size: 24px;
-		line-height: 32px;
+		margin-top: 30px;
+		margin-bottom: 11px;
+		font-size: 18px;
+		line-height: 18px;
 		font-weight: 300;
-	}
 
-	&__timeline {
-		position: relative;
-		&::before,
-		&::after {
-			position: absolute;
-			top: 0;
-			width: 30px;
-			height: 100%;
-			content: "";
+		@media (min-width: $breakpoint-desktop) {
+			margin-top: 93px;
+			margin-bottom: 24px;
+			font-size: 24px;
+			line-height: 32px;
 		}
-
-		&::before {
-			left: 0;
-			background: linear-gradient(to right, #fff, transparent);
-		}
-
-		&::after {
-			right: 0;
-			background: linear-gradient(to left, #fff, transparent);
-		}
-	}
-
-	&__timeline-img {
-		display: block;
-		width: 100%;
-		margin-top: -60px;
 	}
 
 	&__download {
-		padding-top: 20px;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		@media (min-width: $breakpoint-desktop) {
+			padding-top: 20px;
+		}
+	}
+
+
+	&__download-block {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+
+			@media (min-width: $breakpoint-desktop) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	&__download-title {
+		display: flex;
+		align-items: center;
+		margin: 0;
+	}
+
+	&__download-link {
+		position: relative;
+		z-index: 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 26px 23px 26px 30px;
+		border: 1px solid #C5E0F2;
+		font-family: $font-secondary;
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 800;
+		color: #0E1844;
+		border-radius: 25px;
+		transition: color $transition-default;
+
+		@media (min-width: $breakpoint-desktop) {
+			padding: 39px 45px 36px 39px;
+			font-size: 24px;
+			line-height: 50px;
+		}
+
+		&::before {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to right, #F2F6FA 0.58%, rgba(255, 255, 255, 0) 100%);
+			content: "";
+			transition: opacity $transition-default;
+		}
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-blue;
+
+			&::before {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__download-pdf-icon {
+		width: 21px;
+		height: 30px;
+		margin-right: 18px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-right: 28px;
+			width: 32px;
+			height: 42px;
+		}
+	}
+
+	&__download-download-icon {
+		width: 24px;
+		height: 24px;
 	}
 
 	&__download-btn-box {
-		margin-top: 67px;
-		margin-bottom: 67px;
+		margin-top: 34px;
+		margin-bottom: 30px;
 		text-align: center;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-top: 67px;
+			margin-bottom: 67px;
+		}
 	}
 
 	&__download-btn {

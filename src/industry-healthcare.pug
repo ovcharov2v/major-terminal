@@ -1,0 +1,154 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Индустрия Healthcare"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+
+block content
+	+breadcrumb(['Главная'], 'Индустрии')(class="container")
+	// Section Hero
+	section.section-hero.section-hero--industry
+		.container
+			.section-hero__content
+				h1.section-hero__title
+					span.text-weight-light-desktop.display-block-mobile Индустрия
+					|
+					| Healthcare
+				p.section-hero__text Major Terminal помогает своим клиентам полный цикл услуг по обработке, хранению и дистрибуции в индустрии Healthcare
+				img.section-hero__bg(src="images/section-hero/bg6.jpg", alt)
+			p.section-hero__text.section-hero__text--mobile Major Terminal помогает своим клиентам полный цикл услуг по обработке, хранению и дистрибуции в индустрии Healthcare
+	// Section Success
+	.section-success.section-success--mobile-two-col.container
+		.section-success__grid
+			.section-success__elem
+				p.section-success__value 5 млн
+				p.section-success__text Выгрузка (коробов) / год
+			.section-success__elem
+				p.section-success__value 100 млн
+				p.section-success__text Приемка (штук) / год
+			.section-success__elem
+				p.section-success__value от -25 ° до +25 °
+				p.section-success__text Температурное хранение
+			.section-success__elem
+				p.section-success__value 3650 м2
+				p.section-success__text Зоны температурного хранения
+
+	// Section Service range
+	section.section-service-range
+		.container
+			h2.h2.section-service-range__title Учитываем
+				|
+				|
+				span.text-red все
+				|
+				| особенности
+				br
+				|индустрии Healthcare
+			.links-row.section-service-range__links
+				p.links-row__link Контроль и соблюдение холодовой цепи
+				p.links-row__link Упаковочные решения для термолабильной продукции
+				p.links-row__link Организация возвратной логистики
+				p.links-row__link Контроль остаточных сроков годности
+		// Section Partner
+		.section-partner.section-partner--bg-blue.container
+			.section-partner__box
+				.section-partner__nav-row
+					ul.section-partner__link-list
+						li.section-partner__link-elem
+							a.section-partner__link.section-partner__link--active(href="#") Температурный режим
+						li.section-partner__link-elem
+							a.section-partner__link(href="#") Хранение
+						li.section-partner__link-elem
+							a.section-partner__link(href="#") Дистрибуция
+						li.section-partner__link-elem
+							a.section-partner__link(href="#") Дополнительно
+					.dropdown.dropdown--text-blue.dropdown--navigate.section-partner__dropdown
+						.dropdown__value-box
+							input.dropdown__value(type="text", value="Температурный режим", disabled)
+							+svg("chevron-dropdown", true)(class="dropdown__arrow")
+						ul.dropdown__options-list
+							li.dropdown__option.dropdown__option--selected(data-value="#") Температурный режим
+							li.dropdown__option(data-value="#") Хранение
+							li.dropdown__option(data-value="#") Дистрибуция
+							li.dropdown__option(data-value="#") Дополнительно
+				.section-partner__content.section-partner__content--with-lists
+					.section-partner__row
+						.section-partner__col.section-partner__col--content
+							p.section-partner__text2 Наши возможности позволяют соблюдать любые температурные режимы
+							p.section-partner__temperature от -25 ° до +25 °
+							a.button.button--outline-blue.button--md.section-partner__button(href="#") Оставить заявку
+						.section-partner__col.section-partner__col--img
+							img.section-partner__image.section-partner__image--temp(src="images/section-partner/img3.svg", alt)
+	// Section Description
+	section.section-description.container
+		h2.h2.section-description__title Опции и
+			|
+			|
+			br.hide-desktop
+			| преимущества
+		.swiper.section-description__panel-slider
+			.section-description__panel-grid.swiper-wrapper
+				// Panel
+				article.section-description__panel.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Личный кабинет клиента
+						p.section-description__panel-text Управление и отчетность в едином личном кабинете с множеством полезных функций
+						a.section-description__panel-link(href="#") Перейти в кабинет
+					img.section-description__panel-img(src="images/section-description/img1.png", alt)
+				// Panel
+				article.section-description__panel.section-description__panel--image-left.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Интеграция с WMS системой
+						p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
+						a.section-description__panel-link(href="#") Узнать подробнее
+					img.section-description__panel-img(src="images/section-description/img2.svg", alt)
+				// Panel
+				article.section-description__panel.section-description__panel--image-left.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Служба качества
+						p.section-description__panel-text Система управления складом Major собственной разработки. Команда разработчиков и поддержки WMS в режиме 24/7.
+						a.section-description__panel-link(href="#") Узнать подробнее
+					img.section-description__panel-img(src="images/section-description/img3.svg", alt)
+				// Panel
+				article.section-description__panel.swiper-slide
+					.section-description__panel-content
+						h3.section-description__panel-title Интеграция с системами клиента
+						p.section-description__panel-text Собственный департамент разработки помогут реализовать решение для автоматизации ваших бизнес процессов.
+						a.section-description__panel-link(href="#") Скачать презентацию
+					img.section-description__panel-img(src="images/section-description/img4.svg", alt)
+		.slider__nav.slider__nav--panel.hide-desktop
+			button.slider__btn.slider__btn--prev(aria-label="Назад")
+				+svg("chevron-slider")(class="slider__btn-arrow")
+			.slider__pagination
+			button.slider__btn.slider__btn--next(aria-label="Вперед")
+				+svg("chevron-slider")(class="slider__btn-arrow")
+		p.section-description__text-block
+			strong Major Terminal
+			|
+			| помогает своим клиентам в сферы красоты и люкса разрабатывать продукты и модели цепочек поставок, отвечающие растущим запросам потребителей и высоким ожиданиям от бренда. Мы предлагаем широкий ассортимент высококачественных логистических услуг в сфере красоты и люкса, от многоканального выполнения заказов до глобальных транспортных или пере упаковочных решений, адаптированных к рынкам предметов роскоши, что позволяет брендам отражать свой имидж и выполнять обязательства перед людьми и экологией в своей цепочке поставок.
+
+		.section-description__photo-slider.swiper
+			.section-description__photo-grid.swiper-wrapper
+				.section-description__photo-box.swiper-slide
+					img.section-description__photo-img(src="images/section-slider/slide1.jpg", alt)
+					button.section-description__photo-play-button
+						+svg("play")(class="section-description__photo-play-icon")
+				.section-description__photo-box.swiper-slide
+					img.section-description__photo-img(src="images/section-slider/slide2.jpg", alt)
+				.section-description__photo-box.swiper-slide
+					img.section-description__photo-img(src="images/section-slider/slide3.jpg", alt)
+		.slider__nav.slider__nav--photo.hide-desktop
+			button.slider__btn.slider__btn--prev(aria-label="Назад")
+				+svg("chevron-slider")(class="slider__btn-arrow")
+			.slider__pagination
+			button.slider__btn.slider__btn--next(aria-label="Вперед")
+				+svg("chevron-slider")(class="slider__btn-arrow")
+
+		p.section-description__text-block.hide-mobile Индустрия Fashion сталкивается с различными проблемами, такими как изменчивая мода, доступная роскошь или персонализированные покупки. Более того, ожидания потребителей меняются за счет технологий, соображений устойчивости  и новых участников рынка. Вот почему косметическим компаниям необходимо принимать во внимание транспортные и логистические аспекты, чтобы облегчить любые долгосрочные цепочки поставок и проблемы со спросом.

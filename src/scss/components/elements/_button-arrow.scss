@@ -1,5 +1,8 @@
 .button-arrow {
 	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 	background-color: $color-blue-light3;
 	padding: 15px 60px 15px 30px;
 	border-radius: 30px;
@@ -7,22 +10,33 @@
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: 700;
+	text-align: center;
 	color: $color-blue;
 	transition: background-color $transition-default;
 	white-space: nowrap;
 
 	&::after {
-		position: absolute;
-		top: 50%;
-		right: 26px;
+		display: block;
 		width: 22px;
 		height: 8px;
-		transform: translateY(-50%);
+		margin-left: 10px;
+		margin-right: -32px;
 		background-image: url("data:image/svg+xml,%3Csvg width='22' height='8' viewBox='0 0 22 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.8536 4.35355C22.0488 4.15829 22.0488 3.84171 21.8536 3.64645L18.6716 0.464466C18.4763 0.269204 18.1597 0.269204 17.9645 0.464466C17.7692 0.659728 17.7692 0.976311 17.9645 1.17157L20.7929 4L17.9645 6.82843C17.7692 7.02369 17.7692 7.34027 17.9645 7.53553C18.1597 7.7308 18.4763 7.7308 18.6716 7.53553L21.8536 4.35355ZM0.5 4.5H21.5V3.5H0.5V4.5Z' fill='%23E10000'/%3E%3C/svg%3E");
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
 		content: "";
+	}
+
+	@media (min-width: $breakpoint-desktop) {
+		&::after {
+			position: absolute;
+			top: 50%;
+			right: 26px;
+			margin-left: 0;
+			margin-right: 0;
+			transform: translateY(-50%);
+		}
 	}
 
 	&:hover {

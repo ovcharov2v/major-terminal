@@ -2,13 +2,18 @@
 	position: relative;
 	z-index: 0;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-start;
+	align-items: center;
 	border-radius: 25px;
 	overflow: hidden;
 	color: $color-white;
-	padding: 40px 44px;
+	padding: 20px 22px;
+
+	@media (min-width: $breakpoint-desktop) {
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: 40px 44px;
+	}
 
 	&::before {
 		position: absolute;
@@ -27,17 +32,24 @@
 	}
 
 	&:hover {
-		&::before {
-			opacity: 1;
+		@media (min-width: $breakpoint-desktop) {
+			&::before {
+				opacity: 1;
+			}
 		}
 	}
 
 	&__title {
 		margin: 0;
 		font-family: $font-additional;
-		font-size: 28px;
+		font-size: 16px;
 		line-height: 1;
-		font-weight: 700;
+		font-weight: 900;
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 28px;
+			font-weight: 700;
+		}
 	}
 
 	&__bg {

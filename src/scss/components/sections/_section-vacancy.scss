@@ -30,11 +30,13 @@
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
 		grid-row-gap: 17px;
+		margin-bottom: 40px;
 
 		@media (min-width: $breakpoint-desktop) {
 			grid-template-columns: repeat(2, 1fr);
 			grid-column-gap: 31px;
 			grid-row-gap: 32px;
+			margin-bottom: 0;
 		}
 	}
 

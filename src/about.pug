@@ -13,15 +13,18 @@ append vars
 
 block content
 	+breadcrumb(['Главная'], 'О нас')(class="container")
-
-	// Section Hero
-	section.section-hero.section-hero--simple.section-hero--about
+	// Section Hero simple
+	section.section-hero-simple
 		.container
-			.section-hero__content
-				p.section-hero__slogan.text-white Движение вперед, внимание к деталям
-				img.section-hero__img(src="images/section-hero/squares.svg", alt)
-				img.section-hero__bg(src="images/section-hero/bg8.jpg", alt)
-
+			.section-hero-simple__content
+				p.section-hero-simple__slogan.text-white
+					|Движение вперед,
+					|
+					|
+					br.hide-desktop
+					|внимание к деталям
+				img.section-hero-simple__img(src="images/section-hero/squares.svg", alt)
+				img.section-hero-simple__bg(src="images/section-hero/bg8.jpg", alt)
 	section.section-about.tabs.tabs--small
 			.section-about__nav-box.container
 				h2.h2.text-blue.section-about__title О нас
@@ -55,18 +58,28 @@ block content
 								p.section-success__value 176 000 м2
 								p.section-success__text Площадь складов в управлении
 					// Section Partner
-					section.section-partner.container
-						.section-partner__content
-							.section-partner__col
+					section.section-partner.section-partner--bg-image.container
+						.section-partner__box
+							.section-partner__nav-row
 								ul.section-partner__link-list
 									li.section-partner__link-elem
 										a.section-partner__link(href="#") 4PL оператор
 									li.section-partner__link-elem
 										a.section-partner__link(href="#") Логопарк
 									li.section-partner__link-elem
-										a.section-partner__link(href="#") О Major Terminal
+										a.section-partner__link.section-partner__link--active(href="#") О Major Terminal
 									li.section-partner__link-elem
 										a.section-partner__link(href="#") Ценности
+								.dropdown.dropdown--navigate.section-partner__dropdown
+									.dropdown__value-box
+										input.dropdown__value(type="text", value="4PL оператор", disabled)
+										+svg("chevron-dropdown", true)(class="dropdown__arrow")
+									ul.dropdown__options-list
+										li.dropdown__option.dropdown__option--selected(data-value="4PL оператор") 4PL оператор
+										li.dropdown__option(data-value="#") Логопарк
+										li.dropdown__option(data-value="#") О Major Terminal
+										li.dropdown__option(data-value="#") Ценности
+							.section-partner__content
 								h2.h2.text-white.section-partner__title Ma
 									span.text-red j
 									| or Terminal – надежный поставщик всего комплекса складских услуг
@@ -97,21 +110,31 @@ block content
 									a.simple-card-row__link(href="#") POSM
 									a.simple-card-row__link(href="#") FMCG
 					// Section Slider terminal
-					section.section-slider-terminal.road.road--blue
+					section.section-slider-terminal.road.road--blue.road--terminal
 						.container
+							.section-slider-terminal__text-box.section-slider-terminal__text-box--mobile
+								h2.h2.section-slider-terminal__title
+									| Складские терминалы
+									br
+									span.text-blue Ma
+										span.text-red j
+										| or
+									| Terminal
+								p.section-slider-terminal__text Собственные складские площади класса А
 							.section-slider-terminal__row
 								.section-slider-terminal__col
-									h2.h2.section-slider-terminal__title
-										|Складские терминалы
-										br
-										span.text-blue Ma
-											span.text-red j
-											|or
-										|
-										|
-										|Terminal
-									p.section-slider-terminal__text Собственные складские площади класса А+
-									.slider__nav
+									.section-slider-terminal__text-box.section-slider-terminal__text-box--desktop
+										h2.h2.section-slider-terminal__title
+											|Складские терминалы
+											br
+											span.text-blue Ma
+												span.text-red j
+												|or
+											|
+											|
+											|Terminal
+										p.section-slider-terminal__text Собственные складские площади класса А
+									.slider__nav.section-slider-terminal__nav
 										button.slider__btn.slider__btn--prev(aria-label="Назад")
 											+svg("chevron-slider")(class="slider__btn-arrow")
 										.slider__pagination
@@ -165,41 +188,65 @@ block content
 				// Content
 				.section-about__tab-content.tabs__content#content4
 					.container
-						ul.about-download.section-about__download
+						ul.section-about__download
 							// Block
-							li.about-download__block
-								a.about-download__link(href="#" download)
-									p.about-download__title
-										+svg("file-pdf", true)(class="about-download__pdf-icon")
+							li.section-about__download-block
+								a.section-about__download-link(href="#" download)
+									p.section-about__download-title
+										+svg("file-pdf", true)(class="section-about__download-pdf-icon")
 										| ISO 13485:2017
-									+svg("file-download", true)(class="about-download__download-icon")
+									+svg("file-download", true)(class="section-about__download-download-icon")
 							// Block
-							li.about-download__block
-								a.about-download__link(href="#" download)
-									p.about-download__title
-										+svg("file-pdf", true)(class="about-download__pdf-icon")
+							li.section-about__download-block
+								a.section-about__download-link(href="#" download)
+									p.section-about__download-title
+										+svg("file-pdf", true)(class="section-about__download-pdf-icon")
 										| ISO 13485:2017
-									+svg("file-download", true)(class="about-download__download-icon")
+									+svg("file-download", true)(class="section-about__download-download-icon")
 							// Block
-							li.about-download__block
-								a.about-download__link(href="#" download)
-									p.about-download__title
-										+svg("file-pdf", true)(class="about-download__pdf-icon")
+							li.section-about__download-block
+								a.section-about__download-link(href="#" download)
+									p.section-about__download-title
+										+svg("file-pdf", true)(class="section-about__download-pdf-icon")
 										| ISO 13485:2017
-									+svg("file-download", true)(class="about-download__download-icon")
+									+svg("file-download", true)(class="section-about__download-download-icon")
 							// Block
-							li.about-download__block
-								a.about-download__link(href="#" download)
-									p.about-download__title
-										+svg("file-pdf", true)(class="about-download__pdf-icon")
+							li.section-about__download-block
+								a.section-about__download-link(href="#" download)
+									p.section-about__download-title
+										+svg("file-pdf", true)(class="section-about__download-pdf-icon")
 										| ISO 13485:2017
-									+svg("file-download", true)(class="about-download__download-icon")
+									+svg("file-download", true)(class="section-about__download-download-icon")
 						.section-about__download-btn-box
 							button.button.button--outline-blue.button--md.section-about__download-btn Показать еще
 				// Content
 				.section-about__tab-content.section-about__tab-content--no-top-padding.tabs__content#content3
-					.section-about__timeline
-						img.section-about__timeline-img(src="images/section-about/timeline.svg", alt)
+					.section-about__timeline.section-about-timeline
+						.section-about-timeline__box.container.show-more
+							.section-about-timeline__marker.section-about-timeline__marker--red.section-about-timeline__marker--n1
+								img.section-about-timeline__img(src="images/section-about/photo.jpg", alt)
+								p.section-about-timeline__value 2004
+								p.section-about-timeline__text Образование компании
+									br
+									|Major Terminal
+							.section-about-timeline__marker.section-about-timeline__marker--n2
+								p.section-about-timeline__value 2007
+								p.section-about-timeline__text Открытие склада “М9”
+									br
+									|(МО д.Михалково)
+							.section-about-timeline__marker.section-about-timeline__marker--n3
+								p.section-about-timeline__value 2008
+								p.section-about-timeline__text Открытие склада “Истра”
+									br
+									|(г.Истра) и запуск сети региональных
+									br
+									|складов
+							.section-about-timeline__marker.section-about-timeline__marker--n4.show-more__mobile-hide-flex
+								p.section-about-timeline__value 2011
+								p.section-about-timeline__text Открытие склада
+									br
+									|“Парнас” (СПБ)
+							button.button.button--outline-blue.button--md.show-more__button Показать еще
 				// Content
 				.section-about__tab-content.tabs__content#content2
 					// Section Success
