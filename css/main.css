@@ -2730,7 +2730,9 @@ a {
     .news-card--short-mobile {
       padding-top: 0; }
       .news-card--short-mobile::before {
-        content: none; } }
+        content: none; }
+      .news-card--short-mobile:hover {
+        color: #000; } }
   .news-card__img {
     position: absolute;
     z-index: -2;
