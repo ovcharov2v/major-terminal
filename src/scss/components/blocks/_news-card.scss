@@ -55,6 +55,10 @@
 			&::before {
 				content: none;
 			}
+
+			&:hover {
+				color: $color-black;
+			}
 		}
 	}
 
