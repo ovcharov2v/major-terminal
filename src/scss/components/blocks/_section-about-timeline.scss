@@ -1,28 +1,32 @@
 .section-about-timeline {
 	position: relative;
 	width: 100%;
-	max-width: 1900px;
-	margin: 0 auto;
+	padding: 0 14px;
+	background-image: url('../images/section-about/road.svg');
+	background-position: -310px -208px;
+	background-repeat: no-repeat;
+	background-size: 1590px 600px;
 
-	&::after {
-		position: absolute;
-		z-index: -1;
-		top: -100px;
-		left: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url("../images/section-about/road.svg");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		background-position: top center;
-		content: "";
+	@media (min-width: 1400px) {
+		padding: 0 0 0 50%;
+		background: none;
+		overflow-y: hidden;
 
-		@media (max-width: 1400px) {
-			top: -147px;
-			transform: translateX(-63%);
-			width: 1900px;
-			height: 800px;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+
+	&__road {
+		display: none;
+		width: 4082px;
+		user-select: none;
+		pointer-events: none;
+
+		@media (min-width: 1400px) {
+			display: block;
 		}
 	}
 
@@ -30,7 +34,10 @@
 		position: relative;
 
 		@media (min-width: 1400px) {
-			height: 733px;
+			width: 100vw;
+			transform: translateX(-50vw);
+			padding-bottom: 330px;
+			cursor: grab;
 		}
 	}
 
@@ -39,6 +46,8 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		user-select: none;
+		pointer-events: none;
 
 		@media (min-width: 1400px) {
 			position: absolute;
@@ -49,56 +58,129 @@
 			margin-bottom: 57px;
 		}
 
-		&:nth-child(2n) {
-			@media (min-width: 1400px) {
-				flex-direction: column-reverse;
-			}
-		}
-
 		&--n1 {
 			@media (min-width: 1400px) {
 				height: 557px;
-				top: 20%;
-				left: 23%;;
+				top: 520px;
+				left: 377px;
 			}
 		}
 
 		&--n2 {
 			@media (min-width: 1400px) {
-				height: 423px;
-				top: 20%;
-				left: 46%;
+				flex-direction: column-reverse;
+				height: 395px;
+				top: 186px;
+				left: 700px;
 			}
 		}
 
 		&--n3 {
 			@media (min-width: 1400px) {
-				height: 408px;
-				top: 28%;
-				left: 74%;
+				height: 425px;
+				top: 615px;
+				left: 1080px;
 			}
 		}
 
 		&--n4 {
 			@media (min-width: 1400px) {
-				height: 282px;
-				top: 17%;
-				right: 1%;
+				flex-direction: column-reverse;
+				height: 390px;
+				top: 185px;
+				left: 1295px;
 			}
-			@media (min-width: 1900px) {
-				top: 31%;
-				right: -11%;
+		}
+
+
+		&--n5 {
+			@media (min-width: 1400px) {
+				height: 354px;
+				top: 335px;
+				left: 1590px;
+			}
+		}
+
+
+		&--n6 {
+			@media (min-width: 1400px) {
+				flex-direction: column-reverse;
+				height: 392px;
+				top: 123px;
+				left: 1910px;
+			}
+		}
+
+
+		&--n7 {
+			@media (min-width: 1400px) {
+				height: 355px;
+				top: 610px;
+				left: 2090px;
+			}
+		}
+
+
+		&--n8 {
+			@media (min-width: 1400px) {
+				flex-direction: column-reverse;
+				height: 352px;
+				top: 250px;
+				left: 2310px;
+			}
+		}
+
+
+		&--n9 {
+			@media (min-width: 1400px) {
+				height: 452px;
+				top: 490px;
+				left: 2716px;
+			}
+		}
+
+
+		&--n10 {
+			@media (min-width: 1400px) {
+				flex-direction: column-reverse;
+				height: 382px;
+				top: 306px;
+				left: 3040px;
+			}
+		}
+
+
+		&--n11 {
+			@media (min-width: 1400px) {
+				height: 352px;
+				top: 512px;
+				left: 3330px;
+			}
+		}
+
+
+		&--n12 {
+			@media (min-width: 1400px) {
+				height: 382px;
+				top: 220px;
+				left: 3770px;
 			}
 		}
 	}
 
 	&__img {
+		order: -1;
 		display: block;
 		margin-bottom: 46px;
 		width: 164px;
 		height: 164px;
 		border-radius: 50%;
 		box-shadow: 0 4px 50px rgba(#000, .25);
+
+		@media (min-width: 1400px) {
+			order: 0;
+			margin-top: 46px;
+		}
 	}
 
 	&__value {
@@ -126,14 +208,20 @@
 		line-height: 24px;
 		font-weight: 700;
 
-		.section-about-timeline__marker:nth-child(2n-1) & {
+		&--line-top {
 			@media (min-width: 1400px) {
 				flex-direction: column-reverse;
 			}
 		}
+
 		@media (max-width: 1400px) {
 			flex-direction: column-reverse;
 		}
+
+		@media (min-width: 1400px) {
+			white-space: nowrap;
+		}
+
 		&::after {
 			display: block;
 			height: 100%;
