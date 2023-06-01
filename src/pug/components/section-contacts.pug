@@ -13,14 +13,14 @@ mixin sectionContacts(isCareer)
 							.section-contacts__form-row
 								.section-contacts__form-col.section-contacts__form-col--inputs
 									.section-contacts__input-box
-										input.form-control.section-contacts__form-input(type="text", name="name", placeholder="Имя")
+										input.form-control.section-contacts__form-input.section-contacts__form-input--name(type="text", name="name", placeholder="*Имя")
 									.section-contacts__input-box
-										input.form-control.section-contacts__form-input(type="tel", name="phone", placeholder="*Телефон")
+										input.form-control.section-contacts__form-input.section-contacts__form-input--tel(type="tel", name="phone", placeholder="*Телефон")
 									.section-contacts__input-box
-										input.form-control.section-contacts__form-input(type="email", name="email", placeholder="*Адрес электронной почты")
+										input.form-control.section-contacts__form-input.section-contacts__form-input--email(type="email", name="email", placeholder="*Адрес электронной почты")
 								.section-contacts__form-col.section-contacts__form-col--message
 									.section-contacts__textarea-box
-										textarea.form-control.form-control--textarea.section-contacts__form-textarea(name="message", placeholder="*Комментарий...")
+										textarea.form-control.form-control--textarea.section-contacts__form-textarea.section-contacts__form-textarea--comment(name="message", placeholder="*Комментарий...")
 							if isCareer
 								.section-contacts__form-row.section-contacts__form-row--button
 									.section-contacts__form-col.section-contacts__form-col--inputs
@@ -29,9 +29,11 @@ mixin sectionContacts(isCareer)
 										p.section-contacts__form-upload-text Загрузите Ваше резюме –  это повысит шансы на ответ
 										input#upload.section-contacts__form-upload-input(type="file")
 										label.section-contacts__form-upload-label(for="upload") Загрузить файл
+								p.section-contacts__error-message Ошибка! Заполните обязательные поля.
 							else
 								.section-contacts__form-submit-box
 									button.button.button--blue.button--lg.section-contacts__form-submit Отправить
+									p.section-contacts__error-message Ошибка! Заполните обязательные поля.
 
 						.section-contacts__form-layer.section-contacts__form-layer--success
 							+svg("submitted-form")(class="section-contacts__submitted-icon")

@@ -28,6 +28,7 @@
 
 	&::placeholder {
 		color: $color-black;
+		opacity: 1;
 	}
 
 	&:focus {
@@ -40,6 +41,15 @@
 
 		&.form-control--round {
 			padding: 28px 44px;
+		}
+	}
+
+	&--error {
+		border-color: $color-red !important;
+		color: $color-red !important;
+
+		&::placeholder {
+			color: $color-red !important;
 		}
 	}
 }
