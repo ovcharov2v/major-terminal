@@ -412,6 +412,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/section-about-timeline.js":
+/*!*****************************************************!*\
+  !*** ./src/js/components/section-about-timeline.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var timeline = document.querySelector('.section-about-timeline');
+  if (!timeline) return;
+  var pos = {
+    top: 0,
+    left: 0,
+    x: 0,
+    y: 0
+  };
+  var mouseMoveHandler = function mouseMoveHandler(e) {
+    var dx = e.clientX - pos.x;
+    timeline.scrollLeft = pos.left - dx;
+  };
+  var mouseDownHandler = function mouseDownHandler(e) {
+    pos = {
+      left: timeline.scrollLeft,
+      x: e.clientX
+    };
+    document.addEventListener('mousemove', mouseMoveHandler);
+    document.addEventListener('mouseup', mouseUpHandler);
+  };
+  var mouseUpHandler = function mouseUpHandler() {
+    document.removeEventListener('mousemove', mouseMoveHandler);
+    document.removeEventListener('mouseup', mouseUpHandler);
+  };
+  document.addEventListener('mousedown', mouseDownHandler);
+});
+
+/***/ }),
+
 /***/ "./src/js/components/section-description.js":
 /*!**************************************************!*\
   !*** ./src/js/components/section-description.js ***!
@@ -780,6 +817,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_show_more__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _components_free_slider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/free-slider */ "./src/js/components/free-slider.js");
 /* harmony import */ var _components_section_description__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/section-description */ "./src/js/components/section-description.js");
+/* harmony import */ var _components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/section-about-timeline */ "./src/js/components/section-about-timeline.js");
+/* harmony import */ var _components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13__);
+
 
 
 
