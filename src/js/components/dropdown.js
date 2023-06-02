@@ -5,14 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Multi select
 			if(dropdown.classList.contains('dropdown--multi-select')) {
 				const counter = dropdown.querySelector('.dropdown__value-counter')
+				const input = dropdown.querySelector('.dropdown__multi-input')
+				// Test event listener
+				input.addEventListener('change', () => {
+					console.log('changed')
+				})
+
 				dropdown.addEventListener('click', (evt) => {
 					evt.stopPropagation()
+					const valueList = []
 					if(!evt.target.closest('.dropdown__options-list')) {
 						dropdown.classList.toggle('dropdown--active')
 					}
 					else {
-						const checkedOptions = dropdown.querySelectorAll(':checked').length;
-						counter.innerHTML = checkedOptions.toString()
+						const checkedOptions = dropdown.querySelectorAll(':checked');
+						checkedOptions.forEach((opt)=>{
+							valueList.push(opt.value)
+						})
+						const valueString = valueList.join(', ')
+						if(valueString !== input.value) {
+							input.value = valueString
+							input.dispatchEvent(new Event("change"))
+						}
+						counter.innerHTML = checkedOptions.length.toString()
 					}
 				})
 			}
@@ -23,16 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
 					dropdown.classList.toggle('dropdown--active')
 				})
 				const input = dropdown.querySelector('.dropdown__value')
+				// Test event listener
+				input.addEventListener('change', () => {
+					console.log('changed')
+				})
+
 				const optionsList = dropdown.querySelectorAll('.dropdown__option')
 				optionsList.forEach((option) => {
 					option.addEventListener('click', (e) => {
 						e.preventDefault();
-
 						if(dropdown.classList.contains('dropdown--navigate')) {
 							window.location.href=option.dataset.value
 						}
 						else {
 							input.value = option.dataset.value
+							input.dispatchEvent(new Event("change"))
 							dropdown.querySelector('.dropdown__option--selected').classList.remove('dropdown__option--selected')
 							option.classList.add('dropdown__option--selected')
 
