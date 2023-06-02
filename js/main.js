@@ -263,13 +263,27 @@ document.addEventListener('DOMContentLoaded', function () {
       // Multi select
       if (dropdown.classList.contains('dropdown--multi-select')) {
         var counter = dropdown.querySelector('.dropdown__value-counter');
+        var input = dropdown.querySelector('.dropdown__multi-input');
+        // Test event listener
+        input.addEventListener('change', function () {
+          console.log('changed');
+        });
         dropdown.addEventListener('click', function (evt) {
           evt.stopPropagation();
+          var valueList = [];
           if (!evt.target.closest('.dropdown__options-list')) {
             dropdown.classList.toggle('dropdown--active');
           } else {
-            var checkedOptions = dropdown.querySelectorAll(':checked').length;
-            counter.innerHTML = checkedOptions.toString();
+            var checkedOptions = dropdown.querySelectorAll(':checked');
+            checkedOptions.forEach(function (opt) {
+              valueList.push(opt.value);
+            });
+            var valueString = valueList.join(', ');
+            if (valueString !== input.value) {
+              input.value = valueString;
+              input.dispatchEvent(new Event("change"));
+            }
+            counter.innerHTML = checkedOptions.length.toString();
           }
         });
       }
@@ -279,7 +293,11 @@ document.addEventListener('DOMContentLoaded', function () {
           evt.stopPropagation();
           dropdown.classList.toggle('dropdown--active');
         });
-        var input = dropdown.querySelector('.dropdown__value');
+        var _input = dropdown.querySelector('.dropdown__value');
+        // Test event listener
+        _input.addEventListener('change', function () {
+          console.log('changed');
+        });
         var optionsList = dropdown.querySelectorAll('.dropdown__option');
         optionsList.forEach(function (option) {
           option.addEventListener('click', function (e) {
@@ -287,7 +305,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (dropdown.classList.contains('dropdown--navigate')) {
               window.location.href = option.dataset.value;
             } else {
-              input.value = option.dataset.value;
+              _input.value = option.dataset.value;
+              _input.dispatchEvent(new Event("change"));
               dropdown.querySelector('.dropdown__option--selected').classList.remove('dropdown__option--selected');
               option.classList.add('dropdown__option--selected');
               if (dropdown.classList.contains('dropdown--with-flag')) {
@@ -783,6 +802,24 @@ document.addEventListener('DOMContentLoaded', function () {
           }, 300);
         }
       });
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var tabs = document.querySelectorAll(".section-partner__link");
+  var contentBlocks = document.querySelectorAll(".section-partner__list-arrow-block");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function (event) {
+      event.preventDefault();
+      var activeTab = this.dataset.tab;
+      tabs.forEach(function (tab) {
+        return tab.classList.remove("section-partner__link--active");
+      });
+      contentBlocks.forEach(function (contentBlock) {
+        return contentBlock.classList.remove("active");
+      });
+      this.classList.add("section-partner__link--active");
+      document.querySelector(".section-partner__list-arrow-block[data-tab=\"".concat(activeTab, "\"]")).classList.add("active");
     });
   });
 });
