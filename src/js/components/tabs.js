@@ -64,3 +64,19 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+	let max_height = 0;
+	const elements = document.querySelectorAll('.section-partner__col--content .section-partner__list-arrow-block');
+
+	elements.forEach(function(element) {
+		let current_height = element.offsetHeight;
+		if(current_height > max_height) {
+			max_height = current_height;
+		}
+	});
+
+	elements.forEach(function(element) {
+		element.style.height = max_height + 'px';
+	});
+});
