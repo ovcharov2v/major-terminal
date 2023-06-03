@@ -89,11 +89,11 @@ window.onload = function () {
 			if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
 				if (div.classList.contains('active')) {
 					img.src = "/local/templates/major/images/section-partner/img3.svg";
-					img.classList.remove('section-partner__image-sklad');
+					img.classList.remove('section-partner__image--sklad');
 					img.classList.add('section-partner__image-temp');
 				} else {
 					img.src = "/local/templates/major/images/section-partner/img1.svg";
-					img.classList.remove('section-partner__image-temp');
+					img.classList.remove('section-partner__image--temp');
 					img.classList.add('section-partner__image-sklad');
 				}
 			}
