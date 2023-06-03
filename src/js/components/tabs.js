@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", function() {
 	const tabs = document.querySelectorAll(".section-partner__link");
-	const contentBlocks = document.querySelectorAll(".section-partner__list-arrow-block");
+	const contentBlocks = document.querySelectorAll(".section-partner__tab-content");
 	tabs.forEach(tab => {
 		tab.addEventListener("click", function(event) {
 			event.preventDefault();
@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			tabs.forEach(tab => tab.classList.remove("section-partner__link--active"));
 			contentBlocks.forEach(contentBlock => contentBlock.classList.remove("active"));
 			this.classList.add("section-partner__link--active");
-			document.querySelector(`.section-partner__list-arrow-block[data-tab="${activeTab}"]`).classList.add("active");
+			document.querySelector(`.section-partner__tab-content[data-tab="${activeTab}"]`).classList.add("active");
 		});
 	});
 });
 
 document.addEventListener("DOMContentLoaded", function() {
 	let max_height = 0;
-	const elements = document.querySelectorAll('.section-partner__col--content .section-partner__list-arrow-block');
+	const elements = document.querySelectorAll('.section-partner__tab-content');
 
 	elements.forEach(function(element) {
 		let current_height = element.offsetHeight;

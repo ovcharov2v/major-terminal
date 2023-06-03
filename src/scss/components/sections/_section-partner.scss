@@ -242,12 +242,15 @@
 
 	&__list-arrow-block {
 		margin-bottom: 42px;
-		display: none;
 
 		@media (min-width: $breakpoint-desktop) {
 			column-gap: 57px;
 			flex-direction: row;
 		}
+	}
+
+	&__tab-content {
+		display: none;
 		&.active {
 			display: flex;
 		}
