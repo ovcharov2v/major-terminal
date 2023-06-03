@@ -240,6 +240,14 @@
 		}
 	}
 
+	&__tab-content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
 	&__list-arrow-block {
 		margin-bottom: 42px;
 
@@ -247,10 +255,7 @@
 			column-gap: 57px;
 			flex-direction: row;
 		}
-	}
 
-	&__tab-content {
-		display: none;
 		&.active {
 			display: flex;
 		}
