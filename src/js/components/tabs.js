@@ -80,3 +80,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		element.style.height = max_height + 'px';
 	});
 });
+
+window.onload = function () {
+	let div = document.querySelector('div[data-code="TABS_TEMPERATURE"]');
+	let img = document.querySelector('.section-partner__image');
+	let checkClass = (mutationsList, observer) => {
+		for(let mutation of mutationsList) {
+			if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+				if (div.classList.contains('active')) {
+					img.src = "/local/templates/major/images/section-partner/img3.svg";
+					img.classList.remove('section-partner__image-sklad');
+					img.classList.add('section-partner__image-temp');
+				} else {
+					img.src = "/local/templates/major/images/section-partner/img1.svg";
+					img.classList.remove('section-partner__image-temp');
+					img.classList.add('section-partner__image-sklad');
+				}
+			}
+		}
+	};
+
+	// setup a mutation observer to listen for changes in the div's class
+	let observer = new MutationObserver(checkClass);
+	observer.observe(div, { attributes: true, attributeFilter: ['class'] });
+};
