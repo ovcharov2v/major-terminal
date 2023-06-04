@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const wheelHandler = function (e) {
 		const rect = timeline.getBoundingClientRect();
+		const speedCoefficient = 0.5; // Уменьшает скорость прокрутки в 2 раза
 
 		// Если верх элемента находится в начале окна
 		if (rect.top <= 0) {
@@ -33,10 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			if ((e.deltaY < 0 && timeline.scrollLeft > 0) ||
 				(e.deltaY > 0 && timeline.scrollLeft < timeline.scrollWidth - timeline.clientWidth)) {
 				e.preventDefault();
-				timeline.scrollLeft += e.deltaY;
+				timeline.scrollLeft += e.deltaY * speedCoefficient;
 			}
 		}
 	}
+
 
 
 	document.addEventListener('mousedown', mouseDownHandler)
