@@ -70,9 +70,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	const elements = document.querySelectorAll('.tabs2__content-height');
 
 	elements.forEach(function(element) {
-		let current_height = element.offsetHeight;
-		if(current_height > max_height) {
-			max_height = current_height;
+		let style = window.getComputedStyle(element);
+		let margin = parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+		let totalHeight = element.offsetHeight + margin;
+
+		if(totalHeight > max_height) {
+			max_height = totalHeight;
 		}
 	});
 
