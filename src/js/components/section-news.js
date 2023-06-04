@@ -1,5 +1,5 @@
-window.addEventListener("load", function() {
-	const rows = document.querySelectorAll('.news-row');
+document.addEventListener("DOMContentLoaded", function() {
+	const rows = document.querySelectorAll('.news-row__height');
 
 	rows.forEach(function(row) {
 		let max_height = 0;
