@@ -283,7 +283,10 @@ html(class=html.classList)&attributes(html.attrs)
 		include components/header
 		main
 			block content
-		+sectionContacts(isCareer)
+		if showContactsWhite
+			+sectionContactsWhite()
+		else
+			+sectionContacts(isCareer)
 		include components/footer
 		block scripts
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
