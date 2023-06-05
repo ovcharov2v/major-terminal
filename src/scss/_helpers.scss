@@ -10,6 +10,19 @@
 	overflow: hidden !important;
 }
 
+.tabs2__content {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+
+	&-height {
+		margin-bottom: 42px;
+	}
+}
+
+
 .hide-desktop {
 	@media (min-width: $breakpoint-desktop) {
 		display: none !important;

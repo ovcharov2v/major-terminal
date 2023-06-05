@@ -113,13 +113,13 @@
 		font-family: $font-secondary2;
 		max-width: 670px;
 		margin-top: 0;
-		margin-bottom: 40px;
+		margin-bottom: 25px;
 		font-size: 18px;
 		line-height: 28px;
 		font-weight: 500;
 
 		@media (min-width: $breakpoint-desktop) {
-			margin-bottom: 51px;
+			margin-bottom: 25px;
 			font-size: 28px;
 		}
 
@@ -240,14 +240,22 @@
 		}
 	}
 
+	&__tab-content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
 	&__list-arrow-block {
 		margin-bottom: 42px;
-		display: none;
 
 		@media (min-width: $breakpoint-desktop) {
 			column-gap: 57px;
 			flex-direction: row;
 		}
+
 		&.active {
 			display: flex;
 		}

@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", function() {
 	const tabs = document.querySelectorAll(".section-partner__link");
-	const contentBlocks = document.querySelectorAll(".section-partner__list-arrow-block");
+	const contentBlocks = document.querySelectorAll(".tabs2__content");
 	tabs.forEach(tab => {
 		tab.addEventListener("click", function(event) {
 			event.preventDefault();
@@ -60,7 +60,27 @@ document.addEventListener("DOMContentLoaded", function() {
 			tabs.forEach(tab => tab.classList.remove("section-partner__link--active"));
 			contentBlocks.forEach(contentBlock => contentBlock.classList.remove("active"));
 			this.classList.add("section-partner__link--active");
-			document.querySelector(`.section-partner__list-arrow-block[data-tab="${activeTab}"]`).classList.add("active");
+			document.querySelector(`.tabs2__content[data-tab="${activeTab}"]`).classList.add("active");
 		});
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+	let max_height = 0;
+	const elements = document.querySelectorAll('.tabs2__content-height');
+
+	elements.forEach(function(element) {
+		let style = window.getComputedStyle(element);
+		let margin = parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+		let totalHeight = element.offsetHeight + margin;
+
+		if(totalHeight > max_height) {
+			max_height = totalHeight;
+		}
+	});
+
+	elements.forEach(function(element) {
+		element.style.height = max_height + 'px';
+	});
+});
+
