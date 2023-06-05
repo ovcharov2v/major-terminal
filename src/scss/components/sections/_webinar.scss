@@ -1,0 +1,194 @@
+.webinar {
+	padding-top: 60px;
+	padding-bottom: 90px;
+
+	&__title-box {
+		position: relative;
+		width: 100%;
+		max-width: 1334px;
+		margin: 0 auto 34px;
+		padding: 92px 16px 16px;
+		background: linear-gradient(180deg, #ECF0F3 6.21%, rgba(236, 240, 243, 0) 100%);
+		border-radius: 40px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 30px;
+			padding: 60px 114px;
+		}
+	}
+
+	&__title-time {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		display: inline-block;
+		padding: 13px 16px;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-white;
+		background-color: $color-red;
+		border-radius: 50px;
+
+		@media (min-width: $breakpoint-desktop) {
+			left: unset;
+			right: 16px;
+		}
+	}
+
+	&__title-text {
+		margin-top: 0;
+		margin-bottom: 4px;
+		font-size: 20px;
+		line-height: 24px;
+		color: rgba(#004996, .53);
+
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 32px;
+			line-height: 38px;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 21px;
+		font-size: 32px;
+		line-height: 38px;
+		font-weight: 700;
+		color: #004996;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 32px;
+			font-size: 48px;
+			line-height: 56px;
+		}
+	}
+
+	&__register-btn {
+		display: block;
+		width: 100%;
+		padding: 18px 30px;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-white;
+		background-color: #07529B;
+		border-radius: 90px;
+		text-align: center;
+		text-decoration: none;
+		transition: background-color $transition-default;
+
+		&:hover {
+			background-color: darken(#07529B, 10%);
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			max-width: 359px;
+		}
+	}
+
+	&__text-block {
+		width: 100%;
+		max-width: 1112px;
+		margin: 0 auto 93px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 132px;
+		}
+	}
+
+	&__text {
+		margin-top: 0;
+		margin-bottom: 22px;
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	&__expert-list {
+		margin-top: 48px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-top: 80px;
+		}
+	}
+
+	&__expert-title {
+		margin-top: 0;
+		margin-bottom: 24px;
+		font-size: 20px;
+		line-height: 24px;
+		color: #8A8A8A;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 32px;
+			font-size: 32px;
+			line-height: 38px;
+		}
+	}
+
+	&__expert-grid {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 24px;
+
+		@media (min-width: $breakpoint-desktop) {
+			grid-template: auto / repeat(3, 1fr);
+		}
+	}
+
+	&__expert {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+	}
+
+	&__expert-photo-box {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		flex-shrink: 0;
+
+		@media (min-width: $breakpoint-desktop) {
+			width: 120px;
+			height: 120px;
+		}
+	}
+
+	&__expert-photo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__expert-description {
+	}
+
+	&__expert-name {
+		margin-top: 0;
+		margin-bottom: 4px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	&__expert-job {
+		margin: 0;
+		font-size: 16px;
+		line-height: 19px;
+		color: #8A8A8A;
+	}
+
+	&__event-grid {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 24px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 64px;
+			grid-template: auto / repeat(3, 1fr);
+			grid-gap: 32px;
+		}
+	}
+
+	&__event-item {
+	}
+}
