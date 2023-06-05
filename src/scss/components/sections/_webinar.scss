@@ -1,6 +1,10 @@
 .webinar {
 	padding-top: 60px;
-	padding-bottom: 90px;
+	padding-bottom: 40px;
+
+	@media (min-width: $breakpoint-desktop) {
+		padding-bottom: 90px;
+	}
 
 	&__title-box {
 		position: relative;

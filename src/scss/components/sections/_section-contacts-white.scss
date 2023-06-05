@@ -1,0 +1,372 @@
+.section-contacts-white {
+	position: relative;
+	z-index: 0;
+	padding-top: 40px;
+	padding-bottom: 57px;
+	background-color: $color-white;
+	overflow: hidden;
+
+	@media (min-width: $breakpoint-laptop) {
+		padding-top: 30px;
+		padding-bottom: 138px;
+	}
+
+	&__row {
+		display: block;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: grid;
+			grid-template-columns: .85fr 1fr;
+			grid-column-gap: 90px;
+		}
+	}
+
+	&__form-inputs {
+		position: relative;
+		width: 100%;
+
+		@media (min-width: $breakpoint-laptop) {
+			max-width: 480px;
+		}
+	}
+
+	&__img-box {
+		//display: none;
+
+		@media (min-width: $breakpoint-desktop-xl) {
+			//display: block;
+		}
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 23px;
+		font-size: 32px;
+		line-height: 38px;
+		font-weight: 700;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 40px;
+			font-size: 48px;
+			line-height: 56px;
+		}
+	}
+
+	&__form {
+		position: relative;
+		width: 100%;
+
+		.section-contacts-white--job & {
+			margin: 0;
+		}
+	}
+
+	&__form-row {
+		@media (min-width: $breakpoint-laptop) {
+			display: grid;
+			grid-template: auto / repeat(2, 1fr);
+			grid-gap: 16px;
+		}
+	}
+
+	&__input-wrap {
+		position: relative;
+	}
+
+	&__input-digit {
+		position: absolute;
+		display: inline-flex;
+		align-items: center;
+		top: 50%;
+		left: 0;
+		height: 100%;
+		padding: 0 16px;
+		transform: translateY(-50%);
+
+		&::after {
+			position: absolute;
+			top: 12px;
+			right: 0;
+			bottom: 12px;
+			width: 1px;
+			background-color: #9295A6;
+			content: "";
+		}
+	}
+
+	&__form-input,
+	&__form-textarea {
+		display: block;
+		width: 100%;
+		border: 1px solid #C1C6D0;
+		border-radius: 50px;
+		padding: 18px 16px;
+
+		&:hover,
+		&:focus {
+			border-color: $color-blue;
+			transition: border-color $transition-default;
+			outline: none;
+		}
+
+		&::placeholder {
+			color: #9295A6;
+		}
+
+		&.section-contacts-white__error-field {
+			border-color: $color-red !important;
+		}
+	}
+
+	&__form-input {
+		&--tel {
+			padding-left: 67px;
+		}
+	}
+
+	&__form-textarea {
+		height: 141px;
+		resize: none;
+		border-radius: 24px;
+	}
+
+	&__input-box {
+		margin-bottom: 16px;
+	}
+
+	&__textarea-box {
+		height: 100%;
+		margin-top: 32px;
+		margin-bottom: 24px;
+
+		@media (min-width: $breakpoint-laptop) {
+			margin-bottom: 40px;}
+	}
+
+	&__form-submit-box {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		@media (min-width: $breakpoint-laptop) {
+			align-items: flex-start;
+		}
+
+		.section-contacts-white--job & {
+			flex-direction: row;
+			text-align: unset;
+		}
+	}
+
+	&__form-submit {
+		width: 100%;
+		padding: 19px 32px;
+		background: #004996;
+		box-shadow: 0 19px 32px -12px rgba(20, 89, 192, 0.42);
+		border-radius: 100px;
+		border: none;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		color: $color-white;
+		transition: background-color $transition-default;
+
+		&:hover {
+			background: darken(#004996, 10%);
+		}
+
+		@media (min-width: $breakpoint-laptop) {
+			max-width: 232px;
+		}
+	}
+
+	&__call-text {
+		margin-left: 30px;
+		font-family: $font-primary;
+		font-size: 24px;
+		line-height: 100px;
+		font-weight: 600;
+		color: $color-blue;
+	}
+
+	&__call-link {
+		color: inherit;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__form-upload-text {
+		margin-top: 0;
+		margin-bottom: 25px;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-blue;
+	}
+
+	&__form-upload-input {
+		display: none;
+	}
+
+	&__form-upload-label {
+		display: block;
+		margin: 0 0 27px;
+		padding: 20px 32px;
+		border: 1px dashed $color-blue;
+		border-radius: 40px;
+		font-family: $font-secondary;
+		font-size: 21px;
+		line-height: 18px;
+		font-weight: 700;
+		color: $color-blue;
+		text-align: center;
+		cursor: pointer;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: inline-block;
+			margin: 0;
+			font-family: $font-additional;
+			padding: 12px 32px;
+			font-size: 18px;
+		}
+	}
+
+	&__form-layer {
+		transition: opacity $transition-default;
+
+		&--form {
+			.section-contacts-white__form--submitted & {
+				opacity: 0;
+			}
+		}
+
+		&--success {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			visibility: hidden;
+
+			@media (max-width: $breakpoint-laptop) {
+				text-align: center;
+			}
+
+			.section-contacts-white__form--submitted & {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__submitted-icon {
+		display: block;
+		width: 100px;
+		height: 100px;
+		margin: 0 auto 45px;
+
+		@media (min-width: $breakpoint-laptop) {
+			margin: 0 0 45px;
+		}
+	}
+
+	&__submitted-title {
+		margin-top: 0;
+		margin-bottom: 55px;
+	}
+
+	&__submitted-text {
+		margin-top: 0;
+		margin-bottom: 68px;
+		font-family: $font-secondary;
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+
+	&__form-reset {
+		width: 100%;
+		max-width: 246px;
+	}
+
+	&__error-message {
+		display: none;
+		font-family: $font-secondary;
+		font-size: 18px;
+		line-height: 18px;
+		color: $color-red;
+
+		.section-contacts-white__form--error & {
+			display: block;
+		}
+
+		.section-contacts-white--job & {
+			@media (min-width: $breakpoint-laptop) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__feedback-wrap {
+		display: inline-block;
+
+		@media (min-width: $breakpoint-laptop) {
+			display: block;
+		}
+	}
+
+	&__feedback-box {
+		margin-bottom: 7px;
+		text-align: right;
+
+		@media (min-width: $breakpoint-laptop) {
+			margin-bottom: 16px;
+	}
+	}
+
+	&__feedback {
+		display: inline-block;
+		margin: 0;
+		padding: 12px 16px;
+		background-color: #E1ECF6;
+		border-radius: 25px 25px 25px 0;
+		color: #004996;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+
+		@media (min-width: $breakpoint-laptop) {
+			transform: translateX(150px);
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 4px;
+		font-size: 16px;
+		line-height: 19px;
+		color: #9295A6;
+	}
+
+	&__politics {
+		margin-top: 24px;
+		margin-bottom: 0;
+		max-width: 336px;
+		font-size: 12px;
+		line-height: 16px;
+		color: #575B64;
+	}
+
+	&__politics-link {
+		font-weight: 500;
+		color: #004895;
+	}
+}

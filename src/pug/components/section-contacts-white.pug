@@ -1,0 +1,61 @@
+mixin sectionContactsWhite()
+	// Section Contacts White
+	section.section-contacts-white
+		.container.container--small
+			.section-contacts-white__row
+				form.section-contacts-white__form(action="#")
+					.section-contacts-white__form-layer.section-contacts-white__form-layer--form
+						if isCareer
+							h2.h2.text-white.section-contacts-white__title Отправить резюме онлайн
+						else if isWebinar
+							.section-contacts-white__feedback-wrap
+								.section-contacts-white__feedback-box
+									p.section-contacts-white__feedback Будем рады получить
+										|
+										|
+										br.hide-desktop
+										| от вас обратную связь
+								h2.section-contacts-white__title Понравился вебинар?
+						else
+							h2.h2.text-white.section-contacts-white__title Есть вопросы? Свяжитесь с нами!
+						.section-contacts-white__form-inputs
+							.section-contacts-white__form-row
+								.section-contacts-white__input-box
+									label.section-contacts-white__label(for="name") Имя
+									input.section-contacts-white__form-input.section-contacts-white__form-input--name(type="text", name="name")
+								.section-contacts-white__input-box
+									label.section-contacts-white__label(for="phone") Номер телефона
+									.section-contacts-white__input-wrap
+										span.section-contacts-white__input-digit +7
+										input.section-contacts-white__form-input.section-contacts-white__form-input--tel(type="tel", name="phone", placeholder="(000) 000-00-00")
+							.section-contacts-white__input-box
+								label.section-contacts-white__label(for="email") Адрес электронной почты
+								input.section-contacts-white__form-input.section-contacts-white__form-input--email(type="email", name="email")
+							.section-contacts-white__textarea-box
+								label.section-contacts-white__label(for="message") Комментарий
+								textarea.section-contacts-white__form-textarea.section-contacts-white__form-textarea--comment(name="message")
+							if isCareer
+								.section-contacts-white__form-row.section-contacts-white__form-row--button //
+									.section-contacts-white__form-col.section-contacts-white__form-col--inputs
+										button.button.button--blue.button--lg.section-contacts-white__form-submit Отправить
+									.section-contacts-white__form-col.section-contacts-white__form-col--message
+										p.section-contacts-white__form-upload-text Загрузите Ваше резюме –  это повысит шансы на ответ
+										input#upload.section-contacts-white__form-upload-input(type="file")
+										label.section-contacts-white__form-upload-label(for="upload") Загрузить файл
+								p.section-contacts-white__error-message Ошибка! Заполните обязательные поля.
+							else
+								.section-contacts-white__form-submit-box
+									button.section-contacts-white__form-submit Отправить
+									p.section-contacts-white__error-message Ошибка! Заполните обязательные поля.
+							p.section-contacts-white__politics Нажимая кнопку, вы принимаете условия нашей политики
+								|
+								|
+								a.section-contacts-white__politics-link(href="#", target="_blank") в отношении обработки персональных данных.
+					.section-contacts-white__form-layer.section-contacts-white__form-layer--success
+						+svg("submitted-form")(class="section-contacts-white__submitted-icon")
+						h3.h2.text-blue.section-contacts-white__submitted-title Спасибо! Ваше сообщение принято.
+						p.text-blue.section-contacts-white__submitted-text В ближайшее время с Вами свяжется менеджер по указанным контактным данным.
+						button.button--blue.button--lg.section-contacts-white__form-reset(type="reset") Написать еще
+				.section-contacts-white__img-box
+					img.section-contacts-white__img.show-desktop(src="images/common/warehouse-with-logo.svg", alt)
+					img.section-contacts-white__img.hide-desktop(src="images/common/warehouse-with-logo-mobile.svg", alt)
