@@ -5,11 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Описание">
-		<title>404</title>
+		<title>Вебинары</title>
 		<link rel="icon" href="favicons/favicon.ico">
 		<link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="stylesheet" href="./css/main.css?v=1685999888149">
+		<link rel="stylesheet" href="./css/main.css?v=1685999892908">
 	</head>
 	<body>
 		<!-- Header-->
@@ -177,26 +177,144 @@
 			</div>
 		</header>
 		<main>
-			<!-- Breadcrumbs-->
-			<div class="breadcrumb container">
-				<ul class="breadcrumb__list">
-					<li class="breadcrumb__item">
-						<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
-						<svg class="breadcrumb__arrow">
-							<use xlink:href="images/svg-sprite/svg-sprite-static.svg#chevron-right"></use>
+			<!-- Section Webinar list-->
+			<section class="webinar-list">
+				<div class="container container--small">
+					<h1 class="webinar-list__title">Вебинары</h1>
+					<p class="webinar-list__title-text">Активные события</p>
+					<div class="webinar-list__grid">
+						<!-- Webinar-->
+						<article class="webinar-list__item webinar-card webinar-card--register">
+							<time class="webinar-card__time">16 Июня 2023 г. в 12:00</time>
+							<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+							<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+								<svg class="webinar-card__link-icon">
+									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+								</svg></a>
+							<div class="webinar-card__author">
+								<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+							</div><a class="webinar-card__register-btn" href="#">Регистрация</a>
+						</article>
+						<!-- Webinar-->
+						<article class="webinar-list__item webinar-card webinar-card--register">
+							<time class="webinar-card__time">16 Июня 2023 г. в 12:00</time>
+							<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+							<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+								<svg class="webinar-card__link-icon">
+									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+								</svg></a>
+							<div class="webinar-card__author">
+								<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+							</div><a class="webinar-card__register-btn" href="#">Регистрация</a>
+						</article>
+						<!-- Webinar-->
+						<article class="webinar-list__item webinar-card webinar-card--register">
+							<time class="webinar-card__time">16 Июня 2023 г. в 12:00</time>
+							<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+							<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+								<svg class="webinar-card__link-icon">
+									<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+								</svg></a>
+							<div class="webinar-card__author">
+								<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+							</div><a class="webinar-card__register-btn" href="#">Регистрация</a>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- Section Event list-->
+			<section class="event-list container container--small">
+				<div class="event-list__title-box">
+					<h2 class="event-list__title">Прошедшие события</h2>
+					<form class="event-list__search">
+						<button class="event-list__search-submit" aria-label="Искать">
+							<svg class="event-list__search-submit-icon">
+								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#search-loupe"></use>
+							</svg>
+						</button>
+						<input class="event-list__search-input" placeholder="Поиск вебинара">
+					</form>
+				</div>
+				<div class="event-list__grid show-more">
+					<!-- Webinar-->
+					<article class="event-list__item webinar-card">
+						<time class="webinar-card__time">15 декабря 2022 г. в 12:00</time>
+						<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+						<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+							<svg class="webinar-card__link-icon">
+								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+							</svg></a>
+						<div class="webinar-card__author">
+							<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+						</div>
+					</article>
+					<!-- Webinar-->
+					<article class="event-list__item webinar-card">
+						<time class="webinar-card__time">15 декабря 2022 г. в 12:00</time>
+						<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+						<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+							<svg class="webinar-card__link-icon">
+								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+							</svg></a>
+						<div class="webinar-card__author">
+							<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+						</div>
+					</article>
+					<!-- Webinar-->
+					<article class="event-list__item webinar-card">
+						<time class="webinar-card__time">15 декабря 2022 г. в 12:00</time>
+						<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+						<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+							<svg class="webinar-card__link-icon">
+								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+							</svg></a>
+						<div class="webinar-card__author">
+							<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+						</div>
+					</article>
+					<!-- Webinar-->
+					<article class="event-list__item webinar-card show-more__mobile-hide">
+						<time class="webinar-card__time">15 декабря 2022 г. в 12:00</time>
+						<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+						<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+							<svg class="webinar-card__link-icon">
+								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+							</svg></a>
+						<div class="webinar-card__author">
+							<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+						</div>
+					</article>
+					<!-- Webinar-->
+					<article class="event-list__item webinar-card show-more__mobile-hide">
+						<time class="webinar-card__time">15 декабря 2022 г. в 12:00</time>
+						<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+						<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+							<svg class="webinar-card__link-icon">
+								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+							</svg></a>
+						<div class="webinar-card__author">
+							<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+						</div>
+					</article>
+					<!-- Webinar-->
+					<article class="event-list__item webinar-card show-more__mobile-hide">
+						<time class="webinar-card__time">15 декабря 2022 г. в 12:00</time>
+						<h2 class="webinar-card__title">Маркировка на<br>таможенном складе</h2>
+						<p class="webinar-card__text">На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.</p><a class="webinar-card__link" href="#">Подробнее
+							<svg class="webinar-card__link-icon">
+								<use xlink:href="images/svg-sprite/svg-sprite-static.svg#arrow-right"></use>
+							</svg></a>
+						<div class="webinar-card__author">
+							<div class="webinar-card__author-photo-box"><img class="webinar-card__author-photo" src="images/webinar/photo.png" alt></div><span class="webinar-card__author-name">Петр Соколов</span>
+						</div>
+					</article>
+				</div>
+				<div class="event-list__btn-box">
+					<button class="event-list__btn show-more__button">Показать ещё
+						<svg class="event-list__btn-icon">
+							<use xlink:href="images/svg-sprite/svg-sprite-static.svg#plus"></use>
 						</svg>
-					</li>
-					<li class="breadcrumb__item"><span class="breadcrumb__current">404 ошибка</span></li>
-				</ul>
-			</div>
-			<!-- Section 404-->
-			<section class="section-404 road road--404">
-				<div class="container">
-					<div class="section-404__img-box"><img class="section-404__img" src="images/section-404/img-404.svg" alt><img class="section-404__cross" src="images/section-404/cross-404.svg" alt></div>
-					<h1 class="section-404__title">404</h1>
-					<p class="section-404__text">Что-то пошло не так! Нужная страница не найдена<br>Вы можете перейти на
-						<a class="section-404__link" href="/">главную страницу</a>
-					</p>
+					</button>
 				</div>
 			</section>
 		</main>
@@ -327,8 +445,8 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1685999888150"></script>
-		<script src="./js/main.js?v=1685999888150"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1685999892909"></script>
+		<script src="./js/main.js?v=1685999892909"></script><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
 		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
 	</symbol>
