@@ -5,19 +5,19 @@ mixin sectionContactsWhite()
 			.section-contacts-white__row
 				form.section-contacts-white__form(action="#")
 					.section-contacts-white__form-layer.section-contacts-white__form-layer--form
-						if isCareer
-							h2.h2.text-white.section-contacts-white__title Отправить резюме онлайн
-						else if isWebinar
-							.section-contacts-white__feedback-wrap
-								.section-contacts-white__feedback-box
-									p.section-contacts-white__feedback Будем рады получить
-										|
-										|
-										br.hide-desktop
-										| от вас обратную связь
+						.section-contacts-white__feedback-wrap
+							.section-contacts-white__feedback-box
+								p.section-contacts-white__feedback Будем рады получить
+									|
+									|
+									br.hide-desktop
+									| от вас обратную связь
+							if isCareer
+								h2.section-contacts-white__title  Отправить резюме онлайн
+							else if isWebinar
 								h2.section-contacts-white__title Понравился вебинар?
-						else
-							h2.h2.text-white.section-contacts-white__title Есть вопросы? Свяжитесь с нами!
+							else
+								h2.section-contacts-white__title  Есть вопросы? Свяжитесь с нами!
 						.section-contacts-white__form-inputs
 							.section-contacts-white__form-row
 								.section-contacts-white__input-box
