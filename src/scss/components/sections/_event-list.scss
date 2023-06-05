@@ -1,0 +1,148 @@
+.event-list {
+	padding-top: 30px;
+	padding-bottom: 60px;
+
+	@media (min-width: $breakpoint-desktop) {
+		padding-top: 62px;
+		padding-bottom: 120px;
+	}
+
+	&__title-box {
+		margin-bottom: 32px;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 700;
+		color: #8A8A8A;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 0;
+			font-size: 32px;
+			line-height: 38px;
+		}
+	}
+
+	&__search {
+		position: relative;
+		width: 100%;
+
+		@media (min-width: $breakpoint-desktop) {
+			max-width: 425px;
+		}
+	}
+
+	&__search-submit {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 58px;
+		height: 100%;
+		padding: 0;
+		background-color: $color-transparent;
+		border: none;
+		color: $color-blue-medium;
+	}
+
+	&__search-submit-icon {
+		margin-top: 1px;
+		width: 28px;
+		height: 28px;
+	}
+
+	&__search-input {
+		width: 100%;
+		padding: 15px 30px 15px 48px;
+		border: 1px solid rgba(#3C3C3C, .15);
+		border-radius: 90px;
+		transition: border-color $transition-default;
+		font-size: 20px;
+		line-height: 23px;
+
+		&:hover,
+		&:focus {
+			border-color: $color-blue;
+			outline: none;
+		}
+
+		&::placeholder {
+			color: #8A8A8A;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 24px;
+		margin-bottom: 32px;
+
+		@media (min-width: $breakpoint-desktop) {
+			margin-bottom: 64px;
+			grid-template: auto / repeat(3, 1fr);
+			grid-gap: 32px;
+		}
+	}
+
+	&__item {
+		&--show-desktop {
+			display: none;
+
+			.event-list__grid--expanded & {
+				display: block;
+			}
+
+			@media (min-width: $breakpoint-desktop) {
+				display: block;
+			}
+		}
+	}
+
+	&__btn-box {
+		text-align: center;
+	}
+
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: unset;
+		padding: 17px 32px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: $color-white;
+		background: #004996;
+		box-shadow: 0 19px 32px -12px rgba(20, 89, 192, 0.42);
+		border-radius: 100px;
+		border: none;
+		transition: background-color $transition-default, border-color $transition-default;
+
+		&:hover {
+			background-color: darken($color-blue, 10%);
+			border-color: darken($color-blue, 10%);
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			width: unset;
+		}
+	}
+
+	&__btn-icon {
+		margin-left: 8px;
+		width: 24px;
+		height: 24px;
+	}
+}
