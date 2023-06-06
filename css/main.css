@@ -8279,5 +8279,28 @@ a {
         -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
             grid-template: auto/repeat(3, 1fr);
         grid-gap: 32px; } }
+  .webinar__video-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 24px 0 48px;
+    border-radius: 40px;
+    overflow: hidden; }
+    .webinar__video-wrapper::before {
+      display: block;
+      padding-top: 63%;
+      content: ""; }
+    @media (min-width: 1200px) {
+      .webinar__video-wrapper {
+        margin: 80px 0; }
+        .webinar__video-wrapper::before {
+          padding-top: 55%; } }
+  .webinar__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 /*# sourceMappingURL=main.css.map */
