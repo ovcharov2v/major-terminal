@@ -1,0 +1,91 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	-
+		title = "Вебинар"
+		meta.description = "Описание"
+		link.icon = "favicons/favicon.ico"
+		link.icon16x16 = "favicons/favicon-16x16.png"
+		link.icon32x32 = "favicons/favicon-32x32.png"
+		showContactsWhite = true
+		isWebinar = true
+
+block content
+	section.webinar
+		.webinar__title-box
+			p.webinar__title-text Вебинар
+			h1.webinar__title Маркировка на таможенном складе
+		.container.container--small
+			.webinar__text-block
+				p.webinar__text На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.
+				p.webinar__text Вы так же можете направить интересующие Вас вопросы на почту
+					|
+					|
+					strong webinar@mjr.ru
+					|. Наши эксперты подготовят ответ.
+				.webinar__video-wrapper
+					iframe.webinar__video(width='560', height='315', src='https://www.youtube-nocookie.com/embed/QK4xl5c8w7Y', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share', allowfullscreen)
+				.webinar__expert-list
+					h2.webinar__expert-title Эксперты вебинара
+					.webinar__expert-grid
+						.webinar__expert
+							.webinar__expert-photo-box
+								img.webinar__expert-photo(src="images/webinar/photo.png")
+							.webinar__expert-description
+								p.webinar__expert-name Петр Соколов
+								p.webinar__expert-job Руководитель
+						.webinar__expert
+							.webinar__expert-photo-box
+								img.webinar__expert-photo(src="images/webinar/photo.png")
+							.webinar__expert-description
+								p.webinar__expert-name Петр Соколов
+								p.webinar__expert-job Руководитель
+						.webinar__expert
+							.webinar__expert-photo-box
+								img.webinar__expert-photo(src="images/webinar/photo.png")
+							.webinar__expert-description
+								p.webinar__expert-name Петр Соколов
+								p.webinar__expert-job Руководитель
+			.webinar__event-grid
+				// Webinar
+				article.webinar__event-item.webinar-card
+					time.webinar-card__time 15 декабря 2022 г. в 12:00
+					h2.webinar-card__title Маркировка на
+						br
+						|таможенном складе
+					p.webinar-card__text На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.
+					a.webinar-card__link(href="#") Подробнее
+							+svg("arrow-right")(class="webinar-card__link-icon")
+					.webinar-card__author
+						.webinar-card__author-photo-box
+							img.webinar-card__author-photo(src="images/webinar/photo.png", alt)
+						span.webinar-card__author-name Петр Соколов
+				// Webinar
+				article.webinar__event-item.webinar-card
+					time.webinar-card__time 15 декабря 2022 г. в 12:00
+					h2.webinar-card__title Маркировка на
+						br
+						|таможенном складе
+					p.webinar-card__text На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.
+					a.webinar-card__link(href="#") Подробнее
+							+svg("arrow-right")(class="webinar-card__link-icon")
+					.webinar-card__author
+						.webinar-card__author-photo-box
+							img.webinar-card__author-photo(src="images/webinar/photo.png", alt)
+						span.webinar-card__author-name Петр Соколов
+				// Webinar
+				article.webinar__event-item.webinar-card
+					time.webinar-card__time 15 декабря 2022 г. в 12:00
+					h2.webinar-card__title Маркировка на
+						br
+						|таможенном складе
+					p.webinar-card__text На вебинаре эксперты рассказали о практике мультипродуктового оператора в области маркировки товаров, поделились опытом операционной работы и подготовки к новым этапам маркировки (оборудование + расходники, топология склада, ограничения). Слушателям были даны рекомендации по взаимодействию для получения оптимальных условий.
+					a.webinar-card__link(href="#") Подробнее
+							+svg("arrow-right")(class="webinar-card__link-icon")
+					.webinar-card__author
+						.webinar-card__author-photo-box
+							img.webinar-card__author-photo(src="images/webinar/photo.png", alt)
+						span.webinar-card__author-name Петр Соколов
