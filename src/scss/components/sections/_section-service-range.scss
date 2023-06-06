@@ -12,7 +12,7 @@
 	}
 
 	&__links {
-		margin-bottom: 76px;
+		margin-bottom: 64px;
 
 		@media (max-width: $breakpoint-desktop) {
 			margin-bottom: 48px;
@@ -20,6 +20,20 @@
 			padding-left: 14px;
 			margin-right: -14px;
 			width: calc(100% + 28px);
+		}
+	}
+
+	&__text {
+		margin-top: 0;
+		margin-bottom: 74px;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 300;
+
+		@media (max-width: $breakpoint-desktop) {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 58px;
 		}
 	}
 }
