@@ -7560,7 +7560,7 @@ a {
       .section-service-range__title {
         margin-bottom: 54px; } }
   .section-service-range__links {
-    margin-bottom: 76px; }
+    margin-bottom: 64px; }
     @media (max-width: 1200px) {
       .section-service-range__links {
         margin-bottom: 48px;
@@ -7568,6 +7568,17 @@ a {
         padding-left: 14px;
         margin-right: -14px;
         width: calc(100% + 28px); } }
+  .section-service-range__text {
+    margin-top: 0;
+    margin-bottom: 74px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300; }
+    @media (max-width: 1200px) {
+      .section-service-range__text {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 58px; } }
 
 .section-success {
   margin-bottom: 42px; }
