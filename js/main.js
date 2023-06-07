@@ -873,24 +873,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./src/js/components/show-more.js":
-/*!****************************************!*\
-  !*** ./src/js/components/show-more.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-document.addEventListener('DOMContentLoaded', function () {
-  var showMore = document.querySelector('.show-more');
-  var showMoreBtn = document.querySelector('.show-more__button');
-  if (!showMore || !showMoreBtn) return;
-  showMoreBtn.addEventListener('click', function () {
-    showMore.classList.toggle('show-more--active');
-  });
-});
-
-/***/ }),
-
 /***/ "./src/js/components/tabs.js":
 /*!***********************************!*\
   !*** ./src/js/components/tabs.js ***!
@@ -1006,15 +988,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_section_contacts_form_white__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/section-contacts-form-white */ "./src/js/components/section-contacts-form-white.js");
 /* harmony import */ var _components_section_text__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/section-text */ "./src/js/components/section-text.js");
 /* harmony import */ var _components_section_text__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_section_text__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/show-more */ "./src/js/components/show-more.js");
-/* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_show_more__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_free_slider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/free-slider */ "./src/js/components/free-slider.js");
-/* harmony import */ var _components_section_description__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/section-description */ "./src/js/components/section-description.js");
-/* harmony import */ var _components_section_about_timeline__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/section-about-timeline */ "./src/js/components/section-about-timeline.js");
-/* harmony import */ var _components_section_about_timeline__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_section_about_timeline__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_section_news__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/section-news */ "./src/js/components/section-news.js");
-/* harmony import */ var _components_section_news__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_section_news__WEBPACK_IMPORTED_MODULE_15__);
-
+/* harmony import */ var _components_free_slider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/free-slider */ "./src/js/components/free-slider.js");
+/* harmony import */ var _components_section_description__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/section-description */ "./src/js/components/section-description.js");
+/* harmony import */ var _components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/section-about-timeline */ "./src/js/components/section-about-timeline.js");
+/* harmony import */ var _components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _components_section_news__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/section-news */ "./src/js/components/section-news.js");
+/* harmony import */ var _components_section_news__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_section_news__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
