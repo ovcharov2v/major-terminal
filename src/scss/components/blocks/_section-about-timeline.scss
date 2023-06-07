@@ -243,4 +243,14 @@
 			}
 		}
 	}
+
+	&__show-more-btn {
+		display: block;
+		max-width: 248px;
+		margin: 70px auto 0;
+
+		@media (min-width: 1400px) {
+			display: none;
+		}
+	}
 }

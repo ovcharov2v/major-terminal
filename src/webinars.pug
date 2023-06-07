@@ -69,7 +69,7 @@ block content
 				button.event-list__search-submit(aria-label="Искать")
 					+svg("search-loupe")(class="event-list__search-submit-icon")
 				input.event-list__search-input(placeholder="Поиск вебинара")
-		.event-list__grid.show-more
+		.event-list__grid
 			// Webinar
 			article.event-list__item.webinar-card
 				time.webinar-card__time 15 декабря 2022 г. в 12:00
@@ -110,7 +110,7 @@ block content
 						img.webinar-card__author-photo(src="images/webinar/photo.png", alt)
 					span.webinar-card__author-name Петр Соколов
 			// Webinar
-			article.event-list__item.webinar-card.show-more__mobile-hide
+			article.event-list__item.webinar-card
 				time.webinar-card__time 15 декабря 2022 г. в 12:00
 				h2.webinar-card__title Маркировка на
 					br
@@ -123,7 +123,7 @@ block content
 						img.webinar-card__author-photo(src="images/webinar/photo.png", alt)
 					span.webinar-card__author-name Петр Соколов
 			// Webinar
-			article.event-list__item.webinar-card.show-more__mobile-hide
+			article.event-list__item.webinar-card
 				time.webinar-card__time 15 декабря 2022 г. в 12:00
 				h2.webinar-card__title Маркировка на
 					br
@@ -136,7 +136,7 @@ block content
 						img.webinar-card__author-photo(src="images/webinar/photo.png", alt)
 					span.webinar-card__author-name Петр Соколов
 			// Webinar
-			article.event-list__item.webinar-card.show-more__mobile-hide
+			article.event-list__item.webinar-card
 				time.webinar-card__time 15 декабря 2022 г. в 12:00
 				h2.webinar-card__title Маркировка на
 					br
@@ -149,5 +149,5 @@ block content
 						img.webinar-card__author-photo(src="images/webinar/photo.png", alt)
 					span.webinar-card__author-name Петр Соколов
 		.event-list__btn-box
-			button.event-list__btn.show-more__button Показать ещё
+			button.event-list__btn Показать ещё
 				+svg("plus")(class="event-list__btn-icon")
