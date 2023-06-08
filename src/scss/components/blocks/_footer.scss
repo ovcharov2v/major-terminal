@@ -222,6 +222,10 @@
 
 	&__logo-list-elem {
 		padding: 0 11px;
+
+		&:first-child {
+			padding-right: 1px;
+		}
 	}
 
 	&__logo-list-link {
