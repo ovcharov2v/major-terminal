@@ -9,7 +9,7 @@
 		<link rel="icon" href="favicons/favicon.ico">
 		<link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="stylesheet" href="./css/main.css?v=1686861665057">
+		<link rel="stylesheet" href="./css/main.css?v=1686864419364">
 	</head>
 	<body>
 		<!-- Header-->
@@ -332,29 +332,43 @@
 				<div class="section-partner__box">
 					<div class="section-partner__nav-row">
 						<ul class="section-partner__link-list">
-							<li class="section-partner__link-elem"><a class="section-partner__link" href="#">4PL оператор</a></li>
-							<li class="section-partner__link-elem"><a class="section-partner__link" href="#">Логопарк</a></li>
-							<li class="section-partner__link-elem"><a class="section-partner__link section-partner__link--active" href="#">О Major Terminal</a></li>
-							<li class="section-partner__link-elem"><a class="section-partner__link" href="#">Ценности</a></li>
+							<li class="section-partner__link-elem"><a class="section-partner__link section-partner__link--active" href="#" data-tab="1">О Major Terminal</a></li>
+							<li class="section-partner__link-elem"><a class="section-partner__link" href="#" data-tab="2">4PL оператор</a></li>
+							<li class="section-partner__link-elem"><a class="section-partner__link" href="#" data-tab="3">Логопарк</a></li>
+							<li class="section-partner__link-elem"><a class="section-partner__link" href="#" data-tab="4">Ценности</a></li>
 						</ul>
 						<div class="dropdown dropdown--navigate section-partner__dropdown">
 							<div class="dropdown__value-box">
 								<input class="dropdown__value" type="text" value="4PL оператор" disabled>
 								<svg class="dropdown__arrow">
-									<use xlink:href="#chevron-dropdown"></use>
+									<use href="#chevron-dropdown"></use>
 								</svg>
 							</div>
 							<ul class="dropdown__options-list">
-								<li class="dropdown__option dropdown__option--selected" data-value="#">4PL оператор</li>
+								<li class="dropdown__option dropdown__option--selected" data-value="#" data-tab="1">Ответственное хранение и складская обработка товаров, услуги производственного аутсорсинга, транспортной дистрибуции, фулфилмент и работа с производственными маркетплейсами.</li>
+								<li class="dropdown__option" data-value="4PL оператор">4PL оператор</li>
 								<li class="dropdown__option" data-value="#">Логопарк</li>
-								<li class="dropdown__option" data-value="#">О Major Terminal</li>
 								<li class="dropdown__option" data-value="#">Ценности</li>
 							</ul>
 						</div>
 					</div>
 					<div class="section-partner__content">
-						<h2 class="h2 text-white section-partner__title">Ma<span class="text-red">j</span>or Terminal – надежный поставщик всего комплекса складских услуг</h2>
-						<p class="section-partner__text text-white">Major Terminal является частью 4PL-оператора Major Logistics, и имеет колоссальный опыт и экспертизу в широком спектре складских услуг</p><a class="button button--outline-white button--md section-partner__button" href="#">Подробнее о нас</a>
+						<div class="tabs2__content-height tabs2__content active" data-tab="1">
+							<h2 class="h2 text-white section-partner__title">Ma<span class="text-red">j</span>or Terminal – надежный поставщик всего комплекса складских услуг</h2>
+							<p class="section-partner__text text-white">Ответственное хранение и складская обработка товаров, услуги производственного аутсорсинга, транспортной дистрибуции, фулфилмент и работа с производственными маркетплейсами.</p>
+						</div>
+						<div class="tabs2__content-height tabs2__content" data-tab="2">
+							<h2 class="h2 text-white section-partner__title">Ma<span class="text-red">j</span>or Terminal является частью 4PL-оператора Major Logistics</h2>
+							<p class="section-partner__text text-white">Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг. Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг. Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг.</p>
+						</div>
+						<div class="tabs2__content-height tabs2__content" data-tab="3">
+							<h2 class="h2 text-white section-partner__title">Логопарк Ma<span class="text-red">j</span>or Terminal – комплексное решение для хранения и перевозки товаров</h2>
+							<p class="section-partner__text text-white">Собственный таможенный склад и склады, оптимизированные для широкого спектра товаров, служба одного окна, отличная транспортная доступность и опытная команда – залог успеха вашего бизнеса.</p>
+						</div>
+						<div class="tabs2__content-height tabs2__content" data-tab="4">
+							<h2 class="h2 text-white section-partner__title">Клиенты – главная ценность Ma<span class="text-red">j</span>or Terminal</h2>
+							<p class="section-partner__text text-white">Нашим клиентам гарантированы персональное внимание, многоуровневая поддержка, прозрачность всех процессов и возможность сосредоточится на своем бизнесе. О логистике позаботимся мы!</p>
+						</div><a class="button button--outline-white button--md section-partner__button" href="/about/">Подробнее о нас</a>
 					</div>
 				</div>
 			</section>
@@ -538,8 +552,8 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1686861665058"></script>
-		<script src="./js/main.js?v=1686861665058"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1686864419365"></script>
+		<script src="./js/main.js?v=1686864419365"></script><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
 		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
 	</symbol>

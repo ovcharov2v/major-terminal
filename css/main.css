@@ -603,9 +603,13 @@ a {
   overflow: hidden !important; }
 
 .tabs2__content {
-  display: none; }
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
   .tabs2__content.active {
-    display: block; }
+    visibility: visible;
+    position: static; }
   .tabs2__content-height {
     margin-bottom: 42px; }
 
