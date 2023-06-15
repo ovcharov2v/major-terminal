@@ -6,17 +6,25 @@ mixin sectionContactsWhite()
 				form.section-contacts-white__form(action="#")
 					.section-contacts-white__form-layer.section-contacts-white__form-layer--form
 						.section-contacts-white__feedback-wrap
-							.section-contacts-white__feedback-box
-								p.section-contacts-white__feedback Будем рады получить
-									|
-									|
-									br.hide-desktop
-									| от вас обратную связь
 							if isCareer
+								.section-contacts-white__feedback-box
+									p.section-contacts-white__feedback Загрузите Ваше резюме – это повысит шансы на ответ
 								h2.section-contacts-white__title  Отправить резюме онлайн
 							else if isWebinar
+								.section-contacts-white__feedback-box
+									p.section-contacts-white__feedback Будем рады получить
+										|
+										|
+										br.hide-desktop
+										| от вас обратную связь
 								h2.section-contacts-white__title Понравился вебинар?
 							else
+								.section-contacts-white__feedback-box
+									p.section-contacts-white__feedback Будем рады получить
+										|
+										|
+										br.hide-desktop
+										| от вас обратную связь
 								h2.section-contacts-white__title  Есть вопросы? Свяжитесь с нами!
 						.section-contacts-white__form-inputs
 							.section-contacts-white__form-row
@@ -35,14 +43,14 @@ mixin sectionContactsWhite()
 								label.section-contacts-white__label(for="message") Комментарий
 								textarea.section-contacts-white__form-textarea.section-contacts-white__form-textarea--comment(name="message")
 							if isCareer
-								.section-contacts-white__form-row.section-contacts-white__form-row--button //
-									.section-contacts-white__form-col.section-contacts-white__form-col--inputs
-										button.button.button--blue.button--lg.section-contacts-white__form-submit Отправить
-									.section-contacts-white__form-col.section-contacts-white__form-col--message
-										p.section-contacts-white__form-upload-text Загрузите Ваше резюме –  это повысит шансы на ответ
-										input#upload.section-contacts-white__form-upload-input(type="file")
-										label.section-contacts-white__form-upload-label(for="upload") Загрузить файл
-								p.section-contacts-white__error-message Ошибка! Заполните обязательные поля.
+								input#upload.section-contacts-white__form-upload-input(type="file")
+								label.section-contacts-white__form-upload-label(for="upload")
+									+svg("download", true)(class="section-contacts-white__upload-icon")
+									|Загрузить файл
+								p.section-contacts-white__form-upload-text Максимальный размер файла — 100мб
+								.section-contacts-white__form-submit-box
+									button.section-contacts-white__form-submit Отправить
+									p.section-contacts-white__error-message Ошибка! Заполните обязательные поля.
 							else
 								.section-contacts-white__form-submit-box
 									button.section-contacts-white__form-submit Отправить

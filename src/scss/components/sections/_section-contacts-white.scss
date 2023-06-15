@@ -8,7 +8,7 @@
 
 	@media (min-width: $breakpoint-laptop) {
 		padding-top: 30px;
-		padding-bottom: 138px;
+		padding-bottom: 82px;
 	}
 
 	&__row {
@@ -16,7 +16,7 @@
 
 		@media (min-width: $breakpoint-laptop) {
 			display: grid;
-			grid-template-columns: .85fr 1fr;
+			grid-template-columns: .95fr 1fr;
 			grid-column-gap: 90px;
 		}
 	}
@@ -203,11 +203,10 @@
 
 	&__form-upload-text {
 		margin-top: 0;
-		margin-bottom: 25px;
-		font-size: 18px;
-		line-height: 18px;
-		font-weight: 700;
-		color: $color-blue;
+		margin-bottom: 40px;
+		font-size: 12px;
+		line-height: 16px;
+		color: #575B64;
 	}
 
 	&__form-upload-input {
@@ -215,26 +214,25 @@
 	}
 
 	&__form-upload-label {
-		display: block;
-		margin: 0 0 27px;
-		padding: 20px 32px;
-		border: 1px dashed $color-blue;
-		border-radius: 40px;
-		font-family: $font-secondary;
-		font-size: 21px;
+		display: flex;
+		align-items: center;
+		margin-top: 0;
+		margin-bottom: 8px;
+		font-size: 16px;
 		line-height: 18px;
-		font-weight: 700;
+		font-weight: 500;
 		color: $color-blue;
-		text-align: center;
 		cursor: pointer;
 
-		@media (min-width: $breakpoint-laptop) {
-			display: inline-block;
-			margin: 0;
-			font-family: $font-additional;
-			padding: 12px 32px;
-			font-size: 18px;
+		@media (min-width: $breakpoint-desktop) {
+			margin-top: -25px;
 		}
+	}
+
+	&__upload-icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
 	}
 
 	&__form-layer {
