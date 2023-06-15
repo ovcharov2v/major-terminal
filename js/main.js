@@ -431,6 +431,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/scroll-to.js":
+/*!****************************************!*\
+  !*** ./src/js/components/scroll-to.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var linkList = document.querySelectorAll('*[data-scroll-to]');
+  if (!linkList.length) return;
+  linkList.forEach(function (link) {
+    link.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var target = document.querySelector("#".concat(link.dataset.scrollTo));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/section-about-timeline.js":
 /*!*****************************************************!*\
   !*** ./src/js/components/section-about-timeline.js ***!
@@ -994,6 +1019,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_section_about_timeline__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _components_section_news__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/section-news */ "./src/js/components/section-news.js");
 /* harmony import */ var _components_section_news__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_section_news__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _components_scroll_to__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/scroll-to */ "./src/js/components/scroll-to.js");
+/* harmony import */ var _components_scroll_to__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_scroll_to__WEBPACK_IMPORTED_MODULE_15__);
+
 
 
 
