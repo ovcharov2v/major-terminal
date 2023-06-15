@@ -2022,7 +2022,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 -18px;
+    margin: 60px -18px 0;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     display: -webkit-box;
@@ -2036,12 +2036,12 @@ a {
         .footer__logo-list--desktop {
           display: -webkit-box;
           display: -ms-flexbox;
-          display: flex;
-          margin-top: auto; } }
+          display: flex; } }
     .footer__logo-list--mobile {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      margin-top: 7px; }
       @media (min-width: 1200px) {
         .footer__logo-list--mobile {
           display: none; } }
