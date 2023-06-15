@@ -94,10 +94,10 @@
 	&__text-block {
 		width: 100%;
 		max-width: 1112px;
-		margin: 0 auto 93px;
+		margin: 0 auto 70px;
 
 		@media (min-width: $breakpoint-desktop) {
-			margin-bottom: 132px;
+			margin-bottom: 108px;
 		}
 	}
 
@@ -106,6 +106,16 @@
 		margin-bottom: 22px;
 		font-size: 16px;
 		line-height: 22px;
+	}
+
+	&__form-link {
+		color: inherit;
+		font-weight: 700;
+		transition: color $transition-default;
+
+		&:hover {
+			color: $color-red;
+		}
 	}
 
 	&__expert-list {
@@ -121,6 +131,7 @@
 		margin-bottom: 24px;
 		font-size: 20px;
 		line-height: 24px;
+		font-weight: 400;
 		color: #8A8A8A;
 
 		@media (min-width: $breakpoint-desktop) {
@@ -131,19 +142,27 @@
 	}
 
 	&__expert-grid {
-		display: grid;
-		grid-template: auto / 100%;
-		grid-gap: 24px;
-
-		@media (min-width: $breakpoint-desktop) {
-			grid-template: auto / repeat(3, 1fr);
-		}
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -12px;
 	}
 
 	&__expert {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		gap: 14px;
+		width: 100%;
+		margin-bottom: 24px;
+		padding: 0 12px;
+
+		@media (min-width: 768px) {
+			max-width: 50%;
+		}
+
+		@media (min-width: $breakpoint-desktop) {
+			width: auto;
+			max-width: unset;
+		}
 	}
 
 	&__expert-photo-box {
@@ -151,11 +170,6 @@
 		height: 80px;
 		border-radius: 50%;
 		flex-shrink: 0;
-
-		@media (min-width: $breakpoint-desktop) {
-			width: 120px;
-			height: 120px;
-		}
 	}
 
 	&__expert-photo {
@@ -172,6 +186,7 @@
 		margin-bottom: 4px;
 		font-size: 24px;
 		line-height: 28px;
+		white-space: nowrap;
 	}
 
 	&__expert-job {
