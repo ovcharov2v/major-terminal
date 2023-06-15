@@ -11,10 +11,14 @@
 }
 
 .tabs2__content {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
 
 	&.active {
-		display: block;
+		visibility: visible;
+		position: static;
 	}
 
 	&-height {

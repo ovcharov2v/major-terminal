@@ -190,28 +190,49 @@ block content
 			.section-partner__nav-row
 				ul.section-partner__link-list
 					li.section-partner__link-elem
-						a.section-partner__link(href="#") 4PL оператор
+						a.section-partner__link.section-partner__link--active(href='#', data-tab='1') О Major Terminal
 					li.section-partner__link-elem
-						a.section-partner__link(href="#") Логопарк
+						a.section-partner__link(href='#', data-tab='2') 4PL оператор
 					li.section-partner__link-elem
-						a.section-partner__link.section-partner__link--active(href="#") О Major Terminal
+						a.section-partner__link(href='#', data-tab='3') Логопарк
 					li.section-partner__link-elem
-						a.section-partner__link(href="#") Ценности
+						a.section-partner__link(href='#', data-tab='4') Ценности
 				.dropdown.dropdown--navigate.section-partner__dropdown
 					.dropdown__value-box
-						input.dropdown__value(type="text", value="4PL оператор", disabled)
-						+svg("chevron-dropdown", true)(class="dropdown__arrow")
+						input.dropdown__value(type='text', value='4PL оператор', disabled)
+						svg.dropdown__arrow
+							use(href='#chevron-dropdown')
 					ul.dropdown__options-list
-						li.dropdown__option.dropdown__option--selected(data-value="#") 4PL оператор
-						li.dropdown__option(data-value="#") Логопарк
-						li.dropdown__option(data-value="#") О Major Terminal
-						li.dropdown__option(data-value="#") Ценности
+						li.dropdown__option.dropdown__option--selected(data-value='#', data-tab='1') Ответственное хранение и складская обработка товаров, услуги производственного аутсорсинга, транспортной дистрибуции, фулфилмент и работа с производственными маркетплейсами.
+						li.dropdown__option(data-value='4PL оператор') 4PL оператор
+						li.dropdown__option(data-value='#') Логопарк
+						li.dropdown__option(data-value='#') Ценности
 			.section-partner__content
-				h2.h2.text-white.section-partner__title Ma
-					span.text-red j
-					| or Terminal – надежный поставщик всего комплекса складских услуг
-				p.section-partner__text.text-white Major Terminal является частью 4PL-оператора Major Logistics, и имеет колоссальный опыт и экспертизу в широком спектре складских услуг
-				a.button.button--outline-white.button--md.section-partner__button(href="#") Подробнее о нас
+				.tabs2__content-height.tabs2__content.active(data-tab='1')
+					h2.h2.text-white.section-partner__title
+						| Ma
+						span.text-red j
+						| or Terminal – надежный поставщик всего комплекса складских услуг
+					p.section-partner__text.text-white Ответственное хранение и складская обработка товаров, услуги производственного аутсорсинга, транспортной дистрибуции, фулфилмент и работа с производственными маркетплейсами.
+				.tabs2__content-height.tabs2__content(data-tab='2')
+					h2.h2.text-white.section-partner__title
+						| Ma
+						span.text-red j
+						| or Terminal является частью 4PL-оператора Major Logistics
+					p.section-partner__text.text-white Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг. Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг. Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг.
+				.tabs2__content-height.tabs2__content(data-tab='3')
+					h2.h2.text-white.section-partner__title
+						| Логопарк Ma
+						span.text-red j
+						| or Terminal – комплексное решение для хранения и перевозки товаров
+					p.section-partner__text.text-white Собственный таможенный склад и склады, оптимизированные для широкого спектра товаров, служба одного окна, отличная транспортная доступность и опытная команда – залог успеха вашего бизнеса.
+				.tabs2__content-height.tabs2__content(data-tab='4')
+					h2.h2.text-white.section-partner__title
+						| Клиенты – главная ценность Ma
+						span.text-red j
+						| or Terminal
+					p.section-partner__text.text-white Нашим клиентам гарантированы персональное внимание, многоуровневая поддержка, прозрачность всех процессов и возможность сосредоточится на своем бизнесе. О логистике позаботимся мы!
+				a.button.button--outline-white.button--md.section-partner__button(href='/about/') Подробнее о нас
 
 	// Section News
 	.section-news
