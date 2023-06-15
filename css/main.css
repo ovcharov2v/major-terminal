@@ -2022,7 +2022,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 -11px;
+    margin: 0 -18px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     display: -webkit-box;
@@ -2046,7 +2046,7 @@ a {
         .footer__logo-list--mobile {
           display: none; } }
   .footer__logo-list-elem {
-    padding: 0 11px; }
+    padding: 0 18px; }
     .footer__logo-list-elem:first-child {
       padding-right: 1px; }
   .footer__logo-list-link {
@@ -4813,15 +4813,15 @@ a {
   @media (min-width: 992px) {
     .section-contacts-white {
       padding-top: 30px;
-      padding-bottom: 138px; } }
+      padding-bottom: 82px; } }
   .section-contacts-white__row {
     display: block; }
     @media (min-width: 992px) {
       .section-contacts-white__row {
         display: -ms-grid;
         display: grid;
-        -ms-grid-columns: .85fr 90px 1fr;
-        grid-template-columns: .85fr 1fr;
+        -ms-grid-columns: .95fr 90px 1fr;
+        grid-template-columns: .95fr 1fr;
         grid-column-gap: 90px; } }
   .section-contacts-white__form-inputs {
     position: relative;
@@ -4974,33 +4974,33 @@ a {
       text-decoration: underline; }
   .section-contacts-white__form-upload-text {
     margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 700;
-    color: #004996; }
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #575B64; }
   .section-contacts-white__form-upload-input {
     display: none; }
   .section-contacts-white__form-upload-label {
-    display: block;
-    margin: 0 0 27px;
-    padding: 20px 32px;
-    border: 1px dashed #004996;
-    border-radius: 40px;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
     line-height: 18px;
-    font-weight: 700;
+    font-weight: 500;
     color: #004996;
-    text-align: center;
     cursor: pointer; }
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       .section-contacts-white__form-upload-label {
-        display: inline-block;
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        padding: 12px 32px;
-        font-size: 18px; } }
+        margin-top: -25px; } }
+  .section-contacts-white__upload-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; }
   .section-contacts-white__form-layer {
     -webkit-transition: opacity 0.2s ease;
     -o-transition: opacity 0.2s ease;
