@@ -110,6 +110,8 @@
 	}
 
 	&__text-block {
+		margin-top: 0;
+		margin-bottom: 30px;
 		font-family: $font-secondary;
 		max-width: 1260px;
 		font-size: 18px;
@@ -121,9 +123,12 @@
 			line-height: 32px;
 		}
 
-		&:not(:last-child) {
-			margin-bottom: 90px;
+		&--mb {
+			&:not(:last-child) {
+				margin-bottom: 90px;
+			}
 		}
+
 	}
 
 	.section-description__photo-slider {
