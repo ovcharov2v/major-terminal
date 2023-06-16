@@ -1402,6 +1402,7 @@ a {
   .header__mobile-menu-child-link {
     font-size: 18px;
     line-height: 24px;
+    font-weight: 500;
     color: #090909; }
 
 .search-form {
@@ -5806,6 +5807,8 @@ a {
       .section-description__panel-link {
         font-size: 14px; } }
   .section-description__text-block {
+    margin-top: 0;
+    margin-bottom: 30px;
     font-family: "Roboto Condensed", sans-serif;
     max-width: 1260px;
     font-size: 18px;
@@ -5815,7 +5818,7 @@ a {
       .section-description__text-block {
         font-size: 24px;
         line-height: 32px; } }
-    .section-description__text-block:not(:last-child) {
+    .section-description__text-block--mb:not(:last-child) {
       margin-bottom: 90px; }
   .section-description .section-description__photo-slider {
     margin-bottom: 55px; }
