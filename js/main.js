@@ -963,11 +963,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  var tabs = document.querySelectorAll(".section-partner__link");
+  var tabs = document.querySelectorAll(".section-partner__link, .dropdown__option[data-tab]");
   var contentBlocks = document.querySelectorAll(".tabs2__content");
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function (event) {
       event.preventDefault();
+      console.log(1);
       var activeTab = this.dataset.tab;
       tabs.forEach(function (tab) {
         return tab.classList.remove("section-partner__link--active");
@@ -980,20 +981,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
+var setTabs2Height = function setTabs2Height() {
   var max_height = 0;
   var elements = document.querySelectorAll('.tabs2__content-height');
+  if (!elements.length) return;
+  elements.forEach(function (element) {
+    element.style.minHeight = '';
+  });
   elements.forEach(function (element) {
     var style = window.getComputedStyle(element);
     var margin = parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+    margin = 0;
     var totalHeight = element.offsetHeight + margin;
     if (totalHeight > max_height) {
       max_height = totalHeight;
     }
   });
   elements.forEach(function (element) {
-    element.style.height = max_height + 'px';
+    element.style.minHeight = max_height + 'px';
   });
+};
+window.onload = function () {
+  setTabs2Height();
+};
+window.addEventListener('resize', function () {
+  setTabs2Height();
 });
 
 /***/ }),
