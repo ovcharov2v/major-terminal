@@ -859,23 +859,33 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   var slider = document.querySelector('.section-terminals__slider');
   if (!slider) return;
-  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
-    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
-    slidesPerView: 1,
-    grabCursor: true,
-    navigation: {
-      nextEl: '.slider__btn--next',
-      prevEl: '.slider__btn--prev'
-    },
-    pagination: {
-      el: '.slider__pagination',
-      clickable: true,
-      bulletActiveClass: 'slider__bullet--active',
-      renderBullet: function renderBullet(index, className) {
-        return "<button class=\"slider__bullet swiper-pagination-bullet\" aria-label=\"\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 ".concat(index, "\"></button>");
-      }
+  var createTerminalSlider = function createTerminalSlider() {
+    var slides = slider.querySelectorAll('.slider__slide');
+    console.log(slides);
+    if (slides && slides.length > 1) {
+      slider.classList.remove('slider--disabled');
+      new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+        modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
+        slidesPerView: 1,
+        grabCursor: true,
+        navigation: {
+          nextEl: '.slider__btn--next',
+          prevEl: '.slider__btn--prev'
+        },
+        pagination: {
+          el: '.slider__pagination',
+          clickable: true,
+          bulletActiveClass: 'slider__bullet--active',
+          renderBullet: function renderBullet(index, className) {
+            return "<button class=\"slider__bullet swiper-pagination-bullet\" aria-label=\"\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 ".concat(index, "\"></button>");
+          }
+        }
+      });
+    } else {
+      slider.classList.add('slider--disabled');
     }
-  });
+  };
+  createTerminalSlider();
 });
 
 /***/ }),
