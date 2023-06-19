@@ -180,6 +180,10 @@
 				transform: none;
 			}
 		}
+
+		.slider--disabled & {
+			display: none !important;
+		}
 	}
 
 	&__pagintaion {

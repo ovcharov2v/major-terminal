@@ -61,10 +61,11 @@ block content
 			h2.h2.text-blue.section-case-list__title Другие кейсы
 		.section-case-list__grid
 			// Card
-			a.section-case-list__card.card.card--cases.card--with-tag-line(href="#")
+			.section-case-list__card.card.card--cases.card--with-tag-line
 				ul.card__tag-list
-					li.card__tag Fashion
-					li.card__tag Складское хранение
+					li.card__tag-wrapper
+						a.card__tag-link(href="#") Fashion
+					li.card__tag.cursor-pointer(onclick='location.href="https://ya.ru"') Складское хранение
 					li.card__tag Вешальное хранение
 					li.card__tag Еще (7)
 				.card__text-box

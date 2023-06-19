@@ -237,7 +237,8 @@
 		list-style-type: none;
 	}
 
-	&__tag {
+	&__tag,
+	&__tag-link {
 		margin: 0 8px 16px;
 		padding: 7px 21px;
 		border-radius: 20px;
@@ -260,6 +261,28 @@
 			font-family: $font-secondary;
 			font-weight: 700;
 		}
+	}
+
+	&__tag-wrapper {
+		margin: 0 8px 16px;
+
+		&:nth-child(n+3) {
+			display: none;
+
+			@media (min-width: $breakpoint-desktop) {
+				display: inline-block;
+			}
+		}
+
+		.card--cases & {
+			font-family: $font-secondary;
+			font-weight: 700;
+		}
+	}
+
+	&__tag-link {
+		display: inline-block;
+		margin: 0;
 	}
 
 	&__icon {
