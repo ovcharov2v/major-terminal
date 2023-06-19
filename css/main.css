@@ -2480,7 +2480,6 @@ a {
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-radius: 25px;
-  background-color: #004996;
   overflow: hidden; }
 
 .slider__slide-bg {
