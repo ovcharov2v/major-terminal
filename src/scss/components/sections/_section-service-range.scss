@@ -35,5 +35,14 @@
 			line-height: 24px;
 			margin-bottom: 58px;
 		}
+
+		&--mb,
+		&:last-child {
+			margin-bottom: 74px;
+
+			@media (max-width: $breakpoint-desktop) {
+				margin-bottom: 58px;
+			}
+		}
 	}
 }
