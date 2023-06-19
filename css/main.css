@@ -7605,6 +7605,11 @@ a {
         font-size: 18px;
         line-height: 24px;
         margin-bottom: 58px; } }
+    .section-service-range__text--mb, .section-service-range__text:last-child {
+      margin-bottom: 74px; }
+      @media (max-width: 1200px) {
+        .section-service-range__text--mb, .section-service-range__text:last-child {
+          margin-bottom: 58px; } }
 
 .section-success {
   margin-bottom: 42px; }
