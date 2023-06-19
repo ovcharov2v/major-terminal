@@ -51,11 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener("DOMContentLoaded", function() {
-	const tabs = document.querySelectorAll(".section-partner__link");
+	const tabs = document.querySelectorAll(".section-partner__link, .dropdown__option[data-tab]");
 	const contentBlocks = document.querySelectorAll(".tabs2__content");
 	tabs.forEach(tab => {
 		tab.addEventListener("click", function(event) {
 			event.preventDefault();
+			console.log(1)
 			const activeTab = this.dataset.tab;
 			tabs.forEach(tab => tab.classList.remove("section-partner__link--active"));
 			contentBlocks.forEach(contentBlock => contentBlock.classList.remove("active"));
@@ -65,13 +66,19 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+const setTabs2Height = () => {
 	let max_height = 0;
 	const elements = document.querySelectorAll('.tabs2__content-height');
+	if(!elements.length) return
+
+	elements.forEach(function(element) {
+		element.style.minHeight = '';
+	});
 
 	elements.forEach(function(element) {
 		let style = window.getComputedStyle(element);
 		let margin = parseFloat(style.marginTop) + parseFloat(style.marginBottom);
+		margin=0
 		let totalHeight = element.offsetHeight + margin;
 
 		if(totalHeight > max_height) {
@@ -80,7 +87,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	elements.forEach(function(element) {
-		element.style.height = max_height + 'px';
+		element.style.minHeight = max_height + 'px';
 	});
-});
+}
+
+window.onload = function() {
+	setTabs2Height()
+};
+
+window.addEventListener('resize', () => {
+	setTabs2Height();
+})
 

@@ -22,7 +22,7 @@
 	}
 
 	&-height {
-		margin-bottom: 42px;
+		//margin-bottom: 42px;
 	}
 }
 
@@ -65,4 +65,13 @@
 
 .cursor-pointer {
 	cursor: pointer;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.mb-auto {
+	margin-bottom: auto;
 }

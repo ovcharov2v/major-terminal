@@ -58,38 +58,114 @@ block content
 				p.links-row__link Подготовка товара к отгрузке на маркетплейсы
 			p.section-service-range__text Политика конфиденциальности персональных данных г. Москва «01» июня 2017 г. Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую Сайт транспортно-логистической группы компаний Major, расположенный на доменном имени www.mjr.ru, может получить о Пользователе во время его использования.
 		// Section Partner
+		//section.section-partner.section-partner--type2.section-partner--bg-blue.container
+			.section-partner__box
+				.section-partner__nav-row
+					ul.section-partner__link-list
+						li.section-partner__link-elem
+							a.section-partner__link.section-partner__link--active(href='#', data-tab='1') О Major Terminal
+						li.section-partner__link-elem
+							a.section-partner__link(href='#', data-tab='2') 4PL оператор
+						li.section-partner__link-elem
+							a.section-partner__link(href='#', data-tab='3') Логопарк
+						li.section-partner__link-elem
+							a.section-partner__link(href='#', data-tab='4') Ценности
+					.dropdown.dropdown--navigate.section-partner__dropdown
+						.dropdown__value-box
+							input.dropdown__value(type='text', value='4PL оператор', disabled)
+							svg.dropdown__arrow
+								use(href='#chevron-dropdown')
+						ul.dropdown__options-list
+							li.dropdown__option.dropdown__option--selected(data-value='#', data-tab='1') Ответственное хранение и складская обработка товаров, услуги производственного аутсорсинга, транспортной дистрибуции, фулфилмент и работа с производственными маркетплейсами.
+							li.dropdown__option(data-value='4PL оператор') 4PL оператор
+							li.dropdown__option(data-value='#') Логопарк
+							li.dropdown__option(data-value='#') Ценности
+				.section-partner__content
+					.tabs2__content-height.tabs2__content.active(data-tab='1')
+						h2.h2.text-white.section-partner__title
+							| Ma
+							span.text-red j
+							| or Terminal – надежный поставщик всего комплекса складских услуг
+						p.section-partner__text.text-white Ответственное хранение и складская обработка товаров, услуги производственного аутсорсинга, транспортной дистрибуции, фулфилмент и работа с производственными маркетплейсами.
+					.tabs2__content-height.tabs2__content(data-tab='2')
+						h2.h2.text-white.section-partner__title
+							| Ma
+							span.text-red j
+							| or Terminal является частью 4PL-оператора Major Logistics
+						p.section-partner__text.text-white Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг. Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг. Специализируясь на выстраивании всей логистической цепи компаний, Major Terminal обладает колоссальным опытом и экспертизой в широком спектре складских услуг.
+					.tabs2__content-height.tabs2__content(data-tab='3')
+						h2.h2.text-white.section-partner__title
+							| Логопарк Ma
+							span.text-red j
+							| or Terminal – комплексное решение для хранения и перевозки товаров
+						p.section-partner__text.text-white Собственный таможенный склад и склады, оптимизированные для широкого спектра товаров, служба одного окна, отличная транспортная доступность и опытная команда – залог успеха вашего бизнеса.
+					.tabs2__content-height.tabs2__content(data-tab='4')
+						h2.h2.text-white.section-partner__title
+							| Клиенты – главная ценность Ma
+							span.text-red j
+							| or Terminal
+						p.section-partner__text.text-white Нашим клиентам гарантированы персональное внимание, многоуровневая поддержка, прозрачность всех процессов и возможность сосредоточится на своем бизнесе. О логистике позаботимся мы!
+					a.button.button--outline-white.button--md.section-partner__button(href='/about/') Подробнее о нас
+		// Section Partner
 		.section-partner.section-partner--type2.section-partner--bg-blue.container
 			.section-partner__box
 				.section-partner__nav-row
 					ul.section-partner__link-list
 						li.section-partner__link-elem
-							a.section-partner__link.section-partner__link--active(href="#") FBO и FBS
+							a.section-partner__link.section-partner__link--active(href='#', data-tab='1') FBO и FBS
 						li.section-partner__link-elem
-							a.section-partner__link(href="#") Возможности интеграций
+							a.section-partner__link(href='#', data-tab='2') Возможности интеграций
 						li.section-partner__link-elem
-							a.section-partner__link(href="#") Омниканальность
-					.dropdown.dropdown--text-blue.dropdown--navigate.section-partner__dropdown
+							a.section-partner__link(href='#', data-tab='3') Омниканальность
+					.dropdown.dropdown--text-blue.section-partner__dropdown
 						.dropdown__value-box
 							input.dropdown__value(type="text", value="FBO и FBS", disabled)
 							+svg("chevron-dropdown", true)(class="dropdown__arrow")
 						ul.dropdown__options-list
-							li.dropdown__option.dropdown__option--selected(data-value="#") FBO и FBS
-							li.dropdown__option(data-value="#") Возможности интеграций
-							li.dropdown__option(data-value="#") Омниканальность
+							li.dropdown__option.dropdown__option--selected(data-value="FBO и FBS", data-tab='1') FBO и FBS
+							li.dropdown__option(data-value="Возможности интеграций", data-tab='2') Возможности интеграций
+							li.dropdown__option(data-value="Омниканальность", data-tab='3') Омниканальность
 				.section-partner__content
-					.section-partner__row
-						.section-partner__col.section-partner__col--content
-							h3.h2.section-partner__title.hide-mobile Работа по FBS и FBO на
-								br
-								|одном складе
-							p.section-partner__text Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку.
-								br
-								br
-								span.text-weight-light Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.
-							a.button.button--blue-dark.button--md.section-partner__button.hide-mobile(href="#") Оставить заявку
-							a.button.button--outline-blue.button--md.section-partner__button.hide-desktop(href="#") Оставить заявку
-						.section-partner__col.section-partner__col--img
-							img.section-partner__image(src="images/section-partner/img2.svg", alt)
+					.tabs2__content-height.tabs2__content.active(data-tab='1')
+						.section-partner__row
+							.section-partner__col.section-partner__col--content
+								h3.h2.section-partner__title.hide-mobile Работа по FBS и FBO на
+									br
+									|одном складе 1
+								p.section-partner__text Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку 1.
+									br
+									br
+									span.text-weight-light Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.
+								a.button.button--outline-blue.button--md.section-partner__button.hide-desktop(href="#") Оставить заявку
+							.section-partner__col.section-partner__col--img
+								img.section-partner__image.mb-auto(src="images/section-partner/img4.svg", alt)
+					.tabs2__content-height.tabs2__content(data-tab='2')
+						.section-partner__row
+							.section-partner__col.section-partner__col--content
+								h3.h2.section-partner__title.hide-mobile Работа по FBS и FBO на
+									br
+									| одном складе 2 Работа по FBS и FBO на Работа по FBS и FBO на
+								p.section-partner__text Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку 2.
+									br
+									br
+									span.text-weight-light Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.
+								a.button.button--outline-blue.button--md.section-partner__button.hide-desktop(href="#") Оставить заявку
+							.section-partner__col.section-partner__col--img
+								img.section-partner__image.mb-auto(src="images/section-partner/img4.svg", alt)
+					.tabs2__content-height.tabs2__content(data-tab='3')
+						.section-partner__row
+							.section-partner__col.section-partner__col--content
+								h3.h2.section-partner__title.hide-mobile Работа по FBS и FBO на
+									br
+									| одном складе 3
+								p.section-partner__text Продавать на маркетплейсах можно по разному — хранить товары у себя или отправить их на склад онлайн-площадки, которая возьмет на себя обработку заказов и их упаковку 3.
+									br
+									br
+									span.text-weight-light Major Terminal работает по любой схеме и может как хранить товары у себя на складе, так и забирать их с вашего склада для дальнейшей обработки.
+								a.button.button--outline-blue.button--md.section-partner__button.hide-desktop(href="#") Оставить заявку
+							.section-partner__col.section-partner__col--img
+								img.section-partner__image.mb-auto(src="images/section-partner/img4.svg", alt)
+					a.button.button--blue-dark.button--md.section-partner__button.hide-mobile(href="#") Оставить заявку
 	// Section Description
 	section.section-description.container
 		h2.h2.section-description__title Опции и
