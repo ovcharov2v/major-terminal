@@ -4568,9 +4568,6 @@ a {
   .section-partner__image {
     margin-top: 60px;
     max-width: 100%; }
-    @media (min-width: 1200px) {
-      .section-partner__image {
-        margin-top: 0; } }
     .section-partner__image--temp {
       max-width: 200px;
       max-height: 200px;
