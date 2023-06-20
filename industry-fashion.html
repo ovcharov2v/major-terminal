@@ -9,7 +9,7 @@
 		<link rel="icon" href="favicons/favicon.ico">
 		<link rel="icon" href="favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" href="favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="stylesheet" href="./css/main.css?v=1687259695110">
+		<link rel="stylesheet" href="./css/main.css?v=1687270058429">
 	</head>
 	<body>
 		<!-- Header-->
@@ -253,30 +253,32 @@
 					<div class="section-partner__box">
 						<div class="section-partner__nav-row">
 							<ul class="section-partner__link-list">
-								<li class="section-partner__link-elem"><a class="section-partner__link section-partner__link--active" href="#">Услуги</a></li>
-								<li class="section-partner__link-elem"><a class="section-partner__link" href="#">Таможенный склад</a></li>
-								<li class="section-partner__link-elem"><a class="section-partner__link" href="#">Предпродажная подготовка</a></li>
-								<li class="section-partner__link-elem"><a class="section-partner__link" href="#">Дистрибуция</a></li>
+								<li class="section-partner__link-elem"><a class="section-partner__link section-partner__link--active" href="#" data-tab="1">Услуги</a></li>
+								<li class="section-partner__link-elem"><a class="section-partner__link" href="#" data-tab="2">Таможенный склад</a></li>
+								<li class="section-partner__link-elem"><a class="section-partner__link" href="#" data-tab="3">Предпродажная подготовка</a></li>
+								<li class="section-partner__link-elem"><a class="section-partner__link" href="#" data-tab="4">Хранение</a></li>
+								<li class="section-partner__link-elem"><a class="section-partner__link" href="#" data-tab="5">Дистрибуция</a></li>
 							</ul>
-							<div class="dropdown dropdown--text-blue dropdown--navigate section-partner__dropdown">
-								<div class="dropdown__value-box">
-									<input class="dropdown__value" type="text" value="Услуги" disabled>
-									<svg class="dropdown__arrow">
-										<use xlink:href="#chevron-dropdown"></use>
-									</svg>
-								</div>
-								<ul class="dropdown__options-list">
-									<li class="dropdown__option dropdown__option--selected" data-value="#">Услуги</li>
-									<li class="dropdown__option" data-value="#">Таможенный склад</li>
-									<li class="dropdown__option" data-value="#">Предпродажная подготовка</li>
-									<li class="dropdown__option" data-value="#">Дистрибуция</li>
-								</ul>
+						</div>
+						<div class="dropdown dropdown--text-blue section-partner__dropdown">
+							<div class="dropdown__value-box">
+								<input class="dropdown__value" type="text" value="Услуги" disabled>
+								<svg class="dropdown__arrow">
+									<use href="#chevron-dropdown"></use>
+								</svg>
 							</div>
+							<ul class="dropdown__options-list">
+								<li class="dropdown__option dropdown__option--selected" data-tab="1" data-value="Услуги">Услуги</li>
+								<li class="dropdown__option" data-tab="2" data-value="Таможенный склад">Таможенный склад</li>
+								<li class="dropdown__option" data-tab="3" data-value="Предпродажная подготовка">Предпродажная подготовка</li>
+								<li class="dropdown__option" data-tab="4" data-value="Хранение">Хранение</li>
+								<li class="dropdown__option" data-tab="5" data-value="Дистрибуция">Дистрибуция</li>
+							</ul>
 						</div>
 						<div class="section-partner__content section-partner__content--with-lists">
 							<div class="section-partner__row">
 								<div class="section-partner__col section-partner__col--content">
-									<div class="section-partner__list-arrow-block">
+									<div class="section-partner__list-arrow-block tabs2__content tabs2__content-height active" data-tab="1" data-code="TABS_SERVICES">
 										<ul class="list-arrow list-arrow--red-arrow">
 											<li class="list-arrow__elem">Разгрузка, приемка, контроль качества</li>
 											<li class="list-arrow__elem">Сортировка товаров по группам и категория</li>
@@ -284,14 +286,56 @@
 											<li class="list-arrow__elem">Возвратная логистика</li>
 										</ul>
 										<ul class="list-arrow list-arrow--red-arrow">
-											<li class="list-arrow__elem">Кросс-докинг</li>
+											<li class="list-arrow__elem">Разноуровневый кросс-докинг</li>
 											<li class="list-arrow__elem">Выбраковка</li>
-											<li class="list-arrow__elem">Восстановление качества</li>
+											<li class="list-arrow__elem">Глажка и восстановление качества</li>
 											<li class="list-arrow__elem">Маркировка</li>
 										</ul>
-									</div><a class="button button--outline-blue button--md section-partner__button" href="#">Оставить заявку</a>
+									</div>
+									<div class="section-partner__list-arrow-block tabs2__content tabs2__content-height" data-tab="2" data-code="TABS_SKLAD">
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Маркировка честный знак</li>
+											<li class="list-arrow__elem">Собственный таможенный склад</li>
+											<li class="list-arrow__elem">Высокая производительность</li>
+										</ul>
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Лицензированный таможенный представитель</li>
+											<li class="list-arrow__elem">Сопутствующие услуги в процессе маркировки</li>
+										</ul>
+									</div>
+									<div class="section-partner__list-arrow-block tabs2__content tabs2__content-height" data-tab="3" data-code="TABS_PRE_SALE">
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Противокражные датчики (снятие/установка)</li>
+											<li class="list-arrow__elem">Обрезание и крепление ярлыкодержателей</li>
+											<li class="list-arrow__elem">Стикеровка этикетками любых размеров и цветов</li>
+										</ul>
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Упаковка и переупаковка</li>
+											<li class="list-arrow__elem">Восстановление товарного вида</li>
+											<li class="list-arrow__elem">Отбраковка товара</li>
+										</ul>
+									</div>
+									<div class="section-partner__list-arrow-block tabs2__content tabs2__content-height" data-tab="4" data-code="TABS_STORAGE">
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Стеллажное</li>
+											<li class="list-arrow__elem">Напольное</li>
+										</ul>
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Полочное</li>
+											<li class="list-arrow__elem">Вешальное</li>
+										</ul>
+									</div>
+									<div class="section-partner__list-arrow-block tabs2__content tabs2__content-height" data-tab="5" data-code="TABS_DISTR">
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Подбор типа доставки (по времени, цене, значимости)</li>
+											<li class="list-arrow__elem">Отслеживание грузов, предварительные оповещения получателей</li>
+										</ul>
+										<ul class="list-arrow list-arrow--red-arrow">
+											<li class="list-arrow__elem">Координация поставщиков транспорта</li>
+										</ul>
+									</div><a class="button button--outline-blue button--md section-partner__button" href="#section-contacts">Оставить заявку</a>
 								</div>
-								<div class="section-partner__col section-partner__col--img"><img class="section-partner__image" src="images/section-partner/img1.svg" alt></div>
+								<div class="section-partner__col section-partner__col--img"><img class="section-partner__image" style="max-width: 382px;" src="images/section-partner/img1.svg" alt></div>
 							</div>
 						</div>
 					</div>
@@ -348,7 +392,7 @@
 						</svg>
 					</button>
 				</div>
-				<p class="section-description__text-block section-description__text-block--mb"><strong>Major Terminal</strong>
+				<p class="section-description__text-block section-description__text-block--mb mt-30"><strong>Major Terminal</strong>
 					помогает своим клиентам в сферы красоты и люкса разрабатывать продукты и модели цепочек поставок, отвечающие растущим запросам потребителей и высоким ожиданиям от бренда. Мы предлагаем широкий ассортимент высококачественных логистических услуг в сфере красоты и люкса, от многоканального выполнения заказов до глобальных транспортных или пере упаковочных решений, адаптированных к рынкам предметов роскоши, что позволяет брендам отражать свой имидж и выполнять обязательства перед людьми и экологией в своей цепочке поставок.
 				</p>
 				<div class="section-description__photo-slider swiper">
@@ -430,8 +474,7 @@
 			<div class="container">
 				<div class="footer__row">
 					<!-- Nav col-->
-					<div class="footer__col">
-						<p class="footer__nav-title">Индустрии</p>
+					<div class="footer__col"><a class="footer__nav-title" href="#">Индустрии</a>
 						<ul class="footer__nav-list">
 							<li class="footer__nav-elem"><a class="footer__nav-link footer__nav-link--active" href="#">Fashion</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Telecom</a></li>
@@ -446,8 +489,7 @@
 						</ul>
 					</div>
 					<!-- Nav col-->
-					<div class="footer__col">
-						<p class="footer__nav-title">Услуги</p>
+					<div class="footer__col"><a class="footer__nav-title" href="#">Услуги</a>
 						<ul class="footer__nav-list">
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Ответственное хранение</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Складская обработка</a></li>
@@ -459,8 +501,7 @@
 						</ul>
 					</div>
 					<!-- Nav col-->
-					<div class="footer__col">
-						<p class="footer__nav-title">Major Terminal</p>
+					<div class="footer__col"><a class="footer__nav-title" href="#">Major Terminal</a>
 						<ul class="footer__nav-list footer__nav-list--show-laptop">
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">О нас</a></li>
 							<li class="footer__nav-elem"><a class="footer__nav-link" href="#">Кейсы</a></li>
@@ -476,8 +517,8 @@
 						<div class="footer__links-box"><a class="footer__link" href="tel:84957376006">8 (495) 737 60 06</a><a class="footer__link" href="mailto:sales_mt@mjr.ru">sales_mt@mjr.ru</a></div><a class="footer__link-contacts" href="/">Связаться с нами</a>
 						<div class="footer__social-box">
 							<ul class="footer__logo-list footer__logo-list--mobile">
-								<li class="footer__logo-list-elem"><a class="footer__logo-list-link" href="#" target="_blank" rel="noreferrer"><img class="footer__logo-list-img" src="images/common/logo-t.png" alt="Major"></a></li>
-								<li class="footer__logo-list-elem"><a class="footer__logo-list-link" href="#" target="_blank" rel="noreferrer"><img class="footer__logo-list-img" src="images/common/logo-m.png" alt="Major"></a></li>
+								<li class="footer__logo-list-elem"><a class="footer__logo-list-link" href="https://mjr.ru/" target="_blank" rel="noreferrer"><img class="footer__logo-list-img" src="images/common/logo-t.png" alt="Major"></a></li>
+								<li class="footer__logo-list-elem"><a class="footer__logo-list-link" href="https://major-express.ru/" target="_blank" rel="noreferrer"><img class="footer__logo-list-img" src="images/common/logo-m.png" alt="Major"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -492,8 +533,8 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1687259695112"></script>
-		<script src="./js/main.js?v=1687259695112"></script><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1687270058430"></script>
+		<script src="./js/main.js?v=1687270058430"></script><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 8" id="chevron-dropdown">
 		<path d="M1 1.28394L6 5.96615L11 1.28394" stroke="#00162F" stroke-width="2" stroke-linecap="round"></path>
 	</symbol>
