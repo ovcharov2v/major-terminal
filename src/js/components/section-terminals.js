@@ -31,8 +31,10 @@ function createTerminalSlider() {
 document.addEventListener('DOMContentLoaded', () => {
 	const slider = document.querySelector('.section-terminals__slider')
 	if(!slider) return
+	createTerminalSlider()
+})
 
 
-
+document.addEventListener('createTerminalSlider', () => {
 	createTerminalSlider()
 })
