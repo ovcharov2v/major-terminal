@@ -1,5 +1,7 @@
 .webinar-card {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	padding: 24px 16px 16px;
 	border: 1px solid #07529B;
 	border-radius: 40px;
@@ -72,6 +74,7 @@
 	}
 
 	&__link {
+		margin-top: auto;
 		display: inline-flex;
 		align-items: center;
 		margin-bottom: 24px;

@@ -18,6 +18,13 @@
 
 		.dropdown--with-flag & {
 			border-radius: 0;
+			width: 40px;
+			height: 40px;
+
+			@media (min-width: $breakpoint-desktop) {
+				width: unset;
+				height: unset;
+			}
 		}
 
 		.dropdown--gray-border & {
@@ -41,10 +48,15 @@
 		}
 
 		.dropdown--with-flag & {
+			display: none;
 			padding: 0 15px 0 34px;
 			font-size: 12px;
 			line-height: 18px;
 			font-weight: 600;
+
+			@media (min-width: $breakpoint-desktop) {
+				display: block;
+			}
 		}
 
 		.dropdown--gray-border & {
@@ -139,14 +151,11 @@
 			font-size: 12px;
 			line-height: 18px;
 			font-weight: 700;
+			margin-bottom: 0;
 		}
 
 		&--selected {
 			display: none;
-
-			.dropdown--with-flag & {
-				display: block;
-			}
 		}
 	}
 
@@ -164,9 +173,14 @@
 		}
 
 		.dropdown--with-flag & {
+			display: none;
 			right: 0;
 			width: 10px;
 			height: 5px;
+
+			@media (min-width: $breakpoint-desktop) {
+				display: block;
+			}
 		}
 	}
 
@@ -220,5 +234,13 @@
 
 	&__multi-input {
 		display: none;
+	}
+
+	&__lang-text {
+		display: none;
+
+		@media (min-width: $breakpoint-desktop) {
+			display: inline;
+		}
 	}
 }

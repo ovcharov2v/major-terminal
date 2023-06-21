@@ -2,8 +2,35 @@
 footer.footer
 	.container
 		.footer__row
+			.footer__mobile-nav.hide-laptop
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Индустрии
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Услуги
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Кейсы
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Терминалы
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Карьера
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Вебинары
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Новости
+				.footer__mobile-nav-block
+					span.footer__nav-title Устойчивое развитие
+						+svg("menu-dropdown")(class="footer__mobile-menu-dropdown")
+					ul.footer__nav-list
+						li.footer__nav-elem
+							a.footer__nav-link(href="#") Охрана труда
+						li.footer__nav-elem
+							a.footer__nav-link(href="#") Служба качества
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") О нас
+				.footer__mobile-nav-block
+					a.footer__nav-title(href="#") Контакты
 			// Nav col
-			.footer__col
+			.footer__col.show-laptop
 				a.footer__nav-title(href="#") Индустрии
 				ul.footer__nav-list
 					li.footer__nav-elem
@@ -26,7 +53,7 @@ footer.footer
 						a.footer__logo-list-link(href="#", target="_blank", rel="noreferrer")
 							img.footer__logo-list-img(src="images/common/logo-m.png", alt="Major")
 			// Nav col
-			.footer__col
+			.footer__col.show-laptop
 				a.footer__nav-title(href="#") Услуги
 				ul.footer__nav-list
 					li.footer__nav-elem
@@ -44,7 +71,7 @@ footer.footer
 					li.footer__nav-elem
 						a.footer__nav-link(href="#") Кросс-докинг
 			// Nav col
-			.footer__col
+			.footer__col.show-laptop
 				a.footer__nav-title(href="#") Major Terminal
 				ul.footer__nav-list.footer__nav-list--show-laptop
 					li.footer__nav-elem

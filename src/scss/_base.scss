@@ -20,6 +20,12 @@ textarea {
 	color: inherit;
 }
 
+input {
+	&:disabled {
+		opacity: 1 !important;
+	}
+}
+
 button {
 	cursor: pointer;
 }

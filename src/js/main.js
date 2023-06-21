@@ -1,6 +1,7 @@
 import './vendor';
 
 import './components/header'
+import './components/footer'
 import './components/section-services'
 import './components/tabs'
 import './components/section-slider'

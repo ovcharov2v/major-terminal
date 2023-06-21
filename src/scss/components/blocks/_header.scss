@@ -115,12 +115,9 @@
 	}
 
 	&__lang {
-		display: none;
-		width: 138px;
-		padding-left: 24px;
-
 		@media (min-width: $breakpoint-desktop) {
-			display: block;
+			padding-left: 24px;
+			width: 138px;
 		}
 	}
 
