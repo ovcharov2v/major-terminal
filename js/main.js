@@ -887,6 +887,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!slider) return;
   createTerminalSlider();
 });
+document.addEventListener('createTerminalSlider', function () {
+  createTerminalSlider();
+});
 
 /***/ }),
 
