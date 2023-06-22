@@ -30,6 +30,10 @@
 		.dropdown--gray-border & {
 			border: 1px solid #E2E2E2;
 		}
+
+		.dropdown--light-blue-border & {
+			border: 1px solid #C5E0F2;
+		}
 	}
 
 	&__value {
@@ -68,6 +72,13 @@
 				padding-top: 25px;
 				padding-bottom: 25px;
 			}
+		}
+
+		.dropdown--light-blue-border & {
+			padding-top: 13px;
+			padding-bottom: 13px;
+			font-family: $font-primary;
+			color: #004996;
 		}
 
 		.dropdown--multi-select & {
@@ -127,6 +138,12 @@
 			right: 0;
 			min-width: calc(100% + 14px);
 		}
+
+		.dropdown--light-blue-border & {
+			border: 1px solid #C5E0F2;
+			padding: 20px 28px;
+			box-shadow: none;
+		}
 	}
 
 	&__option {
@@ -156,6 +173,10 @@
 
 		&--selected {
 			display: none;
+		}
+
+		.dropdown--light-blue-border & {
+			font-family: $font-primary;
 		}
 	}
 
