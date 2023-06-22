@@ -1438,6 +1438,9 @@ a {
       -webkit-transform: none;
           -ms-transform: none;
               transform: none; }
+    @media (min-width: 1200px) {
+      .header__mobile-menu {
+        display: none !important; } }
   .header__mobile-menu-container {
     padding-top: 29px;
     padding-bottom: 29px;
@@ -1494,6 +1497,62 @@ a {
     line-height: 24px;
     font-weight: 500;
     color: #090909; }
+
+.mobile-nav {
+  margin-bottom: 60px; }
+  .mobile-nav__nav-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Roboto", sans-serif;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #004996;
+    -webkit-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+    opacity: .85; }
+  .mobile-nav__nav-list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .mobile-nav__mobile-nav-block--active .mobile-nav__nav-list {
+      display: block;
+      margin-bottom: 10px; }
+  .mobile-nav__nav-elem:not(:last-child) {
+    margin-bottom: 18px; }
+  .mobile-nav__nav-link {
+    font-size: 18px;
+    line-height: 24px;
+    color: #090909;
+    -webkit-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+    .mobile-nav__nav-link:hover, .mobile-nav__nav-link--active {
+      color: #E10000; }
+  .mobile-nav__mobile-menu-dropdown {
+    display: block;
+    width: 25px;
+    height: 16px;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease; }
+    .mobile-nav__mobile-nav-block--active .mobile-nav__mobile-menu-dropdown {
+      -webkit-transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+              transform: rotate(-180deg); }
 
 .search-form {
   display: -webkit-box;
@@ -1996,33 +2055,18 @@ a {
         -ms-flex-align: start;
             align-items: start; }
   .footer__nav-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: inline-block;
     font-family: "Roboto", sans-serif;
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 24px;
+    margin-bottom: 32px;
     line-height: 32px;
     color: #004996;
     -webkit-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
-    transition: color 0.2s ease;
-    opacity: .85; }
-    @media (min-width: 992px) {
-      .footer__nav-title {
-        display: inline-block;
-        opacity: 1;
-        font-size: 24px;
-        margin-bottom: 32px; }
-        .footer__nav-title:hover {
-          color: #E10000; } }
+    transition: color 0.2s ease; }
+    .footer__nav-title:hover {
+      color: #E10000; }
   .footer__nav-list {
     display: none;
     margin: 0;
@@ -2185,21 +2229,6 @@ a {
     display: inline-block; }
   .footer__logo-list-img {
     max-width: 100%; }
-  .footer__mobile-nav {
-    margin-bottom: 60px; }
-  .footer__mobile-menu-dropdown {
-    display: block;
-    width: 25px;
-    height: 16px;
-    -webkit-transition: -webkit-transform 0.2s ease;
-    transition: -webkit-transform 0.2s ease;
-    -o-transition: transform 0.2s ease;
-    transition: transform 0.2s ease;
-    transition: transform 0.2s ease, -webkit-transform 0.2s ease; }
-    .footer__mobile-nav-block--active .footer__mobile-menu-dropdown {
-      -webkit-transform: rotate(-180deg);
-          -ms-transform: rotate(-180deg);
-              transform: rotate(-180deg); }
 
 .social {
   display: -webkit-box;
