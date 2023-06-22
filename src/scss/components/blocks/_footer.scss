@@ -28,29 +28,18 @@
 	}
 
 	&__nav-title {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		display: inline-block;
 		font-family: $font-primary;
 		margin-top: 0;
-		margin-bottom: 10px;
-		font-size: 22px;
+		font-size: 24px;
+		margin-bottom: 32px;
 		line-height: 32px;
 		color: $color-blue;
 		transition: color $transition-default;
-		opacity: .85;
 
-		@media (min-width: $breakpoint-laptop) {
-			display: inline-block;
-			opacity: 1;
-			font-size: 24px;
-			margin-bottom: 32px;
-
-			&:hover {
-				color: $color-red;
-			}
+		&:hover {
+			color: $color-red;
 		}
-
 	}
 
 	&__nav-list {
@@ -248,20 +237,5 @@
 
 	&__logo-list-img {
 		max-width: 100%;
-	}
-
-	&__mobile-nav {
-		margin-bottom: 60px;
-	}
-
-	&__mobile-menu-dropdown {
-		display: block;
-		width: 25px;
-		height: 16px;
-		transition: transform $transition-default;
-
-		.footer__mobile-nav-block--active & {
-			transform: rotate(-180deg);
-		}
 	}
 }

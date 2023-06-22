@@ -454,6 +454,10 @@
 		.header--menu-shown & {
 			transform: none;
 		}
+
+		@media (min-width: $breakpoint-desktop) {
+			display: none !important;
+		}
 	}
 
 	&__mobile-menu-container {
