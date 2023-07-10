@@ -119,4 +119,9 @@
 			line-height: 24px;
 		}
 	}
+	.free-slider {
+		@media (max-width: $breakpoint-desktop) {
+			margin-right: 30px;
+		}
+	}
 }
