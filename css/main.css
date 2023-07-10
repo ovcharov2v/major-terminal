@@ -4419,6 +4419,9 @@ a {
       .section-services__link-title {
         font-size: 24px;
         line-height: 24px; } }
+  @media (max-width: 1200px) {
+    .section-services .free-slider {
+      margin-right: 30px; } }
 
 .section-slider-terminal {
   padding-top: 24px;
@@ -4507,16 +4510,14 @@ a {
   .section-partner--bg-image .section-partner__box {
     padding: 50px 26px 61px;
     border-radius: 25px;
-    background-image: url("../images/section-partner/bg-m.jpg");
+    background-image: url("../images/section-partner/bg.jpg");
     background-color: #004996;
     background-size: cover;
-    background-position: left center;
+    background-position: center;
     background-repeat: no-repeat; }
     @media (min-width: 1200px) {
       .section-partner--bg-image .section-partner__box {
-        padding: 62px 54px 86px;
-        background-image: url("../images/section-partner/bg.jpg");
-        background-position: center; } }
+        padding: 62px 54px 86px; } }
   .section-partner--bg-blue .section-partner__box {
     padding: 50px 26px 52px;
     border-radius: 25px;
