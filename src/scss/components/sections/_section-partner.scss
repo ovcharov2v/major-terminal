@@ -5,16 +5,14 @@
 		.section-partner--bg-image & {
 			padding: 50px 26px 61px;
 			border-radius: 25px;
-			background-image: url("../images/section-partner/bg-m.jpg");
+			background-image: url("../images/section-partner/bg.jpg");
 			background-color: $color-blue;
 			background-size: cover;
-			background-position: left center;
+			background-position: center;
 			background-repeat: no-repeat;
 
 			@media (min-width: $breakpoint-desktop) {
 				padding: 62px 54px 86px;
-				background-image: url("../images/section-partner/bg.jpg");
-				background-position: center;
 			}
 		}
 
