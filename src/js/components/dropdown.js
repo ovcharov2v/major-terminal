@@ -2,6 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	const dropdownList = document.querySelectorAll('.dropdown')
 	if(dropdownList.length) {
 		dropdownList.forEach((dropdown) => {
+			dropdown.addEventListener('click', (evt) => {
+				evt.stopPropagation()
+				dropdown.classList.toggle('dropdown--active')
+				dropdownList.forEach((el) => {
+					if (el !== dropdown) {
+						el.classList.remove('dropdown--active')
+					}
+				})
+			})
 			// Multi select
 			if(dropdown.classList.contains('dropdown--multi-select')) {
 				const counter = dropdown.querySelector('.dropdown__value-counter')
@@ -14,10 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				dropdown.addEventListener('click', (evt) => {
 					evt.stopPropagation()
 					const valueList = []
-					if(!evt.target.closest('.dropdown__options-list')) {
-						dropdown.classList.toggle('dropdown--active')
-					}
-					else {
 						const checkedOptions = dropdown.querySelectorAll(':checked');
 						checkedOptions.forEach((opt)=>{
 							valueList.push(opt.value)
@@ -28,15 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 							input.dispatchEvent(new Event("change"))
 						}
 						counter.innerHTML = checkedOptions.length.toString()
-					}
 				})
 			}
 			// Single select
 			else {
-				dropdown.addEventListener('click', (evt) => {
-					evt.stopPropagation()
-					dropdown.classList.toggle('dropdown--active')
-				})
 				const input = dropdown.querySelector('.dropdown__value')
 				// Test event listener
 				input.addEventListener('change', () => {
