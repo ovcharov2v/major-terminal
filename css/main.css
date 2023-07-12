@@ -1731,7 +1731,7 @@ a {
     left: 0;
     min-width: 100%;
     margin: 0;
-    padding: 28px;
+    padding: 28px 28px 16px;
     background-color: #fff;
     border-radius: 25px;
     font-family: "Montserrat", sans-serif;
@@ -1769,6 +1769,7 @@ a {
               box-shadow: none; }
   .dropdown__option {
     position: relative;
+    margin-bottom: 12px;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     line-height: 18px;
@@ -1777,8 +1778,6 @@ a {
     -webkit-transition: color 0.2s ease;
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease; }
-    .dropdown__option:not(:last-child) {
-      margin-bottom: 12px; }
     .dropdown__option:hover {
       color: #004996; }
     .dropdown--with-flag .dropdown__option {

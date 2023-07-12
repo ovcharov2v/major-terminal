@@ -260,6 +260,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var dropdownList = document.querySelectorAll('.dropdown');
   if (dropdownList.length) {
     dropdownList.forEach(function (dropdown) {
+      dropdown.addEventListener('click', function (evt) {
+        evt.stopPropagation();
+        dropdown.classList.toggle('dropdown--active');
+        dropdownList.forEach(function (el) {
+          if (el !== dropdown) {
+            el.classList.remove('dropdown--active');
+          }
+        });
+      });
       // Multi select
       if (dropdown.classList.contains('dropdown--multi-select')) {
         var counter = dropdown.querySelector('.dropdown__value-counter');
@@ -271,28 +280,20 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdown.addEventListener('click', function (evt) {
           evt.stopPropagation();
           var valueList = [];
-          if (!evt.target.closest('.dropdown__options-list')) {
-            dropdown.classList.toggle('dropdown--active');
-          } else {
-            var checkedOptions = dropdown.querySelectorAll(':checked');
-            checkedOptions.forEach(function (opt) {
-              valueList.push(opt.value);
-            });
-            var valueString = valueList.join(', ');
-            if (valueString !== input.value) {
-              input.value = valueString;
-              input.dispatchEvent(new Event("change"));
-            }
-            counter.innerHTML = checkedOptions.length.toString();
+          var checkedOptions = dropdown.querySelectorAll(':checked');
+          checkedOptions.forEach(function (opt) {
+            valueList.push(opt.value);
+          });
+          var valueString = valueList.join(', ');
+          if (valueString !== input.value) {
+            input.value = valueString;
+            input.dispatchEvent(new Event("change"));
           }
+          counter.innerHTML = checkedOptions.length.toString();
         });
       }
       // Single select
       else {
-        dropdown.addEventListener('click', function (evt) {
-          evt.stopPropagation();
-          dropdown.classList.toggle('dropdown--active');
-        });
         var _input = dropdown.querySelector('.dropdown__value');
         // Test event listener
         _input.addEventListener('change', function () {
