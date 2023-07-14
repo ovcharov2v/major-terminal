@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	navList.forEach((nav) => {
 		nav.addEventListener('click', (e) => {
-			e.preventDefault()
-			nav.parentNode.classList.toggle('mobile-nav__mobile-nav-block--active')
+			if (nav.tagName === 'SPAN') {
+				nav.parentNode.classList.toggle('mobile-nav__mobile-nav-block--active')
+			}
 		})
 	})
 })
