@@ -261,6 +261,22 @@
 			font-family: $font-secondary;
 			font-weight: 700;
 		}
+
+		&--hidden {
+			display: none !important;
+
+			.card__tag-list--expanded & {
+				display: inline-block !important;
+			}
+		}
+
+		&--more {
+			cursor: pointer;
+
+			.card__tag-list--expanded & {
+				display: none !important;
+			}
+		}
 	}
 
 	&__tag-wrapper {
