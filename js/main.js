@@ -155,6 +155,29 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/components/card-tag.js":
+/*!***************************************!*\
+  !*** ./src/js/components/card-tag.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var moreTagList = document.querySelectorAll('.card__tag--more');
+  if (moreTagList.length) {
+    moreTagList.forEach(function (moreTag) {
+      moreTag.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        evt.stopPropagation();
+        var parent = moreTag.closest('.card__tag-list');
+        parent.classList.add('card__tag-list--expanded');
+      });
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/contacts-form.js":
 /*!********************************************!*\
   !*** ./src/js/components/contacts-form.js ***!
@@ -443,8 +466,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var navList = document.querySelectorAll('.mobile-nav__nav-title');
   navList.forEach(function (nav) {
     nav.addEventListener('click', function (e) {
-      e.preventDefault();
-      nav.parentNode.classList.toggle('mobile-nav__mobile-nav-block--active');
+      if (nav.tagName === 'SPAN') {
+        nav.parentNode.classList.toggle('mobile-nav__mobile-nav-block--active');
+      }
     });
   });
 });
@@ -1068,6 +1092,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_section_news__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_section_news__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _components_scroll_to__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/scroll-to */ "./src/js/components/scroll-to.js");
 /* harmony import */ var _components_scroll_to__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_scroll_to__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _components_card_tag__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/card-tag */ "./src/js/components/card-tag.js");
+/* harmony import */ var _components_card_tag__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_components_card_tag__WEBPACK_IMPORTED_MODULE_17__);
+
 
 
 

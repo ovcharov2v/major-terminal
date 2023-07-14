@@ -2511,6 +2511,14 @@ a {
     .card--cases .card__tag, .card--cases .card__tag-link {
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 700; }
+    .card__tag--hidden, .card__tag-link--hidden {
+      display: none !important; }
+      .card__tag-list--expanded .card__tag--hidden, .card__tag-list--expanded .card__tag-link--hidden {
+        display: inline-block !important; }
+    .card__tag--more, .card__tag-link--more {
+      cursor: pointer; }
+      .card__tag-list--expanded .card__tag--more, .card__tag-list--expanded .card__tag-link--more {
+        display: none !important; }
   .card__tag-wrapper {
     margin: 0 8px 16px; }
     .card__tag-wrapper:nth-child(n+3) {
