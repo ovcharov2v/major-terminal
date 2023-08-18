@@ -176,4 +176,11 @@
 		width: 100%;
 		max-width: 248px;
 	}
+
+	&__partners {
+		display: flex;
+		gap: 98px;
+		margin-bottom: 200px;
+		flex-wrap: wrap;
+	}
 }
