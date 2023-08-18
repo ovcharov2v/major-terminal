@@ -55,6 +55,19 @@
 				padding: 67px 55px 27px;
 			}
 		}
+		.section-hero--case &{
+			padding: 39px 20px 47px;
+
+			@media (min-width: $breakpoint-laptop) {
+				padding: 32px 56px 53px 34px;
+			}
+			.card__tag-list {
+				margin-bottom: 37px;
+					li {
+						cursor: pointer;
+					}
+			}
+		}
 	}
 
 	&__bg {
