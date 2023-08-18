@@ -19,6 +19,37 @@
 		}
 	}
 
+	&__media {
+		.inner__media {
+			position: relative;
+			width: 100%;
+			margin: 80px 0;
+			border-radius: 40px;
+			overflow: hidden;
+
+			&:before {
+				display: block;
+				padding-top: 63%;
+				content: "";
+			}
+
+			@media (min-width: $breakpoint-desktop) {
+				&:before {
+					padding-top: 55%;
+				}
+			}
+		}
+		.case__video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+			-o-object-fit: cover;
+			object-fit: cover;
+		}
+	}
+
 	&__panel-title {
 		margin-top: 0;
 		margin-bottom: 21px;
