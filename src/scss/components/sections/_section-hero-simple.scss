@@ -37,10 +37,10 @@
 
 	&__slogan {
 		margin: 0;
-		font-family: $font-additional;
+		font-family: $font-secondary;
 		font-size: 14px;
 		line-height: 14px;
-		font-weight: 700;
+		font-weight: 500;
 
 		@media (min-width: $breakpoint-desktop) {
 			font-size: 24px;
