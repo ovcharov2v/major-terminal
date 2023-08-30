@@ -51,8 +51,30 @@
 		@media (max-width: $breakpoint-mobile) {
 			display: none;
 		}
-
 	}
+	&__mobile-slogan {
+		display: none;
+		@media (max-width: $breakpoint-mobile) {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			background: #F2F6FA;
+			color: $color-blue;
+			font-family: $font-secondary2;
+			font-size: 20px;
+			font-weight: 500;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 26px 0;
+
+			.slogan-inner {
+				width: 174px;
+				text-align: center;
+			}
+		}
+	}
+
 
 	&__text-dash {
 		display: none;
